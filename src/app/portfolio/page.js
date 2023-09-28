@@ -761,7 +761,7 @@ export default function Portfolio() {
 
   return (
     <main className={styles.main}>
-      <Sidebar scrollY={scrollY} pathname={pathname} />
+      <Sidebar scrollY={scrollY} pathname={pathname} showLinks />
       <div className={styles.content}>
         {/* <h1>Noah Putnam Portfolio</h1> */}
         {/* <div style={{ height: 48 }} /> */}

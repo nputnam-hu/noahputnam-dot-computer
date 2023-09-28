@@ -12,6 +12,20 @@ body {
   margin: 0;
 }
 
+@keyframes borderappear {
+  0% {width: 100vw}
+  100% {width: 0vw}
+}
+
+.bordercover {
+  height: 1px;
+  background: white;
+  margin-top: -1px;
+  animation: borderappear 0.25s linear forwards;
+  margin-left: auto;
+  /* position: absolute; */
+}
+
 a {
   /* color: inherit; */
   /* text-decoration: none; */

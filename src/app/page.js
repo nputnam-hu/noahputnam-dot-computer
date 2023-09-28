@@ -8,8 +8,8 @@ export default function Home() {
       className={styles.main}
       style={{
         paddingTop: 24,
-        paddingBottom: 16,
-        paddingLeft: 21,
+        paddingBottom: 8,
+        paddingLeft: 18,
         height: "calc(100vh - 48px)",
       }}
     >
@@ -56,34 +56,34 @@ export default function Home() {
       <div style={{ marginLeft: 0, display: "flex", flexDirection: "column" }}>
         <Link
           href="/about"
-          style={{ fontFamily: "Times New Roman", fontSize: 18 }}
+          style={{ fontFamily: "Times New Roman", fontSize: 17 }}
         >
           About
         </Link>
         <Link
           href="/portfolio"
-          style={{ fontFamily: "Times New Roman", fontSize: 18, marginTop: 6 }}
+          style={{ fontFamily: "Times New Roman", fontSize: 17, marginTop: 6 }}
         >
           Portfolio
         </Link>
         <Link
           href="https://e-conomy.la"
           target="_blank"
-          style={{ fontFamily: "Times New Roman", fontSize: 18, marginTop: 6 }}
+          style={{ fontFamily: "Times New Roman", fontSize: 17, marginTop: 6 }}
         >
           Essays
         </Link>
         <Link
           href="https://twitter.com/noah_putnam"
           target="_blank"
-          style={{ fontFamily: "Times New Roman", fontSize: 18, marginTop: 6 }}
+          style={{ fontFamily: "Times New Roman", fontSize: 17, marginTop: 6 }}
         >
           Twitter
         </Link>
         {/* <Link
           href="https://based.fashion"
           target="_blank"
-          style={{ fontFamily: "Times New Roman", fontSize: 18, marginTop: 6 }}
+          style={{ fontFamily: "Times New Roman", fontSize: 17, marginTop: 6 }}
         >
           American Dialectic
         </Link> */}
