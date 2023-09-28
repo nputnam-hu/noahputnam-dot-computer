@@ -1,95 +1,109 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+    <main
+      className={styles.main}
+      style={{
+        paddingTop: 24,
+        paddingBottom: 16,
+        paddingLeft: 21,
+        height: "calc(100vh - 48px)",
+      }}
+    >
+      <div
+        className={styles.row}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          // height: 48,
+          // paddingTop: 20,
+          // paddingBottom: 16,
+          // padding: "16px 20px 16px",
+          // borderBottom: "1px solid rgba(0,0,0,0.2)",
+          marginBottom: 12,
+          // background:
+          //   "linear-gradient(to bottom, rgba(195,195,195,0.6), rgba(195,195,195,0.1))",
+          zIndex: 10,
+        }}
+      >
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/nporb.png"
+          alt="Icon of an orb"
+          width={32}
+          height={32}
           priority
+          loading="eager"
+          // style={{ borderRadius: 4, border: "1px solid #ccc" }}
         />
+        <div style={{ width: 10 }} />
+        <h2
+          style={{
+            fontSize: 30,
+            fontFamily: "Times New Roman",
+            fontWeight: 500,
+            margin: 0,
+            marginBottom: 1,
+            // color: "#111",
+          }}
+        >
+          noahputnam.computer
+        </h2>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <div style={{ marginLeft: 0, display: "flex", flexDirection: "column" }}>
+        <Link
+          href="/about"
+          style={{ fontFamily: "Times New Roman", fontSize: 18 }}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          About
+        </Link>
+        <Link
+          href="/portfolio"
+          style={{ fontFamily: "Times New Roman", fontSize: 18, marginTop: 6 }}
         >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
+          Portfolio
+        </Link>
+        <Link
+          href="https://e-conomy.la"
           target="_blank"
-          rel="noopener noreferrer"
+          style={{ fontFamily: "Times New Roman", fontSize: 18, marginTop: 6 }}
         >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
+          Essays
+        </Link>
+        <Link
+          href="https://twitter.com/noah_putnam"
           target="_blank"
-          rel="noopener noreferrer"
+          style={{ fontFamily: "Times New Roman", fontSize: 18, marginTop: 6 }}
         >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          Twitter
+        </Link>
+        {/* <Link
+          href="https://based.fashion"
+          target="_blank"
+          style={{ fontFamily: "Times New Roman", fontSize: 18, marginTop: 6 }}
+        >
+          American Dialectic
+        </Link> */}
       </div>
+      <p
+        style={{
+          width: 550,
+          fontFamily: "Times New Roman",
+          fontStyle: "italic",
+          fontSize: 18,
+          marginTop: "auto",
+          marginBottom: 24,
+          marginLeft: "auto",
+          marginRight: 36,
+        }}
+      >
+        &quot;The closer we come to the danger, the more brightly do the ways
+        into the saving power begin to shine and the more questioning we become.
+        For questioning is the piety of thought.&quot;
+      </p>
     </main>
-  )
+  );
 }

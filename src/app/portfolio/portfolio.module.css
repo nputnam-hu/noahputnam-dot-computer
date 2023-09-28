@@ -1,0 +1,258 @@
+.main {
+  flex: 1;
+  width: 100vw;
+}
+
+.main a {
+  text-decoration: none;
+}
+
+.main button {
+  /* padding: 0; */
+  margin: 0;
+  box-shadow: none;
+  background: none;
+  border: none;
+}
+
+.main h1 {
+  font-size: 52px;
+}
+
+.main h2 {
+  font-family: HelveticaNeue-Light;
+  font-size: 72px;
+  font-weight: 500;
+  margin: 0
+}
+
+.main h3 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0
+}
+
+.main h4 {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+  margin-bottom: -8px;
+}
+
+.main h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #555;
+  margin: 0;
+  margin-bottom: -6px
+}
+
+.main p {
+  font-size: 20px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  /* width: 80%; */
+  padding: 12px 10vw 12px 226px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.vibeheader_img {
+  margin: 0 auto;
+}
+
+.row__text {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fulltext {
+  width: 900px;
+  display: flex;
+  flex-direction: column; 
+}
+
+.row__quote {
+  /* margin-left: auto; */
+  text-align: left;
+  margin-top: 20px;
+  width: 600px;
+}
+
+.row__quote blockquote {
+  font-size: 36px;
+  margin: 0;
+}
+
+.row__quote span {
+  font-size: 18px;
+}
+
+.videowrapper {
+  filter: drop-shadow(8px 8px 5px rgba(0,0,0,0.3));
+  /* margin-left: 20px; */
+  margin-right: auto;
+}
+
+.demovideo {
+  width: 412px;
+  border-radius: 16px;
+}
+
+.media_img {
+  margin-top: 12px;
+  margin-right: auto;
+  z-index: 10;
+}
+
+.inlinemedia_img {
+   margin: auto;
+}
+
+.diagramsection {
+  /* flex: 1; */
+  /* display: flex;
+  flex-direction: column; */
+}
+
+
+
+.diagram_img {
+  /* margin: auto; */
+  background: white;
+  /* padding-bottom: 72px; */
+  /* border-top-left-radius: 100px; */
+  /* transition: all 20s linear; */
+  margin: 0 !important;
+}
+
+.fixeddiagram {
+  position: fixed;
+  /* bottom: 0; */
+}
+
+.stickydiagram {
+  position: sticky !important;
+  top: 0;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.peoplesection {
+  overflow: visible;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  width: 100%;
+  height: 48px;
+}
+
+.peoplesection .row__text {
+  height: 500px;
+}
+
+.elementssection {
+  overflow: visible;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  width: 100%;
+  /* height: 1200px; */
+}
+
+.peopleheader {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+  height: 48px;
+}
+
+.people_headertext {
+  padding-bottom: 16px;
+  padding-top: 96px;
+}
+
+.screenshot {
+  transition: opacity .3s ease-in-out;
+  filter: drop-shadow(8px 8px 5px rgba(0,0,0,0.3));
+  margin-bottom: auto;
+}
+
+.hoverbutton {
+  border-radius: 4px;
+  outline: 2px solid #555;
+  color: #444;
+  padding: 8px 20px;
+}
+
+.hoverbutton:hover {
+  cursor: pointer;
+  outline: 2px solid rgba(183,68,254, 0.9);
+  transition: none;
+  /* background: #fdfdfd; */
+  color: #B744FE;
+  /* background: rgba(183,68,254, 0.02); */
+}
+
+.hoverbutton.active, .hoverbutton.active.hoverbutton:hover {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2.4px 2.4px 4px 1px #ccc;
+  color: #B744FE;
+  outline: 2px solid rgba(183,68,254, 0.9);
+}
+
+.hoverbutton span {
+  font-size: 21px;
+  /* font-weight: 600; */
+  font-family: HelveticaNeue-Medium;
+}
+
+.sidebar {
+  /* padding-top: 60px; */
+  left: 22px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* border-right: 1px solid rgba(0,0,0,0.2); */
+  width: 216px;
+  /* transition: top 0.1s ease-in-out; */
+  /* z-index: -1; */
+}
+
+.sidebar h4 {
+  font-size: 24px;
+  color: #333;
+  font-family: HelveticaNeue-Medium;
+  font-weight: 400;
+  /* text-decoration: underline; */
+}
+
+.sidebar__link {
+  font-size: 16px;
+  /* color: #777; */
+  font-family: HelveticaNeue-Light;
+  text-decoration: underline !important;
+  margin-bottom: 7px;
+}
