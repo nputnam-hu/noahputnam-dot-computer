@@ -8,6 +8,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import { Playfair_Display } from "next/font/google";
 import styles from "./portfolio.module.css";
 
+import VibeHeader from "/public/p/vibeheader.png";
 import VibeDiagram from "/public/p/vibediagram.png";
 import PeopleVibeDiagram from "/public/p/vibediagram-people.png";
 import MusicVibeDiagram from "/public/p/vibediagram-music.png";
@@ -845,11 +846,12 @@ export default function Portfolio() {
           <h2>Vibe-based Computing</h2>
           <div style={{ height: 48 }} />
           <Image
-            src="/p/vibeheader.png"
+            src={VibeHeader}
             alt="A vibe computer"
             className={styles.vibeheader_img}
             width={900}
             height={376}
+            placeholder="blur"
             priority
           />
           <div style={{ height: 36 }} />
