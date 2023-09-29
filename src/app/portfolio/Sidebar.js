@@ -8,9 +8,9 @@ const Sidebar = ({ pathname }) => {
       <h4
         style={{
           position: "absolute",
-          left: 16,
-          top: 13,
-          fontSize: 19,
+          left: 18,
+          top: 16,
+          fontSize: 18,
           fontWeight: "800",
           fontFamily: "HelveticaNeue-Medium",
           color: "black",
@@ -23,8 +23,9 @@ const Sidebar = ({ pathname }) => {
         className={styles.sidebar}
         style={{
           paddingTop: 36,
-          top: -20,
+          top: -16,
           position: "sticky",
+          height: "calc(100vh - 200px)",
         }}
       >
         {/* <div style={{ height: 8 }} /> */}
@@ -42,7 +43,7 @@ const Sidebar = ({ pathname }) => {
           href="/portfolio"
           target="_blank"
           style={{
-            color: pathname === "/portfolio" ? "#363636" : "#777",
+            color: pathname === "/portfolio" ? "#262626" : "#777",
             fontFamily: "HelveticaNeue-Medium",
           }}
         >

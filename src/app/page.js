@@ -53,7 +53,7 @@ export default function Home() {
           noahputnam.computer
         </h2>
       </div>
-      <div style={{ marginLeft: 0, display: "flex", flexDirection: "column" }}>
+      <div style={{ marginLeft: 1, display: "flex", flexDirection: "column" }}>
         <Link
           href="/about"
           style={{
