@@ -20,9 +20,9 @@
 }
 
 .main h2 {
-  font-family: HelveticaNeue-Medium;
+  /* font-family: HelveticaNeue-Light; */
   font-size: 72px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0
 }
 
@@ -41,7 +41,7 @@
 }
 
 .main h5 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #555;
   margin: 0;
@@ -232,44 +232,48 @@
 
 .sidebar {
   /* padding-top: 60px; */
-  left: 19px;
+  left: 16px;
   position: sticky;
   display: flex;
   flex-direction: column;
   height: 100vh;
   /* border-right: 1px solid rgba(0,0,0,0.2); */
+  /* background: rgba(0,0,0,0.02); */
   width: 216px;
+  margin-right: 2px;
   /* transition: top 0.1s ease-in-out; */
   /* z-index: -1; */
 }
 .sidebar h4 {
-  font-size: 21px;
-  color: #333;
-  font-family: HelveticaNeue-Medium;
-  font-weight: 800;
+  font-size: 27px;
+  margin: 0;
   /* text-decoration: underline; */
 }
 
 .sidebar__link {
-  font-size: 16px;
+  font-size: 17px;
   /* color: #777; */
   font-family: HelveticaNeue-Light;
   /* text-decoration: underline !important; */
-  margin-bottom: 7px;
-  margin-left: -1px;
+  margin-bottom: 8px;
+  /* margin-left: -1px; */
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
+.sidebar__link:hover {
+  color: #000 !important
+}
+
 .sidebar__link span{
   margin-right: 4px;
   text-decoration: none !important;
-  /* display: none; */
+  display: none;
 }
 
 .sidebar__link u {
-  /* text-decoration: none; */
+  text-decoration: none;
 }
 
 .backbutton:hover {

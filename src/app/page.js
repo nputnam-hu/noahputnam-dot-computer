@@ -24,7 +24,7 @@ export default function Home() {
           // paddingBottom: 16,
           // padding: "16px 20px 16px",
           // borderBottom: "1px solid rgba(0,0,0,0.2)",
-          marginBottom: 12,
+          marginBottom: 16,
           // background:
           //   "linear-gradient(to bottom, rgba(195,195,195,0.6), rgba(195,195,195,0.1))",
           zIndex: 10,

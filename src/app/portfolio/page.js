@@ -161,7 +161,7 @@ const DiagramSection = ({ scrollY, windowHeight }) => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              marginLeft: `calc(-210px + 5vw)`,
+              marginLeft: `calc(-300px + 5vw)`,
             }}
           >
             <Image
@@ -770,23 +770,44 @@ export default function Portfolio() {
       <Sidebar scrollY={scrollY} pathname={pathname} showLinks />
       <div className={styles.row} style={{ position: "absolute" }}>
         <div style={{ height: 72 }} />
+        <h4
+          style={{
+            position: "absolute",
+            left: 16,
+            top: 13,
+            fontSize: 19,
+            fontWeight: "800",
+            fontFamily: "HelveticaNeue-Medium",
+            color: "black",
+          }}
+        >
+          PORTFOLIO
+        </h4>
+        {/* <div style={{height: 20}} /> */}
         <div
           className={styles.sidebar}
           style={{
-            marginTop: 16,
-            top: 32,
+            paddingTop: 36,
+            top: -20,
             position: "sticky",
           }}
         >
           {/* <div style={{ height: 8 }} /> */}
-          <h4>Portfolio</h4>
-          <div style={{ height: 12 }} />
+          {/* <div
+            style={{
+              height: 1.75,
+              background: "#222",
+              width: 89,
+              marginTop: -1.5,
+            }}
+          /> */}
+          <div style={{ height: 6 }} />
           <Link
             className={styles.sidebar__link}
             href="/portfolio"
             target="_blank"
             style={{
-              color: pathname === "/portfolio" ? "#222" : "#777",
+              color: pathname === "/portfolio" ? "#363636" : "#777",
               fontFamily: "HelveticaNeue-Medium",
             }}
           >
@@ -841,7 +862,7 @@ export default function Portfolio() {
         <div style={{ width: 16 }} />
         <div className={styles.content}>
           {/* <h1>Noah Putnam Portfolio</h1> */}
-          <div style={{ height: 84 }} />
+          <div style={{ height: 80 }} />
           <h5>CASE 1</h5>
           <h2>Vibe-based Computing</h2>
           <div style={{ height: 48 }} />
@@ -936,7 +957,10 @@ export default function Portfolio() {
           <h3>Generative UI</h3>
           <DiagramSection scrollY={scrollY} windowHeight={windowHeight} />
           <h3
-          // style={{ fontSize: 50 }}
+            style={{
+              fontSize: 40,
+              marginLeft: -2,
+            }}
           >
             The Paradigm Shift
           </h3>
