@@ -14,12 +14,12 @@ const IntroSection = () => {
         alt="Adam Lukasik #8 | A year ago, nobody had heard of Adam Lukasik; now, you hear his name and instantly think of his breakthrough tech company sometimes called the large hadron collider for cupcake making. He's the founder of Treatbot, which has raised $5.5 million and is backed by Andreessen Horowitz. It's a robotic arm that lets you bake cupcakes at home."
         className={styles.vibeheader_img}
         style={{ border: "1px solid rgba(255,255,255, 0.33)", borderRadius: 2 }}
-        width={900 * 0.95}
-        height={540 * 0.95}
+        width={900 * 0.9}
+        height={540 * 0.9}
         placeholder="blur"
         priority
       />
-      <div style={{ height: 36 }} />
+      <div style={{ height: 48 }} />
       <div className={styles.row}>
         <div className={styles.row__text}>
           <p>Case study coming soon</p>
