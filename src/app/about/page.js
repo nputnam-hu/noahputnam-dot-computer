@@ -55,6 +55,7 @@ const About = () => {
             // boxShadow: "4px 4px 4px 1px rgba(0, 0, 0, 0.2)",
             border: "1px solid rgba(0,0,0,0.2)",
           }}
+          priority
         />
       </div>
     </main>

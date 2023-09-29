@@ -56,27 +56,46 @@ export default function Home() {
       <div style={{ marginLeft: 0, display: "flex", flexDirection: "column" }}>
         <Link
           href="/about"
-          style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+          style={{
+            fontFamily: "Times New Roman",
+            fontSize: 17,
+            color: "blue",
+          }}
         >
           About
         </Link>
         <Link
           href="/portfolio"
-          style={{ fontFamily: "Times New Roman", fontSize: 17, marginTop: 6 }}
+          style={{
+            fontFamily: "Times New Roman",
+            fontSize: 17,
+            marginTop: 6,
+            color: "blue",
+          }}
         >
           Portfolio
         </Link>
         <Link
           href="https://e-conomy.la"
           target="_blank"
-          style={{ fontFamily: "Times New Roman", fontSize: 17, marginTop: 6 }}
+          style={{
+            fontFamily: "Times New Roman",
+            fontSize: 17,
+            marginTop: 6,
+            color: "blue",
+          }}
         >
           Essays
         </Link>
         <Link
           href="https://twitter.com/noah_putnam"
           target="_blank"
-          style={{ fontFamily: "Times New Roman", fontSize: 17, marginTop: 6 }}
+          style={{
+            fontFamily: "Times New Roman",
+            fontSize: 17,
+            marginTop: 6,
+            color: "blue",
+          }}
         >
           Twitter
         </Link>

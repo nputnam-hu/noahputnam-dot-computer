@@ -13,6 +13,7 @@ import PeopleVibeDiagram from "/public/p/vibediagram-people.png";
 import MusicVibeDiagram from "/public/p/vibediagram-music.png";
 import Sidebar from "./Sidebar";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const playfairBold = Playfair_Display({
   weight: "600",
@@ -59,8 +60,8 @@ const PEOPLE_ID = "people";
 const MUSIC_ID = "music";
 
 const DiagramSection = ({ scrollY, windowHeight }) => {
-  const DIAGRAM_FINAL_HEIGHT = 689 * 0.95;
-  const DIAGRAM_FINAL_WIDTH = 1000 * 0.95;
+  const DIAGRAM_FINAL_HEIGHT = 689 * 0.94;
+  const DIAGRAM_FINAL_WIDTH = 1000 * 0.94;
 
   const [scrollAnimation, setAnimation] = useState(0);
   const [diagramTop, setDiagramTop] = useState();
@@ -82,7 +83,7 @@ const DiagramSection = ({ scrollY, windowHeight }) => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const triggerPoint = diagramTop - windowHeight + DIAGRAM_FINAL_HEIGHT + 64;
+  const triggerPoint = diagramTop - windowHeight + DIAGRAM_FINAL_HEIGHT + 80;
   const endPoint = musicTop + 600;
   const invisblePoint = musicTop + 700 - 72;
   useEffect(() => {
@@ -97,7 +98,7 @@ const DiagramSection = ({ scrollY, windowHeight }) => {
 
   useEffect(() => {
     if (scrollY > diagramTop - 250) {
-      const _scrollAnimation = Math.min(scrollY - diagramTop + 250, 138) / 138;
+      const _scrollAnimation = Math.min(scrollY - diagramTop + 250, 130) / 130;
       setAnimation(_scrollAnimation);
     } else {
       setAnimation(0);
@@ -137,7 +138,7 @@ const DiagramSection = ({ scrollY, windowHeight }) => {
           we interact with the internet.
         </p>
       </div>
-      {/* <div style={{ height: 24 }} /> */}
+      <div style={{ height: 24 }} />
       <div className={styles.col} style={{ alignItems: "center" }}>
         <div
           id={DIAGRAM_ID}
@@ -159,7 +160,7 @@ const DiagramSection = ({ scrollY, windowHeight }) => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              marginLeft: `calc(-216px + 5vw)`,
+              marginLeft: `calc(-210px + 5vw)`,
             }}
           >
             <Image
@@ -646,7 +647,7 @@ const OntologySection = ({ scrollY, windowHeight }) => {
             to imagine a new internet
           </p>
         </div>
-        <div style={{ width: 72 }} />
+        <div style={{ width: 56 }} />
         <Image
           src="/p/mediaelements.png"
           alt="Media Elements, platform agnostic: Image, Video, Audio, Text"
@@ -671,7 +672,7 @@ const OntologySection = ({ scrollY, windowHeight }) => {
           <p>Vibe-based that breaks apart the homogenous:</p>
           <div style={{ height: 16 }} />
         </div>
-        <div style={{ width: 72 }} />
+        <div style={{ width: 56 }} />
         <Image
           src="/p/mediaobjects.png"
           alt="Media Objects platform dependant, atomic units of multi-media content composed of Media Elements"
@@ -692,14 +693,14 @@ const OntologySection = ({ scrollY, windowHeight }) => {
           </p>
           <p>Vibe-based that breaks apart the homogenous:</p>
         </div>
-        <div style={{ width: 72 }} />
+        <div style={{ width: 56 }} />
         <Image
           src="/p/destructure.png"
           alt="Destructuring platforms into different media objects"
           className={styles.media_img}
           style={{ background: "white" }}
-          width={600}
-          height={807}
+          width={600 * 0.9}
+          height={807 * 0.9}
         />
       </div>
       <div style={{ height: 64 }} />
@@ -732,7 +733,7 @@ const OntologySection = ({ scrollY, windowHeight }) => {
             height={606}
           />
         </div>
-        <div style={{ width: 72 }} />
+        <div style={{ width: 56 }} />
         <Image
           src="/p/vibes.png"
           alt="Vibes platform transcendant, dynamic collections of Media Objects, rearrangable"
@@ -759,155 +760,272 @@ export default function Portfolio() {
     return () => window.removeEventListener("resize", _getAndSetWindowHeight);
   }, []);
 
+  const topbarPadding = 52;
+  // const sidebarTop =
+  //   40 + topbarPadding * (1 - Math.min(scrollY, topbarPadding) / topbarPadding);
+
   return (
     <main className={styles.main}>
       <Sidebar scrollY={scrollY} pathname={pathname} showLinks />
-      <div className={styles.content}>
-        {/* <h1>Noah Putnam Portfolio</h1> */}
-        {/* <div style={{ height: 48 }} /> */}
-        <h5>CASE 1</h5>
-        <h2>Vibe-based Computing</h2>
-        <div style={{ height: 48 }} />
-        <Image
-          src="/p/vibeheader.png"
-          alt="A vibe computer"
-          className={styles.vibeheader_img}
-          width={900}
-          height={376}
-          priority
-        />
-        <div style={{ height: 36 }} />
-        <div className={styles.row}>
-          <div className={styles.row__text}>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
+      <div className={styles.row} style={{ position: "absolute" }}>
+        <div style={{ height: 72 }} />
+        <div
+          className={styles.sidebar}
+          style={{
+            marginTop: 16,
+            top: 32,
+            position: "sticky",
+          }}
+        >
+          {/* <div style={{ height: 8 }} /> */}
+          <h4>Portfolio</h4>
+          <div style={{ height: 12 }} />
+          <Link
+            className={styles.sidebar__link}
+            href="/portfolio"
+            target="_blank"
+            style={{
+              color: pathname === "/portfolio" ? "#222" : "#777",
+              fontFamily: "HelveticaNeue-Medium",
+            }}
+          >
+            <span style={{ fontFamily: "HelveticaNeue-Medium", fontSize: 10 }}>
+              •{" "}
+            </span>
+            <u>Vibe-based Computing</u>
+          </Link>
+          <Link
+            className={styles.sidebar__link}
+            href="/portfolio/30000-under-30"
+            target="_blank"
+            style={{
+              color: pathname === "/portfolio/30000-under-30" ? "#000" : "#777",
+              // fontFamily: "HelveticaNeue-Medium",
+            }}
+          >
+            <span style={{ fontFamily: "HelveticaNeue-Medium", fontSize: 10 }}>
+              •{" "}
+            </span>
+            <u>30000 under 30</u>
+          </Link>
+          <Link
+            className={styles.sidebar__link}
+            href="/portfolio/e-conomy"
+            target="_blank"
+            style={{
+              color: pathname === "/portfolio/e-conomy" ? "#000" : "#777",
+              // fontFamily: "Helvetica Neue",
+            }}
+          >
+            <span style={{ fontFamily: "HelveticaNeue-Medium", fontSize: 10 }}>
+              •{" "}
+            </span>
+            <u>E-conomy</u>
+          </Link>
+          <Link
+            className={styles.sidebar__link}
+            href="/portfolio/e-conomy"
+            target="_blank"
+            style={{
+              color: pathname === "/portfolio/e-conomy" ? "#000" : "#777",
+              // fontFamily: "HelveticaNeue-Medium",
+            }}
+          >
+            <span style={{ fontFamily: "HelveticaNeue-Medium", fontSize: 10 }}>
+              •{" "}
+            </span>
+            <u>Nexus Lost</u>
+          </Link>
+        </div>
+        <div style={{ width: 16 }} />
+        <div className={styles.content}>
+          {/* <h1>Noah Putnam Portfolio</h1> */}
+          <div style={{ height: 84 }} />
+          <h5>CASE 1</h5>
+          <h2>Vibe-based Computing</h2>
+          <div style={{ height: 48 }} />
+          <Image
+            src="/p/vibeheader.png"
+            alt="A vibe computer"
+            className={styles.vibeheader_img}
+            width={900}
+            height={376}
+            priority
+          />
+          <div style={{ height: 36 }} />
+          <div className={styles.row}>
+            <div className={styles.row__text}>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+            </div>
+            <div style={{ width: 56 }} />
+            <div className={styles.row__quote}>
+              <blockquote className={playfairMed.className}>
+                Do I contradict myself?
+                <br />
+                Very well then I contradict myself,
+                <br />
+                (I am large, I contain multitudes.)
+              </blockquote>
+              <div style={{ height: 8 }} />
+              <div
+                className={styles.row}
+                style={{ justifyContent: "space-between" }}
+              >
+                <span className={playfairBold.className}>
+                  Walt Whitman, Song of Myself
+                </span>
+                <Image
+                  src="/p/ww.jpeg"
+                  alt="photo of Walt Whitman"
+                  width={140}
+                  height={140}
+                />
+              </div>
+            </div>
           </div>
-          <div style={{ width: 72 }} />
-          <div className={styles.row__quote}>
-            <blockquote className={playfairMed.className}>
-              Do I contradict myself?
-              <br />
-              Very well then I contradict myself,
-              <br />
-              (I am large, I contain multitudes.)
-            </blockquote>
-            <div style={{ height: 8 }} />
-            <div
-              className={styles.row}
-              style={{ justifyContent: "space-between" }}
-            >
-              <span className={playfairBold.className}>
-                Walt Whitman, Song of Myself
-              </span>
+          <div style={{ height: 120 }} />
+          <h3>Omnidirectional Media Engine</h3>
+          <div className={styles.row}>
+            <div className={styles.row__text}>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet. My goal with
+                Vibe-based computing is to imagine a new internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+              <p>
+                My goal with Vibe-based computing is to imagine a new internet
+              </p>
+            </div>
+            <div style={{ width: 56 }} />
+            <div className={styles.videowrapper}>
+              <DemoVideo />
+            </div>
+          </div>
+          <div style={{ height: 140 }} />
+          <h3>Dynamic Media Ontoloy</h3>
+          <OntologySection scrollY={scrollY} windowHeight={windowHeight} />
+          <div style={{ height: 80 }} />
+          <h3>Generative UI</h3>
+          <DiagramSection scrollY={scrollY} windowHeight={windowHeight} />
+          <h3
+          // style={{ fontSize: 50 }}
+          >
+            The Paradigm Shift
+          </h3>
+          <div style={{ height: 48 }} />
+          <Image
+            alt="From walled gardens to vibes"
+            src="/p/paradigmshift.png"
+            // style={{ marginLeft: `calc(50vw - 375px - 72px)` }}
+            style={{ margin: "auto" }}
+            width={750 * 1.1}
+            height={147 * 1.1}
+          />
+          <div style={{ height: 100 }} />
+          <div className={styles.row}>
+            <div className={styles.row__text}>
+              <h4>Aligned Algorithms</h4>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+            </div>
+            <div style={{ width: 56 }} />
+            <div className={styles.col}>
               <Image
-                src="/p/ww.jpeg"
-                alt="photo of Walt Whitman"
-                width={140}
-                height={140}
+                src="/p/usercontentmatrix.png"
+                alt="Algorithm based off of user interaction with content"
+                width={500}
+                height={210}
+                style={{
+                  marginRight: "auto",
+                  marginTop: "auto",
+                  marginBottom: "auto",
+                }}
+              />
+              <div style={{ height: 60 }} />
+              <Image
+                src="/p/3dmatrix.png"
+                alt="Algorithm based off of different vibes user selects and their interaction with content"
+                width={250}
+                height={250}
+                style={{
+                  marginRight: "auto",
+                  marginTop: "auto",
+                  marginBottom: "auto",
+                }}
               />
             </div>
           </div>
-        </div>
-        <div style={{ height: 120 }} />
-        <h3>Omnidirectional Media Engine</h3>
-        <div className={styles.row}>
-          <div className={styles.row__text}>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet. My goal with
-              Vibe-based computing is to imagine a new internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
-            <p>
-              My goal with Vibe-based computing is to imagine a new internet
-            </p>
-          </div>
-          <div style={{ width: 72 }} />
-          <div className={styles.videowrapper}>
-            <DemoVideo />
-          </div>
-        </div>
-        <div style={{ height: 140 }} />
-        <h3>Dynamic Media Ontoloy</h3>
-        <OntologySection scrollY={scrollY} windowHeight={windowHeight} />
-        <div style={{ height: 80 }} />
-        <h3>Generative UI</h3>
-        <DiagramSection scrollY={scrollY} windowHeight={windowHeight} />
-        <h3>The Paradigm Shift</h3>
-        <div style={{ height: 36 }} />
-        <Image
-          alt="From walled gardens to vibes"
-          src="/p/paradigmshift.png"
-          style={{ marginLeft: `calc(50vw - 375px - 72px)` }}
-          width={750}
-          height={147}
-        />
-        <div style={{ height: 80 }} />
-        <div className={styles.row}>
-          <div className={styles.row__text}>
-            <h4>Aligned Algorithms</h4>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
-          </div>
-          <div style={{ width: 72 }} />
-          <div className={styles.col}>
+          <div style={{ height: 72 }} />
+          <div className={styles.row}>
+            <div className={styles.row__text}>
+              <h4>Personalized, Private, Permissionless.</h4>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+              <p>
+                Vibe-based computing is a new paradigm for the internet that
+                breaks apart the homogenous acknowledges the multiplicities
+                inherent in how we interact with the internet. My goal with
+                Vibe-based computing is to imagine a new internet
+              </p>
+            </div>
+            <div style={{ width: 56 }} />
             <Image
-              src="/p/usercontentmatrix.png"
-              alt="Algorithm based off of user interaction with content"
-              width={500}
-              height={210}
-              style={{
-                marginRight: "auto",
-                marginTop: "auto",
-                marginBottom: "auto",
-              }}
-            />
-            <div style={{ height: 60 }} />
-            <Image
-              src="/p/3dmatrix.png"
+              src="/p/vibeperson.png"
               alt="Algorithm based off of different vibes user selects and their interaction with content"
-              width={250}
-              height={250}
+              width={550}
+              height={277}
               style={{
                 marginRight: "auto",
                 marginTop: "auto",
@@ -915,23 +1033,9 @@ export default function Portfolio() {
               }}
             />
           </div>
-        </div>
-        <div style={{ height: 72 }} />
-        <div className={styles.row}>
-          <div className={styles.row__text}>
-            <h4>Personalized, Private, Permissionless.</h4>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
+          <div style={{ height: 72 }} />
+          <h4>A New Way of Being, Online</h4>
+          <div className={styles.fulltext}>
             <p>
               Vibe-based computing is a new paradigm for the internet that
               breaks apart the homogenous acknowledges the multiplicities
@@ -939,30 +1043,8 @@ export default function Portfolio() {
               Vibe-based computing is to imagine a new internet
             </p>
           </div>
-          <div style={{ width: 72 }} />
-          <Image
-            src="/p/vibeperson.png"
-            alt="Algorithm based off of different vibes user selects and their interaction with content"
-            width={550}
-            height={277}
-            style={{
-              marginRight: "auto",
-              marginTop: "auto",
-              marginBottom: "auto",
-            }}
-          />
+          <div style={{ height: 100 }} />
         </div>
-        <div style={{ height: 72 }} />
-        <h4>A New Way of Being, Online</h4>
-        <div className={styles.fulltext}>
-          <p>
-            Vibe-based computing is a new paradigm for the internet that breaks
-            apart the homogenous acknowledges the multiplicities inherent in how
-            we interact with the internet. My goal with Vibe-based computing is
-            to imagine a new internet
-          </p>
-        </div>
-        <div style={{ height: 100 }} />
       </div>
     </main>
   );
