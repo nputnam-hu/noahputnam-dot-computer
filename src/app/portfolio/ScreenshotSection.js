@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import useScrollPosition from "@react-hook/window-scroll";
 import cs from "classnames";
 
 import styles from "./portfolio.module.css";
 
 const MUSIC_ID = "music";
 
-const ScreenshotSection = ({ scrollY, windowHeight }) => {
+const ScreenshotSection = () => {
+  const scrollY = useScrollPosition(120);
   const [musicTop, setMusicTop] = useState();
 
   useEffect(() => {
@@ -20,8 +22,8 @@ const ScreenshotSection = ({ scrollY, windowHeight }) => {
   }, []);
 
   console.log({ musicTop, scrollY });
-  const isMusicVisible = scrollY > musicTop - 700;
-  const SECTION_HEIGHT = 1500;
+  const isMusicVisible = scrollY > musicTop - 600;
+  const SECTION_HEIGHT = 1450;
 
   return (
     <>
@@ -105,7 +107,7 @@ const ScreenshotSection = ({ scrollY, windowHeight }) => {
           style={{
             position: "absolute",
             height: SECTION_HEIGHT - 700,
-            left: 475 + 216 + 80,
+            left: 475 + 216 + 56,
           }}
         >
           <div style={{ position: "sticky", top: 80 }}>

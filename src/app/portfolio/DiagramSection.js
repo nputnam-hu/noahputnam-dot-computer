@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import useScrollPosition from "@react-hook/window-scroll";
+
 import Image from "next/image";
 import cs from "classnames";
 
@@ -11,11 +13,23 @@ const DIAGRAM_FINAL_HEIGHT = 689 * 0.94;
 const DIAGRAM_FINAL_WIDTH = 1000 * 0.94;
 const DIAGRAM_ID = "diagram";
 
-const DiagramSection = ({ scrollY, windowHeight }) => {
+const DiagramSection = () => {
+  const scrollY = useScrollPosition(120);
   const [scrollAnimation, setAnimation] = useState(0);
   const [diagramTop, setDiagramTop] = useState();
   // none | people | music
   const [selectedDiagram, setSelectedDiagram] = useState("none");
+  const [windowHeight, setWindowHeight] = useState();
+
+  useEffect(() => {
+    const _getAndSetWindowHeight = () => {
+      const windowHeight = window.innerHeight;
+      setWindowHeight(windowHeight);
+    };
+    _getAndSetWindowHeight();
+    window.addEventListener("reisze", _getAndSetWindowHeight);
+    return () => window.removeEventListener("resize", _getAndSetWindowHeight);
+  }, []);
 
   useEffect(() => {
     const _setOffsets = () => {
@@ -80,7 +94,7 @@ const DiagramSection = ({ scrollY, windowHeight }) => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              marginLeft: `calc(-300px + 5vw)`,
+              marginRight: `calc(216px - 10vw)`,
             }}
           >
             <Image

@@ -57,9 +57,9 @@
 .content {
   display: flex;
   flex-direction: column;
-  /* width: 80%; */
-  padding: 12px 10vw 12px 0;
-  padding-right: 5vw;
+  width: calc(100vw - 220px - 5vw);
+  padding: 12px 0;
+  padding-right: 5vw !important;
   /* margin-bottom: 100px; */
 }
 
@@ -206,8 +206,7 @@
   height: 100vh;
   /* border-right: 1px solid rgba(0,0,0,0.2); */
   /* background: rgba(0,0,0,0.02); */
-  width: 216px;
-  margin-right: 2px;
+  width: 220px;
   /* transition: top 0.1s ease-in-out; */
   /* z-index: -1; */
 }

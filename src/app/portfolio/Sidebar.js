@@ -1,8 +1,11 @@
-import Image from "next/image";
+"use client";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./portfolio.module.css";
 
-const Sidebar = ({ pathname }) => {
+const Sidebar = () => {
+  const pathname = usePathname();
+
   return (
     <>
       <h4
