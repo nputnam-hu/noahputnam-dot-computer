@@ -1,16 +1,27 @@
 "use client";
 import Image from "next/image";
+import cs from "classnames";
 
 import DemoVideo from "./DemoVideo";
 import DiagramSection from "./DiagramSection";
 import ScreenshotSection from "./ScreenshotSection";
 import styles from "./portfolio.module.css";
+import { useEffect, useRef } from "react";
 
 const VibeBasedComputing = ({
   serverComponents: { introSection, ontologySection },
 }) => {
+  const prevbg = useRef(localStorage.getItem("prevbg")).current;
+  useEffect(() => {
+    setTimeout(() => {
+      localStorage.setItem("prevbg", "light");
+    }, 200);
+  }, []);
+
+  const wasDarkmode = prevbg === "dark";
+
   return (
-    <div className={styles.content}>
+    <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
       <div style={{ height: 72 }} />
       {introSection}
       <div style={{ height: 120 }} />
@@ -51,7 +62,7 @@ const VibeBasedComputing = ({
       <h3>Generative UI</h3>
       <DiagramSection />
       <div style={{ height: 140 }} />
-      <ScreenshotSection scrollY={scrollY} />
+      <ScreenshotSection />
       <div style={{ height: 180 }} />
       <h3
         style={{
@@ -64,7 +75,7 @@ const VibeBasedComputing = ({
       <div style={{ height: 48 }} />
       <Image
         alt="From walled gardens to vibes"
-        src="/p/paradigmshift.png"
+        src="/vibe-based-computing/paradigmshift.png"
         // style={{ marginLeft: `calc(50vw - 375px - 72px)` }}
         style={{ margin: "auto" }}
         width={750 * 1.1}
@@ -96,7 +107,7 @@ const VibeBasedComputing = ({
         <div style={{ width: 56 }} />
         <div className={styles.col}>
           <Image
-            src="/p/usercontentmatrix.png"
+            src="/vibe-based-computing/usercontentmatrix.png"
             alt="Algorithm based off of user interaction with content"
             width={500}
             height={210}
@@ -108,7 +119,7 @@ const VibeBasedComputing = ({
           />
           <div style={{ height: 60 }} />
           <Image
-            src="/p/3dmatrix.png"
+            src="/vibe-based-computing/3dmatrix.png"
             alt="Algorithm based off of different vibes user selects and their interaction with content"
             width={250}
             height={250}
@@ -145,7 +156,7 @@ const VibeBasedComputing = ({
         </div>
         <div style={{ width: 56 }} />
         <Image
-          src="/p/vibeperson.png"
+          src="/vibe-based-computing/vibeperson.png"
           alt="Algorithm based off of different vibes user selects and their interaction with content"
           width={550}
           height={277}

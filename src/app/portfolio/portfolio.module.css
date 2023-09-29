@@ -3,6 +3,11 @@
   width: 100vw;
 }
 
+.main.dark {
+  color: white;
+  /* background: #1a1a1a; */
+}
+
 .main a {
   text-decoration: none;
 }
@@ -15,37 +20,41 @@
   border: none;
 }
 
-.main h1 {
-  font-size: 52px;
+.main h2, .main h3, .main h4, .main h5 {
+  margin: 0
 }
 
 .main h2 {
   /* font-family: HelveticaNeue-Light; */
   font-size: 68px;
   font-weight: 400;
-  margin: 0
 }
 
 .main h3 {
   font-size: 32px;
   font-weight: 500;
-  margin: 0
 }
 
 .main h4 {
   font-size: 26px;
   font-weight: 500;
-  margin: 0;
   color: #333;
-  margin-bottom: -8px;
+  margin-bottom: -8px !important;
 }
+
+/* .main.dark h4 {
+  color: #eee
+} */
 
 .main h5 {
   font-size: 16px;
   font-weight: 700;
   color: #555;
-  margin: 0;
   margin-bottom: -6px
+}
+
+.main.dark h5 {
+  color: #ddd
 }
 
 .main p {
@@ -61,6 +70,10 @@
   padding: 12px 0;
   padding-right: 5vw !important;
   /* margin-bottom: 100px; */
+}
+
+.content.dark {
+  background: #1a1a1a;
 }
 
 .row {
@@ -199,7 +212,7 @@
 
 .sidebar {
   /* padding-top: 60px; */
-  left: 18px;
+  padding-left: 18px;
   position: sticky;
   display: flex;
   flex-direction: column;
@@ -210,6 +223,11 @@
   /* transition: top 0.1s ease-in-out; */
   /* z-index: -1; */
 }
+
+.sidebar.dark {
+  background: #1a1a1a;
+}
+
 .sidebar h4 {
   font-size: 27px;
   margin: 0;
@@ -218,7 +236,7 @@
 
 .sidebar__link {
   font-size: 16px;
-  /* color: #777; */
+  color: #777;
   font-family: HelveticaNeue-Light;
   /* text-decoration: underline !important; */
   margin-bottom: 8px;
@@ -229,7 +247,28 @@
 }
 
 .sidebar__link:hover {
-  color: #000 !important
+  color: #000;
+}
+
+.sidebar__link.dark {
+  color: #ccc;
+}
+
+.sidebar__link.dark:hover {
+  color: #fff;
+}
+
+.sidebar__link.active, .sidebar__link.active:hover {
+  /* margin-bottom: 7px !important; */
+  /* margin-left: 1px; */
+  color: #262626;
+  font-family: HelveticaNeue-Medium;
+}
+
+.sidebar__link.dark.active, .sidebar__link.dark.active:hover {
+  /* margin-bottom: 7px !important; */
+  margin-left: -1px;
+  color: #eee;
 }
 
 .sidebar__link span{

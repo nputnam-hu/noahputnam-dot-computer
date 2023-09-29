@@ -1,18 +1,33 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import cs from "classnames";
 import styles from "./portfolio.module.css";
+import { useParams } from "next/navigation";
+import { useRef } from "react";
 
-const Topbar = ({ scrollY, pathname, showLinks }) => {
+const Topbar = ({ dark }) => {
+  const { from } = useParams();
+  const prevbg = useRef(localStorage.getItem("prevbg")).current;
+  const wasLightmode = prevbg === "light";
+  const wasDarkmode = prevbg === "dark";
+
   return (
-    <div style={{}}>
+    <div>
       <div
+        className={cs(
+          dark && (wasLightmode ? "animatedDarkBg" : styles.dark),
+          !dark && wasDarkmode && "animatedWhiteBg"
+        )}
         style={{
           paddingTop: 20,
           paddingBottom: 12,
           paddingLeft: 14,
           // padding: "16px 20px 16px",
-          borderBottom: "1px solid rgba(0,0,0,0.15)",
-          // background: "#fdfdfd",
+          borderBottom: dark
+            ? "1px solid rgba(255,255,255,0.15)"
+            : "1px solid rgba(0,0,0,0.15)",
+          background: dark ? "#1a1a1a" : "white",
         }}
       >
         <Link
@@ -24,7 +39,7 @@ const Topbar = ({ scrollY, pathname, showLinks }) => {
             // background:
             //   "linear-gradient(to bottom, rgba(195,195,195,0.6), rgba(195,195,195,0.1))",
             zIndex: 10,
-            color: "black",
+            color: dark ? "#ddd" : "black",
             padding: 4,
             display: "inline-flex",
             textDecoration: "none",
@@ -38,7 +53,9 @@ const Topbar = ({ scrollY, pathname, showLinks }) => {
             height={32}
             priority
             loading="eager"
-            // style={{ borderRadius: 4, border: "1px solid #ccc" }}
+            style={{
+              borderRadius: 32,
+            }}
           />
           <div style={{ width: 10 }} />
           <h2
@@ -56,7 +73,7 @@ const Topbar = ({ scrollY, pathname, showLinks }) => {
           </h2>
         </Link>
       </div>
-      <div className="bordercover" />
+      {from === "home" && <div className={cs("bordercover", dark && "dark")} />}
     </div>
   );
 };

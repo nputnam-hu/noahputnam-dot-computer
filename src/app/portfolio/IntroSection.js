@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 
-import VibeHeader from "/public/p/vibeheader.png";
+import VibeHeader from "/public/vibe-based-computing/vibeheader.png";
 import styles from "./portfolio.module.css";
 
 const playfairBold = Playfair_Display({
@@ -62,7 +62,7 @@ const IntroSection = () => {
               Walt Whitman, Song of Myself
             </span>
             <Image
-              src="/p/ww.jpeg"
+              src="/vibe-based-computing/ww.jpeg"
               alt="photo of Walt Whitman"
               width={140}
               height={140}

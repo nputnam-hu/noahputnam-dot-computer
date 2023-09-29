@@ -1,9 +1,14 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
+import cs from "classnames";
 import styles from "./portfolio.module.css";
+import { useRef } from "react";
 
-const Sidebar = () => {
+const Sidebar = ({ dark = false }) => {
+  const prevbg = useRef(localStorage.getItem("prevbg")).current;
+  const wasLightmode = prevbg === "light";
+  const wasDarkmode = prevbg === "dark";
   const pathname = usePathname();
 
   return (
@@ -16,19 +21,24 @@ const Sidebar = () => {
           fontSize: 18,
           fontWeight: "800",
           fontFamily: "HelveticaNeue-Medium",
-          color: "black",
+          color: dark ? "#ddd" : "#1d1d1d",
+          zIndex: 1,
         }}
       >
         PORTFOLIO
       </h4>
       {/* <div style={{height: 20}} /> */}
       <div
-        className={styles.sidebar}
+        className={cs(
+          styles.sidebar,
+          dark && (wasLightmode ? "animatedDarkBg" : styles.dark),
+          !dark && wasDarkmode && "animatedWhiteBg"
+        )}
         style={{
           paddingTop: 36,
           top: -16,
           position: "sticky",
-          height: "calc(100vh - 200px)",
+          // height: "calc(100vh - 200px)",
         }}
       >
         {/* <div style={{ height: 8 }} /> */}
@@ -42,59 +52,51 @@ const Sidebar = () => {
           /> */}
         <div style={{ height: 6 }} />
         <Link
-          className={styles.sidebar__link}
-          href="/portfolio"
-          target="_blank"
-          style={{
-            color: pathname === "/portfolio" ? "#262626" : "#777",
-            fontFamily: "HelveticaNeue-Medium",
+          className={cs(
+            styles.sidebar__link,
+            pathname === "/portfolio" && styles.active,
+            dark && styles.dark
+          )}
+          href={{
+            pathname: "/portfolio",
           }}
         >
-          <span style={{ fontFamily: "HelveticaNeue-Medium", fontSize: 10 }}>
-            •{" "}
-          </span>
           <u>Vibe-based Computing</u>
         </Link>
         <Link
-          className={styles.sidebar__link}
-          href="/portfolio/30000-under-30"
-          target="_blank"
-          style={{
-            color: pathname === "/portfolio/30000-under-30" ? "#000" : "#777",
-            // fontFamily: "HelveticaNeue-Medium",
+          className={cs(
+            styles.sidebar__link,
+            pathname === "/portfolio/30000-under-30" && styles.active,
+            dark && styles.dark
+          )}
+          href={{
+            pathname: "/portfolio/30000-under-30",
           }}
         >
-          <span style={{ fontFamily: "HelveticaNeue-Medium", fontSize: 10 }}>
-            •{" "}
-          </span>
           <u>30000 under 30</u>
         </Link>
         <Link
-          className={styles.sidebar__link}
-          href="/portfolio/e-conomy"
-          target="_blank"
-          style={{
-            color: pathname === "/portfolio/e-conomy" ? "#000" : "#777",
-            // fontFamily: "Helvetica Neue",
+          className={cs(
+            styles.sidebar__link,
+            pathname === "/portfolio/e-conomy" && styles.active,
+            dark && styles.dark
+          )}
+          href={{
+            pathname: "/portfolio/e-conomy",
           }}
         >
-          <span style={{ fontFamily: "HelveticaNeue-Medium", fontSize: 10 }}>
-            •{" "}
-          </span>
           <u>E-conomy</u>
         </Link>
         <Link
-          className={styles.sidebar__link}
-          href="/portfolio/e-conomy"
-          target="_blank"
-          style={{
-            color: pathname === "/portfolio/e-conomy" ? "#000" : "#777",
-            // fontFamily: "HelveticaNeue-Medium",
+          className={cs(
+            styles.sidebar__link,
+            pathname === "/portfolio/e-conomy" && styles.active,
+            dark && styles.dark
+          )}
+          href={{
+            pathname: "/portfolio/e-conomy",
           }}
         >
-          <span style={{ fontFamily: "HelveticaNeue-Medium", fontSize: 10 }}>
-            •{" "}
-          </span>
           <u>Nexus Lost</u>
         </Link>
       </div>

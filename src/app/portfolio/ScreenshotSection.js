@@ -21,7 +21,6 @@ const ScreenshotSection = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  console.log({ musicTop, scrollY });
   const isMusicVisible = scrollY > musicTop - 600;
   const SECTION_HEIGHT = 1450;
 
@@ -107,13 +106,13 @@ const ScreenshotSection = () => {
           style={{
             position: "absolute",
             height: SECTION_HEIGHT - 700,
-            left: 475 + 216 + 56,
+            left: 475 + 216 + 52,
           }}
         >
           <div style={{ position: "sticky", top: 80 }}>
             <div style={{ position: "absolute" }} className={styles.row}>
               <Image
-                src="/p/peopless1.png"
+                src="/vibe-based-computing/peopless1.png"
                 alt="Screenshot of a people vibe in a mobile app"
                 width={342}
                 height={700}
@@ -125,7 +124,7 @@ const ScreenshotSection = () => {
               />
               <div style={{ width: 16 }} />
               <Image
-                src="/p/peopless2.png"
+                src="/vibe-based-computing/peopless2.png"
                 alt="Screenshot of a people vibe in a mobile app"
                 width={342}
                 height={700}
@@ -144,7 +143,7 @@ const ScreenshotSection = () => {
               className={styles.row}
             >
               <Image
-                src="/p/musicss1.png"
+                src="/vibe-based-computing/musicss1.png"
                 alt="Screenshot of a music vibe in a mobile app"
                 width={342}
                 height={700}
@@ -153,7 +152,7 @@ const ScreenshotSection = () => {
               />
               <div style={{ width: 16 }} />
               <Image
-                src="/p/musicss2.png"
+                src="/vibe-based-computing/musicss2.png"
                 alt="Screenshot of a music vibe in a mobile app"
                 width={342}
                 height={700}

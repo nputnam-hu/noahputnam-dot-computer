@@ -53,9 +53,9 @@ export default function Home() {
           noahputnam.computer
         </h2>
       </div>
-      <div style={{ marginLeft: 1, display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <Link
-          href="/about"
+          href={{ pathname: "/about", params: { from: "home" } }}
           style={{
             fontFamily: "Times New Roman",
             fontSize: 17,
@@ -65,7 +65,7 @@ export default function Home() {
           About
         </Link>
         <Link
-          href="/portfolio"
+          href={{ pathname: "/portfolio", params: { from: "home" } }}
           style={{
             fontFamily: "Times New Roman",
             fontSize: 17,
@@ -76,7 +76,7 @@ export default function Home() {
           Portfolio
         </Link>
         <Link
-          href="https://e-conomy.la"
+          href={{ pathname: "https://e-conomy.la", params: { from: "home" } }}
           target="_blank"
           style={{
             fontFamily: "Times New Roman",
@@ -88,7 +88,10 @@ export default function Home() {
           Essays
         </Link>
         <Link
-          href="https://twitter.com/noah_putnam"
+          href={{
+            pathname: "https://twitter.com/noah_putnam",
+            params: { from: "home" },
+          }}
           target="_blank"
           style={{
             fontFamily: "Times New Roman",

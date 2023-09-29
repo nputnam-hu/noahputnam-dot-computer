@@ -5,9 +5,9 @@ import Image from "next/image";
 import cs from "classnames";
 
 import styles from "./portfolio.module.css";
-import VibeDiagram from "/public/p/vibediagram.png";
-import PeopleVibeDiagram from "/public/p/vibediagram-people.png";
-import MusicVibeDiagram from "/public/p/vibediagram-music.png";
+import VibeDiagram from "/public/vibe-based-computing/vibediagram.png";
+import PeopleVibeDiagram from "/public/vibe-based-computing/vibediagram-people.png";
+import MusicVibeDiagram from "/public/vibe-based-computing/vibediagram-music.png";
 
 const DIAGRAM_FINAL_HEIGHT = 689 * 0.94;
 const DIAGRAM_FINAL_WIDTH = 1000 * 0.94;

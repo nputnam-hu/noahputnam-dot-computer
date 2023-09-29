@@ -24,8 +24,8 @@ export const DemoVideo = () => {
         loop
         ref={videoRef}
         controls={false}
-        poster="/p/demoplaceholder.png"
-        src="/p/rhizomedemo.mp4#t=1.5"
+        poster="/vibe-based-computing/demoplaceholder.png"
+        src="/vibe-based-computing/rhizomedemo.mp4#t=1.5"
       />
     </VisibilitySensor>
   );

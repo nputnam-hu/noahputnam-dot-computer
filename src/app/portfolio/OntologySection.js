@@ -23,7 +23,7 @@ const OntologySection = () => {
         </div>
         <div style={{ width: 56 }} />
         <Image
-          src="/p/mediaelements.png"
+          src="/vibe-based-computing/mediaelements.png"
           alt="Media Elements, platform agnostic: Image, Video, Audio, Text"
           className={styles.media_img}
           width={500}
@@ -48,7 +48,7 @@ const OntologySection = () => {
         </div>
         <div style={{ width: 56 }} />
         <Image
-          src="/p/mediaobjects.png"
+          src="/vibe-based-computing/mediaobjects.png"
           alt="Media Objects platform dependant, atomic units of multi-media content composed of Media Elements"
           className={styles.media_img}
           width={508}
@@ -69,7 +69,7 @@ const OntologySection = () => {
         </div>
         <div style={{ width: 56 }} />
         <Image
-          src="/p/destructure.png"
+          src="/vibe-based-computing/destructure.png"
           alt="Destructuring platforms into different media objects"
           className={styles.media_img}
           style={{ background: "white" }}
@@ -100,7 +100,7 @@ const OntologySection = () => {
           </p>
           <div style={{ height: 36 }} />
           <Image
-            src="/p/vibelearn.png"
+            src="/vibe-based-computing/vibelearn.png"
             alt="Media Elements, platform agnostic: Image, Video, Audio, Text"
             className={styles.inlinemedia_img}
             width={400}
@@ -109,7 +109,7 @@ const OntologySection = () => {
         </div>
         <div style={{ width: 56 }} />
         <Image
-          src="/p/vibes.png"
+          src="/vibe-based-computing/vibes.png"
           alt="Vibes platform transcendant, dynamic collections of Media Objects, rearrangable"
           className={styles.media_img}
           width={482}

@@ -17,6 +17,26 @@ body {
   100% {width: 0vw}
 }
 
+@keyframes fadeinDarkbg {
+  0% { background: rgba(26,26,26,0);}
+  100% { background: rgba(26,26,26,1);}
+}
+
+@keyframes fadeinLightbg {
+  0% { background: rgba(26,26,26,1);}
+  100% { background: rgba(26,26,26,0);}
+}
+
+.animatedDarkBg {
+  /* background: rgba(26,26,26,0); */
+  animation: fadeinDarkbg 0.2s forwards;
+}
+
+.animatedWhiteBg {
+  /* background: rgba(26,26,26,0); */
+  animation: fadeinLightbg 0.2s forwards;
+}
+
 .bordercover {
   height: 1px;
   background: white;
@@ -24,6 +44,10 @@ body {
   animation: borderappear 0.25s linear forwards;
   margin-left: auto;
   /* position: absolute; */
+}
+
+.bordercover.dark {
+  background: #1a1a1a;
 }
 
 a {
