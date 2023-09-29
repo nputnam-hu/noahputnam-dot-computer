@@ -8,7 +8,7 @@ const IntroSection = () => {
     <>
       <h5>CASE 2</h5>
       <h2>30000 under 30</h2>
-      <div style={{ height: 48 }} />
+      <div style={{ height: 36 }} />
       <Image
         src={ThirtykHeader}
         alt="Adam Lukasik #8 | A year ago, nobody had heard of Adam Lukasik; now, you hear his name and instantly think of his breakthrough tech company sometimes called the large hadron collider for cupcake making. He's the founder of Treatbot, which has raised $5.5 million and is backed by Andreessen Horowitz. It's a robotic arm that lets you bake cupcakes at home."

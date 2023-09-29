@@ -8,7 +8,9 @@ import { useRef } from "react";
 
 const Topbar = ({ dark }) => {
   const { from } = useParams();
-  const prevbg = useRef(localStorage.getItem("prevbg")).current;
+  const prevbg = useRef(
+    typeof window !== "undefined" && localStorage.getItem("prevbg")
+  ).current;
   const wasLightmode = prevbg === "light";
   const wasDarkmode = prevbg === "dark";
 

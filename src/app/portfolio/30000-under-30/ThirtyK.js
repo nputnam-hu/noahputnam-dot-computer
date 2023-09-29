@@ -6,7 +6,9 @@ import { useEffect, useRef } from "react";
 import styles from "../portfolio.module.css";
 
 const ThirtyK = ({ serverComponents: { introSection } }) => {
-  const prevbg = useRef(localStorage.getItem("prevbg")).current;
+  const prevbg = useRef(
+    typeof window !== "undefined" && localStorage.getItem("prevbg")
+  ).current;
   useEffect(() => {
     setTimeout(() => {
       localStorage.setItem("prevbg", "dark");

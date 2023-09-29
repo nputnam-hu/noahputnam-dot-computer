@@ -11,7 +11,9 @@ import { useEffect, useRef } from "react";
 const VibeBasedComputing = ({
   serverComponents: { introSection, ontologySection },
 }) => {
-  const prevbg = useRef(localStorage.getItem("prevbg")).current;
+  const prevbg = useRef(
+    typeof window !== "undefined" && localStorage.getItem("prevbg")
+  ).current;
   useEffect(() => {
     setTimeout(() => {
       localStorage.setItem("prevbg", "light");

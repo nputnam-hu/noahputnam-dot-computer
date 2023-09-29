@@ -6,7 +6,9 @@ import styles from "./portfolio.module.css";
 import { useRef } from "react";
 
 const Sidebar = ({ dark = false }) => {
-  const prevbg = useRef(localStorage.getItem("prevbg")).current;
+  const prevbg = useRef(
+    typeof window !== "undefined" && localStorage.getItem("prevbg")
+  ).current;
   const wasLightmode = prevbg === "light";
   const wasDarkmode = prevbg === "dark";
   const pathname = usePathname();
