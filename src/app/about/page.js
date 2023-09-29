@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../portfolio/portfolio.module.css";
-import Sidebar from "../portfolio/Sidebar";
+import Topbar from "../portfolio/Topbar";
 
 import BusinessCard from "/public/businesscard.png";
 
 const About = () => {
   return (
     <main style={{}}>
-      <Sidebar />
+      <Topbar />
       <div style={{ paddingLeft: 21 }}>
         <h2
           style={{

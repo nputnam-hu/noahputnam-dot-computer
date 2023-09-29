@@ -39,7 +39,7 @@ export default function Home() {
           loading="eager"
           // style={{ borderRadius: 4, border: "1px solid #ccc" }}
         />
-        <div style={{ width: 8 }} />
+        <div style={{ width: 10 }} />
         <h2
           style={{
             fontSize: 30,
