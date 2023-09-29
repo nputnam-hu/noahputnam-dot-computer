@@ -60,6 +60,7 @@
   /* width: 80%; */
   padding: 12px 10vw 12px 0;
   padding-right: 5vw;
+  /* margin-bottom: 100px; */
 }
 
 .row {
@@ -232,7 +233,7 @@
 .sidebar {
   /* padding-top: 60px; */
   left: 19px;
-  position: fixed;
+  position: sticky;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -241,9 +242,8 @@
   /* transition: top 0.1s ease-in-out; */
   /* z-index: -1; */
 }
-
 .sidebar h4 {
-  font-size: 20px;
+  font-size: 21px;
   color: #333;
   font-family: HelveticaNeue-Medium;
   font-weight: 800;

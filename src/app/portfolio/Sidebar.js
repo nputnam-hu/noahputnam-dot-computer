@@ -11,7 +11,8 @@ const Sidebar = ({ scrollY, pathname, showLinks }) => {
           paddingBottom: 12,
           paddingLeft: 14,
           // padding: "16px 20px 16px",
-          borderBottom: "1px solid rgba(0,0,0,0.2)",
+          borderBottom: "1px solid rgba(0,0,0,0.15)",
+          // background: "#fdfdfd",
         }}
       >
         <Link
@@ -39,7 +40,7 @@ const Sidebar = ({ scrollY, pathname, showLinks }) => {
             loading="eager"
             // style={{ borderRadius: 4, border: "1px solid #ccc" }}
           />
-          <div style={{ width: 10 }} />
+          <div style={{ width: 8 }} />
           <h2
             style={{
               fontSize: 30,
