@@ -1,4 +1,5 @@
 import Image from "next/image";
+import cs from "classnames";
 
 import ThirtykHeader from "/public/30000-under-30/30kheader.png";
 import styles from "../portfolio.module.css";
@@ -12,7 +13,7 @@ const IntroSection = () => {
       <Image
         src={ThirtykHeader}
         alt="Adam Lukasik #8 | A year ago, nobody had heard of Adam Lukasik; now, you hear his name and instantly think of his breakthrough tech company sometimes called the large hadron collider for cupcake making. He's the founder of Treatbot, which has raised $5.5 million and is backed by Andreessen Horowitz. It's a robotic arm that lets you bake cupcakes at home."
-        className={styles.vibeheader_img}
+        className={cs(styles.vibeheader_img, "animateOpacity")}
         style={{ border: "1px solid rgba(255,255,255, 0.33)", borderRadius: 2 }}
         width={900 * 0.9}
         height={540 * 0.9}

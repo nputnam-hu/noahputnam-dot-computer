@@ -245,6 +245,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+  width: 180px;
 }
 
 .sidebar__link:hover {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import cs from "classnames";
 import { Playfair_Display } from "next/font/google";
 
 import VibeHeader from "/public/vibe-based-computing/vibeheader.png";
@@ -22,7 +23,7 @@ const IntroSection = () => {
       <Image
         src={VibeHeader}
         alt="A vibe computer"
-        className={styles.vibeheader_img}
+        className={cs(styles.vibeheader_img, "animateOpacity")}
         width={900}
         height={376}
         placeholder="blur"
