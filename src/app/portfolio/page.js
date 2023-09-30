@@ -9,7 +9,10 @@ export default function Portfolio() {
   return (
     <main className={styles.main}>
       <Topbar />
-      <div className={styles.row} style={{ position: "absolute" }}>
+      <div
+        className={styles.row}
+        style={{ position: "absolute", display: "relative" }}
+      >
         <Sidebar />
         <VibeBasedComputing
           serverComponents={{

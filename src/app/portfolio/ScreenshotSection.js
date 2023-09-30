@@ -109,7 +109,7 @@ const ScreenshotSection = () => {
             left: 475 + 216 + 52,
           }}
         >
-          <div style={{ position: "sticky", top: 80 }}>
+          <div className={styles.sticky} style={{ top: 80 }}>
             <div style={{ position: "absolute" }} className={styles.row}>
               <Image
                 src="/vibe-based-computing/peopless1.png"

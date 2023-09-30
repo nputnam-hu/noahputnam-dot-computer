@@ -33,13 +33,14 @@ const Sidebar = ({ dark = false }) => {
       <div
         className={cs(
           styles.sidebar,
+          styles.sticky,
           dark && (wasLightmode ? "animatedDarkBg" : styles.dark),
           !dark && wasDarkmode && "animatedWhiteBg"
         )}
         style={{
           paddingTop: 36,
           top: -16,
-          position: "sticky",
+          display: "block",
           // height: "calc(100vh - 200px)",
         }}
       >
