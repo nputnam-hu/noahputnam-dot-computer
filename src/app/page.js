@@ -75,7 +75,7 @@ export default function Home() {
         >
           Portfolio
         </Link>
-        <Link
+        {/* <Link
           href={{ pathname: "https://e-conomy.la", params: { from: "home" } }}
           target="_blank"
           style={{
@@ -86,7 +86,7 @@ export default function Home() {
           }}
         >
           Essays
-        </Link>
+        </Link> */}
         <Link
           href={{
             pathname: "https://twitter.com/noah_putnam",
@@ -109,6 +109,64 @@ export default function Home() {
         >
           American Dialectic
         </Link> */}
+        <h4
+          style={{
+            fontFamily: "Times New Roman",
+            fontSize: 17,
+            marginTop: 20,
+            marginBottom: 0,
+            fontWeight: "700",
+            fontStyle: "italic",
+            // textDecoration: "underline",
+          }}
+        >
+          Essays
+        </h4>
+        <Link
+          href={{
+            pathname: "https://e-conomy.la/the-creator-middle-class/",
+            params: { from: "home" },
+          }}
+          target="_blank"
+          style={{
+            fontFamily: "Times New Roman",
+            fontSize: 17,
+            marginTop: 6,
+            color: "blue",
+          }}
+        >
+          The Creator Middle Class
+        </Link>
+        <Link
+          href={{
+            pathname: "https://e-conomy.la/marc-andreessens-original-sin/",
+            params: { from: "home" },
+          }}
+          target="_blank"
+          style={{
+            fontFamily: "Times New Roman",
+            fontSize: 17,
+            marginTop: 6,
+            color: "blue",
+          }}
+        >
+          Marc Andreessen’s Original Sin
+        </Link>
+        <Link
+          href={{
+            pathname: "https://e-conomy.la/the-economy-of-bits/",
+            params: { from: "home" },
+          }}
+          target="_blank"
+          style={{
+            fontFamily: "Times New Roman",
+            fontSize: 17,
+            marginTop: 6,
+            color: "blue",
+          }}
+        >
+          The Economy of Bits
+        </Link>
       </div>
       <p
         style={{

@@ -43,7 +43,7 @@ body {
 }
 
 .animateOpacity {
-  animation: animatedOpacity 0.4s forwards;
+  animation: animatedOpacity 0.2s forwards;
 }
 
 .bordercover {

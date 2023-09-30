@@ -6,19 +6,18 @@ const OntologySection = () => {
     <div>
       <div className={styles.fulltext}>
         <p>
-          Vibe-based computing is a new paradigm for the internet that breaks
-          apart the homogenous acknowledges the multiplicities inherent in how
-          we interact with the internet.
+          In order to implement Vibe-based Computing, we must build an
+          understanding of the web flexible enough to describe all of the
+          activity and creation that occurs within it. To accomplish this, we
+          define a general ontology of digital media:
         </p>
       </div>
-      <div style={{ height: 40 }} />
+      <div style={{ height: 36 }} />
       <div className={styles.row}>
-        <div className={styles.row__text}>
+        <div className={styles.row__smalltext}>
           <p>
-            Vibe-based computing is a new paradigm for the internet that breaks
-            apart the homogenous acknowledges the multiplicities inherent in how
-            we interact with the internet. My goal with Vibe-based computing is
-            to imagine a new internet
+            We start by defining the base <b>Media Elements</b> that make up
+            digital content: images, video, text, and audio.
           </p>
         </div>
         <div style={{ width: 56 }} />
@@ -34,17 +33,16 @@ const OntologySection = () => {
           }}
         />
       </div>
-      <div style={{ height: 80 }} />
+      <div style={{ height: 92 }} />
       <div className={styles.row}>
-        <div className={styles.row__text}>
+        <div className={styles.row__smalltext}>
           <p>
-            Vibe-based computing is a new paradigm for the internet that breaks
-            apart the homogenous acknowledges the multiplicities inherent in how
-            we interact with the internet. My goal with Vibe-based computing is
-            to imagine a new internet
+            Next we define <b>Media Objects</b> as the core units of different
+            platforms on the web. Media Objects consist of a group of Media
+            Elements, alongside a set of static properties that are defined by
+            the platform's database model, and meta-properties that can be
+            inferred by AI models.
           </p>
-          <p>Vibe-based that breaks apart the homogenous:</p>
-          <div style={{ height: 16 }} />
         </div>
         <div style={{ width: 56 }} />
         <Image
@@ -56,35 +54,32 @@ const OntologySection = () => {
           style={{ marginLeft: -8 }}
         />
       </div>
-      <div style={{ height: 120 }} />
+      <div style={{ height: 92 }} />
       <div className={styles.row}>
-        <div className={styles.row__text}>
+        <div className={styles.row__smalltext}>
           <p>
-            Vibe-based computing is a new paradigm for the internet that breaks
-            apart the homogenous acknowledges the multiplicities inherent in how
-            we interact with the internet. My goal with Vibe-based computing is
-            to imagine a new internet
+            By thinking of digital media in terms of distinct Media Objects, we
+            can destructure the walled gardens behind every platform into their
+            constituent parts, and begin to return control over their content to
+            the user.
           </p>
-          <p>Vibe-based that breaks apart the homogenous:</p>
         </div>
-        <div style={{ width: 56 }} />
+        <div style={{ width: 32 }} />
         <Image
           src="/vibe-based-computing/destructure.png"
           alt="Destructuring platforms into different media objects"
           className={styles.media_img}
           style={{ background: "white" }}
-          width={600 * 0.9}
-          height={807 * 0.9}
+          width={600}
+          height={263}
         />
       </div>
-      <div style={{ height: 64 }} />
+      <div style={{ height: 92 }} />
       <div className={styles.row}>
-        <div className={styles.row__text}>
+        <div className={styles.row__smalltext}>
           <p>
-            Vibe-based computing is a new paradigm for the internet that breaks
-            apart the homogenous acknowledges the multiplicities inherent in how
-            we interact with the internet. My goal with Vibe-based computing is
-            to imagine a new internet
+            <b>Vibes</b> now arrive as the restructured collections of these{" "}
+            Media Objects.
           </p>
           <p>
             Vibe-based computing is a new paradigm for the internet that breaks
@@ -107,7 +102,7 @@ const OntologySection = () => {
             height={606}
           />
         </div>
-        <div style={{ width: 56 }} />
+        <div style={{ width: 44 }} />
         <Image
           src="/vibe-based-computing/vibes.png"
           alt="Vibes platform transcendant, dynamic collections of Media Objects, rearrangable"

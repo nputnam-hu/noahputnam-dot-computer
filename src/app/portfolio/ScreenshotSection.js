@@ -21,7 +21,7 @@ const ScreenshotSection = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const isMusicVisible = scrollY > musicTop - 600;
+  const isMusicVisible = scrollY > musicTop - 500;
   const SECTION_HEIGHT = 1450;
 
   return (
