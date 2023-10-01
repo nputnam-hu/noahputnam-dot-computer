@@ -269,9 +269,9 @@ const VibeBasedComputing = ({
           But at scale, The Vibe has potential to fundamentally redefine the
           relationship we have with the internet. Instead of your online
           identity being splintered across an array of walled gardens designed
-          to extract maximal profit, The Vibe creates a new ecology where
-          creativiy is owned by the user, and where the inherent multiplicty of
-          being is reified in cyberspace.
+          to extract maximum profit for you, The Vibe creates a new ecology
+          where creativiy is owned by the user, and where the inherent
+          multiplicty of being is reified in cyberspace.
         </p>
       </div>
     </div>

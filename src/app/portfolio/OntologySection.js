@@ -6,17 +6,17 @@ const OntologySection = () => {
     <div>
       <div className={styles.fulltext}>
         <p>
-          In order to implement Vibe-based Computing, we must build an
-          understanding of the web flexible enough to describe all of the
-          activity and creation that occurs within it. To accomplish this, we
-          define a general ontology of digital media:
+          In order to implement The Vibe, we must build an understanding of the
+          web flexible enough to describe all of the activity and creation that
+          occurs within it. To accomplish this, Vibe-based Computing define a
+          general ontology of online media:
         </p>
       </div>
       <div style={{ height: 36 }} />
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
-            We start by defining the base <b>Media Elements</b> that make up
+            To begin, we by define the base <b>Media Elements</b> that make up
             digital content: images, video, text, and audio.
           </p>
         </div>
@@ -58,10 +58,10 @@ const OntologySection = () => {
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
-            By thinking of digital media in terms of distinct Media Objects, we
-            can destructure the walled gardens behind every platform into their
-            constituent parts, and begin to return control over their content to
-            the user.
+            By conceptualizing the internet in terms of distinct Media Objects,
+            we can destructure the walled gardens behind every platform into
+            their constituent parts, opening up a space to return control over
+            their contents back to the user.
           </p>
         </div>
         <div style={{ width: 32 }} />
@@ -70,11 +70,11 @@ const OntologySection = () => {
           alt="Destructuring platforms into different media objects"
           className={styles.media_img}
           style={{ background: "white" }}
-          width={600}
-          height={263}
+          width={550}
+          height={739}
         />
       </div>
-      <div style={{ height: 92 }} />
+      <div style={{ height: 48 }} />
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>

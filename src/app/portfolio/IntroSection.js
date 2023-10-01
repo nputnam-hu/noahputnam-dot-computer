@@ -84,20 +84,20 @@ const IntroSection = () => {
             At it&#8217;s most basic, a Vibe is an object that can hold any
             number and any kind of digital media. People can import an account
             they have on a platform—Tik Tok, Instagram, Twitter, etc.—into a
-            Vibe they own, or they can manually create one by uploading pieces
-            of content one by one. This collection of media becomes a
-            standardized interface for language models to read in, understand,
-            and transform its contents.
+            Vibe they own, or they can manually create one by uploading
+            different pieces of content one by one.
           </p>
           <p>
-            LLMs are able to create a semantic understanding of any piece of
-            media directly from its contents. While before an image or a text
-            post only meant something to a computer when crossreferenced against
-            thousands of user interactions with it, now computers can understand
-            any media with a single API call to a language model. This means
-            that the media a user uploads to a Vibe can be immediately useful to
-            them before having to share any data with a corporate-cotnrolled
-            platform.
+            The disruptive potential of LLMs lies in their ability to create a
+            semantic understanding of a piece of media directly from its
+            content. While before an image or a text post only meant something
+            to a computer when crossreferenced against thousands of user
+            interactions with it, now computers can understand any media with a
+            single API call to a language model. This means users no longer have
+            to share their data with corporate-controlled platform for it to be
+            made useful to them. Through The Vibe, a collection of media owned
+            by a user becomes a standardized interface for language models to
+            read in, understand, and transform its contents.
           </p>
         </div>
         <div style={{ width: 36 }} />
@@ -106,8 +106,8 @@ const IntroSection = () => {
           src="/vibe-based-computing/vibegroup.png"
           // style={{ marginLeft: `calc(50vw - 375px - 72px)` }}
           style={{ marginRight: "auto", marginBottom: "auto", marginTop: 16 }}
-          width={400 * 1.1}
-          height={294 * 1.1}
+          width={400 * 1.15}
+          height={294 * 1.15}
         />
       </div>
     </>
