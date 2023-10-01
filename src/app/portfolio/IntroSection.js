@@ -56,48 +56,49 @@ const IntroSection = () => {
           .
         </p>
         <p style={{ fontSize: 24, lineHeight: 1.3 }}>
-          Vibes are everywhere online. Most of the platforms we spend our time
-          on are at their core about vibe curation: Pinterest boards, Instagram
-          accounts, Spotify playlists, etc. rest on the idea of a unifying mood
-          or theme between their content. The language of vibes has proliferated
-          alongside the rise of the internet. Unlike the linear television
-          episode or fixed music album, vibes match the pace and tenor of the
-          web: continuous, social, ever-evolving.
+          Vibes are everywhere on the web. Most of the platforms we spend our
+          time on are at their core about vibe curation: Pinterest boards,
+          Instagram accounts, Spotify playlists, etc. rest on the idea of a
+          unifying mood or theme between their content. The language of vibes
+          has proliferated alongside the rise of the internet. Unlike the linear
+          television episode or fixed music album, vibes match the pace and
+          tenor of cyberspace: continuous, social, ever-evolving.
         </p>
         <p style={{ fontSize: 24 }}>
           But with the rise of large language models (LLMs), the idea of a vibe
           itself can now be condensed into a representation in data, as a
           permutation of weights within a language model’s latent space. LLMs
           operate on vibes, fine-tuning on rows of data to calculate where they
-          cluster in concept-space, mapping the semantics of a text string to
-          its corresponding manifestation as an image, and vice versa.
-          Vibe-based Computing makes this process legible to the user by
-          introducing The Vibe as a new organizing metaphor for people to
-          understand and interact with language models.
+          cluster in concept-space, mapping the essence of a text prompt to its
+          corresponding manifestation as an image. Vibe-based Computing makes
+          this process legible to the user by introducing The Vibe as a new
+          organizing metaphor for people to understand and interact with these
+          language models.
         </p>
       </div>
       <div style={{ height: 60 }} />
-      <h3>A New Interface for AI</h3>
+      <h3>An Intuitive Interface for AI</h3>
       <div className={styles.row}>
         <div className={styles.row__text}>
           <p>
             At it&#8217;s most basic, a Vibe is an object that can hold any
             number and any kind of digital media. People can import an account
-            they have on a platform—Tik Tok, Instagram, Twitter, etc.—into a
-            Vibe they own, or they can manually create one by uploading
-            different pieces of content one by one.
+            they have on a platform into a Vibe they own, or they can manually
+            create one by uploading individual content piece by piece. While
+            this construction may seem trivial, a Vibe animates into something
+            far more powerful through its relationship with next-gen AI models.
           </p>
           <p>
             The disruptive potential of LLMs lies in their ability to create a
-            semantic understanding of a piece of media directly from its
-            content. While before an image or a text post only meant something
-            to a computer when crossreferenced against thousands of user
-            interactions with it, now computers can understand any media with a
-            single API call to a language model. This means users no longer have
-            to share their data with corporate-controlled platform for it to be
-            made useful to them. Through The Vibe, a collection of media owned
-            by a user becomes a standardized interface for language models to
-            read in, understand, and transform its contents.
+            semantic understanding of media directly from its content. While
+            before an image or a text post only meant something to a computer
+            when crossreferenced against thousands of user interactions with it,
+            now language models can build these connections with a single API
+            call. This means users no longer have to share their data with
+            corporate-controlled platforms for it to be made useful to them.
+            Through The Vibe, a collection of media curated by a user becomes a
+            standardized interface for language models to read in, understand,
+            and transform its contents.
           </p>
         </div>
         <div style={{ width: 36 }} />

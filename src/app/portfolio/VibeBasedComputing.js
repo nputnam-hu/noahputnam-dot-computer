@@ -42,10 +42,10 @@ const VibeBasedComputing = ({
         <div className={styles.row__text}>
           <p>
             LLMs break down the traditional boundaries between content on the
-            web. They can translate fluidly between different forms of media:
-            text becomes image, image becomes music, music becomes video, and
-            video transmute back to text. This capability provides the
-            foundation for the Vibe as a computational object.
+            web. They translate fluidly between different forms of media: text
+            becomes image, image becomes music, music becomes video, and video
+            transmute back to text. This capability provides the foundation for
+            the Vibe as a computational object.
           </p>
           <p></p>
           <p>

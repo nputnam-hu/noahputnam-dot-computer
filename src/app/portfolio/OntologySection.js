@@ -6,17 +6,17 @@ const OntologySection = () => {
     <div>
       <div className={styles.fulltext}>
         <p>
-          In order to implement The Vibe, we must build an understanding of the
-          web flexible enough to describe all of the activity and creation that
-          occurs within it. To accomplish this, Vibe-based Computing define a
-          general ontology of online media:
+          In order to implement the Vibe primitive, we must build an
+          understanding of the web flexible enough to describe all of the
+          activity and creation that happens within it. To accomplish this,
+          Vibe-based Computing define a general ontology of online media:
         </p>
       </div>
       <div style={{ height: 36 }} />
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
-            To begin, we by define the base <b>Media Elements</b> that make up
+            To begin, we define the base <b>Media Elements</b> that make up
             digital content: images, video, text, and audio.
           </p>
         </div>
@@ -70,11 +70,11 @@ const OntologySection = () => {
           alt="Destructuring platforms into different media objects"
           className={styles.media_img}
           style={{ background: "white" }}
-          width={550}
-          height={739}
+          width={600}
+          height={263}
         />
       </div>
-      <div style={{ height: 48 }} />
+      <div style={{ height: 92 }} />
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
