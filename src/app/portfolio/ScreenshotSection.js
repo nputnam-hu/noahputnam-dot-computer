@@ -4,6 +4,7 @@ import useScrollPosition from "@react-hook/window-scroll";
 import cs from "classnames";
 
 import styles from "./portfolio.module.css";
+import Link from "next/link";
 
 const MUSIC_ID = "music";
 
@@ -21,7 +22,7 @@ const ScreenshotSection = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const isMusicVisible = scrollY > musicTop - 200;
+  const isMusicVisible = scrollY > musicTop - 500;
   const SECTION_HEIGHT = 1650;
 
   return (
@@ -49,7 +50,7 @@ const ScreenshotSection = () => {
               A People Vibe UI
             </h4>
             <p>
-              A people vibe UI would solve the social context collapse that
+              A People Vibe UI would solve the social context collapse that
               plagues all messaging apps. By delineating the distinct Vibes that
               make up your contacts list, the user can be in control of which
               social universe they want to be engaging with at any given time.
@@ -70,8 +71,8 @@ const ScreenshotSection = () => {
               6pm on Friday it changes to “Homies”. Or if you're mad at all of
               your friends, the AI might suggest a new “Enemies” Vibe to group
               them in. Instead of the computer being ignorant to the deeply
-              personal application it is being used in, Vibes enable it to build
-              an emotional awareness that drives the User Experience.
+              personal circumstances it is being used in, Vibes enable it to
+              build an emotional awareness that drives the User Experience.
             </p>
           </div>
           <div
@@ -90,22 +91,36 @@ const ScreenshotSection = () => {
               A Music Vibe UI
             </h4>
             <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
+              In a Music Vibe UI the top level interface moves from the library
+              of playlists and albums to the queue of songs. Every Vibe
+              generates a queue of song media objects that get recommended to
+              the user, but unlike a playlist the Music Vibe is a living object
+              that responds to user behavior. For example, if the user skips
+              through songs from a certain artist, the Vibe will skip over songs
+              from that artist in future recommendations.
             </p>
             <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
+              {" "}
+              The app surfaces different artists, albums, and songs to the right
+              of the queue which operates like a{" "}
+              <Link
+                href="https://en.wikipedia.org/wiki/Conveyor_belt_sushi"
+                target="_blank"
+              >
+                sushi converyor belt
+              </Link>{" "}
+              where the user can guide the direction the Vibe takes by dragging
+              recommendations into it, allowing them to curate their listening
+              experience.
             </p>
             <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
+              Again the UI here can use the temporal and emotional context of
+              the user to anticipate what Vibe best suits their current intent.
+              This also works across Vibes: when a user sets their People Vibe
+              to “Study Buddies”, the UI might ask if they want to queue up a
+              lo-fi beats Music Vibe to pair with it, while if they set it to
+              “Homies” on a Friday night it might suggest a club dance Music
+              Vibe.
             </p>
           </div>
         </div>
