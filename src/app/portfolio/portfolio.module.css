@@ -59,7 +59,7 @@
 }
 
 .main p {
-  font-size: 21px;
+  font-size: 22px;
   margin: 12px 0;
   line-height: 135%;
   font-family: Helvetica Neue;
@@ -103,13 +103,13 @@
 }
 
 .row__text {
-  width: 550px;
+  width: 600px;
   display: flex;
   flex-direction: column;
 }
 
 .row__smalltext {
-  width: 500px;
+  width: 525px;
   display: flex;
   flex-direction: column;
 }

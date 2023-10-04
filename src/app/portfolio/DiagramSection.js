@@ -8,8 +8,11 @@ import styles from "./portfolio.module.css";
 import VibeDiagram from "/public/vibe-based-computing/vibediagram.png";
 import PeopleVibeDiagram from "/public/vibe-based-computing/vibediagram-people.png";
 import MusicVibeDiagram from "/public/vibe-based-computing/vibediagram-music.png";
+import NewsVibeDiagram from "/public/vibe-based-computing/vibediagram-news.png";
+import PhotosVibeDiagram from "/public/vibe-based-computing/vibediagram-photos.png";
+import MoneyVibeDiagram from "/public/vibe-based-computing/vibediagram-money.png";
 
-const DIAGRAM_FINAL_HEIGHT = 689 * 0.94;
+const DIAGRAM_FINAL_HEIGHT = 684 * 0.94;
 const DIAGRAM_FINAL_WIDTH = 1000 * 0.94;
 const DIAGRAM_ID = "diagram";
 
@@ -67,9 +70,11 @@ const DiagramSection = () => {
     <div className={styles.diagramsection}>
       <div className={styles.fulltext}>
         <p>
-          Vibe-based computing is a new paradigm for the internet that breaks
-          apart the homogenous acknowledges the multiplicities inherent in how
-          we interact with the internet.
+          Now that the Vibe has been formally defined, we can begin to explore
+          how the primtive can be applied to open up new possibilites in the
+          space of Human-Comptuer Interaction. For example, in the realm of
+          UI/UX, Vibes function as a new organizing principle for computer
+          applications which can be explored in a variety of domains.
         </p>
       </div>
       <div style={{ height: 24 }} />
@@ -152,6 +157,54 @@ const DiagramSection = () => {
                 position: "absolute",
               }}
             />
+            <Image
+              src={NewsVibeDiagram}
+              placeholder="blur"
+              alt="An example of a news vibe"
+              className={cs(styles.diagram_img)}
+              width={DIAGRAM_FINAL_WIDTH * dimScale}
+              height={DIAGRAM_FINAL_HEIGHT * dimScale}
+              style={{
+                zIndex: 15,
+                // position: "absolute",
+                opacity: selectedDiagram === "news" ? 1 : 0,
+                transition: "opacity .3s ease-in-out",
+                // top: 0,
+                position: "absolute",
+              }}
+            />
+            <Image
+              src={PhotosVibeDiagram}
+              placeholder="blur"
+              alt="An example of a photos vibe"
+              className={cs(styles.diagram_img)}
+              width={DIAGRAM_FINAL_WIDTH * dimScale}
+              height={DIAGRAM_FINAL_HEIGHT * dimScale}
+              style={{
+                zIndex: 15,
+                // position: "absolute",
+                opacity: selectedDiagram === "photos" ? 1 : 0,
+                transition: "opacity .3s ease-in-out",
+                // top: 0,
+                position: "absolute",
+              }}
+            />
+            <Image
+              src={MoneyVibeDiagram}
+              placeholder="blur"
+              alt="An example of a money vibe"
+              className={cs(styles.diagram_img)}
+              width={DIAGRAM_FINAL_WIDTH * dimScale}
+              height={DIAGRAM_FINAL_HEIGHT * dimScale}
+              style={{
+                zIndex: 15,
+                // position: "absolute",
+                opacity: selectedDiagram === "money" ? 1 : 0,
+                transition: "opacity .3s ease-in-out",
+                // top: 0,
+                position: "absolute",
+              }}
+            />
             <div style={{ height: DIAGRAM_FINAL_HEIGHT }} />
             <div
               className={styles.row}
@@ -194,27 +247,27 @@ const DiagramSection = () => {
               </button>
               <div style={{ width: 0 }} />
               <button
-                onClick={() => setSelectedDiagram("none")}
+                onClick={() => setSelectedDiagram("news")}
                 className={cs(
                   styles.hoverbutton,
-                  selectedDiagram === "money" && styles.active
+                  selectedDiagram === "news" && styles.active
                 )}
               >
                 <span>News</span>
               </button>
               <div style={{ width: 0 }} />
               <button
-                onClick={() => setSelectedDiagram("none")}
+                onClick={() => setSelectedDiagram("photos")}
                 className={cs(
                   styles.hoverbutton,
-                  selectedDiagram === "money" && styles.active
+                  selectedDiagram === "photos" && styles.active
                 )}
               >
                 <span>Photos</span>
               </button>
               <div style={{ width: 0 }} />
               <button
-                onClick={() => setSelectedDiagram("none")}
+                onClick={() => setSelectedDiagram("money")}
                 className={cs(
                   styles.hoverbutton,
                   selectedDiagram === "money" && styles.active

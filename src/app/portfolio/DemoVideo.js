@@ -25,7 +25,7 @@ export const DemoVideo = () => {
         ref={videoRef}
         controls={false}
         poster="/vibe-based-computing/demoplaceholder.png"
-        src="/vibe-based-computing/rhizomedemo.mp4#t=1.5"
+        src="/vibe-based-computing/vibevideo.mp4"
       />
     </VisibilitySensor>
   );

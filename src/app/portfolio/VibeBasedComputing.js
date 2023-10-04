@@ -8,6 +8,7 @@ import DiagramSection from "./DiagramSection";
 import ScreenshotSection from "./ScreenshotSection";
 import styles from "./portfolio.module.css";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 const playfairBold = Playfair_Display({
   weight: "600",
@@ -42,23 +43,33 @@ const VibeBasedComputing = ({
         <div className={styles.row__text}>
           <p>
             LLMs break down the traditional boundaries between content on the
-            web. They translate fluidly between different forms of media: text
-            becomes image, image becomes music, music becomes video, and video
-            transmute back to text. This capability provides the foundation for
-            the Vibe as a computational object.
+            web. They translate fluidly between different mediums: text becomes
+            image, image becomes music, music becomes video, and video transmute
+            back to text. This capability provides the foundation for the Vibe
+            as a computational object.
           </p>
-          <p></p>
           <p>
-            As we apply Vibes to more complex arrangements of models, powerful
-            use cases begin to emerge. For example, consider a series of
-            language models each fed the same Vibe as an input where the first
-            model generates a color scheme, the next generates a typography
-            pairing, and so on for all of the components of a design system.
-            This constitutes an AI-powered theming engine that a user composes a
-            Vibe with to generate the design for a personalized web page. This
-            technique can be generalized to other forms of artistic creation: a
-            playlist generated from an Instagram account, a movie generated from
-            a moodboard. The potential is limitless.
+            The most straightforward app built on top of a Vibe is an image
+            studio that given a selected Vibe applies techniques like{" "}
+            <Link href="https://huggingface.co/blog/lora" target="_blank">
+              LoRA
+            </Link>{" "}
+            to extract the underlying style of images in that Vibe. This would
+            let users generate or remix images in different aesthetics depending
+            on the Vibe that is plugged in to the studio. But as we apply Vibes
+            to more complex arrangements of models, use cases emerge beyond
+            simple content creation.
+          </p>
+          <p>
+            For example, consider a series of language models each fed the same
+            Vibe as an input where the first model generates a color scheme, the
+            next generates a typography pairing, and so on for all of the
+            components of a design system. This constitutes an AI-powered
+            theming engine that a user composes a Vibe with to generate the
+            design for a personalized web page. Now imagine how this technique
+            can be generalized to other forms of artistic creation: a playlist
+            generated from an Instagram account, a movie generated from a
+            moodboard. The potential is limitless.
           </p>
           <p></p>
         </div>
@@ -96,7 +107,7 @@ const VibeBasedComputing = ({
       <div style={{ height: 80 }} />
       <div className={styles.row}>
         <div className={styles.row__text}>
-          <h4>Aligned Algorithms</h4>
+          <h4>Tangible Algorithms</h4>
           <p>
             Vibe-based computing is a new paradigm for the internet that breaks
             apart the homogenous acknowledges the multiplicities inherent in how
@@ -193,7 +204,7 @@ const VibeBasedComputing = ({
         height={147 * 1.1}
       />
       <div style={{ height: 72 }} /> */}
-      <h3 style={{}}>A New Way of Being, Online</h3>
+      <h3 style={{}}>Towards a Liberatory Internet</h3>
       <div style={{ height: 2 }} />
       <div className={styles.row}>
         <div className={styles.row__text}>
@@ -214,6 +225,7 @@ const VibeBasedComputing = ({
             creativiy is owned by the user, and where the inherent multiplicty
             of being is reified in cyberspace.
           </p>
+          <p>...a new way of being, online.</p>
         </div>
         <div style={{ width: 24 }} />
         <div className={styles.row__quote}>

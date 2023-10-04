@@ -21,8 +21,8 @@ const ScreenshotSection = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const isMusicVisible = scrollY > musicTop - 500;
-  const SECTION_HEIGHT = 1450;
+  const isMusicVisible = scrollY > musicTop - 200;
+  const SECTION_HEIGHT = 1650;
 
   return (
     <>
@@ -49,22 +49,29 @@ const ScreenshotSection = () => {
               A People Vibe UI
             </h4>
             <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
+              A people vibe UI would solve the social context collapse that
+              plagues all messaging apps. By delineating the distinct Vibes that
+              make up your contacts list, the user can be in control of which
+              social universe they want to be engaging with at any given time.
+              People Vibes are defined in conjunction between the user manually
+              categorizing different contacts and the AI inferring different
+              meta-properties to understand their relationships.
             </p>
+            {/* <p>
+              While the different people Vibes start out being defined by the
+              user, as the AI infers different meta-properties on each
+              relationship it can begin to automatically categorize new contacts
+              into the appropriate Vibe.
+            </p> */}
             <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
-            </p>
-            <p>
-              Vibe-based computing is a new paradigm for the internet that
-              breaks apart the homogenous acknowledges the multiplicities
-              inherent in how we interact with the internet. My goal with
-              Vibe-based computing is to imagine a new internet
+              The UI can call forth different Vibes depending on the social
+              context the user is currently in. On 10am on a Monday the system
+              might automatically set itself to the “Coworkers” Vibe, while at
+              6pm on Friday it changes to “Homies”. Or if you're mad at all of
+              your friends, the AI might suggest a new “Enemies” Vibe to group
+              them in. Instead of the computer being ignorant to the deeply
+              personal application it is being used in, Vibes enable it to build
+              an emotional awareness that drives the User Experience.
             </p>
           </div>
           <div
