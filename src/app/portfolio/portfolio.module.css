@@ -83,10 +83,10 @@
 .content {
   display: flex;
   flex-direction: column;
-  width: 83vw;
+  /* width: 83vw; */
   padding-top: 12px;
   padding-right: 5vw;
-  padding-left: 12vw;
+  padding-left: 140px;
   padding-bottom: 100px;
 }
 

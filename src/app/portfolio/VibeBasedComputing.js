@@ -37,7 +37,7 @@ const VibeBasedComputing = ({
   return (
     <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
       <div style={{ height: 100 }} />
-      <div style={{ paddingLeft: "4vw" }}>
+      <div style={{ paddingLeft: 90 }}>
         <h5>CASE 1</h5>
         <h1>Vibe-based Computing</h1>
         <div style={{ height: 40 }} />

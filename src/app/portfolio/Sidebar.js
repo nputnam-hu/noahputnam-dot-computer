@@ -27,8 +27,8 @@ const Sidebar = ({ dark = false }) => {
         paddingLeft: 14,
         top: 0,
         display: "block",
-        height: 250,
-        width: 219,
+        height: 230,
+        width: 212,
         borderBottomRightRadius: 12,
         border: "0 solid rgba(0, 0, 0, 0.10)",
         borderRightWidth: 2,
@@ -76,7 +76,7 @@ const Sidebar = ({ dark = false }) => {
         >
           PORTFOLIO
         </h4>
-        <div style={{ height: 12 }} />
+        <div style={{ height: 14 }} />
         <Link
           className={cs(
             styles.sidebar__link,
