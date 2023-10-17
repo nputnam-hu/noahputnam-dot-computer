@@ -106,7 +106,7 @@ const Topbar = ({ dark, isHome = false }) => {
               </h2>
             </>
           )}
-          <Select />
+          {/* <Select /> */}
         </Link>
       </div>
       {!isHome && from === "home" && (
