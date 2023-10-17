@@ -21,7 +21,7 @@ const Select = () => {
   );
 };
 
-const Topbar = ({ dark, isHome = false }) => {
+const Topbar = ({ dark, isHome = false, children }) => {
   const { from } = useParams();
   const prevbg = useRef(
     typeof window !== "undefined" && localStorage.getItem("prevbg")
@@ -40,10 +40,11 @@ const Topbar = ({ dark, isHome = false }) => {
         )}
         style={{
           ...{
-            paddingTop: 16,
-            paddingBottom: 16,
+            height: 64,
+            marginTop: 12,
             paddingLeft: 14,
             display: "flex",
+            alignItems: "center",
           },
           ...(!isHome
             ? {
@@ -86,7 +87,7 @@ const Topbar = ({ dark, isHome = false }) => {
             }}
             className={isHome ? "animate_smaller_orb" : "animate_bigger_orb"}
           />
-          {isHome && (
+          {true && (
             <>
               <div
                 style={{
@@ -106,8 +107,9 @@ const Topbar = ({ dark, isHome = false }) => {
               </h2>
             </>
           )}
-          {/* <Select /> */}
         </Link>
+        <div style={{ width: 16 }} />
+        {/* {children} */}
       </div>
       {!isHome && from === "home" && (
         <div className={cs("bordercover", dark && "dark")} />

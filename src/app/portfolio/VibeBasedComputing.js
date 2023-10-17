@@ -36,7 +36,7 @@ const VibeBasedComputing = ({
 
   return (
     <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
-      <div style={{ height: 30 }} />
+      <div style={{ height: 36 }} />
       <h5>CASE 1</h5>
       <h1>Vibe-based Computing</h1>
       <div style={{ height: 40 }} />
@@ -72,7 +72,7 @@ const VibeBasedComputing = ({
         </span>
         .
       </p>
-      <div style={{ height: 120 }} />
+      <div style={{ height: 100 }} />
       {introSection}
       <div style={{ height: 100 }} />
       <Image
@@ -249,17 +249,6 @@ const VibeBasedComputing = ({
         <p>The long term deliverable is</p>
       </div>
       <div style={{ height: 24 }} />
-      <Image
-        src="/vibe-based-computing/rnetdark.png"
-        style={{
-          margin: "auto",
-          filter: "drop-shadow(8px 12px 7px rgba(0,0,0,0.3))",
-          borderRadius: 4,
-        }}
-        width={700 * 1.5}
-        height={452 * 1.5}
-        alt="rNet: the open protocol for Vibe-based Computing"
-      />
     </div>
   );
 };

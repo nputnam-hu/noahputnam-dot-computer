@@ -8,13 +8,13 @@ export default function Home() {
     <main
       className={styles.main}
       style={{
-        height: "calc(100vh - 48px)",
+        height: "100vh",
       }}
     >
       <Topbar isHome />
       <div
         style={{
-          marginTop: -5,
+          marginTop: -4,
           paddingBottom: 8,
           paddingLeft: 18,
           zIndex: 100000,
@@ -143,7 +143,7 @@ export default function Home() {
           fontStyle: "italic",
           fontSize: 18,
           marginTop: "auto",
-          marginBottom: 24,
+          marginBottom: 36,
           marginLeft: "auto",
           marginRight: 24,
         }}

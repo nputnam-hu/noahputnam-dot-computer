@@ -6,8 +6,8 @@ const OntologySection = () => {
     <div>
       <div className={styles.fulltext}>
         <p>
-          In order to implement The Vibe object, we must build a model of the
-          web flexible enough to describe all of the activity and creation that
+          In order to implement The Vibe, we must build a model of the web
+          flexible enough to describe all of the activity and creation that
           happens within it. To accomplish this, Vibe-based Computing defines a
           general ontology of online media:
         </p>

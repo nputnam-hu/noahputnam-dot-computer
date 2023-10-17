@@ -31,7 +31,7 @@ const IntroSection = () => {
         <div style={{ width: 36 }} />
         <DemoVideo />
       </div>
-      <div style={{ height: 140 }} />
+      <div style={{ height: 120 }} />
       <div className={styles.row} style={{ marginTop: -4 }}>
         <div className={styles.row__text}>
           <h2>From Platforms to Vibes</h2>
@@ -64,15 +64,15 @@ const IntroSection = () => {
       </div>
       <div className={styles.fulltext}>
         <p style={{ fontSize: 26.5 }}>
-          Generative AI alters the physics of media on the internet. While
-          before an image or a text post could only take on meaning in the web
-          when crossreferenced against platform data on how thousands of users
-          interacted with it, now generatives models are able to build these
-          kinds of semantic connections directly from the piece of media itself.
-          This means users can search, discover, and transform digital media
-          outside the confines of any walled garden. Enter The Vibe as a media
-          primitive for the post-platform web, definining a standardized
-          interface between media curated by users and Generative AI.
+          Generative AI alters the physics of content on the internet. While
+          before an image or a text post could only be understood by computers
+          when it was crossreferenced against how thousands of users interacted
+          with it, now generatives models are able to build these kinds of
+          semantic connections directly from the piece of media itself. This
+          means users can search, discover, and transform digital media outside
+          the confines of any walled garden. Enter The Vibe as a media primitive
+          for the post-platform web, definining a standardized interface between
+          media curated by users and Generative AI.
         </p>
       </div>
     </>
