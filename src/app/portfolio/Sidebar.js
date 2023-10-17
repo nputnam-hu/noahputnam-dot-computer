@@ -4,6 +4,7 @@ import Link from "next/link";
 import cs from "classnames";
 import styles from "./portfolio.module.css";
 import { useRef } from "react";
+import Image from "next/image";
 
 const Sidebar = ({ dark = false }) => {
   const prevbg = useRef(
@@ -14,46 +15,68 @@ const Sidebar = ({ dark = false }) => {
   const pathname = usePathname();
 
   return (
-    <>
-      <h4
+    <div
+      className={cs(
+        styles.sidebar,
+        // styles.sticky,
+        dark && (wasLightmode ? "animatedDarkBg" : styles.dark),
+        !dark && wasDarkmode && "animatedWhiteBg"
+      )}
+      style={{
+        paddingTop: 20,
+        paddingLeft: 14,
+        top: 0,
+        display: "block",
+        height: 250,
+        width: 219,
+        borderBottomRightRadius: 12,
+        border: "0 solid rgba(0, 0, 0, 0.10)",
+        borderRightWidth: 2,
+        borderBottomWidth: 2,
+        background: "rgba(250, 249, 246, 0.70)",
+        backdropFilter: "blur(40px)",
+        zIndex: 3,
+      }}
+    >
+      <Link
+        href="/"
+        className={styles.row}
         style={{
-          position: "absolute",
-          left: 18,
-          top: 16,
-          fontSize: 18,
-          fontWeight: "800",
-          fontFamily: "HelveticaNeue-Medium",
-          color: dark ? "#ddd" : "#1d1d1d",
-          zIndex: 1,
+          alignItems: "center",
+          zIndex: 10,
+          padding: 4,
+          textDecoration: "none",
+          fontWeight: "300",
+          // background: "red",
+          marginRight: "auto",
         }}
       >
-        PORTFOLIO
-      </h4>
-      {/* <div style={{height: 20}} /> */}
-      <div
-        className={cs(
-          styles.sidebar,
-          styles.sticky,
-          dark && (wasLightmode ? "animatedDarkBg" : styles.dark),
-          !dark && wasDarkmode && "animatedWhiteBg"
-        )}
-        style={{
-          paddingTop: 36,
-          top: -16,
-          display: "block",
-          // height: "calc(100vh - 200px)",
-        }}
-      >
-        {/* <div style={{ height: 8 }} /> */}
-        {/* <div
-            style={{
-              height: 1.75,
-              background: "#222",
-              width: 89,
-              marginTop: -1.5,
-            }}
-          /> */}
-        <div style={{ height: 6 }} />
+        <Image
+          src="/nporb.png"
+          alt="Icon of an orb"
+          width={36}
+          height={36}
+          priority
+          loading="eager"
+          style={{
+            borderRadius: 32,
+          }}
+        />
+      </Link>
+      <div style={{ padding: "0 4px" }}>
+        <h4
+          style={{
+            fontSize: 20,
+            fontWeight: "800",
+            fontFamily: "HelveticaNeue-Medium",
+            color: dark ? "#ddd" : "#1d1d1d",
+            zIndex: 1,
+            marginTop: 8,
+          }}
+        >
+          PORTFOLIO
+        </h4>
+        <div style={{ height: 12 }} />
         <Link
           className={cs(
             styles.sidebar__link,
@@ -103,7 +126,7 @@ const Sidebar = ({ dark = false }) => {
           <u>Nexus Lost</u>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 

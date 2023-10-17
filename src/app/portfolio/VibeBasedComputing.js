@@ -36,44 +36,46 @@ const VibeBasedComputing = ({
 
   return (
     <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
-      <div style={{ height: 36 }} />
-      <h5>CASE 1</h5>
-      <h1>Vibe-based Computing</h1>
-      <div style={{ height: 40 }} />
-      <Image
-        src={VibeHeader}
-        alt="A vibe computer"
-        className={cs(styles.vibeheader_img, "animateOpacity")}
-        width={900}
-        height={362}
-        placeholder="blur"
-        priority
-      />
-      <div style={{ height: 40 }} />
-      <p
-        style={{
-          fontSize: 31,
-          marginBottom: 8,
-          width: 800,
-          fontFamily: "HelveticaNeue-Light",
-          lineHeight: 1.45,
-        }}
-      >
-        Vibe-based Computing is an attempt to reimagine what the internet could
-        be by constructing a new primitive for online media,{" "}
-        <span
+      <div style={{ height: 100 }} />
+      <div style={{ paddingLeft: "4vw" }}>
+        <h5>CASE 1</h5>
+        <h1>Vibe-based Computing</h1>
+        <div style={{ height: 40 }} />
+        <Image
+          src={VibeHeader}
+          alt="A vibe computer"
+          className={cs(styles.vibeheader_img, "animateOpacity")}
+          width={900}
+          height={362}
+          placeholder="blur"
+          priority
+        />
+        <div style={{ height: 40 }} />
+        <p
           style={{
-            // fontSize: 30,
-            fontFamily: "HelveticaNeue",
-            // color: "#7d59ff",
+            fontSize: 31,
+            marginBottom: 8,
+            width: 800,
+            fontFamily: "HelveticaNeue-Light",
+            lineHeight: 1.45,
           }}
         >
-          The Vibe
-        </span>
-        .
-      </p>
-      <div style={{ height: 100 }} />
-      {introSection}
+          Vibe-based Computing is an attempt to reimagine what the internet
+          could be by constructing a new primitive for online media,{" "}
+          <span
+            style={{
+              // fontSize: 30,
+              fontFamily: "HelveticaNeue",
+              // color: "#7d59ff",
+            }}
+          >
+            The Vibe
+          </span>
+          .
+        </p>
+        <div style={{ height: 100 }} />
+        {introSection}
+      </div>
       <div style={{ height: 100 }} />
       <Image
         alt="From walled gardens to vibes"

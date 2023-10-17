@@ -15,9 +15,6 @@ export const metadata = {
 export default function Portfolio() {
   return (
     <main className={styles.main}>
-      <Topbar>
-        <TopBarContent />
-      </Topbar>
       <div
         className={styles.row}
         style={{ position: "absolute", display: "relative" }}
