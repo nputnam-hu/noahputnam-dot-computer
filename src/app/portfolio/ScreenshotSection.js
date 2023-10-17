@@ -50,13 +50,16 @@ const ScreenshotSection = () => {
               A People Vibe UI
             </h4>
             <p>
-              A People Vibe UI would solve the social context collapse that
-              plagues all messaging apps. By delineating the distinct Vibes that
-              make up your contacts list, the user can be in control of which
-              social universe they want to be engaging with at any given time.
-              People Vibes are defined in conjunction between the user manually
-              categorizing different contacts and the AI inferring different
-              meta-properties to understand their relationships.
+              People Vibes organize the user&rsquo;s relationships through a
+              combination of manually categorizing contacts and the AI inferring
+              meta-properties like tone and formality from each contact&rsquo;s
+              conversation history. This allows for a chat UI that avoids the
+              social context collapse that plagues every existing messaging app.
+              The user no longer has to worry about seeing an annoying message
+              from their boss on Friday night or juggling texts between their
+              boyfriend and their grandma. In the Vibe paradigm, they are always
+              in control of which social universe they want to engage with at
+              any given moment.
             </p>
             {/* <p>
               While the different people Vibes start out being defined by the
@@ -65,14 +68,14 @@ const ScreenshotSection = () => {
               into the appropriate Vibe.
             </p> */}
             <p>
-              The UI can call forth different Vibes depending on the social
-              context the user is currently in. On 10am on a Monday the system
+              The UI can call forth different Vibes depending on the temporal
+              and emotional context of the user. On 10am on a Monday the system
               might automatically set itself to the “Coworkers” Vibe, while at
-              6pm on Friday it changes to “Homies”. Or if you're mad at all of
+              6pm on Friday it changes to “Squad”. Or if you're mad at all of
               your friends, the AI might suggest a new “Enemies” Vibe to group
               them in. Instead of the computer being ignorant to the deeply
               personal circumstances it is being used in, Vibes enable it to
-              build an emotional awareness that drives the User Experience.
+              build an affective awareness that drives the user experience.
             </p>
           </div>
           <div
@@ -91,36 +94,33 @@ const ScreenshotSection = () => {
               A Music Vibe UI
             </h4>
             <p>
-              In a Music Vibe UI the top level interface moves from the library
-              of playlists and albums to the queue of songs. Every Vibe
-              generates a queue of song media objects that get recommended to
-              the user, but unlike a playlist the Music Vibe is a living object
-              that responds to user behavior. For example, if the user skips
-              through songs from a certain artist, the Vibe will skip over songs
-              from that artist in future recommendations.
+              In a Vibe-powered music app, the top level interface moves from
+              the library of playlists to the queue of songs. Music Vibes at
+              first glance look similar to the "Radio" feature on Spotify, apply
+              to create an algorithmacally generated list of songs derived from
+              a selected playlist/artist/album, but unlike a playlist the Vibe
+              is a living object that can change its form in response to the
+              user.
             </p>
             <p>
-              {" "}
-              The app surfaces different artists, albums, and songs to the right
-              of the queue which operates like a{" "}
+              The Music Vibe begins with songs provided by the user but evolves
+              its queue continuously with their interaction. If the user skips
+              through songs from a certain artist, the Vibe will exclude that
+              artist from future recommendations. If they are playing the same
+              couple songs on repeat, the Vibe may stop pulling new song objects
+              altogether and just loop those songs in its queue. The UI surfaces
+              different recommended artists, albums, and songs to the right of
+              the queue, which operates like a{" "}
               <Link
                 href="https://en.wikipedia.org/wiki/Conveyor_belt_sushi"
                 target="_blank"
               >
                 sushi converyor belt
-              </Link>{" "}
-              where the user can guide the direction the Vibe takes by dragging
-              recommendations into it, allowing them to curate their listening
-              experience.
-            </p>
-            <p>
-              Again the UI here can use the temporal and emotional context of
-              the user to anticipate what Vibe best suits their current intent.
-              This also works across Vibes: when a user sets their People Vibe
-              to “Study Buddies”, the UI might ask if they want to queue up a
-              lo-fi beats Music Vibe to pair with it, while if they set it to
-              “Homies” on a Friday night it might suggest a club dance Music
-              Vibe.
+              </Link>
+              , letting the user pick recommendations off it and drag them into
+              the Vibe to shape its direction. The recommendations the user
+              selects in turn inform the new song Media Objects that get pulled
+              into the end of the queue.
             </p>
           </div>
         </div>
@@ -128,7 +128,7 @@ const ScreenshotSection = () => {
           style={{
             position: "absolute",
             height: SECTION_HEIGHT - 700,
-            left: 475 + 216 + 52,
+            left: 500 + 200 + 56,
           }}
         >
           <div className={styles.sticky} style={{ top: 80 }}>

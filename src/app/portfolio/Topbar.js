@@ -6,7 +6,22 @@ import styles from "./portfolio.module.css";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 
-const Topbar = ({ dark }) => {
+const Select = () => {
+  return (
+    <div>
+      <label for="cars">Choose a car:</label>
+
+      <select name="cars" id="cars">
+        <option value="volvo">Vibe-based Computing</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
+  );
+};
+
+const Topbar = ({ dark, isHome = false }) => {
   const { from } = useParams();
   const prevbg = useRef(
     typeof window !== "undefined" && localStorage.getItem("prevbg")
@@ -14,22 +29,31 @@ const Topbar = ({ dark }) => {
   const wasLightmode = prevbg === "light";
   const wasDarkmode = prevbg === "dark";
 
+  console.log({ isHome });
   return (
     <div>
       <div
         className={cs(
+          styles.row,
           dark && (wasLightmode ? "animatedDarkBg" : styles.dark),
           !dark && wasDarkmode && "animatedWhiteBg"
         )}
         style={{
-          paddingTop: 20,
-          paddingBottom: 12,
-          paddingLeft: 14,
-          // padding: "16px 20px 16px",
-          borderBottom: dark
-            ? "1px solid rgba(255,255,255,0.15)"
-            : "1px solid rgba(0,0,0,0.15)",
-          background: dark ? "#1a1a1a" : "white",
+          ...{
+            paddingTop: 16,
+            paddingBottom: 16,
+            paddingLeft: 14,
+            display: "flex",
+          },
+          ...(!isHome
+            ? {
+                // padding: "16px 20px 16px",
+                borderBottom: dark
+                  ? "1px solid rgba(255,255,255,0.15)"
+                  : "1px solid rgba(0,0,0,0.15)",
+                background: dark ? "#1a1a1a" : "white",
+              }
+            : {}),
         }}
       >
         <Link
@@ -46,36 +70,48 @@ const Topbar = ({ dark }) => {
             display: "inline-flex",
             textDecoration: "none",
             fontWeight: "300",
+            cursor: isHome ? "default" : "pointer",
           }}
+          disabled={isHome}
         >
           <Image
             src="/nporb.png"
             alt="Icon of an orb"
-            width={32}
-            height={32}
+            width={34}
+            height={34}
             priority
             loading="eager"
             style={{
               borderRadius: 32,
             }}
+            className={isHome ? "animate_smaller_orb" : "animate_bigger_orb"}
           />
-          <div style={{ width: 10 }} />
-          <h2
-            style={{
-              fontSize: 30,
-              fontFamily: "Times New Roman",
-              // fontWeight: 500,
-              margin: 0,
-              marginBottom: 1,
-              fontWeight: "300",
-              // color: "#111",
-            }}
-          >
-            noahputnam.computer
-          </h2>
+          {isHome && (
+            <>
+              <div
+                style={{
+                  width: 10,
+                }}
+              />
+              <h2
+                style={{
+                  fontSize: 30,
+                  fontFamily: "Times New Roman",
+                  margin: 0,
+                  marginBottom: 0.5,
+                  fontWeight: "300",
+                }}
+              >
+                noahputnam.computer
+              </h2>
+            </>
+          )}
+          <Select />
         </Link>
       </div>
-      {from === "home" && <div className={cs("bordercover", dark && "dark")} />}
+      {!isHome && from === "home" && (
+        <div className={cs("bordercover", dark && "dark")} />
+      )}
     </div>
   );
 };

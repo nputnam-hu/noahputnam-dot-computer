@@ -9,6 +9,7 @@ import ScreenshotSection from "./ScreenshotSection";
 import styles from "./portfolio.module.css";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import VibeHeader from "/public/vibe-based-computing/vibeheader.png";
 
 const playfairBold = Playfair_Display({
   weight: "600",
@@ -35,79 +36,65 @@ const VibeBasedComputing = ({
 
   return (
     <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
-      <div style={{ height: 72 }} />
-      {introSection}
-      <div style={{ height: 120 }} />
-      <h3>Omnidirectional Media Engine</h3>
-      <div className={styles.row}>
-        <div className={styles.row__text}>
-          <p>
-            LLMs break down the traditional boundaries between content on the
-            web. They translate fluidly between different mediums: text becomes
-            image, image becomes music, music becomes video, and video transmute
-            back to text. This capability provides the foundation for the Vibe
-            as a computational object.
-          </p>
-          <p>
-            The most straightforward app built on top of a Vibe is an image
-            studio that given a selected Vibe applies techniques like{" "}
-            <Link href="https://huggingface.co/blog/lora" target="_blank">
-              LoRA
-            </Link>{" "}
-            to extract the underlying style of images in that Vibe. This would
-            let users generate or remix images in different aesthetics depending
-            on the Vibe that is plugged in to the studio. But as we apply Vibes
-            to more complex arrangements of models, use cases emerge beyond
-            simple content creation.
-          </p>
-          <p>
-            For example, consider a series of language models each fed the same
-            Vibe as an input where the first model generates a color scheme, the
-            next generates a typography pairing, and so on for all of the
-            components of a design system. This constitutes an AI-powered
-            theming engine that a user composes a Vibe with to generate the
-            design for a personalized web page. Now imagine how this technique
-            can be generalized to other forms of artistic creation: a playlist
-            generated from an Instagram account, a movie generated from a
-            moodboard. The potential is limitless.
-          </p>
-          <p></p>
-        </div>
-        <div style={{ width: 44 }} />
-        <div className={styles.videowrapper}>
-          <DemoVideo />
-        </div>
-      </div>
-      <div style={{ height: 140 }} />
-      <h3>Dynamic Media Ontoloy</h3>
-      {ontologySection}
-      <div style={{ height: 80 }} />
-      <h3>Generative UI</h3>
-      <DiagramSection />
-      <div style={{ height: 140 }} />
-      <ScreenshotSection />
-      <div style={{ height: 256 }} />
-      <h3
+      <div style={{ height: 30 }} />
+      <h5>CASE 1</h5>
+      <h1>Vibe-based Computing</h1>
+      <div style={{ height: 40 }} />
+      <Image
+        src={VibeHeader}
+        alt="A vibe computer"
+        className={cs(styles.vibeheader_img, "animateOpacity")}
+        width={900}
+        height={362}
+        placeholder="blur"
+        priority
+      />
+      <div style={{ height: 40 }} />
+      <p
         style={{
-          fontSize: 40,
-          marginLeft: -2,
+          fontSize: 31,
+          marginBottom: 8,
+          width: 800,
+          fontFamily: "HelveticaNeue-Light",
+          lineHeight: 1.45,
         }}
       >
-        The Paradigm Shift
-      </h3>
-      <div style={{ height: 36 }} />
+        Vibe-based Computing is an attempt to reimagine what the internet could
+        be by constructing a new primitive for online media,{" "}
+        <span
+          style={{
+            // fontSize: 30,
+            fontFamily: "HelveticaNeue",
+            // color: "#7d59ff",
+          }}
+        >
+          The Vibe
+        </span>
+        .
+      </p>
+      <div style={{ height: 120 }} />
+      {introSection}
+      <div style={{ height: 100 }} />
       <Image
         alt="From walled gardens to vibes"
         src="/vibe-based-computing/paradigmshift.png"
         // style={{ marginLeft: `calc(50vw - 375px - 72px)` }}
         style={{ margin: "auto" }}
-        width={750 * 1.1}
-        height={147 * 1.1}
-      />
-      <div style={{ height: 80 }} />
+        width={750 * 1.0}
+        height={147 * 1.0}
+      />{" "}
+      <div style={{ height: 130 }} />
+      <h3>Dynamic Media Ontoloy</h3>
+      {ontologySection}
+      <div style={{ height: 64 }} />
+      <h3>Generative UI</h3>
+      <DiagramSection />
+      <div style={{ height: 140 }} />
+      <ScreenshotSection />
+      <div style={{ height: 240 }} />
       <div className={styles.row}>
         <div className={styles.row__text}>
-          <h4>Tangible Algorithms</h4>
+          <h3>Tangible Algorithms</h3>
           <p>
             Vibe-based computing is a new paradigm for the internet that breaks
             apart the homogenous acknowledges the multiplicities inherent in how
@@ -154,57 +141,8 @@ const VibeBasedComputing = ({
           />
         </div>
       </div>
-      <div style={{ height: 72 }} />
-      <div className={styles.row}>
-        <div className={styles.row__text}>
-          <h4>Personalized, Private, Permissionless.</h4>
-          <p>
-            Vibe-based computing is a new paradigm for the internet that breaks
-            apart the homogenous acknowledges the multiplicities inherent in how
-            we interact with the internet. My goal with Vibe-based computing is
-            to imagine a new internet
-          </p>
-          <p>
-            Vibe-based computing is a new paradigm for the internet that breaks
-            apart the homogenous acknowledges the multiplicities inherent in how
-            we interact with the internet. My goal with Vibe-based computing is
-            to imagine a new internet
-          </p>
-          <p>
-            Vibe-based computing is a new paradigm for the internet that breaks
-            apart the homogenous acknowledges the multiplicities inherent in how
-            we interact with the internet. My goal with Vibe-based computing is
-            to imagine a new internet
-          </p>
-        </div>
-        <div style={{ width: 56 }} />
-        <Image
-          src="/vibe-based-computing/vibeperson.png"
-          alt="Algorithm based off of different vibes user selects and their interaction with content"
-          width={550}
-          height={277}
-          style={{
-            marginRight: "auto",
-            marginTop: "auto",
-            marginBottom: "auto",
-          }}
-        />
-      </div>
-      <div style={{ height: 80 }} />
-      {/* <Image
-        alt="From walled gardens to vibes"
-        src="/vibe-based-computing/paradigmshift.png"
-        // style={{ marginLeft: `calc(50vw - 375px - 72px)` }}
-        style={{
-          margin: "auto",
-          // marginRight: "auto",
-          paddingRight: "calc(210px - 7vw)",
-        }}
-        width={750 * 1.1}
-        height={147 * 1.1}
-      />
-      <div style={{ height: 72 }} /> */}
-      <h3 style={{}}>Towards a Liberatory Internet</h3>
+      <div style={{ height: 120 }} />
+      <h2>Towards a Liberatory Internet</h2>
       <div style={{ height: 2 }} />
       <div className={styles.row}>
         <div className={styles.row__text}>
@@ -264,28 +202,64 @@ const VibeBasedComputing = ({
         }}
       />
       <div style={{ height: 40 }} />
-      <p style={{ fontFamily: "HelveticaNeue-Medium" }}>
+      <h2 style={{ fontFamily: "HelveticaNeue-Medium", color: "black" }}>
         Current State of Development
-      </p>
+      </h2>
+      <div style={{ height: 4 }} />
       <div className={styles.fulltext}>
         <p>
-          At it&#8217;s most basic, The Vibe primitive is an object that can
-          hold any number and any kind of digital media. People can import any
-          account they have on a platform—Tik Tok, Instagram, Twitter, etc.—into
-          a Vibe they own, or they can manually create one by uploading
-          different pieces of media one by one. This collection of media becomes
-          a standardized interface for language models to read in, understand,
-          and transform their content.
+          To date most of my work on Vibe-based Computing has been at the
+          conceptual level in trying to explore the possiblities of the Vibe
+          inteface from an Human-Computer Interaction lens. While there is
+          plenty of work left to do there, the next phase of the project I have
+          been working on lately is creating a working prototype of a Vibe-based
+          Computing system that can demonstrate a proof of concept for the idea
+          and serve as a foundation for a fully developed framework to release
+          in the future.
         </p>
         <p>
-          But at scale, The Vibe has potential to fundamentally redefine the
-          relationship we have with the internet. Instead of your online
-          identity being splintered across an array of walled gardens designed
-          to extract maximum profit for you, The Vibe creates a new ecology
-          where creativiy is owned by the user, and where the inherent
-          multiplicty of being is reified in cyberspace.
+          To this end, there are 3 major research areas I have been pursuing:
         </p>
+        <p>1. Multi-modal language models</p>
+        <p>2. Category theory as an ontological framework</p>
+        <p>3. Privacy and data model</p>
+        <div style={{ height: 12 }} />
+        <h4
+          style={{
+            fontFamily: "HelveticaNeue-Medium",
+            color: "black",
+            // margin: 0,
+            fontSize: 24,
+          }}
+        >
+          Target Demo
+        </h4>
+        <p>The target demo is</p>
+        <div style={{ height: 12 }} />
+        <h4
+          style={{
+            fontFamily: "HelveticaNeue-Medium",
+            color: "black",
+            marginBottom: 4,
+            fontSize: 24,
+          }}
+        >
+          Long Term Deliverable
+        </h4>
+        <p>The long term deliverable is</p>
       </div>
+      <div style={{ height: 24 }} />
+      <Image
+        src="/vibe-based-computing/rnetdark.png"
+        style={{
+          margin: "auto",
+          filter: "drop-shadow(8px 12px 7px rgba(0,0,0,0.3))",
+          borderRadius: 4,
+        }}
+        width={700 * 1.5}
+        height={452 * 1.5}
+        alt="rNet: the open protocol for Vibe-based Computing"
+      />
     </div>
   );
 };

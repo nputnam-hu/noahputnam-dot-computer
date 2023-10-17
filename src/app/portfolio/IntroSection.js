@@ -1,119 +1,79 @@
-import Image from "next/image";
-import cs from "classnames";
-import { Playfair_Display } from "next/font/google";
-
-import VibeHeader from "/public/vibe-based-computing/vibeheader.png";
+"use client";
 import styles from "./portfolio.module.css";
-
-const playfairBold = Playfair_Display({
-  weight: "600",
-  subsets: ["latin"],
-});
-const playfairMed = Playfair_Display({
-  weight: "400",
-  subsets: ["latin"],
-});
+import DemoVideo from "./DemoVideo";
+import Image from "next/image";
 
 const IntroSection = () => {
   return (
     <>
-      <h5>CASE 1</h5>
-      <h2>Vibe-based Computing</h2>
-      <div style={{ height: 48 }} />
-      <Image
-        src={VibeHeader}
-        alt="A vibe computer"
-        className={cs(styles.vibeheader_img, "animateOpacity")}
-        width={900}
-        height={376}
-        placeholder="blur"
-        priority
-      />
-      <div style={{ height: 36 }} />
-      <div className={styles.fulltext} style={{}}>
-        <p style={{ fontSize: 24, lineHeight: 1.35 }}>
-          <span
-            style={{
-              // color: "#B744FE",
-              fontFamily: "HelveticaNeue-Medium",
-              // fontStyle: "italic",
-            }}
-          >
-            Vibe-based Computing
-          </span>{" "}
-          is an attempt to reimagine what the internet <br />
-          can be by constructing a new primitive for online media,{" "}
-          <span
-            style={{
-              // color: "#B744FE",
-              fontFamily: "HelveticaNeue",
-              // fontStyle: "italic",
-              fontWeight: 400,
-            }}
-          >
-            “The Vibe”
-          </span>
-          .
-        </p>
-        <p style={{ fontSize: 24, lineHeight: 1.3 }}>
-          Vibes are everywhere online. Most of the platforms we spend our time
-          on are at their core about vibe curation: Pinterest boards, Instagram
-          accounts, Spotify playlists, etc. rest on the idea of a unifying mood
-          or theme between their content. The language of vibes has proliferated
-          throughout culture alongside the rise of the internet. Unlike the
-          linear television episode or fixed music album, vibes match the pace
-          and tenor of the web: continuous, social, ever-evolving.
-        </p>
-        <p style={{ fontSize: 24 }}>
-          But with the rise of large language models (LLMs), the idea of a vibe
-          itself can now be condensed into a representation in data, as a
-          permutation of weights within a language model’s latent space. LLMs
-          operate on vibes, fine-tuning on rows of data to calculate where they
-          cluster in concept-space, mapping the essence of a text prompt to its
-          corresponding manifestation as an image and vice versa. Vibe-based
-          Computing seeks to make this process legible to the user by
-          introducing The Vibe as an organizing metaphor for people to
-          understand and interact with these new models.
-        </p>
-      </div>
-      <div style={{ height: 60 }} />
-      <h3>A New Interface for AI</h3>
       <div className={styles.row}>
+        <div className={styles.col}>
+          <h2>A New Way of Being, Online</h2>
+          <div className={styles.row__text}>
+            <p style={{ fontSize: 26.5, marginBottom: 8 }}>
+              Vibes are everywhere online. Their form uniquely matches the pace
+              and tenor of the web: continuous, social, ever-evolving. But with
+              the advent of Generative AI, vibes can take on new meaning in
+              cyberspace.
+            </p>
+            <p style={{ fontSize: 26.5 }}>
+              The way generative models intuitively work is by “finding the
+              vibe” of media they are prompted on, and translating it into the
+              generated media they output. This metaphor lays the foundation for
+              The Vibe as a new UI object and language that opens up unexplored
+              territory for developers to build on top of these models.
+              Vibe-based Computing builds on these insights to develop a novel
+              mode of Human-Computer Interaction between internet users and AI,
+              with The Vibe as its central primitive.
+            </p>
+          </div>
+        </div>
+        <div style={{ width: 36 }} />
+        <DemoVideo />
+      </div>
+      <div style={{ height: 140 }} />
+      <div className={styles.row} style={{ marginTop: -4 }}>
         <div className={styles.row__text}>
-          <p>
+          <h2>From Platforms to Vibes</h2>
+          <p style={{ fontSize: 26.5, marginBottom: 8 }}>
             At it&#8217;s most basic,{" "}
             <b>
               a Vibe is an object that can hold any number and any kind of
-              digital media
+              digital content
             </b>
-            . People can import accounts they have on outside platforms into a
-            Vibe, or they can manually create one by uploading different media
-            piece by piece. While this construction may seem trivial, a Vibe
-            animates into something far more powerful through its relationship
-            with generative AI models.
-          </p>
-          <p>
-            The disruptive potential of LLMs lies in their ability to create a
-            semantic understanding of media directly from its content. While
-            before an image or a text post only meant something to a computer
-            when crossreferenced against thousands of user interactions with it,
-            now LLMs can build these kinds of connections with a single API
-            call. This means users no longer have to share their data with
-            corporate-controlled platforms for it to be made useful to them.
-            Through The Vibe, a collection of media curated by a user becomes a
-            standardized interface for language models to read in, understand,
-            and transform its contents.
+            . You can have a Vibe of your vacation photos, or a Vibe of
+            longevity research papers, or a Vibe of all the tweets you've ever
+            posted. While a Vibe begins its life with the media uploaded by its
+            owner, it becomes richer in detail and sophistication over time as
+            it builds a deeper understanding of its contents in concert with AI.
           </p>
         </div>
         <div style={{ width: 36 }} />
         <Image
           alt="A group of vibes"
           src="/vibe-based-computing/vibegroup.png"
-          // style={{ marginLeft: `calc(50vw - 375px - 72px)` }}
-          style={{ marginRight: "auto", marginBottom: "auto", marginTop: 16 }}
-          width={400 * 1.2}
-          height={294 * 1.2}
+          style={{
+            marginRight: "auto",
+            marginBottom: "auto",
+            marginTop: 24,
+            // transform: ["rotate(-14deg)"],
+          }}
+          width={400 * 1.1}
+          height={294 * 1.1}
         />
+      </div>
+      <div className={styles.fulltext}>
+        <p style={{ fontSize: 26.5 }}>
+          Generative AI alters the physics of media on the internet. While
+          before an image or a text post could only take on meaning in the web
+          when crossreferenced against platform data on how thousands of users
+          interacted with it, now generatives models are able to build these
+          kinds of semantic connections directly from the piece of media itself.
+          This means users can search, discover, and transform digital media
+          outside the confines of any walled garden. Enter The Vibe as a media
+          primitive for the post-platform web, definining a standardized
+          interface between media curated by users and Generative AI.
+        </p>
       </div>
     </>
   );

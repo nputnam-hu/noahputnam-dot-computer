@@ -5,11 +5,16 @@ import Topbar from "../portfolio/Topbar";
 
 import BusinessCard from "/public/businesscard.png";
 
+export const metadata = {
+  title: "About | noahputnam.computer",
+  description: "A computer owned by Noah Putnam",
+};
+
 const About = () => {
   return (
     <main style={{}}>
       <Topbar />
-      <div style={{ paddingLeft: 21 }}>
+      <div style={{ paddingLeft: 18 }}>
         <h2
           style={{
             fontWeight: "400",

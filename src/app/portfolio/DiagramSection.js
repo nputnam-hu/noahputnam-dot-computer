@@ -48,7 +48,7 @@ const DiagramSection = () => {
   useEffect(() => {
     if (scrollY > triggerPoint) {
       if (selectedDiagram === "none") {
-        setSelectedDiagram("people");
+        setSelectedDiagram("music");
       }
     } else {
       setSelectedDiagram("none");
@@ -71,10 +71,10 @@ const DiagramSection = () => {
       <div className={styles.fulltext}>
         <p>
           Now that the Vibe has been formally defined, we can begin to explore
-          how the primtive can be applied to open up new possibilites in the
-          space of Human-Comptuer Interaction. For example, in the realm of
-          UI/UX, Vibes function as a new organizing principle for computer
-          applications which can be explored in a variety of domains.
+          how the primtive can open up novel modalities for Human-Comptuer
+          Interaction. When applied to UI/UX, Vibes function as a new organizing
+          principle for computer applications which can be explored in a variety
+          of domains.
         </p>
       </div>
       <div style={{ height: 24 }} />
@@ -99,7 +99,7 @@ const DiagramSection = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              marginRight: `calc(208px - 7vw + 64px)`,
+              marginRight: `calc(200px - 7vw + 64px)`,
             }}
           >
             <Image
@@ -224,18 +224,6 @@ const DiagramSection = () => {
                 justifyContent: "space-between",
               }}
             >
-              {/* <h4 style={{ textDecoration: "underline" }}>Media Landscape</h4>
-          <div style={{ height: 16 }} /> */}
-              <button
-                onClick={() => setSelectedDiagram("people")}
-                className={cs(
-                  styles.hoverbutton,
-                  selectedDiagram === "people" && styles.active
-                )}
-              >
-                <span>People</span>
-              </button>
-              <div style={{ width: 0 }} />
               <button
                 onClick={() => setSelectedDiagram("music")}
                 className={cs(
@@ -244,6 +232,16 @@ const DiagramSection = () => {
                 )}
               >
                 <span>Music</span>
+              </button>
+              <div style={{ width: 0 }} />
+              <button
+                onClick={() => setSelectedDiagram("people")}
+                className={cs(
+                  styles.hoverbutton,
+                  selectedDiagram === "people" && styles.active
+                )}
+              >
+                <span>People</span>
               </button>
               <div style={{ width: 0 }} />
               <button

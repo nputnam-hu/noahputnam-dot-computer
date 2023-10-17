@@ -59,7 +59,15 @@ body {
   background: #1a1a1a;
 }
 
-a {
-  /* color: inherit; */
-  /* text-decoration: none; */
+@keyframes orbbigger {
+  0% { transform: scale(1);}
+  100% { transform: scale(1.25);}
+}
+
+.animate_bigger_orb {
+  animation: orbbigger 0.1s linear forwards;
+}
+
+.animate_smaller_orb {
+  animation: orbbigger 0.1s linear reverse;
 }
