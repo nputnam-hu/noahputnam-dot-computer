@@ -9,8 +9,8 @@ export default function Home() {
       style={{
         height: "calc(100vh - 42px)",
         paddingTop: 24,
-        paddingBottom: 8,
         paddingLeft: 18,
+        paddingBottom: 8,
       }}
     >
       <div
@@ -24,7 +24,7 @@ export default function Home() {
           // paddingBottom: 16,
           // padding: "16px 20px 16px",
           // borderBottom: "1px solid rgba(0,0,0,0.2)",
-          marginBottom: 12,
+          marginBottom: 14,
           // background:
           //   "linear-gradient(to bottom, rgba(195,195,195,0.6), rgba(195,195,195,0.1))",
           zIndex: 10,
@@ -55,7 +55,6 @@ export default function Home() {
       </div>
       <div
         style={{
-          // marginTop: -2,
           paddingBottom: 8,
           zIndex: 100000,
         }}

@@ -128,7 +128,7 @@ const ScreenshotSection = () => {
           style={{
             position: "absolute",
             height: SECTION_HEIGHT - 700,
-            left: 570 + 140 + 32,
+            left: 550 + 150 + 36,
           }}
         >
           <div className={styles.sticky} style={{ top: 80 }}>

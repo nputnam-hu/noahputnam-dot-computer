@@ -12,19 +12,43 @@ export const metadata = {
 
 const About = () => {
   return (
-    <main style={{}}>
-      <Topbar />
-      <div style={{ paddingLeft: 18 }}>
+    <main style={{ paddingTop: 20, paddingLeft: 14 }}>
+      <div
+        className={styles.row}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          // marginBottom: 12,
+          zIndex: 10,
+        }}
+      >
+        <Link href="/" style={{ padding: 4, width: 36, height: 36 }}>
+          <Image
+            src="/nporb.png"
+            alt="Icon of an orb"
+            width={36}
+            height={36}
+            priority
+            loading="eager"
+          />
+        </Link>
+        <div style={{ width: 6 }} />
+      </div>
+      <div style={{ marginLeft: 4 }}>
+        <div style={{ height: 16 }} />
         <h2
           style={{
             fontWeight: "400",
             fontSize: 40,
             fontFamily: "HelveticaNeue-Medium",
-            margin: "16px 0 12px",
+            // margin: "16px 0 12px",
+            margin: 0,
           }}
         >
           About
         </h2>
+        <div style={{ height: 12 }} />
         <Image
           src={BusinessCard}
           placeholder="blur"
@@ -34,6 +58,7 @@ const About = () => {
           style={{
             // boxShadow: "4px 4px 4px 1px rgba(0, 0, 0, 0.2)",
             border: "1px solid rgba(0,0,0,0.2)",
+            margin: "auto",
           }}
           priority
         />

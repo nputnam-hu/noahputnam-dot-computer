@@ -36,8 +36,8 @@ const VibeBasedComputing = ({
 
   return (
     <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
-      <div style={{ height: 112 }} />
-      <div style={{ paddingLeft: 50 }}>
+      <div style={{ height: 108 }} />
+      <div style={{ paddingLeft: 52 }}>
         <h5>CASE 1</h5>
         <h1>Vibe-based Computing</h1>
         <div style={{ height: 44 }} />
@@ -52,12 +52,12 @@ const VibeBasedComputing = ({
         priority
       />
       <div style={{ height: 48 }} />
-      <div style={{ paddingLeft: 50 }}>
+      <div style={{ paddingLeft: 52 }}>
         <p
           style={{
             fontSize: 30,
             marginBottom: 8,
-            width: 800,
+            width: 820,
             fontFamily: "HelveticaNeue-Light",
             lineHeight: 1.45,
           }}
@@ -78,16 +78,16 @@ const VibeBasedComputing = ({
         <div style={{ height: 120 }} />
         {introSection}
       </div>
-      <div style={{ height: 120 }} />
+      <div style={{ height: 100 }} />
       <Image
         alt="From walled gardens to vibes"
         src="/vibe-based-computing/paradigmshift.png"
-        // style={{ marginLeft: `calc(50vw - 375px - 72px)` }}
-        style={{ margin: "auto" }}
+        style={{ marginLeft: `calc(-172px - 5vw + 412px)` }}
+        // style={{ margin: "auto" }}
         width={750 * 1.1}
         height={147 * 1.1}
       />{" "}
-      <div style={{ height: 120 }} />
+      <div style={{ height: 100 }} />
       <h3>Dynamic Media Ontoloy</h3>
       {ontologySection}
       <div style={{ height: 64 }} />

@@ -95,7 +95,7 @@ const OntologySection = () => {
             Objects.
           </p>
         </div>
-        <div style={{ width: 64 }} />
+        <div style={{ width: 44 }} />
 
         <div className={styles.col}>
           <Image

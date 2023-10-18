@@ -22,9 +22,9 @@ const IntroSection = () => {
               generated media they output. This metaphor lays the foundation for
               The Vibe as a new UI object and language that opens up unexplored
               territory for developers to build on top of these models.
-              Vibe-based Computing builds on these insights to develop a novel
-              mode of Human-Computer Interaction between internet users and AI,
-              with The Vibe as its central primitive.
+              Vibe-based Computing develops a novel mode of Human-Computer
+              Interaction between internet users and AI, with The Vibe as its
+              central primitive.
             </p>
           </div>
         </div>
@@ -66,13 +66,16 @@ const IntroSection = () => {
         <p style={{ fontSize: 26.5 }}>
           Generative AI alters the physics of content on the internet. While
           before an image or a text post could only be understood by computers
-          when it was crossreferenced against how thousands of users interacted
-          with it, now generatives models are able to build these kinds of
-          semantic connections directly from the piece of media itself. This
-          means users can search, discover, and transform digital media outside
-          the confines of any walled garden. Enter The Vibe as a media primitive
-          for the post-platform web, definining a standardized interface between
-          media curated by users and Generative AI.
+          when it was crossreferenced against how thousands of platform-specific
+          user interactions with it, now generatives models are able to build
+          these kinds of semantic connections directly from the media itself.
+          This means users can search, discover, and transform digital media
+          outside the confines of any walled garden.
+        </p>
+        <p style={{ fontSize: 26.5 }}>
+          Enter The Vibe as a media primitive for the post-platform web,
+          definining a standardized interface between media curated by users and
+          Generative AI.
         </p>
       </div>
     </>
