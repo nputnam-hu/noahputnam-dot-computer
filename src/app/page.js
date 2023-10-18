@@ -7,7 +7,7 @@ export default function Home() {
     <main
       className={styles.main}
       style={{
-        height: "100vh",
+        height: "calc(100vh - 42px)",
         paddingTop: 24,
         paddingBottom: 8,
         paddingLeft: 18,
@@ -24,7 +24,7 @@ export default function Home() {
           // paddingBottom: 16,
           // padding: "16px 20px 16px",
           // borderBottom: "1px solid rgba(0,0,0,0.2)",
-          marginBottom: 16,
+          marginBottom: 12,
           // background:
           //   "linear-gradient(to bottom, rgba(195,195,195,0.6), rgba(195,195,195,0.1))",
           zIndex: 10,
@@ -46,7 +46,7 @@ export default function Home() {
             fontFamily: "Times New Roman",
             fontWeight: 500,
             margin: 0,
-            marginBottom: 1,
+            marginBottom: 0,
             // color: "#111",
           }}
         >
@@ -55,7 +55,7 @@ export default function Home() {
       </div>
       <div
         style={{
-          marginTop: -4,
+          // marginTop: -2,
           paddingBottom: 8,
           zIndex: 100000,
         }}
@@ -183,7 +183,7 @@ export default function Home() {
           fontStyle: "italic",
           fontSize: 18,
           marginTop: "auto",
-          marginBottom: 36,
+          marginBottom: 16,
           marginLeft: "auto",
           marginRight: 24,
         }}

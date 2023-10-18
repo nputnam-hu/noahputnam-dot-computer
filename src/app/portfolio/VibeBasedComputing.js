@@ -36,24 +36,26 @@ const VibeBasedComputing = ({
 
   return (
     <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
-      <div style={{ height: 100 }} />
-      <div style={{ paddingLeft: 90 }}>
+      <div style={{ height: 112 }} />
+      <div style={{ paddingLeft: 50 }}>
         <h5>CASE 1</h5>
         <h1>Vibe-based Computing</h1>
-        <div style={{ height: 40 }} />
-        <Image
-          src={VibeHeader}
-          alt="A vibe computer"
-          className={cs(styles.vibeheader_img, "animateOpacity")}
-          width={900}
-          height={362}
-          placeholder="blur"
-          priority
-        />
-        <div style={{ height: 40 }} />
+        <div style={{ height: 44 }} />
+      </div>
+      <Image
+        src={VibeHeader}
+        alt="A vibe computer"
+        className={cs(styles.vibeheader_img, "animateOpacity")}
+        width={900}
+        height={362}
+        placeholder="blur"
+        priority
+      />
+      <div style={{ height: 48 }} />
+      <div style={{ paddingLeft: 50 }}>
         <p
           style={{
-            fontSize: 31,
+            fontSize: 30,
             marginBottom: 8,
             width: 800,
             fontFamily: "HelveticaNeue-Light",
@@ -73,19 +75,19 @@ const VibeBasedComputing = ({
           </span>
           .
         </p>
-        <div style={{ height: 100 }} />
+        <div style={{ height: 120 }} />
         {introSection}
       </div>
-      <div style={{ height: 100 }} />
+      <div style={{ height: 120 }} />
       <Image
         alt="From walled gardens to vibes"
         src="/vibe-based-computing/paradigmshift.png"
         // style={{ marginLeft: `calc(50vw - 375px - 72px)` }}
         style={{ margin: "auto" }}
-        width={750 * 1.0}
-        height={147 * 1.0}
+        width={750 * 1.1}
+        height={147 * 1.1}
       />{" "}
-      <div style={{ height: 130 }} />
+      <div style={{ height: 120 }} />
       <h3>Dynamic Media Ontoloy</h3>
       {ontologySection}
       <div style={{ height: 64 }} />

@@ -26,7 +26,7 @@
 
 .main h1 {
   /* font-family: HelveticaNeue-Light; */
-  font-family: HelveticaNeue-Medium;
+  font-family: HelveticaNeue;
   font-size: 84px;
   font-weight: 400;
 }
@@ -71,7 +71,7 @@
 .main p {
   font-size: 23px;
   margin: 10px 0;
-  line-height: 140%;
+  line-height: 140% !important;
   font-family: Helvetica Neue;
 }
 
@@ -83,7 +83,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  /* width: 83vw; */
+  width: calc(95vw - 140px);
   padding-top: 12px;
   padding-right: 5vw;
   padding-left: 140px;
@@ -120,7 +120,7 @@
 }
 
 .row__smalltext {
-  width: 525px;
+  width: 550px;
   display: flex;
   flex-direction: column;
 }
@@ -245,7 +245,7 @@
   /* padding-top: 60px; */
   /* padding-left: 18px; */
   /* position: -webkit-sticky; */
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   /* border-right: 1px solid rgba(0,0,0,0.2); */
@@ -269,12 +269,12 @@
   color: #777;
   font-family: HelveticaNeue-Light;
   /* text-decoration: underline !important; */
-  margin-bottom: 8px;
+  padding-right: 17px;
   /* margin-left: -1px; */
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 180px;
+  /* width: 180px; */
 }
 
 .sidebar__link:hover {
@@ -317,8 +317,8 @@
 }
 
 .classsection .row__text {
-  margin-left: -20px;
-  width: 560px;
+  /* margin-left: -20px; */
+  width: 570px;
   height: 500px;
 }
 
@@ -330,4 +330,37 @@
   transition: opacity .3s ease-in-out;
   filter: drop-shadow(8px 8px 5px rgba(0,0,0,0.3));
   margin-bottom: auto;
+}
+
+.fixedlinks {
+  /* width: 212px; */
+  /* height: 56px; */
+  padding: 16px 20px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  padding-left: 14px;
+  padding-right: 10px;
+  border-right: 2px solid rgba(0, 0, 0, 0.10);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.10);
+  background: rgba(250, 249, 246, 0.80);
+  backdrop-filter: blur(20px);
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform .1s ease-in-out;
+}
+
+.fixedlinks span {
+  color: #262626;
+  font-family: HelveticaNeue-Medium;
+  margin-right: 6px;
+  font-size: 17px;
+}
+
+.fixedlinks svg {
+  /* transform: rotate(270deg); */
 }
