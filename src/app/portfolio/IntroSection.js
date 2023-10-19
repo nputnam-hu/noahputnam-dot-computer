@@ -69,11 +69,11 @@ const IntroSection = () => {
           when it was crossreferenced against how thousands of platform-specific
           user interactions with it, now generatives models are able to build
           these kinds of semantic connections directly from the media itself.
-          This means users can search, discover, and transform digital media
+          This means users can now search, discover, and transform digital media
           outside the confines of any walled garden.
-        </p>
-        <p style={{ fontSize: 26.5 }}>
-          Enter The Vibe as a media primitive for the post-platform web,
+          {/* </p>
+        <p style={{ fontSize: 26.5 }}> */}{" "}
+          Enter The Vibe as the core primitive for a post-platform web,
           definining a standardized interface between media curated by users and
           Generative AI.
         </p>

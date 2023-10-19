@@ -11,15 +11,26 @@ const FixedBar = ({ dark }) => {
   const pathname = usePathname();
   const scrollY = useWindowScroll(120);
   const [expanded, setExpanded] = useState(false);
+  const [shouldDisplay, setDisplay] = useState(false);
 
   const toggleExpanded = () => setExpanded((prev) => !prev);
+
+  useEffect(() => {
+    if (scrollY > 20) {
+      setDisplay(true);
+    } else {
+      setDisplay(false);
+    }
+  }, [scrollY]);
 
   return (
     <div
       className={cs(styles.fixedlinks)}
       style={{
-        display: scrollY < 20 ? "none" : "flex",
+        display: shouldDisplay ? "flex" : "none",
       }}
+      onMouseEnter={() => setExpanded(true)}
+      onMouseLeave={() => setExpanded(false)}
     >
       <div className={styles.row}>
         <div className={styles.col}>
@@ -27,7 +38,7 @@ const FixedBar = ({ dark }) => {
             style={{
               height: expanded ? 44 : 0,
               opacity: expanded ? 1 : 0,
-              transition: "all .15s",
+              transition: "all .3s",
               overflowY: "hidden",
             }}
           >
@@ -76,7 +87,7 @@ const FixedBar = ({ dark }) => {
             style={{
               height: expanded ? 80 : 0,
               opacity: expanded ? 1 : 0,
-              transition: "all .15s",
+              transition: "all .3s",
               overflowY: "hidden",
             }}
           >
@@ -123,7 +134,9 @@ const FixedBar = ({ dark }) => {
           onClick={toggleExpanded}
           style={{
             marginBottom: "auto",
-            transform: `rotate(${expanded ? 180 : 0}deg)`,
+            cursor: "pointer",
+            opacity: expanded ? 0 : 1,
+            transition: "opacity 0.1s",
           }}
         >
           <svg

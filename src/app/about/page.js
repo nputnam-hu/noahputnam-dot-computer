@@ -35,8 +35,8 @@ const About = () => {
         </Link>
         <div style={{ width: 6 }} />
       </div>
+      <div style={{ height: 8 }} />
       <div style={{ marginLeft: 4 }}>
-        <div style={{ height: 16 }} />
         <h2
           style={{
             fontWeight: "400",

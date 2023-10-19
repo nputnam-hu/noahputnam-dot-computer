@@ -8,9 +8,8 @@ import ThirtyK from "./ThirtyK";
 export default function Portfolio() {
   return (
     <main className={cs(styles.main, styles.dark)}>
-      <Topbar dark />
       <div className={styles.row} style={{ position: "absolute" }}>
-        <Sidebar dark />
+        <Sidebar />
         <ThirtyK serverComponents={{ introSection: <IntroSection /> }} />
       </div>
     </main>

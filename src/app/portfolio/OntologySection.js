@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./portfolio.module.css";
 
 const OntologySection = () => {
@@ -79,24 +80,25 @@ const OntologySection = () => {
           </p>
           <p>
             Vibes have two modalities for interacting with AI: push and pull.
-            Vibes can push their Media Objects to models for analysis, and they
-            can pull new Media Objects from models to add to their contents, in
-            similar fashion to a recommendation algorithm filling a content
-            feed.
+            Vibes can <em>push</em> their Media Objects to models for analysis,
+            and they can <em>pull</em> new Media Objects from models to add to
+            their contents, in similar fashion to a recommendation algorithm
+            filling a content feed.
           </p>
           <p>
-            On a technical level, Vibes function as a technical standard for
+            On a code level, Vibes function as a technical standard for
             developers to build apps on top of Generative AI. In a Vibe-based
-            Computing ecosystem, users can take any of the Vibes they own and
-            upload it to an app which pushes and pulls its Media Objects in
-            concert with different generative models. The strength of this model
-            comes from the universal interface the Vibe defines by describing
-            all content in terms of its constituent properties and Media
-            Objects.
+            Computing ecosystem, users can take any Vibe they own and upload it
+            to an app which connects it to different generative models to read
+            and transforms its contents.
+            {/* The strength of this
+            model comes from the universal interface the Vibe defines. By
+            describing all internet content in terms of its constituent
+            properties and Media Objects, we can abstract the data layer from
+            the UI layer in web applications. */}
           </p>
         </div>
-        <div style={{ width: 44 }} />
-
+        <div style={{ width: 32 }} />
         <div className={styles.col}>
           <Image
             src="/vibe-based-computing/vibes.png"
@@ -112,38 +114,55 @@ const OntologySection = () => {
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
-            For example, imagine a music playlist generator that works by the
-            user pushing a series of Instagram media objects to a model that
-            builds an understanding of their content and then maps that
-            understanding to a music model's latent space from which a list of
-            songs is generated that gets pulled into a new Vibe. This app would
-            let any user see what music matches the Vibe of their Instagram.
+            The most straightforward app built on top of a Vibe is an image
+            studio that given a selected Vibe applies techniques like{" "}
+            <Link href="https://huggingface.co/blog/lora" target="_blank">
+              LoRA
+            </Link>{" "}
+            to extract the underlying style of images in that Vibe. This lets
+            users generate and remix images in different aesthetics depending on
+            the Vibe that is plugged into the app. And with the development of
+            multimodal models, over time AI will be able to infer implicit
+            properties like style and mood from not just images but all forms of
+            media, unlocking the ability to use any of your Vibes for this
+            function.
+          </p>
+          <p>
+            As we apply Vibes to more complex arrangements of models, use cases
+            emerge beyond simple content creation. For example, imagine a music
+            playlist generator that works by the user pushing a series of
+            Instagram media objects to a model that builds an understanding of
+            their content and then maps that understanding to a music model's
+            latent space from which a list of songs is generated that gets
+            pulled into a new Vibe. This app would let any user see what music
+            matches the vibe of their Instagram.
           </p>
         </div>
-        <div style={{ width: 40 }} />
+        <div style={{ width: 24 }} />
         <Image
           src="/vibe-based-computing/vibeperson.png"
           alt="Algorithm based off of different vibes user selects and their interaction with content"
-          width={550 * 0.99}
-          height={277 * 0.99}
+          width={550 * 1.05}
+          height={277 * 1.05}
           className={styles.media_img}
           style={{
             // marginRight: "auto",
-            marginTop: -24,
-            // marginBottom: "auto",
+            marginBottom: "auto",
+            marginTop: "auto",
           }}
         />
       </div>
-      <div style={{ height: 80 }} />
+      {/* <div style={{ height: 80 }} /> */}
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
-            object presented to the user which evolves with their interaction.
-            This co-creative process between user and AI is key to a Vibe
-            feeling at once intimately personal and vibrantly alive. Every Vibe
-            begins its life by using AI to build an understanding of the initial
-            Media Objects it is supplied, but then learns a deeper understanding
-            over time from how the user engages with it.
+            Vibes are objects that think fast and slow. object presented to the
+            user which evolves with their interaction. This co-creative process
+            between user and AI is key to a Vibe feeling at once intimately
+            personal and vibrantly alive. Every Vibe begins its life by using AI
+            to build an understanding of the initial Media Objects it is
+            supplied, but then learns a deeper understanding over time from how
+            the user engages with it.
           </p>
         </div>
         <div style={{ width: 64 }} />

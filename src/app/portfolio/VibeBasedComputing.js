@@ -40,7 +40,7 @@ const VibeBasedComputing = ({
       <div style={{ paddingLeft: 52 }}>
         <h5>CASE 1</h5>
         <h1>Vibe-based Computing</h1>
-        <div style={{ height: 44 }} />
+        <div style={{ height: "5vh" }} />
       </div>
       <Image
         src={VibeHeader}
@@ -50,8 +50,9 @@ const VibeBasedComputing = ({
         height={362}
         placeholder="blur"
         priority
+        // style={{ marginLeft: `calc(-172px - 5vw + 450px)` }}
       />
-      <div style={{ height: 48 }} />
+      <div style={{ height: "5.5vh" }} />
       <div style={{ paddingLeft: 52 }}>
         <p
           style={{

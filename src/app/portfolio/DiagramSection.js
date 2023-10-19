@@ -99,7 +99,7 @@ const DiagramSection = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              marginRight: `calc(200px - 7vw + 64px)`,
+              marginRight: `calc(172px)`,
             }}
           >
             <Image
