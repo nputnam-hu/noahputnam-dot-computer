@@ -26,8 +26,8 @@ const OntologySection = () => {
           src="/vibe-based-computing/mediaelements.png"
           alt="Media Elements, platform agnostic: Image, Video, Audio, Text"
           className={styles.media_img}
-          width={500}
-          height={206}
+          width={500 * 0.95}
+          height={206 * 0.95}
           style={{
             // opacity: isElementsVisible ? 1 : 0,
             transition: "opacity .3s ease-in-out",
@@ -79,18 +79,15 @@ const OntologySection = () => {
             primitive that is truly owned by the user.
           </p>
           <p>
-            Vibes have two modalities for interacting with AI: push and pull.
-            Vibes can <em>push</em> their Media Objects to models for analysis,
-            and they can <em>pull</em> new Media Objects from models to add to
-            their contents, in similar fashion to a recommendation algorithm
-            filling a content feed.
-          </p>
-          <p>
             On a code level, Vibes function as a technical standard for
-            developers to build apps on top of Generative AI. In a Vibe-based
-            Computing ecosystem, users can take any Vibe they own and upload it
-            to an app which connects it to different generative models to read
-            and transforms its contents.
+            developers to build apps on top of Generative AI. Vibes have two
+            modalities for interacting with AI: push and pull. Vibes can{" "}
+            <em>push</em> their Media Objects to models for analysis, and they
+            can <em>pull</em> new Media Objects from models to add to their
+            contents, in similar fashion to a recommendation algorithm filling a
+            content feed. In a Vibe-based Computing ecosystem, users can take
+            any Vibe they own and upload it to an app which connects it to
+            different generative models to read and transforms its contents.
             {/* The strength of this
             model comes from the universal interface the Vibe defines. By
             describing all internet content in terms of its constituent
@@ -129,13 +126,12 @@ const OntologySection = () => {
           </p>
           <p>
             As we apply Vibes to more complex arrangements of models, use cases
-            emerge beyond simple content creation. For example, imagine a music
-            playlist generator that works by the user pushing a series of
-            Instagram media objects to a model that builds an understanding of
-            their content and then maps that understanding to a music model's
-            latent space from which a list of songs is generated that gets
-            pulled into a new Vibe. This app would let any user see what music
-            matches the vibe of their Instagram.
+            emerge beyond simple content creation. For example, imagine a series
+            of LLMs each fed the same Vibe as an input where the first model
+            generates a color scheme, the next generates a typography pairing,
+            and so on for all of the components of a design system. This
+            constitutes an AI-powered theming engine that a user composes a Vibe
+            with to generate the design for a personalized web page.
           </p>
         </div>
         <div style={{ width: 24 }} />
@@ -143,7 +139,7 @@ const OntologySection = () => {
           src="/vibe-based-computing/vibeperson.png"
           alt="Algorithm based off of different vibes user selects and their interaction with content"
           width={550 * 1.05}
-          height={277 * 1.05}
+          height={262 * 1.05}
           className={styles.media_img}
           style={{
             // marginRight: "auto",
@@ -156,13 +152,16 @@ const OntologySection = () => {
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
-            Vibes are objects that think fast and slow. object presented to the
-            user which evolves with their interaction. This co-creative process
-            between user and AI is key to a Vibe feeling at once intimately
-            personal and vibrantly alive. Every Vibe begins its life by using AI
-            to build an understanding of the initial Media Objects it is
-            supplied, but then learns a deeper understanding over time from how
-            the user engages with it.
+            Vibes are objects that “think fast and slow”. The semanitc context
+            provided by generative models allow Vibes to build an understanding
+            of the Media Object it holds, but then bespoke models and heuristic
+            algorithms can be used to evolve the Vibe as the user interacts with
+            it. This co-creative process between user and AI is key to a Vibe
+            feeling at once intimately personal and vibrantly alive.
+            {/* Every Vibe
+            begins its life by using AI to build an understanding of the initial
+            Media Objects it is supplied, but then learns a deeper understanding
+            over time from how the user engages with it. */}
           </p>
         </div>
         <div style={{ width: 64 }} />

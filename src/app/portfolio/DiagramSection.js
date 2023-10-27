@@ -71,10 +71,9 @@ const DiagramSection = () => {
       <div className={styles.fulltext}>
         <p>
           Now that the Vibe has been formally defined, we can begin to explore
-          how the primtive can open up novel modalities for Human-Comptuer
-          Interaction. When applied to UI/UX, Vibes function as a new organizing
-          principle for computer applications which can be explored in a variety
-          of domains.
+          its implications for the web. For example, when applied to UI/UX,
+          Vibes function as a powerful organizing principle for computer
+          applications which can be applied in a variety of domains.
         </p>
       </div>
       <div style={{ height: 24 }} />

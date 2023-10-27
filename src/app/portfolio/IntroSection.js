@@ -66,7 +66,7 @@ const IntroSection = () => {
         <p style={{ fontSize: 26.5 }}>
           Generative AI alters the physics of content on the internet. While
           before an image or a text post could only be understood by computers
-          when it was crossreferenced against how thousands of platform-specific
+          when it was crossreferenced against thousands of platform-specific
           user interactions with it, now generatives models are able to build
           these kinds of semantic connections directly from the media itself.
           This means users can now search, discover, and transform digital media

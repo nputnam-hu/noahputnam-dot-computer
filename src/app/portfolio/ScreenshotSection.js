@@ -47,7 +47,7 @@ const ScreenshotSection = () => {
               }}
               className={styles.screenshot_headertext}
             >
-              A People Vibe UI
+              Generating a Music Vibe
             </h4>
             <p>
               People Vibes organize the user&rsquo;s relationships through a
