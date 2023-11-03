@@ -43,9 +43,10 @@ const IntroSection = () => {
             </b>
             . You can have a Vibe of your vacation photos, or a Vibe of
             longevity research papers, or a Vibe of all the tweets you've ever
-            posted. While a Vibe begins its life with the media uploaded by its
-            owner, it becomes richer in detail and sophistication over time as
-            it builds a deeper understanding of its contents in concert with AI.
+            written. And while a Vibe begins its life with the media uploaded by
+            its owner, it becomes richer in detail and sophistication over time
+            as it builds a deeper understanding of its contents in concert with
+            AI.
           </p>
         </div>
         <div style={{ width: 36 }} />

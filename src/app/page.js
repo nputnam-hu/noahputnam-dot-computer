@@ -187,9 +187,9 @@ export default function Home() {
           marginRight: 24,
         }}
       >
-        &quot;The closer we come to the danger, the more brightly do the ways
-        into the saving power begin to shine and the more questioning we become.
-        For questioning is the piety of thought.&quot;
+        “The closer we come to the danger, the more brightly do the ways into
+        the saving power begin to shine and the more questioning we become. For
+        questioning is the piety of thought.”
       </p>
     </main>
   );

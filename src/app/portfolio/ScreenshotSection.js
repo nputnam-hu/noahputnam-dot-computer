@@ -128,7 +128,7 @@ const ScreenshotSection = () => {
           style={{
             position: "absolute",
             height: SECTION_HEIGHT - 700,
-            left: 550 + 150 + 36,
+            left: 540 + 150 + 48,
           }}
         >
           <div className={styles.sticky} style={{ top: 80 }}>
@@ -180,6 +180,37 @@ const ScreenshotSection = () => {
                 height={700}
                 style={{ opacity: isMusicVisible ? 1 : 0 }}
                 className={styles.screenshot}
+              />
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                paddinTop: 70,
+              }}
+              className={styles.row}
+            >
+              <div
+                style={{
+                  width: 334,
+                  height: 700,
+                  background: "#1a1a1a",
+                  marginBottom: "auto",
+                  zIndex: -1,
+                  borderRadius: 64,
+                  marginLeft: 4,
+                }}
+              />
+              <div style={{ width: 16 }} />
+              <div
+                style={{
+                  width: 334,
+                  height: 700,
+                  background: "#1a1a1a",
+                  marginBottom: "auto",
+                  zIndex: -1,
+                  borderRadius: 64,
+                  marginLeft: 4,
+                }}
               />
             </div>
           </div>
