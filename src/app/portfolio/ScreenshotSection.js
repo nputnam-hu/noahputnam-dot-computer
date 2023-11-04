@@ -50,16 +50,14 @@ const ScreenshotSection = () => {
               Generating a Music Vibe
             </h4>
             <p>
-              People Vibes organize the user&rsquo;s relationships through a
-              combination of manually categorizing contacts and the AI inferring
-              meta-properties like tone and formality from each contact&rsquo;s
-              conversation history. This allows for a chat UI that avoids the
-              social context collapse that plagues every existing messaging app.
-              The user no longer has to worry about seeing an annoying message
-              from their boss on Friday night or juggling texts between their
-              boyfriend and their grandma. In the Vibe paradigm, they are always
-              in control of which social universe they want to engage with at
-              any given moment.
+              The strength of the Vibe model comes from the universal interface
+              its defines. For example, imagine a music playlist generator that
+              works by the user pushing a series of Instagram media objects to a
+              model that builds an understanding of their content and then maps
+              that understanding to a music model's latent space from which a
+              list of songs is generated that gets pulled into a new Vibe. This
+              app would let any user see what music matches the vibe of their
+              Instagram.
             </p>
             {/* <p>
               While the different people Vibes start out being defined by the
@@ -96,21 +94,21 @@ const ScreenshotSection = () => {
             <p>
               In a Vibe-powered music app, the top level interface moves from
               the library of playlists to the queue of songs. Music Vibes at
-              first glance look similar to the "Radio" feature on Spotify, apply
+              first glance look similar to the "Radio" feature on Spotify, able
               to create an algorithmacally generated list of songs derived from
-              a selected playlist/artist/album, but unlike a playlist the Vibe
-              is a living object that can change its form in response to the
-              user.
+              a selected playlist/artist/album—but unlike a playlist or radio
+              station the Vibe is a living object that can change form in
+              response to its owner.
             </p>
             <p>
-              The Music Vibe begins with songs provided by the user but evolves
-              its queue continuously with their interaction. If the user skips
-              through songs from a certain artist, the Vibe will exclude that
-              artist from future recommendations. If they are playing the same
-              couple songs on repeat, the Vibe may stop pulling new song objects
-              altogether and just loop those songs in its queue. The UI surfaces
-              different recommended artists, albums, and songs to the right of
-              the queue, which operates like a{" "}
+              The Music Vibe evolves its song queue continuously with user
+              interaction. If the user skips through tracks from a certain
+              artist, the Vibe will exclude that artist from future
+              recommendations. If they are playing the same couple songs on
+              repeat, the Vibe may stop pulling new song objects altogether and
+              just loop those songs in its queue. The UI surfaces different
+              recommended artists, albums, and songs to the right of the queue,
+              which operates like a{" "}
               <Link
                 href="https://en.wikipedia.org/wiki/Conveyor_belt_sushi"
                 target="_blank"
@@ -131,7 +129,10 @@ const ScreenshotSection = () => {
             left: 540 + 150 + 48,
           }}
         >
-          <div className={styles.sticky} style={{ top: 80 }}>
+          <div
+            className={styles.sticky}
+            style={{ top: "calc((100vh - 700px) / 2)" }}
+          >
             <div style={{ position: "absolute" }} className={styles.row}>
               <Image
                 src="/vibe-based-computing/peopless1.png"
