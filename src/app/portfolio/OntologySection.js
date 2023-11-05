@@ -119,13 +119,13 @@ const OntologySection = () => {
             <Link href="https://huggingface.co/blog/lora" target="_blank">
               LoRA
             </Link>{" "}
-            to extract the underlying style of images in that Vibe. This lets
-            users generate and remix images in different aesthetics depending on
-            the Vibe that is plugged into the app. And with the development of
-            multimodal models, over time AI will be able to infer implicit
-            properties like style and mood from not just images but all forms of
-            media, unlocking the ability to use any of your Vibes for this
-            function.
+            to extract the underlying style of images in that Vibe. This would
+            let users generate and remix images in different aesthetics
+            depending on the Vibe that is plugged into the app. And with the
+            development of multimodal models, over time AI will be able to infer
+            implicit properties like style and mood from not just images but all
+            forms of media, unlocking the ability to use any of your Vibes for
+            this function.
           </p>
           <p>
             As we apply Vibes to more complex arrangements of models, use cases
@@ -157,15 +157,16 @@ const OntologySection = () => {
           <p>
             Vibes are objects that “think fast and slow”. When a Vibe is
             created, different generative models are employed to define
-            meta-properties one each of its Media Objects which can be leveraged
+            meta-properties on each of its Media Objects which can be leveraged
             by developers to build apps with semantic awareness of the media
-            users upload. But over time, bespoke models and heuristic algorithms
-            can be used to write more context-specific meta-properties to the
-            objects based off how users interact with them. This contextual
-            awareness can be used to change both the function of the Vibe in the
-            app UX, and the form of the Vibe as new Media Objects are pulled
-            into it. This co-creative process between user and AI is key to a
-            Vibe feeling at once intimately personal and vibrantly alive.
+            users upload. But then as users interact with the app, bespoke
+            models and heuristic algorithms can be used to write more
+            context-specific meta-properties to the Vibe's objects. That
+            contextual understanding can be used to change both the function of
+            the Vibe in the app UX, and the form of the Vibe as new Media
+            Objects are pulled into it. This co-creative process between user
+            and AI is key to a Vibe feeling at once intimately personal and
+            vibrantly alive.
             {/* The semantic context
             provided by generative models allow a Vibe to instantly build an
             understanding of the Media Objects it holds, but then bespoke models

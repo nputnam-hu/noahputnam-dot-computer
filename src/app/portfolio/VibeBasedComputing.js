@@ -87,7 +87,7 @@ const VibeBasedComputing = ({
       <DiagramSection />
       <div style={{ height: 140 }} />
       <ScreenshotSection />
-      <div style={{ height: 240 }} />
+      <div style={{ height: 200 }} />
       <EndSection />
       <div style={{ height: 60 }} />
       <div
@@ -103,7 +103,7 @@ const VibeBasedComputing = ({
         style={{
           fontFamily: "HelveticaNeue-Medium",
           color: "black",
-          // fontSize: 32,
+          fontSize: 30,
         }}
       >
         Current State of Development

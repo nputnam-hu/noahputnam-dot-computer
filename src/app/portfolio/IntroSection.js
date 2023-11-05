@@ -38,7 +38,7 @@ const IntroSection = () => {
           <p style={{ fontSize: 26.5, marginBottom: 8 }}>
             At it&#8217;s most basic,{" "}
             <b>
-              a Vibe is an object that can hold any number and any kind of
+              The Vibe is an object that can hold any number and any kind of
               digital content
             </b>
             . You can have a Vibe of your vacation photos, or a Vibe of

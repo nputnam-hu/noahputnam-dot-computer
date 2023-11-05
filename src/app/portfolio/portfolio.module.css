@@ -134,10 +134,11 @@
 .row__quote {
   /* margin-left: auto; */
   text-align: left;
-  margin-top: 16px;
-  /* margin-top: auto; */
+  /* margin-top: 16px; */
+  margin-top: auto;
   margin-bottom: auto;
   margin-right: auto;
+  padding-bottom: 40px;
   /* width: 550px; */
 }
 

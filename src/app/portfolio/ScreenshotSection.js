@@ -53,10 +53,10 @@ const ScreenshotSection = () => {
               Vibe-based Computing enables a creative model for apps that
               mirrors the experience of working with a human professional. When
               you hire a designer or artist to make something for you, you don't
-              manually specify every detail of what you want. Instead give them
-              a high-level description and references that gesture at the “the
-              vibe” of what you want the end product to look like, and they use
-              their own creativity to map that to a completed work.
+              have to manually specify every detail of what you want. Instead,
+              you give them a high-level description and references that gesture
+              at the “the vibe” of what the end product should look like, and
+              they use their own creativity to map that to a completed work.
             </p>
             {/* <p>
               While the different people Vibes start out being defined by the
@@ -65,15 +65,16 @@ const ScreenshotSection = () => {
               into the appropriate Vibe.
             </p> */}
             <p>
-              To implement this paradigm in a computer application, developers
+              To accomplish this paradigm in a computer application, developers
               can employ models that both push and pull from Vibes. For example,
-              a Music Vibe generator can work through the user importing Media
-              Objects from one of their social media accounts that get pushed to
-              a model that learns an understanding of their content. From there,
-              that understanding can be mapped to a music model which generates
-              a list of songs that get pulled into a new Vibe. This app would
-              let any user see what music matches their Instagram, a task that
-              before could only be accomplished by working with a human curator.
+              a Music Vibe generator could be implemented through the user
+              importing Media Objects from one of their social media accounts
+              which get pushed to a model that learns an understanding of their
+              content. From there, that understanding can be mapped to a music
+              model which generates a list of songs that get pulled into a new
+              Vibe. This app would let any user see what music matches their
+              Instagram, a task that before could only be accomplished by
+              working with a human curator.
             </p>
           </div>
           <div
@@ -116,9 +117,9 @@ const ScreenshotSection = () => {
                 sushi converyor belt
               </Link>
               , letting the user pick objects off it and drag them into the Vibe
-              to shape its direction. The recommendations the user selects in
-              turn inform the new song Media Objects that get pulled into the
-              end of the queue.
+              to shape its form. The recommendations the user selects in turn
+              inform the new song Media Objects that get pulled into the end of
+              the queue.
             </p>
           </div>
         </div>

@@ -18,10 +18,8 @@ const EndSection = () => {
       <div className={styles.row}>
         <div className={styles.row__text}>
           <p>
-            Vibe-based computing is a new paradigm for the internet that breaks
-            apart the homogenous acknowledges the multiplicities inherent in how
-            we interact with the internet. My goal with Vibe-based computing is
-            to imagine a new internet
+            With the rise of the modern internet, algorithms have become a
+            pernicious force in our lives.
           </p>
           <p>
             Vibe-based computing is a new paradigm for the internet that breaks
@@ -63,8 +61,8 @@ const EndSection = () => {
           />
         </div>
       </div>
-      <div style={{ height: 120 }} />
-      <h3>Towards a Liberatory Internet</h3>
+      <div style={{ height: 180 }} />
+      <h2>Towards a Liberatory Internet</h2>
       <div style={{ height: 2 }} />
       <div className={styles.row}>
         <div className={styles.row__text}>
@@ -86,7 +84,7 @@ const EndSection = () => {
           </p>
           <p>...a new way of being, online.</p>
         </div>
-        <div style={{ width: 24 }} />
+        <div style={{ width: 48 }} />
         <div className={styles.row__quote}>
           <blockquote className={playfairMed.className}>
             Do I contradict myself?
