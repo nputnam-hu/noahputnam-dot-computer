@@ -70,7 +70,7 @@ const DiagramSection = () => {
     <div className={styles.diagramsection}>
       <div className={styles.fulltext}>
         <p>
-          Now that the Vibe has been formally defined, we can begin to consider
+          Now that The Vibe has been formally defined, we can begin to consider
           its implications for Human-Computer Interaction. For example, when
           applied to UI/UX, Vibes operate as a powerful new organizing principle
           for computer applications which can be explored in a variety of

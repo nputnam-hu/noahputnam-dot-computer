@@ -14,9 +14,9 @@ const playfairMed = Playfair_Display({
 const EndSection = () => {
   return (
     <>
+      <h3>Tangible Algorithms</h3>
       <div className={styles.row}>
         <div className={styles.row__text}>
-          <h3>Tangible Algorithms</h3>
           <p>
             Vibe-based computing is a new paradigm for the internet that breaks
             apart the homogenous acknowledges the multiplicities inherent in how
@@ -64,18 +64,17 @@ const EndSection = () => {
         </div>
       </div>
       <div style={{ height: 120 }} />
-      <h2>Towards a Liberatory Internet</h2>
+      <h3>Towards a Liberatory Internet</h3>
       <div style={{ height: 2 }} />
       <div className={styles.row}>
         <div className={styles.row__text}>
           <p>
-            At it&#8217;s most basic, The Vibe is an object that can hold any
-            number and any kind of digital media. People can import any account
-            they have on a platform—Tik Tok, Instagram, Twitter, etc.—into a
-            Vibe they own, or they can manually create one by uploading
-            different pieces of media one by one. This collection of media
-            becomes a standardized interface for language models to read in,
-            understand, and transform their content.
+            But at scale, The Vibe has potential to fundamentally redefine the
+            relationship we have with the internet. Instead of your online
+            identity being splintered across an array of walled gardens designed
+            to extract maximal profit, The Vibe creates a new ecology where
+            creativiy is owned by the user, and where the inherent multiplicty
+            of being is reified in cyberspace.
           </p>
           <p>
             But at scale, The Vibe has potential to fundamentally redefine the

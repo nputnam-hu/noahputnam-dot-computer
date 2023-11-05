@@ -74,9 +74,12 @@ const OntologySection = () => {
         <div className={styles.row__smalltext}>
           <p>
             <b>Vibes</b> now arrive as the restructured collections of these{" "}
-            Media Objects. Vibes are <em>platform transcendant</em>. They
-            abstract over individual platforms in order to create a media
-            primitive that is truly owned by the user.
+            Media Objects. Users can create a Vibe by importing media from an
+            account they have on outside platforms or they can create it
+            manually by uploading media piece by piece. Vibes are{" "}
+            <em>platform transcendant</em>. All forms of internet content—Tik
+            Tok videos, Pintrest boards, Spotify playlists, etc.—are assimilated
+            into the universtal interface the Vibe defines.
           </p>
           <p>
             On a code level, Vibes function as a technical standard for
@@ -107,7 +110,7 @@ const OntologySection = () => {
           />
         </div>
       </div>
-      {/* <div style={{ height: 40 }} /> */}
+      {/* <div style={{ height: 12 }} /> */}
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
@@ -127,8 +130,8 @@ const OntologySection = () => {
           <p>
             As we apply Vibes to more complex arrangements of models, use cases
             emerge beyond simple content creation. For example, imagine a series
-            of LLMs each fed the same Vibe as an input where the first model
-            generates a color scheme, the next generates a typography pairing,
+            of generative models each fed the same Vibe as an input where the
+            first model produces a color scheme, the next a typography pairing,
             and so on for all of the components of a design system. This
             constitutes an AI-powered theming engine that a user composes a Vibe
             with to generate the design for a personalized web page.
@@ -152,13 +155,30 @@ const OntologySection = () => {
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
-            Vibes are objects that “think fast and slow”. The semanitc context
-            provided by generative models allow Vibes to instantly build an
+            Vibes are objects that “think fast and slow”. When a Vibe is
+            created, different generative models are employed to define
+            meta-properties one each of its Media Objects which can be leveraged
+            by developers to build apps with semantic awareness of the media
+            users upload. But over time, bespoke models and heuristic algorithms
+            can be used to write more context-specific meta-properties to the
+            objects based off how users interact with them. This contextual
+            awareness can be used to change both the function of the Vibe in the
+            app UX, and the form of the Vibe as new Media Objects are pulled
+            into it. This co-creative process between user and AI is key to a
+            Vibe feeling at once intimately personal and vibrantly alive.
+            {/* The semantic context
+            provided by generative models allow a Vibe to instantly build an
             understanding of the Media Objects it holds, but then bespoke models
-            and heuristic algorithms are employed to evolve the Vibe's function
-            and form over time as the user interacts with it. This co-creative
-            process between user and AI is key to a Vibe feeling at once
-            intimately personal and vibrantly alive.
+            and heuristic algorithms can be employed to evolve the Vibe's
+            function and form over time as the user interacts with it. */}
+            {/* You can think of a
+            Vibe as almost like a{" "}
+            <Link
+              href="https://en.wikipedia.org/wiki/Tamagotchi"
+              target="_blank"
+            >
+              Tamagotchi
+            </Link> */}
             {/* Every Vibe
             begins its life by using AI to build an understanding of the initial
             Media Objects it is supplied, but then learns a deeper understanding

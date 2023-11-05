@@ -99,10 +99,16 @@ const VibeBasedComputing = ({
         }}
       />
       <div style={{ height: 40 }} />
-      <h2 style={{ fontFamily: "HelveticaNeue-Medium", color: "black" }}>
+      <h4
+        style={{
+          fontFamily: "HelveticaNeue-Medium",
+          color: "black",
+          // fontSize: 32,
+        }}
+      >
         Current State of Development
-      </h2>
-      <div style={{ height: 4 }} />
+      </h4>
+      <div style={{ height: 8 }} />
       <div className={styles.fulltext}>
         <p>
           To date most of my work on Vibe-based Computing has been at the

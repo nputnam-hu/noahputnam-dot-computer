@@ -50,14 +50,13 @@ const ScreenshotSection = () => {
               Generating a Music Vibe
             </h4>
             <p>
-              The strength of the Vibe model comes from the universal interface
-              its defines. For example, imagine a music playlist generator that
-              works by the user pushing a series of Instagram media objects to a
-              model that builds an understanding of their content and then maps
-              that understanding to a music model's latent space from which a
-              list of songs is generated that gets pulled into a new Vibe. This
-              app would let any user see what music matches the vibe of their
-              Instagram.
+              Vibe-based Computing enables a creative model for apps that
+              mirrors the experience of working with a human professional. When
+              you hire a designer or artist to make something for you, you don't
+              manually specify every detail of what you want. Instead give them
+              a high-level description and references that gesture at the “the
+              vibe” of what you want the end product to look like, and they use
+              their own creativity to map that to a completed work.
             </p>
             {/* <p>
               While the different people Vibes start out being defined by the
@@ -66,14 +65,15 @@ const ScreenshotSection = () => {
               into the appropriate Vibe.
             </p> */}
             <p>
-              The UI can call forth different Vibes depending on the temporal
-              and emotional context of the user. On 10am on a Monday the system
-              might automatically set itself to the “Coworkers” Vibe, while at
-              6pm on Friday it changes to “Squad”. Or if you're mad at all of
-              your friends, the AI might suggest a new “Enemies” Vibe to group
-              them in. Instead of the computer being ignorant to the deeply
-              personal circumstances it is being used in, Vibes enable it to
-              build an affective awareness that drives the user experience.
+              To implement this paradigm in a computer application, developers
+              can employ models that both push and pull from Vibes. For example,
+              a Music Vibe generator can work through the user importing Media
+              Objects from one of their social media accounts that get pushed to
+              a model that learns an understanding of their content. From there,
+              that understanding can be mapped to a music model which generates
+              a list of songs that get pulled into a new Vibe. This app would
+              let any user see what music matches their Instagram, a task that
+              before could only be accomplished by working with a human curator.
             </p>
           </div>
           <div
@@ -115,10 +115,10 @@ const ScreenshotSection = () => {
               >
                 sushi converyor belt
               </Link>
-              , letting the user pick recommendations off it and drag them into
-              the Vibe to shape its direction. The recommendations the user
-              selects in turn inform the new song Media Objects that get pulled
-              into the end of the queue.
+              , letting the user pick objects off it and drag them into the Vibe
+              to shape its direction. The recommendations the user selects in
+              turn inform the new song Media Objects that get pulled into the
+              end of the queue.
             </p>
           </div>
         </div>
