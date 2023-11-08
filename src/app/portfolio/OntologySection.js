@@ -41,15 +41,15 @@ const OntologySection = () => {
             Next we define <b>Media Objects</b> as the core units of different
             platforms on the web. Media Objects consist of a group of Media
             Elements, alongside a set of static properties that are defined by
-            the platform's database schema, and meta-properties that can be
-            inferred by AI.
+            the platform's database schema, and abstract meta-properties that
+            can be inferred by AI.
           </p>
           <p>
             By conceptualizing the content we see on the internet in terms of
             distinct Media Objects, we can begin to destructure the walled
             gardens behind every platform into their constituent parts.
           </p>
-          <div style={{ height: 32 }} />
+          <div style={{ height: 24 }} />
           <Image
             src="/vibe-based-computing/destructure.png"
             alt="Destructuring platforms into different media objects"
@@ -74,23 +74,22 @@ const OntologySection = () => {
         <div className={styles.row__smalltext}>
           <p>
             <b>Vibes</b> now arrive as the restructured collections of these{" "}
-            Media Objects. Users can create a Vibe by importing media from an
-            account they have on outside platforms or they can create it
-            manually by uploading media piece by piece. Vibes are{" "}
-            <em>platform transcendant</em>. All forms of internet content—Tik
-            Tok videos, Pintrest boards, Spotify playlists, etc.—are assimilated
-            into the universtal interface the Vibe defines.
+            Media Objects. Users can create a Vibe by importing an account they
+            have on a platform, or manually by uploading media piece by piece.
+            Vibes are <em>platform transcendant</em>. All forms of internet
+            content—Tik Tok videos, Pintrest boards, Spotify playlists, etc.—are
+            assimilated into the universtal interface The Vibe defines.
           </p>
           <p>
             On a code level, Vibes function as a technical standard for
             developers to build apps on top of AI. Vibes have two modalities for
-            interacting with AI: push and pull. Vibes can <em>push</em> their
-            Media Objects to models for analysis, and they can <em>pull</em> new
-            Media Objects from models to add to their contents, in similar
-            fashion to a recommendation algorithm filling a content feed. In a
-            Vibe-based Computing ecosystem, users can take any Vibe they own and
-            upload it to an app which connects it to different generative models
-            to read in and transforms its contents.
+            interacting with AI models: push and pull. Vibes can <em>push</em>{" "}
+            their Media Objects to models for analysis, and they can{" "}
+            <em>pull</em> new Media Objects from models to add to their
+            contents, in similar fashion to a recommendation algorithm filling a
+            content feed. In a Vibe-based Computing ecosystem, users can take
+            any Vibe they own and upload it to an app which connects it to
+            different AI models to read in and transform its media.
             {/* The strength of this
             model comes from the universal interface the Vibe defines. By
             describing all internet content in terms of its constituent
@@ -114,18 +113,18 @@ const OntologySection = () => {
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
-            The most straightforward app built on top of a Vibe is an image
-            studio that given a selected Vibe applies techniques like{" "}
+            A straightforward example of an app built on top of a Vibe is an
+            image studio that given a selected Vibe applies techniques like{" "}
             <Link href="https://huggingface.co/blog/lora" target="_blank">
               LoRA
             </Link>{" "}
-            to extract the underlying style of images in that Vibe. This would
-            let users generate and remix images in different aesthetics
-            depending on the Vibe that is plugged into the app. And with the
-            development of multimodal models, over time AI will be able to infer
-            implicit properties like style and mood from not just images but all
-            forms of media, unlocking the ability to use any of your Vibes for
-            this function.
+            to extract the underlying style of the images in its Media Objects.
+            This would let users generate and remix images in different
+            aesthetics depending on the Vibe that is plugged into the app. And
+            with the development of multimodal models, over time AI will be able
+            to infer implicit properties like style and mood from not just
+            images but all forms of media, unlocking the ability to use any of
+            your Vibes for this function.
           </p>
           <p>
             As we apply Vibes to more complex arrangements of models, use cases
@@ -157,16 +156,16 @@ const OntologySection = () => {
           <p>
             Vibes are objects that “think fast and slow”. When a Vibe is
             created, different generative models are employed to define
-            meta-properties on each of its Media Objects which can be leveraged
-            by developers to build apps with semantic awareness of the media
-            users upload. But then as users interact with the app, bespoke
-            models and heuristic algorithms can be used to write more
-            context-specific meta-properties to the Vibe's objects. That
-            contextual understanding can be used to change both the function of
-            the Vibe in the app UX, and the form of the Vibe as new Media
-            Objects are pulled into it. This co-creative process between user
-            and AI is key to a Vibe feeling at once intimately personal and
-            vibrantly alive.
+            meta-properties on each of its Media Objects, which can be leveraged
+            to build apps with semantic awareness of the content users upload.
+            But then as users interact with an app, bespoke models and heuristic
+            algorithms can be used to write more context-specific
+            meta-properties to the Vibe's objects. That contextual understanding
+            can be used to change both the function of the Vibe in the app UX,
+            and the form of the Vibe as new Media Objects are pulled into it.
+            This co-creative process between user and AI in constructing a Vibe
+            is key to it feeling at once intimately personal and vibrantly
+            alive.
             {/* The semantic context
             provided by generative models allow a Vibe to instantly build an
             understanding of the Media Objects it holds, but then bespoke models

@@ -36,9 +36,9 @@ const IntroSection = () => {
         <div className={styles.row__text}>
           <h2>From Platforms to Vibes</h2>
           <p style={{ fontSize: 26.5, marginBottom: 8 }}>
-            At it&#8217;s most basic,{" "}
+            At its most basic,{" "}
             <b>
-              The Vibe is an object that can hold any number and any kind of
+              a Vibe is an object that can hold any number and any kind of
               digital content
             </b>
             . You can have a Vibe of your vacation photos, or a Vibe of
@@ -70,8 +70,8 @@ const IntroSection = () => {
           when it was crossreferenced against thousands of platform-specific
           user interactions with it, now generatives models are able to build
           these kinds of semantic connections directly from the media itself.
-          This means users can now search, discover, and transform digital media
-          outside the confines of any walled garden.
+          This means people can now search, discover, and transform digital
+          media outside the confines of any walled garden.
           {/* </p>
         <p style={{ fontSize: 26.5 }}> */}{" "}
           Enter The Vibe as the core primitive for a post-platform web,

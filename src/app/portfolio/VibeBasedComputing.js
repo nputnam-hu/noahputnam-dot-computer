@@ -47,7 +47,7 @@ const VibeBasedComputing = ({
       <div style={{ paddingLeft: 52 }}>
         <p
           style={{
-            fontSize: 30,
+            fontSize: 31,
             marginBottom: 8,
             width: 820,
             fontFamily: "HelveticaNeue-Light",
@@ -87,7 +87,7 @@ const VibeBasedComputing = ({
       <DiagramSection />
       <div style={{ height: 140 }} />
       <ScreenshotSection />
-      <div style={{ height: 200 }} />
+      <div style={{ height: 180 }} />
       <EndSection />
       <div style={{ height: 60 }} />
       <div
