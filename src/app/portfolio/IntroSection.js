@@ -68,15 +68,15 @@ const IntroSection = () => {
           Generative AI alters the physics of content on the internet. While
           before an image or a text post could only be understood by computers
           when it was crossreferenced against thousands of platform-specific
-          user interactions with it, now generatives models are able to build
+          user interactions with it, now generative models are able to build
           these kinds of semantic connections directly from the media itself.
           This means people can now search, discover, and transform digital
           media outside the confines of any walled garden.
           {/* </p>
         <p style={{ fontSize: 26.5 }}> */}{" "}
-          Enter The Vibe as the core primitive for a post-platform web,
-          definining a standardized interface between media curated by users and
-          Generative AI.
+          Enter The Vibe as the core primitive for a post-platform web, defining
+          a standardized interface between media curated by users and Generative
+          AI.
         </p>
       </div>
     </>

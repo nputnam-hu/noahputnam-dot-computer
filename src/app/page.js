@@ -93,6 +93,17 @@ export default function Home() {
         >
           Essays
         </Link> */}
+          {/* <Link
+            href={{ pathname: "/portfolio", params: { from: "home" } }}
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            Cambridge Technologists
+          </Link> */}
           <Link
             href={{
               pathname: "https://twitter.com/noah_putnam",
@@ -108,6 +119,7 @@ export default function Home() {
           >
             Twitter
           </Link>
+
           {/* <Link
           href="https://based.fashion"
           target="_blank"

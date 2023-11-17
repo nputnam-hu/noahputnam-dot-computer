@@ -113,7 +113,7 @@ const FixedBar = ({ dark }) => {
                 pathname: "/portfolio/e-conomy",
               }}
             >
-              E-conomy
+              Cambridge Technologists
             </Link>
             <Link
               className={cs(
@@ -125,7 +125,7 @@ const FixedBar = ({ dark }) => {
                 pathname: "/portfolio/e-conomy",
               }}
             >
-              Nexus Lost
+              E-conomy
             </Link>
           </div>
         </div>
@@ -272,7 +272,7 @@ const Sidebar = ({ dark = false }) => {
                   pathname: "/portfolio/e-conomy",
                 }}
               >
-                E-conomy
+                Cambridge Technologists
               </Link>
               <Link
                 className={cs(
@@ -284,7 +284,7 @@ const Sidebar = ({ dark = false }) => {
                   pathname: "/portfolio/e-conomy",
                 }}
               >
-                Nexus Lost
+                E-conomy
               </Link>
             </div>
           </div>

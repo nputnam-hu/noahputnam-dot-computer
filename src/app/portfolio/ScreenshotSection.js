@@ -23,12 +23,12 @@ const ScreenshotSection = () => {
   }, []);
 
   const isMusicVisible = scrollY > musicTop - 500;
-  const SECTION_HEIGHT = 1650;
+  const SECTION_HEIGHT = 1700;
 
   return (
     <>
       <div
-        className={cs(styles.row, styles.classsection)}
+        className={cs(styles.row, styles.screenshotsection)}
         // style={{ background: "red" }}
       >
         {/* <div style={{ position: "absolute", height: 2000 }}> */}
@@ -54,12 +54,12 @@ const ScreenshotSection = () => {
               applications that mirrors the experience of working with a human
               professional. When you hire a designer or artist to make something
               for you, you don't have to manually specify every detail of what
-              you want. Instead, you give them a high-level description of the
-              end product you want and different references that gesture at what
-              it should look like, and then they use their own creativity to map
-              that to a completed work. By composing different generative models
-              together under the Vibe interface, developers can enable that same
-              kind of experience but at software scale.
+              you want. Instead, you give them different references that gesture
+              at the “vibe” what it should look like, and then they use their
+              own creativity to map that to a completed work. By composing
+              different generative models together under the Vibe interface,
+              developers can enable that same kind of experience but at software
+              scale.
             </p>
             {/* <p>
               While the different people Vibes start out being defined by the
@@ -68,18 +68,17 @@ const ScreenshotSection = () => {
               into the appropriate Vibe.
             </p> */}
             <p>
-              Consider, for example, the concept of an app that lets you import
-              one of your social media accounts to create a personalized
-              playlist based off it. This functionality can be implemented by
-              first taking the Media Objects from the imported account and
+              Consider, for example, the concept of an app that creates a
+              personalized playlist for a user based off a social media account
+              that they connect. This functionality could be implemented by
+              first taking the Media Objects from the connected account and
               pushing them to a general model that learns an understanding of
               their content, and then mapping that understanding to a music
               model which produces a list of related songs. From there, the
               generated playlist gets pulled into a new Vibe and presented to
-              the user.
-              {/* This app would let
-              anyone see what kind of music matched their Instagram, a task that
-              would require a human curator before. */}
+              the user. This app would let anyone see what kinds of music
+              matched their Instagram, a task that could only be accomplished
+              with a human curator before.
               {/* And while this custom generated playlist is an impressive feature,
               it is just the starting point for the Music Vibe. */}
               {/* But while new newly generated playlist is just the starting point
@@ -108,7 +107,7 @@ const ScreenshotSection = () => {
               In a Vibe-powered music app, the top level interface moves from
               the library of playlists to the queue of songs. Music Vibes at
               first glance look similar to the "Radio" feature on Spotify, able
-              to create an algorithmacally generated list of songs derived from
+              to create an algorithmically generated list of songs derived from
               a selected playlist/artist/album—but unlike a playlist or radio
               station the Vibe is a living object that can change form in
               response to its owner.
@@ -148,7 +147,7 @@ const ScreenshotSection = () => {
           >
             <div style={{ position: "absolute" }} className={styles.row}>
               <Image
-                src="/vibe-based-computing/peopless1.png"
+                src="/vibe-based-computing/peopless1.svg"
                 alt="Screenshot of a people vibe in a mobile app"
                 width={342}
                 height={700}
@@ -188,7 +187,7 @@ const ScreenshotSection = () => {
               />
               <div style={{ width: 16 }} />
               <Image
-                src="/vibe-based-computing/musicss2.png"
+                src="/vibe-based-computing/musicss2.svg"
                 alt="Screenshot of a music vibe in a mobile app"
                 width={342}
                 height={700}
