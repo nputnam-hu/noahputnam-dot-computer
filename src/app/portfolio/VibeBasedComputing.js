@@ -70,7 +70,7 @@ const VibeBasedComputing = ({
         <div style={{ height: 120 }} />
         {introSection}
       </div>
-      <div style={{ height: 100 }} />
+      <div style={{ height: 80 }} />
       <Image
         alt="From walled gardens to vibes"
         src="/vibe-based-computing/paradigmshift.png"
@@ -82,7 +82,7 @@ const VibeBasedComputing = ({
       <div style={{ height: 100 }} />
       <h3>Dynamic Media Ontology</h3>
       {ontologySection}
-      <div style={{ height: 64 }} />
+      <div style={{ height: 120 }} />
       <h3>Generative UI</h3>
       <DiagramSection />
       <div style={{ height: 140 }} />
@@ -116,18 +116,17 @@ const VibeBasedComputing = ({
           inteface from an Human-Computer Interaction lens. While there is
           plenty of work left to do there, the next phase of the project I have
           been working on lately is creating a working prototype of a Vibe-based
-          Computing system that can demonstrate a proof of concept for the idea
-          and serve as a foundation for a fully developed framework to release
-          in the future.
+          Computing system that can demonstrate a proof of concept for the idea,
+          and serve as a foundation for a fully developed framework to be
+          released in the future.
         </p>
         <p>
-          To this end, there are 3 major research areas I have been pursuing:
+          To this end, there are 2 major research areas I have been pursuing:
         </p>
-        <p>1. Multi-modal language models</p>
-        <p>2. Category theory as an ontological framework</p>
-        <p>3. Privacy and data model</p>
+        <p>1. Multi-modal generative models</p>
+        <p>2. Privacy and data model</p>
         <div style={{ height: 12 }} />
-        <h4
+        {/* <h4
           style={{
             fontFamily: "HelveticaNeue-Medium",
             color: "black",
@@ -149,9 +148,18 @@ const VibeBasedComputing = ({
         >
           Long Term Deliverable
         </h4>
-        <p>The long term deliverable is</p>
+        <p>The long term deliverable is</p> */}
       </div>
       <div style={{ height: 24 }} />
+      <h4
+        style={{
+          fontFamily: "HelveticaNeue-Medium",
+          color: "#444",
+          fontSize: 23,
+        }}
+      >
+        A Note on Attribution
+      </h4>
     </div>
   );
 };

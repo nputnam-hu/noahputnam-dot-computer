@@ -23,7 +23,7 @@ const ScreenshotSection = () => {
   }, []);
 
   const isMusicVisible = scrollY > musicTop - 500;
-  const SECTION_HEIGHT = 1700;
+  const SECTION_HEIGHT = 1800;
 
   return (
     <>
@@ -72,20 +72,21 @@ const ScreenshotSection = () => {
               personalized playlist for a user based off a social media account
               that they connect. This functionality could be implemented by
               first taking the Media Objects from the connected account and
-              pushing them to a general model that learns an understanding of
-              their content, and then mapping that understanding to a music
-              model which produces a list of related songs. From there, the
-              generated playlist gets pulled into a new Vibe and presented to
-              the user. This app would let anyone see what kinds of music
-              matched their Instagram, a task that could only be accomplished
-              with a human curator before.
-              {/* And while this custom generated playlist is an impressive feature,
-              it is just the starting point for the Music Vibe. */}
+              pushing them to an AI model that learns an understanding of their
+              content, and then maps that understanding to a music model that
+              can produce a list of related songs. From there, the generated
+              song list can be pulled into a new Vibe and presented to the user.
+              This app would let anyone see what kinds of songs matched their
+              their Instagram, a task that would require a human curator today.
               {/* But while new newly generated playlist is just the starting point
               the Music Vibe. */}
               {/* And while generating a custom playlist from your social media is
               already a pretty magical experience, it is just the starting point
               for the Music Vibe. */}
+            </p>
+            <p>
+              And this list of songs is just the starting point for the Music
+              Vibe.
             </p>
           </div>
           <div
@@ -108,9 +109,9 @@ const ScreenshotSection = () => {
               the library of playlists to the queue of songs. Music Vibes at
               first glance look similar to the "Radio" feature on Spotify, able
               to create an algorithmically generated list of songs derived from
-              a selected playlist/artist/album—but unlike a playlist or radio
-              station the Vibe is a living object that can change form in
-              response to its owner.
+              a selected playlist/artist/album—but unlike a radio station the
+              Vibe is a living object that can change form in response to its
+              owner.
             </p>
             <p>
               The Music Vibe evolves its song queue continuously with user
@@ -118,7 +119,7 @@ const ScreenshotSection = () => {
               artist, the Vibe will exclude that artist from future
               recommendations. If they are playing the same couple of tracks on
               repeat, the Vibe may stop pulling new song objects altogether and
-              just loop those songs in its queue. The UI surfaces different
+              just loop those songs on repeat. The UI surfaces different
               recommended artists, albums, and songs in a widget to the right of
               the queue which operates like a{" "}
               <Link

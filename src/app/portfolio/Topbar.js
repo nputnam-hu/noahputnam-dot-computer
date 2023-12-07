@@ -6,21 +6,6 @@ import styles from "./portfolio.module.css";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 
-const Select = () => {
-  return (
-    <div>
-      <label for="cars">Choose a car:</label>
-
-      <select name="cars" id="cars">
-        <option value="volvo">Vibe-based Computing</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
-    </div>
-  );
-};
-
 const Topbar = ({ dark, isHome = false, children }) => {
   const { from } = useParams();
   const prevbg = useRef(
