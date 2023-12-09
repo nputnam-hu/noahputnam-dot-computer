@@ -111,7 +111,7 @@ const OntologySection = () => {
         <div className={styles.row__smalltext}>
           <p>
             A basic example of an app built on top of a Vibe is an image studio
-            that given a selected Vibe applies techniques like{" "}
+            that, given a selected Vibe, applies techniques like{" "}
             <Link href="https://huggingface.co/blog/lora" target="_blank">
               LoRA
             </Link>{" "}
