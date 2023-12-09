@@ -95,12 +95,6 @@ const EndSection = () => {
             online persona, creating a new media ecology where creativity is
             owned by the user.
           </p>
-          <p>
-            Coming from within the domain in which positioning reaches its apex
-            - the attention economy - Vibes create the necessary
-            destabilization, enrichment, and individuation for the space of
-            being itself to begin to open.
-          </p>
           <p>...a new way of being, online.</p>
         </div>
         <div style={{ width: 52 }} />
