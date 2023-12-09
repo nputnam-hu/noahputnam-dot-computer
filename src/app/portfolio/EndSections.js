@@ -55,12 +55,12 @@ const EndSection = () => {
         <Image
           src="/vibe-based-computing/tangiblealgos.jpeg"
           alt="Algorithm based off of user interaction with content"
-          width={500 * 1.05}
-          height={398 * 1.05}
+          width={500 * 1.0}
+          height={398 * 1.0}
           style={{
             marginRight: "auto",
-            marginTop: "auto",
-            // marginTop: 24,
+            // marginTop: "auto",
+            marginTop: 24,
             marginBottom: "auto",
             // paddingBottom: 22,
             borderRadius: 4,
