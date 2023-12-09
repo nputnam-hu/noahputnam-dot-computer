@@ -51,7 +51,7 @@ const EndSection = () => {
             and swap algorithms with each other.
           </p>
         </div>
-        <div style={{ width: 48 }} />
+        <div style={{ width: 36 }} />
         <Image
           src="/vibe-based-computing/tangiblealgos.jpeg"
           alt="Algorithm based off of user interaction with content"
@@ -98,7 +98,6 @@ const EndSection = () => {
           <p>...a new way of being, online.</p>
         </div>
         <div style={{ width: 52 }} />
-
         <div className={styles.row__quote} style={{ marginTop: 8 }}>
           <blockquote className={playfairMed.className}>
             Do I contradict myself?
