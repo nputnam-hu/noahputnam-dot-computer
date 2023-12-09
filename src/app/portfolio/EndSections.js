@@ -92,8 +92,8 @@ const EndSection = () => {
             other people as a collection of ideas and labels that characterize
             the modern internet. They provide a glimpse of the full multiplicity
             of being behind each person’s otherwise constrained and channeled
-            online persona and create a new media ecology where creativity is
-            owned by the user.
+            online persona. All of this comes together to create a a different
+            kind of web, a media ecology where creativity is owned by the user.
           </p>
           <p>...a new way of being, online.</p>
         </div>
