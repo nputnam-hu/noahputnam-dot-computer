@@ -51,12 +51,12 @@ const EndSection = () => {
             and swap algorithms with each other.
           </p>
         </div>
-        <div style={{ width: 36 }} />
+        <div style={{ width: 40 }} />
         <Image
           src="/vibe-based-computing/tangiblealgos.jpeg"
           alt="Algorithm based off of user interaction with content"
-          width={500 * 1.0}
-          height={398 * 1.0}
+          width={500 * 1}
+          height={398 * 1}
           style={{
             marginRight: "auto",
             // marginTop: "auto",
@@ -67,7 +67,10 @@ const EndSection = () => {
           }}
         />
       </div>
-      <div style={{ height: 140 }} />
+      <div style={{ height: 70 }} />
+
+      <div style={{ height: 70 }} />
+
       <h2>Towards a Liberatory Internet</h2>
       <div style={{ height: 2 }} />
       <div className={styles.fulltext}>
