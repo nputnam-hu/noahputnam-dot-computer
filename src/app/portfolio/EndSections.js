@@ -67,7 +67,7 @@ const EndSection = () => {
           }}
         />
       </div>
-      <div style={{ height: 180 }} />
+      <div style={{ height: 140 }} />
       <h2>Towards a Liberatory Internet</h2>
       <div style={{ height: 2 }} />
       <div className={styles.fulltext}>
@@ -92,7 +92,7 @@ const EndSection = () => {
             other people as a collection of ideas and labels that characterize
             the modern internet. They provide a glimpse of the full multiplicity
             of being behind each person’s otherwise constrained and channeled
-            online persona, creating a new media ecology where creativity is
+            online persona and create a new media ecology where creativity is
             owned by the user.
           </p>
           <p>...a new way of being, online.</p>

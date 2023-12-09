@@ -22,8 +22,8 @@ const ScreenshotSection = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const isMusicVisible = scrollY > musicTop - 500;
-  const SECTION_HEIGHT = 1800;
+  const isMusicVisible = scrollY > musicTop - 550;
+  const SECTION_HEIGHT = 1700;
 
   return (
     <>
@@ -49,7 +49,18 @@ const ScreenshotSection = () => {
             >
               Generating a Music Vibe
             </h4>
-            <p></p>
+            <p>
+              Vibe-based Computing enables a creative model for computer
+              applications that mirrors the experience of working with a human
+              professional. When you hire a designer or artist to make something
+              for you, you don't have to manually specify every detail of what
+              you want. Instead, you give them different references that gesture
+              at the “vibe” what it should look like, and then they use their
+              own creativity to map that to a completed work. By composing
+              different generative models together under the Vibe interface,
+              developers can enable that same kind of experience but at software
+              scale.
+            </p>
             {/* <p>
               While the different people Vibes start out being defined by the
               user, as the AI infers different meta-properties on each
@@ -65,13 +76,14 @@ const ScreenshotSection = () => {
               content, and then maps that understanding to a music model that
               can produce a list of related songs. From there, the generated
               song list can be pulled into a new Vibe and presented to the user.
+              This app would let anyone see what kinds of songs matched their
+              their Instagram, a task that would require a human curator today.
               {/* But while new newly generated playlist is just the starting point
               the Music Vibe. */}
               {/* And while generating a custom playlist from your social media is
               already a pretty magical experience, it is just the starting point
               for the Music Vibe. */}
             </p>
-            {/* <p></p> */}
           </div>
           <div
             className={styles.row__text}
