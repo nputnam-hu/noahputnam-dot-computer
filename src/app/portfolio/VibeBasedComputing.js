@@ -82,7 +82,7 @@ const VibeBasedComputing = ({
       <div style={{ height: 100 }} />
       <h3>Dynamic Media Ontology</h3>
       {ontologySection}
-      <div style={{ height: 120 }} />
+      <div style={{ height: 60 }} />
       <h3>Generative UI</h3>
       <DiagramSection />
       <div style={{ height: 140 }} />

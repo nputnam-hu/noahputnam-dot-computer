@@ -16,133 +16,96 @@ const EndSection = () => {
   return (
     <>
       <h3>Tangible Algorithms</h3>
-      <div className={styles.row}>
-        <div className={styles.fulltext}>
-          <p>
-            With the rise of the modern internet, algorithms have become an
-            increasingly unsavoury force in our lives. Across every platform,
-            they work to predict and influence our behavior, nudging us towards
-            addiction, constant emotional activation, and passive consumption.
-            At the same time, platforms hide the workings of these algorithms
-            away from us, submerging them beneath their interfaces to more
-            easily divert our will to profit-maximizing ends.
-          </p>
-          <p>
-            Vibe-based Computing seeks to put the user back in the driver's
-            seat. The Vibe as metaphor and UI object decomposes the
-            uni-algorithm of the platform into an assortment of objects, each
-            owned by the user. Instead of passively doomscrolling through
-            content feeds, users can . Algorithms become agentifying, providing
-            power for users to direct their own experience.
-          </p>
-        </div>
-        <div style={{ width: 56 }} />
-        {/* <Image
-          src="/vibe-based-computing/algodiagram.png"
-          alt="Algorithm based off of user interaction with content"
-          width={300 * 1.0 - 0.03}
-          height={495 * 1.0 - 0.03}
-          style={{
-            marginRight: "auto",
-            marginTop: "auto",
-            // marginTop: 36,
-            marginBottom: "auto",
-            paddingBottom: 22,
-            borderRadius: 2,
-          }}
-        /> */}
-      </div>
-      <div className={styles.row}>
-        <div className={styles.row__text}>
-          <p>
-            This shift is deeper than just a UI update: it speaks to the
-            technical foundations of how content is surfaced to us on the web.
-            Today's internet platforms all generally employ content
-            recommendation algorithms that operate under some variant of{" "}
-            <Link
-              href="https://en.wikipedia.org/wiki/Collaborative_filtering"
-              target="_blank"
-            >
-              collaborative filtering
-            </Link>{" "}
-            . Collaborative filtering generates recommendations for a user by
-            looking at all of the content they have engaged with in the past,
-            and then cross-referencing that history across the entire database
-            of user-content interactions. By finding other users who have
-            engaged with the same content as the recomendee, the algorithm can
-            surface new content to the recomendee that the related users have
-            postively engaged with, but the recommendee has not seen yet.
-          </p>
-          <p>
-            However, while collaborative filtering has proven to be succesful
-            for incumbent platforms, it also has a number of inherent problems.
-            New users face a steep cold-start problem (poor recommendations when
-            there is little data to compare against), recommendations become
-            stale over time (over-indexing on user history),
-          </p>
-          <p>Vibes introduce a third dimension to user-content matrix.</p>
-        </div>
-        <div style={{ width: 48 }} />
-        <div
-          className={styles.col}
-          style={{
-            marginRight: "auto",
-            marginTop: "auto",
-            // marginBottom: "auto",
-            // paddingBottom: 22,
-            // paddingTop: 44,
-          }}
-        >
-          <Image
-            src="/vibe-based-computing/usercontentmatrix.png"
-            alt="Algorithm based off of user interaction with content"
-            width={500 * 1.0}
-            height={210 * 1.0}
-          />
-          <div style={{ height: 120 }} />
-          <Image
-            src="/vibe-based-computing/3dmatrix.png"
-            alt="Algorithm based off of different vibes user selects and their interaction with content"
-            width={250 * 1.0}
-            height={250 * 1.0}
-          />
-        </div>
-      </div>
-      <div style={{ height: 140 }} />
-      <h2>Towards a Liberatory Internet</h2>
-      <div style={{ height: 2 }} />
       <div className={styles.fulltext}>
         <p>
-          But at scale, The Vibe has potential to fundamentally redefine the
-          relationship we have with the internet. Instead of your online
-          identity being splintered across an array of walled gardens designed
-          to extract maximal profit, The Vibe creates a new ecology where
-          creativiy is owned by the user, and where the inherent multiplicty of
-          being is reified in cyberspace.
+          Across every platform on the modern web, algorithms are constantly
+          working to predict and influence our behavior. They nudge us towards
+          addiction, emotional activation, and passive consumption. And at the
+          same time, platforms hide the workings of these algorithms away from
+          us, submerging them beneath their UI to more easily divert our will
+          towards profit-maximizing ends.
+        </p>
+        <p>
+          Vibe-based Computing seeks to put the user back in the driver's seat.
+          The Vibe as metaphor and UI object decomposes the opaque uni-algorithm
+          of the platform into a collection of friendly, intuitive objects owned
+          by the user. Algorithms become agentifying, providing power for users
+          to direct their own experience.
         </p>
       </div>
       <div className={styles.row}>
         <div className={styles.row__text}>
           <p>
-            But at scale, The Vibe has potential to fundamentally redefine the
-            relationship we have with the internet. Instead of your online
-            identity being splintered across an array of walled gardens designed
-            to extract maximal profit, The Vibe creates a new ecology where
-            creativiy is owned by the user, and where the inherent multiplicty
-            of being is reified in cyberspace.
+            Take the previous example of a music app built on top of Vibes.
+            Users can split their music listening between many of these Vibes:
+            one Vibe for lo fi study music and one for 2000s hip hop, one for
+            Friday night pregames and another for Saturday morning hangovers.
+            The user is placed in control of the algorithm and can differentiate
+            the ways they want to access their content.
           </p>
           <p>
-            But at scale, The Vibe has potential to fundamentally redefine the
-            relationship we have with the internet. Instead of your online
-            identity being splintered across an array of walled gardens designed
-            to extract maximal profit, The Vibe creates a new ecology where
-            creativiy is owned by the user, and where the inherent multiplicty
-            of being is reified in cyberspace.
+            If a Vibe’s recommendations become stale the user can reset its
+            parameters or discard the Vibe altogether to start fresh. And like
+            all Vibes in a Vibe-based Computing ecosystem, the created music
+            Vibes are natively shareable with other people, letting users borrow
+            and swap algorithms with each other.
+          </p>
+        </div>
+        <div style={{ width: 48 }} />
+        <Image
+          src="/vibe-based-computing/tangiblealgos.jpeg"
+          alt="Algorithm based off of user interaction with content"
+          width={500 * 1.05}
+          height={398 * 1.05}
+          style={{
+            marginRight: "auto",
+            marginTop: "auto",
+            // marginTop: 24,
+            marginBottom: "auto",
+            // paddingBottom: 22,
+            borderRadius: 4,
+          }}
+        />
+      </div>
+      <div style={{ height: 180 }} />
+      <h2>Towards a Liberatory Internet</h2>
+      <div style={{ height: 2 }} />
+      <div className={styles.fulltext}>
+        <p>
+          All revolutions in computing rely on new organizing metaphors to make
+          their capabilities accessible to a nontechnical audience: x86 had the
+          desktop, the internet had the browser, smartphones had the app. Vibes
+          represent the next stage in that evolution. In a world of monopoly
+          platforms and surveillance capitalism, Vibes promise to return the web
+          to an era of truly personal computing.
+        </p>
+      </div>
+      <div className={styles.row}>
+        <div className={styles.row__text}>
+          <p>
+            In this new internet, users shape the emergent direction of the
+            Vibes they interact with, adding and removing content, merging
+            Vibes, seeding new Vibes, connecting with others.
+          </p>
+          <p>
+            Vibes layer on top of the ordered, simplified representations of
+            other people as a collection of ideas and labels that characterize
+            the modern internet. They provide a glimpse of the full multiplicity
+            of being behind each person’s otherwise constrained and channeled
+            online persona, creating a new media ecology where creativity is
+            owned by the user.
+          </p>
+          <p>
+            Coming from within the domain in which positioning reaches its apex
+            - the attention economy - Vibes create the necessary
+            destabilization, enrichment, and individuation for the space of
+            being itself to begin to open.
           </p>
           <p>...a new way of being, online.</p>
         </div>
         <div style={{ width: 52 }} />
-        <div className={styles.row__quote}>
+
+        <div className={styles.row__quote} style={{ marginTop: 8 }}>
           <blockquote className={playfairMed.className}>
             Do I contradict myself?
             <br />
