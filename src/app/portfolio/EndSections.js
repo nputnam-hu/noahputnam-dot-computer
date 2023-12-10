@@ -55,8 +55,8 @@ const EndSection = () => {
           <Image
             src="/vibe-based-computing/tangiblealgos.jpeg"
             alt="Algorithm based off of user interaction with content"
-            width={500 * 0.95}
-            height={398 * 0.95}
+            width={500 * 0.99}
+            height={398 * 0.99}
             style={{
               marginRight: "auto",
               // marginTop: "auto",
@@ -70,8 +70,8 @@ const EndSection = () => {
           <Image
             src="/vibe-based-computing/computer.png"
             alt="Algorithm based off of user interaction with content"
-            width={353 * 1.05}
-            height={250 * 1.05}
+            width={353 * 1.02}
+            height={250 * 1.02}
             style={{
               marginRight: "auto",
               // marginTop: "auto",
