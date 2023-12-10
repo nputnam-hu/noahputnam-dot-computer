@@ -45,7 +45,7 @@ const EndSection = () => {
           <p>
             If a Vibe’s recommendations become stale the user can reset its
             parameters or discard the Vibe altogether to start fresh. And like
-            all Vibes owned by the user, the created music Vibes are natively
+            all Vibes owned by the user, the created Music Vibes are natively
             shareable with other people, letting users borrow and swap
             algorithms with each other.
           </p>
