@@ -63,7 +63,7 @@ const EndSection = () => {
               marginTop: 32,
               marginBottom: "auto",
               // paddingBottom: 22,
-              borderRadius: 4,
+              borderRadius: 2,
             }}
           />
           <div style={{ height: 24 }} />
@@ -77,7 +77,7 @@ const EndSection = () => {
               // marginTop: "auto",
               marginBottom: "auto",
               // paddingBottom: 22,
-              borderRadius: 4,
+              borderRadius: 2,
             }}
           />
         </div>
