@@ -16,25 +16,24 @@ const EndSection = () => {
   return (
     <>
       <h3>Tangible Algorithms</h3>
-      <div className={styles.fulltext}>
-        <p>
-          Across every platform on the modern web, algorithms are constantly
-          working to predict and influence our behavior. They nudge us towards
-          addiction, emotional activation, and passive consumption. And at the
-          same time, platforms hide the workings of these algorithms away from
-          us, submerging them beneath their UI to more easily divert our will
-          towards profit-maximizing ends.
-        </p>
-        <p>
-          Vibe-based Computing seeks to put the user back in the driver's seat.
-          The Vibe as metaphor and UI object decomposes the opaque uni-algorithm
-          of the platform into a collection of friendly, intuitive objects owned
-          by the user. Algorithms become agentifying, providing power for users
-          to direct their own experience.
-        </p>
-      </div>
+      {/* <div className={styles.fulltext}></div> */}
       <div className={styles.row}>
         <div className={styles.row__text}>
+          <p>
+            Across every platform on the modern web, algorithms are constantly
+            working to predict and influence our behavior, nudging us towards
+            addiction, emotional activation, and passive consumption. And at the
+            same time, platforms hide the workings of these algorithms away from
+            us, submerging them beneath their UI to more easily divert our will
+            towards profit-maximizing ends.
+          </p>
+          <p>
+            Vibe-based Computing seeks to put the user back in the driver's
+            seat. The Vibe as metaphor and UI object decomposes the opaque
+            uni-algorithm of the platform into a collection of friendly,
+            intuitive objects owned by the user. Algorithms become agentifying,
+            providing power for users to direct their own experience.
+          </p>
           <p>
             Take the previous example of a music app built on top of Vibes.
             Users can split their music listening between many of these Vibes:
@@ -51,21 +50,37 @@ const EndSection = () => {
             and swap algorithms with each other.
           </p>
         </div>
-        <div style={{ width: 40 }} />
-        <Image
-          src="/vibe-based-computing/tangiblealgos.jpeg"
-          alt="Algorithm based off of user interaction with content"
-          width={500 * 1}
-          height={398 * 1}
-          style={{
-            marginRight: "auto",
-            // marginTop: "auto",
-            marginTop: 24,
-            marginBottom: "auto",
-            // paddingBottom: 22,
-            borderRadius: 4,
-          }}
-        />
+        <div style={{ width: 48 }} />
+        <div className={styles.col}>
+          <Image
+            src="/vibe-based-computing/tangiblealgos.jpeg"
+            alt="Algorithm based off of user interaction with content"
+            width={500 * 0.95}
+            height={398 * 0.95}
+            style={{
+              marginRight: "auto",
+              // marginTop: "auto",
+              marginTop: 32,
+              marginBottom: "auto",
+              // paddingBottom: 22,
+              borderRadius: 4,
+            }}
+          />
+          <div style={{ height: 24 }} />
+          <Image
+            src="/vibe-based-computing/computer.png"
+            alt="Algorithm based off of user interaction with content"
+            width={353 * 1.1}
+            height={250 * 1.1}
+            style={{
+              marginRight: "auto",
+              // marginTop: "auto",
+              marginBottom: "auto",
+              // paddingBottom: 22,
+              borderRadius: 4,
+            }}
+          />
+        </div>
       </div>
       <div style={{ height: 70 }} />
 

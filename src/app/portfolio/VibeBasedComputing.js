@@ -87,7 +87,7 @@ const VibeBasedComputing = ({
       <DiagramSection />
       <div style={{ height: 140 }} />
       <ScreenshotSection />
-      <div style={{ height: 180 }} />
+      <div style={{ height: 240 }} />
       <EndSection />
       <div style={{ height: 60 }} />
       <div
