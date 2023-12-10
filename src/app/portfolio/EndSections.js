@@ -60,7 +60,7 @@ const EndSection = () => {
             style={{
               marginRight: "auto",
               // marginTop: "auto",
-              marginTop: 32,
+              marginTop: 24,
               marginBottom: "auto",
               // paddingBottom: 22,
               borderRadius: 2,
