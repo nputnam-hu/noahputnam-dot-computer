@@ -118,10 +118,13 @@ const OntologySection = () => {
             to extract the underlying style of the images in its Media Objects.
             This would let users generate and remix images in different
             aesthetics depending on the Vibe that is plugged into the app. And
-            with the development of multimodal models, over time AI will be able
-            to infer implicit properties like style and mood from not just
-            images but all forms of media, unlocking the ability to use any of
-            your Vibes for this kind of function.
+            with the development of{" "}
+            <Link href="https://arxiv.org/abs/2309.16058" target="_blank">
+              multimodal models
+            </Link>
+            , over time AI will be able to infer implicit properties like style
+            and mood from not just images but all forms of media, unlocking the
+            ability to use any of your Vibes for this kind of function.
           </p>
           <p>
             As we apply Vibes to more complex arrangements of models, use cases

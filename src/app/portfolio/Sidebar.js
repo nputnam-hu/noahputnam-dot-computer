@@ -191,7 +191,7 @@ const Sidebar = ({ dark = false }) => {
           borderBottomWidth: 1,
           background: "rgba(250, 249, 246, 1)",
           // backdropFilter: "blur(10px)",
-          zIndex: 3,
+          // zIndex: 3,
         }}
       >
         <div className={styles.row} style={{ alignItems: "center" }}>
