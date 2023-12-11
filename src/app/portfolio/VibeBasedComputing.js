@@ -154,11 +154,11 @@ const VibeBasedComputing = ({
       <h4
         style={{
           fontFamily: "HelveticaNeue-Medium",
-          color: "#444",
-          fontSize: 23,
+          color: "black",
+          fontSize: 30,
         }}
       >
-        A Note on Attribution
+        Attribution & Prior Works
       </h4>
     </div>
   );

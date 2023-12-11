@@ -73,7 +73,8 @@ const DiagramSection = () => {
           Now that The Vibe has been formally defined, we can begin to consider
           its implications for Human-Computer Interaction. For instance, when
           applied to UI/UX, Vibes operate as a powerful new organizing principle
-          for computer apps that can be explored in a variety of domains.
+          for software applications that can be explored in a variety of
+          domains.
         </p>
       </div>
       <div style={{ height: 24 }} />

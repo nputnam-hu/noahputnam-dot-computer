@@ -80,8 +80,8 @@ const OntologySection = () => {
             Vibe defines.
           </p>
           <p>
-            Vibes play a dual role in computer applications: a) a UI object for
-            users to consume, curate, and share media, and b) a technical
+            Vibes play a dual role in computer applications: a) as a UI object
+            for users to consume, curate, and share media, and b) as a technical
             standard for developers to connect users' media with AI.
           </p>
           <p>
@@ -90,8 +90,8 @@ const OntologySection = () => {
             analysis, and they can <em>pull</em> new Media Objects from a model
             to add to their contents, in similar fashion to a recommendation
             algorithm filling a content feed. In a Vibe-based Computing
-            ecosystem, users can take any Vibe they own and connect it with an
-            app that interaces with AI to understand and transform its contents.
+            ecosystem, users can take any Vibe they own and upload it to an app
+            that interfaces with AI to understand and transform its contents.
           </p>
         </div>
         <div style={{ width: 32 }} />
@@ -118,7 +118,7 @@ const OntologySection = () => {
             to extract the underlying style of the images in its Media Objects.
             This would let users generate and remix images in different
             aesthetics depending on the Vibe that is plugged into the app. And
-            with the development of multimodal models over time, AI will be able
+            with the development of multimodal models, over time AI will be able
             to infer implicit properties like style and mood from not just
             images but all forms of media, unlocking the ability to use any of
             your Vibes for this kind of function.
