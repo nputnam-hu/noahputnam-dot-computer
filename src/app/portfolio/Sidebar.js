@@ -97,13 +97,15 @@ const FixedBar = ({ dark }) => {
                 pathname === "/portfolio/30000-under-30" && styles.active,
                 dark && styles.dark
               )}
-              href={{
-                pathname: "/portfolio/30000-under-30",
-              }}
+              // href={{
+              //   pathname: "/portfolio/30000-under-30",
+              // }}
+              href="https://twitter.com/zeitgeist_fm"
+              target="_blank"
             >
               30000 under 30
             </Link>
-            <Link
+            {/* <Link
               className={cs(
                 styles.fixedsidebar__link,
                 pathname === "/portfolio/e-conomy" && styles.active,
@@ -114,16 +116,18 @@ const FixedBar = ({ dark }) => {
               }}
             >
               Cambridge Technologists
-            </Link>
+            </Link> */}
             <Link
               className={cs(
                 styles.fixedsidebar__link,
                 pathname === "/portfolio/e-conomy" && styles.active,
                 dark && styles.dark
               )}
-              href={{
-                pathname: "/portfolio/e-conomy",
-              }}
+              // href={{
+              //   pathname: "/portfolio/e-conomy",
+              // }}
+              href="https://e-conomy.la"
+              target="_blank"
             >
               E-conomy
             </Link>
@@ -256,13 +260,15 @@ const Sidebar = ({ dark = false }) => {
                   pathname === "/portfolio/30000-under-30" && styles.active,
                   dark && styles.dark
                 )}
-                href={{
-                  pathname: "/portfolio/30000-under-30",
-                }}
+                // href={{
+                //   pathname: "/portfolio/30000-under-30",
+                // }}
+                href="https://twitter.com/zeitgeist_fm"
+                target="_blank"
               >
                 30000 under 30
               </Link>
-              <Link
+              {/* <Link
                 className={cs(
                   styles.sidebar__link,
                   pathname === "/portfolio/e-conomy" && styles.active,
@@ -273,16 +279,18 @@ const Sidebar = ({ dark = false }) => {
                 }}
               >
                 Cambridge Technologists
-              </Link>
+              </Link> */}
               <Link
                 className={cs(
                   styles.sidebar__link,
                   pathname === "/portfolio/e-conomy" && styles.active,
                   dark && styles.dark
                 )}
-                href={{
-                  pathname: "/portfolio/e-conomy",
-                }}
+                // href={{
+                //   pathname: "/portfolio/e-conomy",
+                // }}
+                href="https://e-conomy.la"
+                target="_blank"
               >
                 E-conomy
               </Link>
