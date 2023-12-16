@@ -160,17 +160,19 @@ const VibeBasedComputing = ({
       >
         Attribution & Prior Works
       </h4>
-      <p>
-        The concept of Vibe-based Computing is original to me, as are the UI
-        designs depicted under the "Generating a Music Vibe" and "A Music Vibe
-        UI" sections.
-      </p>
-      <p>
-        The graphics and Vibe gif shown interspered throughout this portfolio
-        page were made in collaboration between me and outside designers I hired
-        to better illustrate the different components of the concept I
-        formulated. Further details available upon request.
-      </p>
+      <div className={styles.fulltext}>
+        <p>
+          The concept of Vibe-based Computing is original to me, as are the UI
+          designs depicted under the "Generating a Music Vibe" and "A Music Vibe
+          UI" sections.
+        </p>
+        <p>
+          The graphics and Vibe gif shown interspered throughout this portfolio
+          page were made in collaboration between me and outside designers I
+          hired to better illustrate the different components of the concept I
+          formulated. Further details available upon request.
+        </p>
+      </div>
     </div>
   );
 };
