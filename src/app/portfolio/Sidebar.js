@@ -100,7 +100,7 @@ const FixedBar = ({ dark }) => {
               // href={{
               //   pathname: "/portfolio/30000-under-30",
               // }}
-              href="https://twitter.com/zeitgeist_fm"
+              href="/30k_under_30.pdf"
               target="_blank"
             >
               30000 under 30
@@ -263,7 +263,7 @@ const Sidebar = ({ dark = false }) => {
                 // href={{
                 //   pathname: "/portfolio/30000-under-30",
                 // }}
-                href="https://twitter.com/zeitgeist_fm"
+                href="/30k_under_30.pdf"
                 target="_blank"
               >
                 30000 under 30
