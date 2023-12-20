@@ -110,7 +110,7 @@ const ScreenshotSection = () => {
             they are playing the same couple of tracks on repeat, the Vibe may
             stop pulling new song objects altogether and just loop those songs
             on repeat. The UI surfaces different recommended artists, albums,
-            and songs in a widget to the right of the queue which operates like
+            and songs in a widget to the right of the queue, which operates like
             a{" "}
             <Link
               href="https://en.wikipedia.org/wiki/Conveyor_belt_sushi"
