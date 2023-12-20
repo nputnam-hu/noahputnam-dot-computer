@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import useScrollPosition from "@react-hook/window-scroll";
+import { isSafari } from "react-device-detect";
 
 import Image from "next/image";
 import cs from "classnames";
@@ -65,7 +66,7 @@ const DiagramSection = () => {
     }
   }, [scrollY, diagramTop]);
 
-  const dimScale = (1 / 5) * scrollAnimation + 4 / 5;
+  const dimScale = isSafari ? 1 : (1 / 5) * scrollAnimation + 4 / 5;
 
   return (
     <div className={styles.diagramsection}>
