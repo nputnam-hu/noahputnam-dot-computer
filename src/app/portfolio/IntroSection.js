@@ -19,12 +19,12 @@ const IntroSection = () => {
             <p style={{ fontSize: 26.5 }}>
               The way generative models intuitively work is by “finding the
               vibe” of media they are prompted on, and translating it into the
-              generated media they output. This metaphor lays the foundation for
-              The Vibe as a new UI object and language that opens up unexplored
-              territory for developers to build on top of these models.
-              Vibe-based Computing develops a novel mode of Human-Computer
-              Interaction between internet users and AI, with The Vibe as its
-              central primitive.
+              generated media they output. This metaphor lays the foundation for{" "}
+              <b>The Vibe</b> as a new UI object and language that opens up
+              unexplored territory for developers to build on top of these
+              models. Vibe-based Computing develops a novel mode of
+              Human-Computer Interaction between internet users and AI, with The
+              Vibe as its central primitive.
             </p>
           </div>
         </div>
