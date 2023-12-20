@@ -12,25 +12,6 @@ export const metadata = {
 
 const About = () => {
   return (
-    <section style={{ display: "relative" }}>
-      <div
-        style={{
-          position: "--webkit-sticky",
-          top: 150,
-          background: "pink",
-          display: "block",
-        }}
-      >
-        I'm sticky
-      </div>
-      <div style={{ paddingBottom: "100vh" }}>some content...</div>
-      {/* <span style="position: sticky; top: 150px; display: block; background: darkcyan;">
-            Me too!
-          </span> */}
-      <div style={{ paddingBottom: "100vh" }}>some content...</div>
-    </section>
-  );
-  return (
     <main style={{ paddingTop: 20, paddingLeft: 14 }}>
       <div
         className={styles.row}
