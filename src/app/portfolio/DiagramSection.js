@@ -18,6 +18,7 @@ const DIAGRAM_ID = "diagram";
 
 const DiagramSection = () => {
   const scrollY = useScrollPosition(120);
+  // console.log({ scrollY });
   const [scrollAnimation, setAnimation] = useState(0);
   const [diagramTop, setDiagramTop] = useState();
   // none | people | music
@@ -82,16 +83,18 @@ const DiagramSection = () => {
         <div
           id={DIAGRAM_ID}
           style={{
-            height: DIAGRAM_FINAL_HEIGHT * dimScale + 100,
+            height: DIAGRAM_FINAL_HEIGHT + 100,
             position: "absolute",
             zIndex: 10,
           }}
+          className={styles.webkitfix}
         >
           <div
+            className={styles.webkitfix}
             style={{
               // position: "sticky",
               // top: 64 - 40 * scrollAnimation,
-              width: DIAGRAM_FINAL_WIDTH * dimScale,
+              width: DIAGRAM_FINAL_WIDTH,
               top: 60,
               // ((windowHeight - DIAGRAM_FINAL_HEIGHT * 1.1 - 100) / 2) *
               // scrollAnimation,
@@ -106,7 +109,7 @@ const DiagramSection = () => {
               src={VibeDiagram}
               placeholder="blur"
               alt="Vibe Diagram"
-              className={cs(styles.diagram_img)}
+              className={cs(styles.diagram_img, styles.webkitfix)}
               place
               width={DIAGRAM_FINAL_WIDTH * dimScale}
               height={DIAGRAM_FINAL_HEIGHT * dimScale}
@@ -117,6 +120,10 @@ const DiagramSection = () => {
                 zIndex: 16,
                 // top: 0,
                 position: "absolute",
+                transform: "translateZ(0)",
+                // transform: `scale(${dimScale}) translateZ(0) translateY(${
+                //   (DIAGRAM_FINAL_HEIGHT / 2) * dimScale * 0
+                // })`,
                 // bottom:
                 // (scrollAnimation *
                 //   (windowHeight - DIAGRAM_FINAL_HEIGHT * dimScale)) /
@@ -126,10 +133,30 @@ const DiagramSection = () => {
               }}
             />
             <Image
+              src={MusicVibeDiagram}
+              placeholder="blur"
+              alt="An example of a music vibe"
+              className={cs(styles.diagram_img, styles.webkitfix)}
+              width={DIAGRAM_FINAL_WIDTH * dimScale}
+              height={DIAGRAM_FINAL_HEIGHT * dimScale}
+              style={{
+                // transform: `scale(${dimScale}) translateZ(0) translateY(${
+                //   (DIAGRAM_FINAL_HEIGHT / 2) * dimScale * 0
+                // })`,
+                zIndex: 15,
+                // position: "absolute",
+                opacity: selectedDiagram === "music" ? 1 : 0,
+                transition: "opacity .3s ease-in-out",
+                // top: 0,
+                position: "absolute",
+                transform: "translateZ(0)",
+              }}
+            />
+            <Image
               src={PeopleVibeDiagram}
               placeholder="blur"
               alt="An example of a people vibe"
-              className={cs(styles.diagram_img)}
+              className={cs(styles.diagram_img, styles.webkitfix)}
               width={DIAGRAM_FINAL_WIDTH * dimScale}
               height={DIAGRAM_FINAL_HEIGHT * dimScale}
               style={{
@@ -142,26 +169,10 @@ const DiagramSection = () => {
               }}
             />
             <Image
-              src={MusicVibeDiagram}
-              placeholder="blur"
-              alt="An example of a music vibe"
-              className={cs(styles.diagram_img)}
-              width={DIAGRAM_FINAL_WIDTH * dimScale}
-              height={DIAGRAM_FINAL_HEIGHT * dimScale}
-              style={{
-                zIndex: 15,
-                // position: "absolute",
-                opacity: selectedDiagram === "music" ? 1 : 0,
-                transition: "opacity .3s ease-in-out",
-                // top: 0,
-                position: "absolute",
-              }}
-            />
-            <Image
               src={NewsVibeDiagram}
               placeholder="blur"
               alt="An example of a news vibe"
-              className={cs(styles.diagram_img)}
+              className={cs(styles.diagram_img, styles.webkitfix)}
               width={DIAGRAM_FINAL_WIDTH * dimScale}
               height={DIAGRAM_FINAL_HEIGHT * dimScale}
               style={{
@@ -177,7 +188,7 @@ const DiagramSection = () => {
               src={PhotosVibeDiagram}
               placeholder="blur"
               alt="An example of a photos vibe"
-              className={cs(styles.diagram_img)}
+              className={cs(styles.diagram_img, styles.webkitfix)}
               width={DIAGRAM_FINAL_WIDTH * dimScale}
               height={DIAGRAM_FINAL_HEIGHT * dimScale}
               style={{
@@ -193,7 +204,7 @@ const DiagramSection = () => {
               src={MoneyVibeDiagram}
               placeholder="blur"
               alt="An example of a money vibe"
-              className={cs(styles.diagram_img)}
+              className={cs(styles.diagram_img, styles.webkitfix)}
               width={DIAGRAM_FINAL_WIDTH * dimScale}
               height={DIAGRAM_FINAL_HEIGHT * dimScale}
               style={{
