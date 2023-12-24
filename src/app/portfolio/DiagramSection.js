@@ -91,7 +91,7 @@ const DiagramSection = () => {
           className={styles.webkitfix}
         >
           <div
-            className={styles.absolutecenter}
+            // className={styles.absolutecenter}
             style={{
               // position: "sticky",
               // top: 64 - 40 * scrollAnimation,
@@ -103,7 +103,8 @@ const DiagramSection = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              justifyContent: "flex-start",
+              // justifyContent: "flex-start",
+              marginRight: 80,
             }}
           >
             <Image

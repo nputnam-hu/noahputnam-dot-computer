@@ -343,7 +343,7 @@
 }
 
 .vibeperson_img {
-  transform: scale(.95);
+  /* transform: scale(.95); */
   @media screen and (max-width: 1300px) {
     transform: scale(.9);
   } 
