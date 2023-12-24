@@ -3,6 +3,8 @@ import styles from "./portfolio.module.css";
 import DemoVideo from "./DemoVideo";
 import Image from "next/image";
 
+import VibeGroup from "/public/vibe-based-computing/vibegroup.png";
+
 const IntroSection = () => {
   return (
     <>
@@ -10,13 +12,13 @@ const IntroSection = () => {
         <div className={styles.col}>
           <h2>A New Way of Being, Online</h2>
           <div className={styles.row__text}>
-            <p style={{ fontSize: 26.5, marginBottom: 8 }}>
+            <p className={styles.largefont} style={{ marginBottom: 8 }}>
               Vibes are everywhere online. Their form uniquely matches the pace
               and tenor of the web: continuous, social, ever-evolving. But with
               the advent of Generative AI, vibes can take on new meaning in
               cyberspace.
             </p>
-            <p style={{ fontSize: 26.5 }}>
+            <p className={styles.largefont}>
               The way generative models intuitively work is by “finding the
               vibe” of media they are prompted on, and translating it into the
               generated media they output. This metaphor lays the foundation for{" "}
@@ -35,7 +37,7 @@ const IntroSection = () => {
       <div className={styles.row} style={{ marginTop: -4 }}>
         <div className={styles.row__text}>
           <h2>From Platforms to Vibes</h2>
-          <p style={{ fontSize: 26.5, marginBottom: 8 }}>
+          <p className={styles.largefont} style={{ marginBottom: 8 }}>
             At its most basic,{" "}
             <b>
               a Vibe is an object that can hold any number and any kind of
@@ -52,19 +54,12 @@ const IntroSection = () => {
         <div style={{ width: 36 }} />
         <Image
           alt="A group of vibes"
-          src="/vibe-based-computing/vibegroup.png"
-          style={{
-            marginRight: "auto",
-            marginBottom: "auto",
-            marginTop: 24,
-            // transform: ["rotate(-14deg)"],
-          }}
-          width={400 * 1.1}
-          height={294 * 1.1}
+          src={VibeGroup}
+          className={styles.groupvibes_img}
         />
       </div>
       <div className={styles.fulltext}>
-        <p style={{ fontSize: 26.5 }}>
+        <p className={styles.largefont}>
           Generative AI alters the physics of content on the internet. While
           before an image or a text post could only be understood by computers
           when it was crossreferenced against thousands of platform-specific

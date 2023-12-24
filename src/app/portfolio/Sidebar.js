@@ -70,7 +70,6 @@ const FixedBar = ({ dark }) => {
             </Link>
           </div>
           <span>Portfolio</span>
-          <div style={{ height: 4 }} />
           <Link
             className={cs(
               styles.fixedsidebar__link,
@@ -131,9 +130,22 @@ const FixedBar = ({ dark }) => {
             >
               E-conomy
             </Link>
+            <Link
+              className={cs(
+                styles.fixedsidebar__link,
+                pathname === "/portfolio/e-conomy" && styles.active,
+                dark && styles.dark
+              )}
+              // href={{
+              //   pathname: "/portfolio/e-conomy",
+              // }}
+              href="https://blogwise-dashboard-archive.netlify.app/"
+              target="_blank"
+            >
+              blogwise
+            </Link>
           </div>
         </div>
-        <div style={{ width: 8 }} />
         <button
           onClick={toggleExpanded}
           style={{
@@ -144,6 +156,7 @@ const FixedBar = ({ dark }) => {
           }}
         >
           <svg
+            className={styles.fixedsidebar__downicon}
             width="19"
             height="17"
             viewBox="0 0 19 17"
@@ -293,6 +306,20 @@ const Sidebar = ({ dark = false }) => {
                 target="_blank"
               >
                 E-conomy
+              </Link>
+              <Link
+                className={cs(
+                  styles.sidebar__link,
+                  pathname === "/portfolio/e-conomy" && styles.active,
+                  dark && styles.dark
+                )}
+                // href={{
+                //   pathname: "/portfolio/e-conomy",
+                // }}
+                href="https://blogwise-dashboard-archive.netlify.app/"
+                target="_blank"
+              >
+                blogwise
               </Link>
             </div>
           </div>

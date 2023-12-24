@@ -13,8 +13,8 @@ import NewsVibeDiagram from "/public/vibe-based-computing/vibediagram-news.png";
 import PhotosVibeDiagram from "/public/vibe-based-computing/vibediagram-photos.png";
 import MoneyVibeDiagram from "/public/vibe-based-computing/vibediagram-money.png";
 
-const DIAGRAM_FINAL_HEIGHT = 684 * 0.94;
-const DIAGRAM_FINAL_WIDTH = 1000 * 0.94;
+const DIAGRAM_FINAL_HEIGHT = 643;
+const DIAGRAM_FINAL_WIDTH = 940;
 const DIAGRAM_ID = "diagram";
 
 const DiagramSection = () => {
@@ -46,7 +46,7 @@ const DiagramSection = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const triggerPoint = diagramTop - windowHeight + DIAGRAM_FINAL_HEIGHT + 80;
+  const triggerPoint = diagramTop - windowHeight + DIAGRAM_FINAL_HEIGHT + 60;
   useEffect(() => {
     if (scrollY > triggerPoint) {
       if (selectedDiagram === "none") {
@@ -73,7 +73,7 @@ const DiagramSection = () => {
       <div className={styles.fulltext}>
         <p>
           Now that The Vibe has been formally defined, we can begin to consider
-          its implications for Human-Computer Interaction. For instance, when
+          its implications for Human-Computer Interaction. For example, when
           applied to UI/UX, Vibes operate as a powerful new organizing principle
           for software applications that can be explored in a variety of
           domains.
@@ -91,7 +91,7 @@ const DiagramSection = () => {
           className={styles.webkitfix}
         >
           <div
-            className={styles.webkitfix}
+            className={styles.absolutecenter}
             style={{
               // position: "sticky",
               // top: 64 - 40 * scrollAnimation,
@@ -103,7 +103,7 @@ const DiagramSection = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              marginRight: `calc(172px)`,
+              justifyContent: "flex-start",
             }}
           >
             <Image

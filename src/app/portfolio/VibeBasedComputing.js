@@ -8,8 +8,9 @@ import ScreenshotSection from "./ScreenshotSection";
 import styles from "./portfolio.module.css";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import VibeHeader from "/public/vibe-based-computing/vibeheader.png";
 import EndSection from "./EndSections";
+import VibeHeader from "/public/vibe-based-computing/vibeheader.png";
+import ParadigmShift from "/public/vibe-based-computing/paradigmshift.png";
 
 const VibeBasedComputing = ({
   serverComponents: { introSection, ontologySection },
@@ -25,42 +26,54 @@ const VibeBasedComputing = ({
 
   const wasDarkmode = prevbg === "dark";
 
+  // return (
+  //   <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
+  //     <div style={{ height: 100 }} />
+  //     <h2>Testaew</h2>
+  //     <div style={{ height: 100 }} />
+  //     <ScreenshotSection />
+  //     <div
+  //       className={cs(styles.absolutecenter, styles.mobileonly)}
+  //       style={{ marginTop: -1, background: "white", height: 1, zIndex: 100 }}
+  //     />
+  //     <div style={{ height: 200 }} />
+  //     <h2>Testaew</h2>
+  //     <div style={{ height: 200 }} />
+  //   </div>
+  // );
+
   return (
     <>
-      <div className={styles.mobile}>
-        <div style={{ height: 108 }} />
-        <div style={{ width: "80vw", paddingLeft: "5vw", fontSize: 18 }}>
-          This portfolio page is currently only optimized for desktop and will
-          not appear correctly viewed on mobile.
-        </div>
-      </div>
       <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
         <div style={{ height: 108 }} />
-        <div style={{ paddingLeft: 52 }}>
+        <div className={styles.intropadding}>
           <h5>CASE 1</h5>
           <h1>Vibe-based Computing</h1>
-          <div style={{ height: "5vh" }} />
         </div>
-        <Image
-          src={VibeHeader}
-          alt="A vibe computer"
-          className={cs(styles.vibeheader_img, "animateOpacity")}
-          width={900}
-          height={362}
-          placeholder="blur"
-          priority
-          // style={{ marginLeft: `calc(-172px - 5vw + 450px)` }}
-        />
-        <div style={{ height: "5.5vh" }} />
-        <div style={{ paddingLeft: 52 }}>
-          <p
-            style={{
-              fontSize: 31,
-              marginBottom: 8,
-              width: 820,
-              fontFamily: "HelveticaNeue-Light",
-              lineHeight: 1.45,
-            }}
+        <div className={styles.absolutecenter}>
+          <Image
+            // fill
+            src={VibeHeader}
+            alt="A vibe computer"
+            className={cs(styles.vibeheader_img, "animateOpacity")}
+            // sizes="(max-width: 1200px) 800px, 900px"
+            // width={900}
+            // height={362}
+            placeholder="blur"
+            priority
+            // style={{ marginLeft: "calc(16vw - 450px)" }}
+          />
+        </div>
+        <div className={styles.intropadding}>
+          <span
+            className={styles.intro__description}
+            // style={{
+            //   fontSize: 31,
+            //   marginBottom: 8,
+            //   width: 820,
+            //   fontFamily: "HelveticaNeue-Light",
+            //   lineHeight: 1.45,
+            // }}
           >
             Vibe-based Computing is an attempt to reimagine what the internet
             could be by constructing a new primitive for online media,{" "}
@@ -74,19 +87,18 @@ const VibeBasedComputing = ({
               The Vibe
             </span>
             .
-          </p>
+          </span>
           <div style={{ height: 120 }} />
           {introSection}
         </div>
         <div style={{ height: 80 }} />
-        <Image
-          alt="From walled gardens to vibes"
-          src="/vibe-based-computing/paradigmshift.png"
-          style={{ marginLeft: `calc(-172px - 5vw + 412px)` }}
-          // style={{ margin: "auto" }}
-          width={750 * 1.1}
-          height={147 * 1.1}
-        />{" "}
+        <div className={styles.absolutecenter}>
+          <Image
+            alt="From walled gardens to vibes"
+            src={ParadigmShift}
+            className={cs(styles.paradigmshift_img)}
+          />
+        </div>
         <div style={{ height: 100 }} />
         <h3>Dynamic Media Ontology</h3>
         {ontologySection}
@@ -95,6 +107,15 @@ const VibeBasedComputing = ({
         <DiagramSection />
         <div style={{ height: 140 }} />
         <ScreenshotSection />
+        <div
+          className={cs(styles.absolutecenter, styles.mobileonly)}
+          style={{
+            marginTop: -1,
+            background: "white",
+            height: 1,
+            zIndex: 1000000,
+          }}
+        />
         <div style={{ height: 240 }} />
         <EndSection />
         <div style={{ height: 60 }} />

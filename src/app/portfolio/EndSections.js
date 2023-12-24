@@ -24,8 +24,7 @@ const EndSection = () => {
             working to predict and influence our behavior, nudging us towards
             addiction, emotional activation, and passive consumption. And at the
             same time, platforms hide the workings of these algorithms away from
-            us, submerging them beneath their UI to more easily divert our will
-            towards profit-maximizing ends.
+            us to more easily divert our will towards profit-maximizing ends.
           </p>
           <p>
             Vibe-based Computing seeks to put the user back in the driver's

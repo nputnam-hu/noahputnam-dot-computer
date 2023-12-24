@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import cs from "classnames";
 import styles from "./portfolio.module.css";
 
 const OntologySection = () => {
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <div className={styles.fulltext}>
         <p>
           In order to implement The Vibe, we must build a model of the web
@@ -142,7 +143,7 @@ const OntologySection = () => {
           alt="Algorithm based off of different vibes user selects and their interaction with content"
           width={550 * 1.05}
           height={262 * 1.05}
-          className={styles.media_img}
+          className={cs(styles.media_img, styles.vibeperson_img)}
           style={{
             // marginRight: "auto",
             marginBottom: "auto",
@@ -186,7 +187,7 @@ const OntologySection = () => {
             and vibrantly alive.
           </p> */}
         </div>
-        <div style={{ width: 64 }} />
+        <div style={{ width: 44 }} />
         <Image
           src="/vibe-based-computing/vibelearn.png"
           alt="Media Elements, platform agnostic: Image, Video, Audio, Text"
