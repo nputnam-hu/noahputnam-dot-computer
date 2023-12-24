@@ -188,7 +188,7 @@
   font-size: 31px;
   margin-bottom: 8px;
   width: 800px;
-  line-height: 1.45;
+  line-height: 140%;
   font-family: HelveticaNeue-Light;
   @media screen and (max-width: 1300px) {
     font-size: 28px;
@@ -207,10 +207,10 @@
 }
 
 .vibeheader_img {
-  margin: 44px auto 56px;
+  margin: 44px auto 60px;
   width: 900px;
   height: auto;
-  padding-left: 160px;
+  padding-left: 80px;
   @media screen and (max-width: 1300px) {
     width: 850px;
     margin: 55px auto;
