@@ -922,8 +922,9 @@
     padding-right: 4vw !important;
   }
 
-  .main p {
+  .main p, .largefont {
     font-size: 20px;
+    line-height: auto !important;
   }
 
   .vibeheader_img {
@@ -1044,7 +1045,7 @@
     line-height: 1.2;
   }
   .main h2 {
-    font-size: 44px;
+    font-size: 48px;
     line-height: 1.2;
     /* margin-bottom: 4px; */
     /* font-family: HelveticaNeue-Medium; */
