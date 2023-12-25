@@ -42,7 +42,7 @@ const ParadigmShiftMobile = () => {
         position: "relative",
         height: 912,
         width: "100%",
-        paddingBottom: 60,
+        paddingBottom: 0,
       }}
       id={SECTION_ID}
     >
