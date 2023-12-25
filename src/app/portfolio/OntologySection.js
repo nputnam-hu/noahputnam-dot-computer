@@ -5,7 +5,8 @@ import styles from "./portfolio.module.css";
 
 const OntologySection = () => {
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div className={styles.ontotologysection}>
+      <h3>Dynamic Media Ontology</h3>
       <div className={styles.fulltext}>
         <p>
           In order to implement The Vibe, we must build a model of the web
@@ -45,6 +46,14 @@ const OntologySection = () => {
             the platform's database schema, and abstract meta-properties that
             can be inferred by AI.
           </p>
+          <Image
+            src="/vibe-based-computing/mediaobjects.png"
+            alt="Media Objects platform dependant, atomic units of multi-media content composed of Media Elements"
+            className={cs(styles.media_img, styles.mediaobject_img_mobile)}
+            width={500}
+            height={368}
+            style={{ marginLeft: -4 }}
+          />
           <p>
             By conceptualizing the content we see on the internet in terms of
             distinct Media Objects, we can begin to destructure the walled
@@ -64,7 +73,7 @@ const OntologySection = () => {
         <Image
           src="/vibe-based-computing/mediaobjects.png"
           alt="Media Objects platform dependant, atomic units of multi-media content composed of Media Elements"
-          className={styles.media_img}
+          className={cs(styles.media_img, styles.mediaobject_img)}
           width={500}
           height={368}
           style={{ marginLeft: -4 }}
@@ -80,6 +89,14 @@ const OntologySection = () => {
             playlists, etc.—are assimilated into the universtal interface The
             Vibe defines.
           </p>
+          <Image
+            src="/vibe-based-computing/vibes.png"
+            alt="Vibes platform transcendant, dynamic collections of Media Objects, rearrangable"
+            className={cs(styles.media_img, styles.vibedesc_img_mobile)}
+            width={482}
+            height={500}
+            style={{ marginLeft: 16 }}
+          />
           <p>
             Vibes play a dual role in computer applications: a) as a UI object
             for users to consume, curate, and share media, and b) as a technical
@@ -100,7 +117,7 @@ const OntologySection = () => {
           <Image
             src="/vibe-based-computing/vibes.png"
             alt="Vibes platform transcendant, dynamic collections of Media Objects, rearrangable"
-            className={styles.media_img}
+            className={cs(styles.media_img, styles.vibedesc_img)}
             width={482}
             height={500}
             style={{ marginLeft: 16 }}
@@ -108,7 +125,7 @@ const OntologySection = () => {
         </div>
       </div>
       {/* <div style={{ height: 12 }} /> */}
-      <div className={styles.row}>
+      <div className={styles.row_mobilecol}>
         <div className={styles.row__smalltext}>
           <p>
             A basic example of an app built on top of Vibes is an image studio
@@ -143,7 +160,7 @@ const OntologySection = () => {
           alt="Algorithm based off of different vibes user selects and their interaction with content"
           width={550 * 1.05}
           height={262 * 1.05}
-          className={cs(styles.media_img, styles.vibeperson_img)}
+          className={cs(styles.media_img)}
           style={{
             // marginRight: "auto",
             marginBottom: "auto",

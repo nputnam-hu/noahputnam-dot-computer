@@ -10,7 +10,9 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import EndSection from "./EndSections";
 import VibeHeader from "/public/vibe-based-computing/vibeheader.png";
+import MobileVibeHeader from "/public/vibe-based-computing/vibeheader_mobile.png";
 import ParadigmShift from "/public/vibe-based-computing/paradigmshift.png";
+import MobileParadigmShift from "/public/vibe-based-computing/paradigmshift_mobile.png";
 
 const VibeBasedComputing = ({
   serverComponents: { introSection, ontologySection },
@@ -50,20 +52,29 @@ const VibeBasedComputing = ({
           <h5>CASE 1</h5>
           <h1>Vibe-based Computing</h1>
         </div>
-        <div className={styles.absolutecenter}>
-          <Image
-            // fill
-            src={VibeHeader}
-            alt="A vibe computer"
-            className={cs(styles.vibeheader_img, "animateOpacity")}
-            // sizes="(max-width: 1200px) 800px, 900px"
-            // width={900}
-            // height={362}
-            placeholder="blur"
-            priority
-            // style={{ marginLeft: "calc(16vw - 450px)" }}
-          />
-        </div>
+        <Image
+          // fill
+          src={VibeHeader}
+          alt="A vibe computer"
+          className={cs(styles.vibeheader_img, "animateOpacity")}
+          // sizes="(max-width: 1200px) 800px, 900px"
+          // width={900}
+          // height={362}
+          placeholder="blur"
+          priority
+          // style={{ marginLeft: "calc(16vw - 450px)" }}
+        />
+        <Image
+          src={MobileVibeHeader}
+          alt="A vibe computer"
+          className={cs(styles.mobilevibeheader_img, "animateOpacity")}
+          // sizes="(max-width: 1200px) 800px, 900px"
+          // width={900}
+          // height={362}
+          placeholder="blur"
+          priority
+          // style={{ marginLeft: "calc(16vw - 450px)" }}
+        />
         <div className={styles.intropadding}>
           <span
             className={styles.intro__description}
@@ -89,18 +100,33 @@ const VibeBasedComputing = ({
             .
           </span>
           <div style={{ height: 120 }} />
+          <div className={styles.mobileonly} style={{ height: 80 }} />
           {introSection}
         </div>
-        <div style={{ height: 80 }} />
-        <div className={styles.absolutecenter}>
+        <div className={styles.desktoponly} style={{ height: 200 }} />
+        <div className={styles.mobileonly} style={{ height: 80 }} />
+        <div>
           <Image
             alt="From walled gardens to vibes"
             src={ParadigmShift}
-            className={cs(styles.paradigmshift_img)}
+            className={cs(
+              // styles.desktoponly,
+              styles.paradigmshift_img
+            )}
           />
+          {/* <Image
+            alt="From walled gardens to vibes"
+            src={MobileParadigmShift}
+            className={cs(styles.mobileonly)}
+            style={{
+              width: "80%",
+              height: "auto",
+              margin: "-140px 0 -60px",
+              paddingLeft: 28,
+            }}
+          /> */}
         </div>
-        <div style={{ height: 100 }} />
-        <h3>Dynamic Media Ontology</h3>
+        <div style={{ height: 260 }} />
         {ontologySection}
         <div style={{ height: 60 }} />
         <h3>Generative UI</h3>

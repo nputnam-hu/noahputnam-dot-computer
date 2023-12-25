@@ -72,6 +72,7 @@ const FixedBar = ({ dark }) => {
           <span>Portfolio</span>
           <Link
             className={cs(
+              styles.desktoponly,
               styles.fixedsidebar__link,
               pathname === "/portfolio" && styles.active,
               dark && styles.dark
@@ -83,13 +84,27 @@ const FixedBar = ({ dark }) => {
             Vibe-based Computing
           </Link>
           <div
+            className={expanded && styles.expandedbar}
             style={{
-              height: expanded ? 80 : 0,
+              height: 0,
               opacity: expanded ? 1 : 0,
               transition: "all .3s",
               overflowY: "hidden",
             }}
           >
+            <Link
+              className={cs(
+                styles.mobileonly,
+                styles.fixedsidebar__link,
+                pathname === "/portfolio" && styles.active,
+                dark && styles.dark
+              )}
+              href={{
+                pathname: "/portfolio",
+              }}
+            >
+              Vibe-based Computing
+            </Link>
             <Link
               className={cs(
                 styles.fixedsidebar__link,

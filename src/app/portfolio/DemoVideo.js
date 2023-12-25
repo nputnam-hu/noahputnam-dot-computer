@@ -14,21 +14,38 @@ export const DemoVideo = () => {
 
   return (
     <VisibilitySensor onChange={(isVisible) => setIsVisible(isVisible)}>
-      <div className={styles.videowrapper}>
-        <video
-          id="video"
-          className={styles.demovideo}
-          preload="none"
-          autoPlay
-          playsInline
-          muted
-          loop
-          ref={videoRef}
-          controls={false}
-          poster="/vibe-based-computing/demoplaceholder.png"
-          src="/vibe-based-computing/vibevideo.mp4"
-        />
-      </div>
+      <>
+        <div className={styles.videowrapper}>
+          <video
+            id="video"
+            className={styles.demovideo}
+            preload="none"
+            autoPlay
+            playsInline
+            muted
+            loop
+            ref={videoRef}
+            controls={false}
+            poster="/vibe-based-computing/demoplaceholder.png"
+            src="/vibe-based-computing/vibevideo.mp4"
+          />
+        </div>
+        <div className={styles.videowrapper_mobile}>
+          <video
+            id="video2"
+            className={styles.demovideo_mobile}
+            preload="none"
+            autoPlay
+            playsInline
+            muted
+            loop
+            controls={false}
+            ref={videoRef}
+            poster="/vibe-based-computing/demoplaceholdermobile.png"
+            src="/vibe-based-computing/demomobile.mp4"
+          ></video>
+        </div>
+      </>
     </VisibilitySensor>
   );
 };

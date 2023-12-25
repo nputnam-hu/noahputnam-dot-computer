@@ -8,7 +8,7 @@ import VibeGroup from "/public/vibe-based-computing/vibegroup.png";
 const IntroSection = () => {
   return (
     <>
-      <div className={styles.row}>
+      <div className={styles.row_mobilecol}>
         <div className={styles.col}>
           <h2>A New Way of Being, Online</h2>
           <div className={styles.row__text}>
@@ -34,7 +34,7 @@ const IntroSection = () => {
         <DemoVideo />
       </div>
       <div style={{ height: 120 }} />
-      <div className={styles.row} style={{ marginTop: -4 }}>
+      <div className={styles.row_mobilecol} style={{ marginTop: -4 }}>
         <div className={styles.row__text}>
           <h2>From Platforms to Vibes</h2>
           <p className={styles.largefont} style={{ marginBottom: 8 }}>

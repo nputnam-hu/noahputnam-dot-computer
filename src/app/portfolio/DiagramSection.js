@@ -13,9 +13,10 @@ import NewsVibeDiagram from "/public/vibe-based-computing/vibediagram-news.png";
 import PhotosVibeDiagram from "/public/vibe-based-computing/vibediagram-photos.png";
 import MoneyVibeDiagram from "/public/vibe-based-computing/vibediagram-money.png";
 
-const DIAGRAM_FINAL_HEIGHT = 643;
-const DIAGRAM_FINAL_WIDTH = 940;
 const DIAGRAM_ID = "diagram";
+
+const DIAGRAM_FINAL_WIDTH = 940;
+const DIAGRAM_FINAL_HEIGHT = 643;
 
 const DiagramSection = () => {
   const scrollY = useScrollPosition(120);
@@ -25,15 +26,20 @@ const DiagramSection = () => {
   // none | people | music
   const [selectedDiagram, setSelectedDiagram] = useState("none");
   const [windowHeight, setWindowHeight] = useState();
+  const [windowWidth, setWindowWidth] = useState();
+
+  console.log({ DIAGRAM_FINAL_WIDTH });
 
   useEffect(() => {
     const _getAndSetWindowHeight = () => {
-      const windowHeight = window.innerHeight;
-      setWindowHeight(windowHeight);
+      const _windowHeight = window.innerHeight;
+      const _windowWidth = window.innerWidth;
+      setWindowHeight(_windowHeight);
+      setWindowWidth(_windowWidth);
     };
     _getAndSetWindowHeight();
     window.addEventListener("reisze", _getAndSetWindowHeight);
-    return () => window.removeEventListener("resize", _getAndSetWindowHeight);
+    // return () => window.removeEventListener("resize", _getAndSetWindowHeight);
   }, []);
 
   useEffect(() => {
@@ -79,7 +85,7 @@ const DiagramSection = () => {
           domains.
         </p>
       </div>
-      <div style={{ height: 24 }} />
+      <div style={{ height: 36 }} />
       <div className={styles.col} style={{ alignItems: "center" }}>
         <div
           id={DIAGRAM_ID}
@@ -104,7 +110,7 @@ const DiagramSection = () => {
               flexDirection: "column",
               alignItems: "center",
               // justifyContent: "flex-start",
-              marginRight: 80,
+              marginRight: 100,
             }}
           >
             <Image

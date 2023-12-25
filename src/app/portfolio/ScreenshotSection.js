@@ -207,6 +207,7 @@ const ScreenshotSection = () => {
   useEffect(() => {
     const _setOffsets = () => {
       const _sectionTop = document.getElementById(SECTION_ID).offsetTop;
+      console.log({ _sectionTop });
       setSectionTop(_sectionTop);
       const _screenWidth = window.innerWidth;
       setScreenWidth(_screenWidth);
@@ -219,6 +220,8 @@ const ScreenshotSection = () => {
   }, []);
 
   const SECTION_HEIGHT = 1700;
+
+  console.log({ sectionTop, scrollY });
 
   const isMusicVisible =
     scrollY > sectionTop + 450 + (screenWidth > 1300 ? 0 : 250);
