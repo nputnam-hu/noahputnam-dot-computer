@@ -36,7 +36,7 @@ const OntologySection = () => {
           }}
         />
       </div>
-      <div style={{ height: 92 }} />
+      <div className={styles.desktoponly} style={{ height: 92 }} />
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>
@@ -79,7 +79,7 @@ const OntologySection = () => {
           style={{ marginLeft: -4 }}
         />
       </div>
-      <div style={{ height: 72 }} />
+      <div className={styles.desktoponly} style={{ height: 72 }} />
       <div className={styles.row}>
         <div className={styles.row__smalltext}>
           <p>

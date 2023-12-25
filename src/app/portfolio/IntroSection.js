@@ -10,8 +10,8 @@ const IntroSection = () => {
     <>
       <div className={styles.row_mobilecol}>
         <div className={styles.col}>
-          <h2>A New Way of Being, Online</h2>
           <div className={styles.row__text}>
+            <h2>A New Way of Being, Online</h2>
             <p className={styles.largefont} style={{ marginBottom: 8 }}>
               Vibes are everywhere online. Their form uniquely matches the pace
               and tenor of the web: continuous, social, ever-evolving. But with

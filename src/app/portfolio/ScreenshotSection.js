@@ -8,24 +8,36 @@ import Link from "next/link";
 
 const SECTION_ID = "section";
 const MOBILE_SECTION_ID = "mobilesection";
+const MOBILE_SECTION2_ID = "mobilesection2";
+
+import PeopleSS1 from "/public/vibe-based-computing/peopless1.svg";
+import PeopleSS2 from "/public/vibe-based-computing/peopless2.png";
+import MusicSS1 from "/public/vibe-based-computing/musicss1.svg";
+import MusicSS2 from "/public/vibe-based-computing/musicss2.svg";
 
 const MobileScreenshotSection = () => {
   const scrollY = useScrollPosition(120);
   const [sectionTop, setSectionTop] = useState();
+  const [section2Top, setSection2Top] = useState();
 
   useEffect(() => {
     const _setOffsets = () => {
       const _sectionTop = document.getElementById(MOBILE_SECTION_ID).offsetTop;
+      const _section2Top =
+        document.getElementById(MOBILE_SECTION2_ID).offsetTop;
       setSectionTop(_sectionTop);
+      setSection2Top(_section2Top);
     };
     _setOffsets();
     window.addEventListener("resize", _setOffsets);
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const isMusicScreenshotTwoVisible = scrollY > sectionTop + 600;
+  const isMusicScreenshotTwoVisible =
+    scrollY > sectionTop + (section2Top - 571 - 140);
   const isGenScreenshotTwoVisible =
-    !isMusicScreenshotTwoVisible && scrollY > sectionTop + 350;
+    !isMusicScreenshotTwoVisible &&
+    scrollY > sectionTop + (section2Top - 571 - 140) / 2;
   const isGenScreenshotOneVisible =
     !isGenScreenshotTwoVisible && !isMusicScreenshotTwoVisible;
 
@@ -40,10 +52,10 @@ const MobileScreenshotSection = () => {
             position: "relative",
           }}
         >
-          <div className="mobile_screenshots">
+          <div className={cs("mobile_screenshots", styles.overextendpadding)}>
             <div style={{ height: 590, background: "white" }} />
             <Image
-              src="/vibe-based-computing/peopless1.svg"
+              src={PeopleSS1}
               alt="Screenshot of a people vibe in a mobile app"
               width={342}
               height={700}
@@ -54,7 +66,7 @@ const MobileScreenshotSection = () => {
               className={styles.mobilescreenshot}
             />
             <Image
-              src="/vibe-based-computing/peopless2.png"
+              src={PeopleSS2}
               alt="Screenshot of a people vibe in a mobile app"
               width={342}
               height={700}
@@ -65,7 +77,7 @@ const MobileScreenshotSection = () => {
               className={styles.mobilescreenshot}
             />
             <Image
-              src="/vibe-based-computing/musicss2.png"
+              src={MusicSS2}
               alt="Screenshot of a music vibe in a mobile app"
               width={342}
               height={700}
@@ -76,8 +88,9 @@ const MobileScreenshotSection = () => {
             />
             <div className={styles.mobilescreenshotbg} />
             <div
+              className={styles.overextendpadding}
               style={{
-                width: "100vw",
+                // width: "100vw",
                 background: "rgba(0,0,0,0.1)",
                 height: 1,
               }}
@@ -86,15 +99,11 @@ const MobileScreenshotSection = () => {
           <div
             className={cs(
               styles.col,
-              styles.absolutecenter,
-              styles.withpadding
+              styles.overextendpadding
+              // styles.withpadding
             )}
             style={{
               background: "rgba(0,0,0,0.03)",
-              // background: "rgba(250, 249, 246, 1)",
-              // marginLeft: "-5vw",
-              // width: "95vw",
-              // paddingLeft: "5vw",
             }}
           >
             <div style={{ height: 48 }} />
@@ -146,7 +155,7 @@ const MobileScreenshotSection = () => {
               </p>
             </div>
             <div style={{ height: 80 }} />
-            <div className={styles.row__text}>
+            <div className={styles.row__text} id={MOBILE_SECTION2_ID}>
               <h4
                 style={{
                   width: "auto",
@@ -344,7 +353,7 @@ const ScreenshotSection = () => {
         <div className={cs(styles.stickyscreenshots)}>
           <div style={{ position: "absolute" }} className={styles.row}>
             <Image
-              src="/vibe-based-computing/peopless1.svg"
+              src={PeopleSS1}
               alt="Screenshot of a people vibe in a mobile app"
               width={342}
               height={700}
@@ -363,7 +372,7 @@ const ScreenshotSection = () => {
             />
             <div style={{ width: 16 }} />
             <Image
-              src="/vibe-based-computing/peopless2.png"
+              src={PeopleSS2}
               alt="Screenshot of a people vibe in a mobile app"
               width={342}
               height={700}
@@ -388,7 +397,7 @@ const ScreenshotSection = () => {
             className={styles.row}
           >
             <Image
-              src="/vibe-based-computing/musicss1.png"
+              src={MusicSS1}
               alt="Screenshot of a music vibe in a mobile app"
               width={342}
               height={700}
@@ -406,7 +415,7 @@ const ScreenshotSection = () => {
             />
             <div style={{ width: 16 }} />
             <Image
-              src="/vibe-based-computing/musicss2.svg"
+              src={MusicSS2}
               alt="Screenshot of a music vibe in a mobile app"
               width={342}
               height={700}

@@ -100,10 +100,10 @@ const VibeBasedComputing = ({
             .
           </span>
           <div style={{ height: 120 }} />
-          <div className={styles.mobileonly} style={{ height: 80 }} />
+          <div className={styles.mobileonly} style={{ height: 40 }} />
           {introSection}
         </div>
-        <div className={styles.desktoponly} style={{ height: 200 }} />
+        <div className={styles.desktoponly} style={{ height: 180 }} />
         <div className={styles.mobileonly} style={{ height: 80 }} />
         <div>
           <Image
@@ -131,14 +131,14 @@ const VibeBasedComputing = ({
         <div style={{ height: 60 }} />
         <h3>Generative UI</h3>
         <DiagramSection />
-        <div style={{ height: 140 }} />
+        <div className={styles.desktoponly} style={{ height: 200 }} />
         <ScreenshotSection />
         <div
-          className={cs(styles.absolutecenter, styles.mobileonly)}
+          className={cs(styles.overextendpadding, styles.mobileonly)}
           style={{
-            marginTop: -1,
+            marginTop: -1.5,
             background: "white",
-            height: 1,
+            height: 2,
             zIndex: 1000000,
           }}
         />

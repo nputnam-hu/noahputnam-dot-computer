@@ -81,8 +81,6 @@ body {
   display: block;
   top: 0px;
   background: white;
-  width: 100vw;
-  /* margin-left: -5vw; */
   padding-top: 16px;
   /* margin-bottom: 48px; */
   /* border-bottom: 1px solid rgba(0,0,0,0.1); */
@@ -94,7 +92,7 @@ body {
   /* outline: 1px solid gray; */
   @media screen and (max-width: 800px) {
     padding-top: 46px;
-    width: 100vw;
-  margin-left: -4vw;
+    /* width: 100vw; */
+    margin-left: -4vw;
   }
 }

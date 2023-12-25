@@ -28,8 +28,6 @@ const DiagramSection = () => {
   const [windowHeight, setWindowHeight] = useState();
   const [windowWidth, setWindowWidth] = useState();
 
-  console.log({ DIAGRAM_FINAL_WIDTH });
-
   useEffect(() => {
     const _getAndSetWindowHeight = () => {
       const _windowHeight = window.innerHeight;
@@ -44,7 +42,9 @@ const DiagramSection = () => {
 
   useEffect(() => {
     const _setOffsets = () => {
-      const _diagramTop = document.getElementById(DIAGRAM_ID).offsetTop;
+      const _diagramTop =
+        document.getElementById(DIAGRAM_ID).offsetParent.offsetTop +
+        document.getElementById(DIAGRAM_ID).offsetHeight;
       setDiagramTop(_diagramTop);
     };
     _setOffsets();
@@ -52,7 +52,7 @@ const DiagramSection = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const triggerPoint = diagramTop - windowHeight + DIAGRAM_FINAL_HEIGHT + 60;
+  const triggerPoint = diagramTop - windowHeight + 72 + 20;
   useEffect(() => {
     if (scrollY > triggerPoint) {
       if (selectedDiagram === "none") {
@@ -64,15 +64,17 @@ const DiagramSection = () => {
   }, [scrollY, triggerPoint, selectedDiagram]);
 
   useEffect(() => {
-    if (scrollY > diagramTop - 250) {
-      const _scrollAnimation = Math.min(scrollY - diagramTop + 250, 130) / 130;
+    if (scrollY > diagramTop - windowHeight - 20) {
+      const _scrollAnimation =
+        Math.min(scrollY - diagramTop + windowHeight + 20, 130) / 130;
       setAnimation(_scrollAnimation);
     } else {
       setAnimation(0);
     }
-  }, [scrollY, diagramTop]);
+  }, [scrollY, diagramTop, windowHeight]);
 
-  const dimScale = isSafari ? 1 : (1 / 5) * scrollAnimation + 4 / 5;
+  const dimScale = windowWidth < 600 ? 1 : (1 / 5) * scrollAnimation + 4 / 5;
+  const translateScale = windowWidth < 600 ? 0.5 : scrollAnimation - 0.5;
 
   return (
     <div className={styles.diagramsection}>
@@ -85,214 +87,158 @@ const DiagramSection = () => {
           domains.
         </p>
       </div>
-      <div style={{ height: 36 }} />
-      <div className={styles.col} style={{ alignItems: "center" }}>
-        <div
-          id={DIAGRAM_ID}
+      <div
+        style={{
+          position: "absolute",
+          zIndex: 10,
+        }}
+        className={styles.diagramcol}
+      >
+        <Image
+          src={VibeDiagram}
+          placeholder="blur"
+          alt="Vibe Diagram"
+          className={cs(styles.diagram_img, styles.webkitfix)}
           style={{
-            height: DIAGRAM_FINAL_HEIGHT + 100,
+            opacity: selectedDiagram === "none" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            zIndex: 16,
             position: "absolute",
-            zIndex: 10,
+            transform: `scale(${dimScale}) translateZ(0) translateY(${
+              10 * translateScale
+            }%)`,
           }}
-          className={styles.webkitfix}
-        >
-          <div
-            // className={styles.absolutecenter}
-            style={{
-              // position: "sticky",
-              // top: 64 - 40 * scrollAnimation,
-              width: DIAGRAM_FINAL_WIDTH,
-              top: 60,
-              // ((windowHeight - DIAGRAM_FINAL_HEIGHT * 1.1 - 100) / 2) *
-              // scrollAnimation,
-              // left: 0.1 * DIAGRAM_FINAL_WIDTH * dimScale,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              // justifyContent: "flex-start",
-              marginRight: 100,
-            }}
+          id={DIAGRAM_ID}
+        />
+        <Image
+          src={MusicVibeDiagram}
+          placeholder="blur"
+          alt="An example of a music vibe"
+          className={cs(styles.diagram_img, styles.webkitfix)}
+          // width={DIAGRAM_FINAL_WIDTH * dimScale}
+          // height={DIAGRAM_FINAL_HEIGHT * dimScale}
+          style={{
+            transform: `scale(${dimScale}) translateZ(0) translateY(${
+              10 * translateScale
+            }%)`,
+            zIndex: 15,
+            opacity: selectedDiagram === "music" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            position: "absolute",
+          }}
+        />
+        <Image
+          src={PeopleVibeDiagram}
+          placeholder="blur"
+          alt="An example of a people vibe"
+          className={cs(styles.diagram_img, styles.webkitfix)}
+          style={{
+            transform: `scale(${dimScale}) translateY(${10 * translateScale}%)`,
+            opacity: selectedDiagram === "people" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            zIndex: 15,
+            // position: "absolute",
+            position: "absolute",
+            // marginTop: -5,
+          }}
+        />
+        <Image
+          src={NewsVibeDiagram}
+          placeholder="blur"
+          alt="An example of a news vibe"
+          className={cs(styles.diagram_img, styles.webkitfix)}
+          style={{
+            zIndex: 15,
+            transform: `scale(${dimScale}) translateY(${10 * translateScale}%)`,
+            // position: "absolute",
+            opacity: selectedDiagram === "news" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            // top: 0,
+            position: "absolute",
+          }}
+        />
+        <Image
+          src={PhotosVibeDiagram}
+          placeholder="blur"
+          alt="An example of a photos vibe"
+          className={cs(styles.diagram_img, styles.webkitfix)}
+          style={{
+            zIndex: 15,
+            transform: `scale(${dimScale}) translateY(${10 * translateScale}%)`,
+            // position: "absolute",
+            opacity: selectedDiagram === "photos" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            // top: 0,
+            position: "absolute",
+          }}
+        />
+        <Image
+          src={MoneyVibeDiagram}
+          placeholder="blur"
+          alt="An example of a money vibe"
+          className={cs(styles.diagram_img, styles.webkitfix)}
+          style={{
+            transform: `scale(${dimScale}) translateY(${10 * translateScale}%)`,
+            zIndex: 15,
+            // position: "absolute",
+            opacity: selectedDiagram === "money" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            // top: 0,
+            position: "absolute",
+          }}
+        />
+        <div className={styles.diagramspacer} />
+        <div className={styles.diagram__butttons}>
+          <button
+            onClick={() => setSelectedDiagram("music")}
+            className={cs(
+              styles.hoverbutton,
+              selectedDiagram === "music" && styles.active
+            )}
           >
-            <Image
-              src={VibeDiagram}
-              placeholder="blur"
-              alt="Vibe Diagram"
-              className={cs(styles.diagram_img, styles.webkitfix)}
-              place
-              width={DIAGRAM_FINAL_WIDTH * dimScale}
-              height={DIAGRAM_FINAL_HEIGHT * dimScale}
-              style={{
-                // paddingBottom: isPeopleVisible ? 0 : 4,
-                opacity: selectedDiagram === "none" ? 1 : 0,
-                transition: "opacity .3s ease-in-out",
-                zIndex: 16,
-                // top: 0,
-                position: "absolute",
-                transform: "translateZ(0)",
-                // transform: `scale(${dimScale}) translateZ(0) translateY(${
-                //   (DIAGRAM_FINAL_HEIGHT / 2) * dimScale * 0
-                // })`,
-                // bottom:
-                // (scrollAnimation *
-                //   (windowHeight - DIAGRAM_FINAL_HEIGHT * dimScale)) /
-                //   2 -
-                // 120,
-                // marginTop: -5,
-              }}
-            />
-            <Image
-              src={MusicVibeDiagram}
-              placeholder="blur"
-              alt="An example of a music vibe"
-              className={cs(styles.diagram_img, styles.webkitfix)}
-              width={DIAGRAM_FINAL_WIDTH * dimScale}
-              height={DIAGRAM_FINAL_HEIGHT * dimScale}
-              style={{
-                // transform: `scale(${dimScale}) translateZ(0) translateY(${
-                //   (DIAGRAM_FINAL_HEIGHT / 2) * dimScale * 0
-                // })`,
-                zIndex: 15,
-                // position: "absolute",
-                opacity: selectedDiagram === "music" ? 1 : 0,
-                transition: "opacity .3s ease-in-out",
-                // top: 0,
-                position: "absolute",
-                transform: "translateZ(0)",
-              }}
-            />
-            <Image
-              src={PeopleVibeDiagram}
-              placeholder="blur"
-              alt="An example of a people vibe"
-              className={cs(styles.diagram_img, styles.webkitfix)}
-              width={DIAGRAM_FINAL_WIDTH * dimScale}
-              height={DIAGRAM_FINAL_HEIGHT * dimScale}
-              style={{
-                opacity: selectedDiagram === "people" ? 1 : 0,
-                transition: "opacity .3s ease-in-out",
-                zIndex: 15,
-                // position: "absolute",
-                position: "absolute",
-                // marginTop: -5,
-              }}
-            />
-            <Image
-              src={NewsVibeDiagram}
-              placeholder="blur"
-              alt="An example of a news vibe"
-              className={cs(styles.diagram_img, styles.webkitfix)}
-              width={DIAGRAM_FINAL_WIDTH * dimScale}
-              height={DIAGRAM_FINAL_HEIGHT * dimScale}
-              style={{
-                zIndex: 15,
-                // position: "absolute",
-                opacity: selectedDiagram === "news" ? 1 : 0,
-                transition: "opacity .3s ease-in-out",
-                // top: 0,
-                position: "absolute",
-              }}
-            />
-            <Image
-              src={PhotosVibeDiagram}
-              placeholder="blur"
-              alt="An example of a photos vibe"
-              className={cs(styles.diagram_img, styles.webkitfix)}
-              width={DIAGRAM_FINAL_WIDTH * dimScale}
-              height={DIAGRAM_FINAL_HEIGHT * dimScale}
-              style={{
-                zIndex: 15,
-                // position: "absolute",
-                opacity: selectedDiagram === "photos" ? 1 : 0,
-                transition: "opacity .3s ease-in-out",
-                // top: 0,
-                position: "absolute",
-              }}
-            />
-            <Image
-              src={MoneyVibeDiagram}
-              placeholder="blur"
-              alt="An example of a money vibe"
-              className={cs(styles.diagram_img, styles.webkitfix)}
-              width={DIAGRAM_FINAL_WIDTH * dimScale}
-              height={DIAGRAM_FINAL_HEIGHT * dimScale}
-              style={{
-                zIndex: 15,
-                // position: "absolute",
-                opacity: selectedDiagram === "money" ? 1 : 0,
-                transition: "opacity .3s ease-in-out",
-                // top: 0,
-                position: "absolute",
-              }}
-            />
-            <div style={{ height: DIAGRAM_FINAL_HEIGHT }} />
-            <div
-              className={styles.row}
-              style={{
-                // position: "sticky",
-                alignItems: "flex-start",
-                justifyContent: "center",
-                marginTop: 44,
-                marginLeft: 64,
-                zIndex: 1000,
-                // opacity:
-                //   selectedDiagram === "music" || selectedDiagram === "people"
-                //     ? 1
-                //     : 0,
-                transition: "opacity .1s ease-in-out",
-                width: DIAGRAM_FINAL_WIDTH - 350,
-                justifyContent: "space-between",
-              }}
-            >
-              <button
-                onClick={() => setSelectedDiagram("music")}
-                className={cs(
-                  styles.hoverbutton,
-                  selectedDiagram === "music" && styles.active
-                )}
-              >
-                <span>Music</span>
-              </button>
-              <div style={{ width: 0 }} />
-              <button
-                onClick={() => setSelectedDiagram("people")}
-                className={cs(
-                  styles.hoverbutton,
-                  selectedDiagram === "people" && styles.active
-                )}
-              >
-                <span>People</span>
-              </button>
-              <div style={{ width: 0 }} />
-              <button
-                onClick={() => setSelectedDiagram("news")}
-                className={cs(
-                  styles.hoverbutton,
-                  selectedDiagram === "news" && styles.active
-                )}
-              >
-                <span>News</span>
-              </button>
-              <div style={{ width: 0 }} />
-              <button
-                onClick={() => setSelectedDiagram("photos")}
-                className={cs(
-                  styles.hoverbutton,
-                  selectedDiagram === "photos" && styles.active
-                )}
-              >
-                <span>Photos</span>
-              </button>
-              <div style={{ width: 0 }} />
-              <button
-                onClick={() => setSelectedDiagram("money")}
-                className={cs(
-                  styles.hoverbutton,
-                  selectedDiagram === "money" && styles.active
-                )}
-              >
-                <span>Money</span>
-              </button>
-              {/* <div style={{ width: 0 }} />
+            <span>Music</span>
+          </button>
+          <div style={{ width: 0 }} />
+          <button
+            onClick={() => setSelectedDiagram("people")}
+            className={cs(
+              styles.hoverbutton,
+              selectedDiagram === "people" && styles.active
+            )}
+          >
+            <span>People</span>
+          </button>
+          <div style={{ width: 0 }} />
+          <button
+            onClick={() => setSelectedDiagram("news")}
+            className={cs(
+              styles.hoverbutton,
+              selectedDiagram === "news" && styles.active
+            )}
+          >
+            <span>News</span>
+          </button>
+          <div style={{ width: 0 }} />
+          <button
+            onClick={() => setSelectedDiagram("photos")}
+            className={cs(
+              styles.hoverbutton,
+              selectedDiagram === "photos" && styles.active
+            )}
+          >
+            <span>Photos</span>
+          </button>
+          <div style={{ width: 0 }} />
+          <button
+            onClick={() => setSelectedDiagram("money")}
+            className={cs(
+              styles.hoverbutton,
+              selectedDiagram === "money" && styles.active
+            )}
+          >
+            <span>Money</span>
+          </button>
+          {/* <div style={{ width: 0 }} />
               <button
                 onClick={() => setSelectedDiagram("none")}
                 className={cs(
@@ -302,7 +248,7 @@ const DiagramSection = () => {
               >
                 <span>Movies</span>
               </button> */}
-              {/* <div style={{ width: 0 }} />
+          {/* <div style={{ width: 0 }} />
               <button
                 onClick={() => setSelectedDiagram("none")}
                 className={cs(
@@ -312,8 +258,6 @@ const DiagramSection = () => {
               >
                 <span>Shopping</span>
               </button> */}
-            </div>
-          </div>
         </div>
       </div>
       <div style={{ height: DIAGRAM_FINAL_HEIGHT + 100 }} />

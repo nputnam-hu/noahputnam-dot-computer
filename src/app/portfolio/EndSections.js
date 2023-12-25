@@ -3,6 +3,9 @@ import styles from "./portfolio.module.css";
 import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
 
+import TangibleAlgos from "/public/vibe-based-computing/tangiblealgos.jpeg";
+import Computer from "/public/vibe-based-computing/computer.png";
+
 const playfairBold = Playfair_Display({
   weight: "600",
   subsets: ["latin"],
@@ -15,6 +18,14 @@ const playfairMed = Playfair_Display({
 const EndSection = () => {
   return (
     <>
+      <Image
+        src={TangibleAlgos}
+        alt="Algorithm based off of user interaction with content"
+        style={{
+          borderRadius: 2,
+        }}
+        className={styles.tangiblealgos_img_mobile}
+      />
       <h3>Tangible Algorithms</h3>
       {/* <div className={styles.fulltext}></div> */}
       <div className={styles.row}>
@@ -33,6 +44,16 @@ const EndSection = () => {
             intuitive objects owned by the user. Algorithms become agentifying,
             providing power for users to direct their own experience.
           </p>
+          <Image
+            src={Computer}
+            alt="Algorithm based off of user interaction with content"
+            width={353 * 0.95}
+            height={250 * 0.95}
+            style={{
+              borderRadius: 2,
+            }}
+            className={styles.computer_img_mobile}
+          />
           <p>
             Take the previous example of a music app built on top of Vibes.
             Users can split their music listening between many of these Vibes:
@@ -49,13 +70,11 @@ const EndSection = () => {
             algorithms with each other.
           </p>
         </div>
-        <div style={{ width: 48 }} />
+        <div className={styles.desktoponly} style={{ width: 48 }} />
         <div className={styles.col}>
           <Image
-            src="/vibe-based-computing/tangiblealgos.jpeg"
+            src={TangibleAlgos}
             alt="Algorithm based off of user interaction with content"
-            width={500 * 0.99}
-            height={398 * 0.99}
             style={{
               marginRight: "auto",
               // marginTop: "auto",
@@ -64,10 +83,11 @@ const EndSection = () => {
               // paddingBottom: 22,
               borderRadius: 2,
             }}
+            className={styles.tangiblealgos_img}
           />
           <div style={{ height: 24 }} />
           <Image
-            src="/vibe-based-computing/computer.png"
+            src={Computer}
             alt="Algorithm based off of user interaction with content"
             width={353 * 0.95}
             height={250 * 0.95}
@@ -78,6 +98,7 @@ const EndSection = () => {
               // paddingBottom: 22,
               borderRadius: 2,
             }}
+            className={styles.computer_img}
           />
         </div>
       </div>
@@ -97,7 +118,7 @@ const EndSection = () => {
           to an era of truly personal computing.
         </p>
       </div>
-      <div className={styles.row}>
+      <div className={styles.row_mobilecol}>
         <div className={styles.row__text}>
           <p>
             In this new internet, users shape the emergent direction of the
@@ -129,7 +150,8 @@ const EndSection = () => {
             style={{ justifyContent: "space-between" }}
           >
             <span className={playfairBold.className}>
-              Walt Whitman, Song of Myself{" "}
+              Walt Whitman,
+              <br className={styles.mobileonly} /> Song of Myself{" "}
               <span style={{ fontSize: 20, marginTop: -2 }}>51</span>
             </span>
             <Image
