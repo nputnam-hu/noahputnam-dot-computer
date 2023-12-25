@@ -40,9 +40,9 @@ const ParadigmShiftMobile = () => {
       className={styles.mobileonly}
       style={{
         position: "relative",
-        height: 868,
+        height: 912,
         width: "100%",
-        paddingBottom: 80,
+        paddingBottom: 60,
       }}
       id={SECTION_ID}
     >
