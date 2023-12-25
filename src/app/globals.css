@@ -75,7 +75,7 @@ body {
 }
 
 .mobile_screenshots {
-  z-index: 10000;
+  z-index: 1000000000;
   position: sticky;
   position: -webkit-sticky;
   display: block;
@@ -90,9 +90,12 @@ body {
   /* height: 590px; */
   /* margin-top: 580px; */
   /* outline: 1px solid gray; */
-  @media screen and (max-width: 800px) {
-    padding-top: 46px;
+}
+
+@media screen and (max-width: 800px) {
+  .mobile_screenshots {
+    /* padding-top: 46px; */
     /* width: 100vw; */
-    margin-left: -4vw;
+    /* margin-left: -4vw; */
   }
 }

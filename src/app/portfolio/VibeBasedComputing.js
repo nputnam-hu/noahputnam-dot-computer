@@ -116,10 +116,9 @@ const VibeBasedComputing = ({
             src={MobileParadigmShift}
             className={cs(styles.mobileonly)}
             style={{
-              width: "70%",
+              width: 200,
               height: "auto",
-              margin: "-100px 0 -60px",
-              paddingLeft: "10%",
+              margin: "-120px auto -80px",
             }}
           />
         </div>
