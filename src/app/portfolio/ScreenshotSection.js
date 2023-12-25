@@ -12,8 +12,8 @@ const MOBILE_SECTION2_ID = "mobilesection2";
 
 import PeopleSS1 from "/public/vibe-based-computing/peopless1.svg";
 import PeopleSS2 from "/public/vibe-based-computing/peopless2.png";
-import MusicSS1 from "/public/vibe-based-computing/musicss1.svg";
-import MusicSS2 from "/public/vibe-based-computing/musicss2.svg";
+import MusicSS1 from "/public/vibe-based-computing/musicss1.png";
+import MusicSS2 from "/public/vibe-based-computing/musicss2.png";
 
 const MobileScreenshotSection = () => {
   const scrollY = useScrollPosition(120);
