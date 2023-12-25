@@ -10,7 +10,7 @@ const SECTION_ID = "section";
 const MOBILE_SECTION_ID = "mobilesection";
 const MOBILE_SECTION2_ID = "mobilesection2";
 
-import PeopleSS1 from "/public/vibe-based-computing/peopless1.svg";
+import PeopleSS1 from "/public/vibe-based-computing/peopless1.png";
 import PeopleSS2 from "/public/vibe-based-computing/peopless2.png";
 import MusicSS1 from "/public/vibe-based-computing/musicss1.png";
 import MusicSS2 from "/public/vibe-based-computing/musicss2.png";
