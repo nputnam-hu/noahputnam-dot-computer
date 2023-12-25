@@ -12,7 +12,7 @@ import EndSection from "./EndSections";
 import VibeHeader from "/public/vibe-based-computing/vibeheader.png";
 import MobileVibeHeader from "/public/vibe-based-computing/vibeheader_mobile.png";
 import ParadigmShift from "/public/vibe-based-computing/paradigmshift.png";
-import MobileParadigmShift from "/public/vibe-based-computing/paradigmshift_mobile.png";
+import ParadigmShiftMobile from "./ParadigmShift";
 
 const VibeBasedComputing = ({
   serverComponents: { introSection, ontologySection },
@@ -104,25 +104,16 @@ const VibeBasedComputing = ({
           {introSection}
         </div>
         <div className={styles.desktoponly} style={{ height: 180 }} />
-        <div className={styles.mobileonly} style={{ height: 180 }} />
+        <div className={styles.mobileonly} style={{ height: 80 }} />
         <div>
           <Image
             alt="From walled gardens to vibes"
             src={ParadigmShift}
             className={cs(styles.desktoponly, styles.paradigmshift_img)}
           />
-          <Image
-            alt="From walled gardens to vibes"
-            src={MobileParadigmShift}
-            className={cs(styles.mobileonly)}
-            style={{
-              maxWidth: 300,
-              height: "auto",
-              margin: "-120px auto -80px",
-            }}
-          />
+          <ParadigmShiftMobile />
         </div>
-        <div style={{ height: 240 }} />
+        <div className={styles.desktoponly3} style={{ height: 280 }} />
         {ontologySection}
         <div style={{ height: 60 }} />
         <h3>Generative UI</h3>

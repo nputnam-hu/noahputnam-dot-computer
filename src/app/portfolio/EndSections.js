@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./portfolio.module.css";
-import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
 
 import TangibleAlgos from "/public/vibe-based-computing/tangiblealgos.jpeg";
 import Computer from "/public/vibe-based-computing/computer.png";
 
+import { Playfair_Display } from "next/font/google";
 const playfairBold = Playfair_Display({
   weight: "600",
   subsets: ["latin"],
