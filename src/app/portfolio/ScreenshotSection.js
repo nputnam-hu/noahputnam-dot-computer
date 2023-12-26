@@ -7,42 +7,64 @@ import styles from "./portfolio.module.css";
 import Link from "next/link";
 
 const SECTION_ID = "section";
-const MOBILE_SECTION_ID = "mobilesection";
-const MOBILE_SECTION2_ID = "mobilesection2";
 
 import PeopleSS1 from "/public/vibe-based-computing/peopless1.png";
 import PeopleSS2 from "/public/vibe-based-computing/peopless2.png";
 import MusicSS1 from "/public/vibe-based-computing/musicss1.png";
 import MusicSS2 from "/public/vibe-based-computing/musicss2.png";
 
+const MOBILE_SECTION2_ID = "mobilesection2";
+const MOBILE_SECTION3_ID = "mobilesection3";
+const MOBILE_SECTION4_ID = "mobilesection4";
+
 const MobileScreenshotSection = () => {
   const scrollY = useScrollPosition(120);
-  const [sectionTop, setSectionTop] = useState();
   const [section2Top, setSection2Top] = useState();
+  const [section3Top, setSection3Top] = useState();
+  const [section4Top, setSection4Top] = useState();
 
   useEffect(() => {
     const _setOffsets = () => {
-      const _sectionTop = document.getElementById(MOBILE_SECTION_ID).offsetTop;
       const _section2Top =
-        document.getElementById(MOBILE_SECTION2_ID).offsetTop;
-      setSectionTop(_sectionTop);
+        document.getElementById(MOBILE_SECTION2_ID).offsetTop +
+        document.getElementById(MOBILE_SECTION2_ID).offsetParent.offsetTop -
+        window.innerHeight;
+      const _section3Top =
+        document.getElementById(MOBILE_SECTION3_ID).offsetTop +
+        document.getElementById(MOBILE_SECTION3_ID).offsetParent.offsetTop -
+        window.innerHeight;
+      const _section4Top =
+        document.getElementById(MOBILE_SECTION4_ID).offsetTop +
+        document.getElementById(MOBILE_SECTION4_ID).offsetParent.offsetTop -
+        window.innerHeight;
       setSection2Top(_section2Top);
+      setSection3Top(_section3Top);
+      setSection4Top(_section4Top);
     };
-    _setOffsets();
+    setTimeout(_setOffsets, 100);
     window.addEventListener("resize", _setOffsets);
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const isMusicScreenshotTwoVisible =
-    scrollY > sectionTop + (section2Top - 571 - 140);
+  console.log({ section2Top, section3Top, section4Top, scrollY });
+
+  const isMusicScreenshotTwoVisible = scrollY > section4Top;
+  const isMusicScreenshotOneVisible =
+    !isMusicScreenshotTwoVisible && scrollY > section3Top;
   const isGenScreenshotTwoVisible =
+    !isMusicScreenshotOneVisible &&
     !isMusicScreenshotTwoVisible &&
-    scrollY > sectionTop + (section2Top - 571 - 140) / 2;
+    scrollY > section2Top;
   const isGenScreenshotOneVisible =
-    !isGenScreenshotTwoVisible && !isMusicScreenshotTwoVisible;
+    !isGenScreenshotTwoVisible &&
+    !isMusicScreenshotOneVisible &&
+    !isMusicScreenshotTwoVisible;
 
   return (
-    <div className={cs(styles.mobile_screenshotsection)} id={MOBILE_SECTION_ID}>
+    <div
+      className={cs(styles.mobile_screenshotsection, styles.overextendpadding)}
+      style={{ zIndex: 1000000000, background: "white" }}
+    >
       <div>
         {/* <div style={{ position: "absolute", height: 2000 }}> */}
         <div
@@ -53,12 +75,12 @@ const MobileScreenshotSection = () => {
           }}
         >
           <div className={cs("mobile_screenshots", styles.overextendpadding)}>
-            <div style={{ height: 500, background: "white" }} />
+            <div style={{ height: 820 }} />
             <Image
               src={PeopleSS1}
               alt="Screenshot of a people vibe in a mobile app"
-              width={244}
-              height={500}
+              width={342}
+              height={700}
               style={{
                 opacity: isGenScreenshotOneVisible ? 1 : 0,
                 // transition: "opacity .5s ease-in",
@@ -68,8 +90,8 @@ const MobileScreenshotSection = () => {
             <Image
               src={PeopleSS2}
               alt="Screenshot of a people vibe in a mobile app"
-              width={244}
-              height={500}
+              width={342}
+              height={700}
               style={{
                 opacity: isGenScreenshotTwoVisible ? 1 : 0,
                 // transition: "opacity .5s ease-in",
@@ -79,35 +101,71 @@ const MobileScreenshotSection = () => {
             <Image
               src={MusicSS2}
               alt="Screenshot of a music vibe in a mobile app"
-              width={244}
-              height={500}
+              width={342}
+              height={700}
+              style={{
+                opacity: isMusicScreenshotOneVisible ? 1 : 0,
+              }}
+              className={styles.mobilescreenshot}
+            />
+            <Image
+              src={MusicSS1}
+              alt="Screenshot of a music vibe in a mobile app"
+              width={342}
+              height={700}
               style={{
                 opacity: isMusicScreenshotTwoVisible ? 1 : 0,
               }}
               className={styles.mobilescreenshot}
             />
             <div className={styles.mobilescreenshotbg} />
-            <div
+            {/* <div
               className={styles.overextendpadding}
               style={{
                 // width: "100vw",
                 background: "rgba(0,0,0,0.1)",
                 height: 1,
               }}
-            />
+            /> */}
           </div>
           <div
             className={cs(
-              styles.col,
-              styles.overextendpadding
+              styles.col
               // styles.withpadding
             )}
-            style={{
-              background: "rgba(0,0,0,0.03)",
-            }}
+            style={
+              {
+                // background: "rgba(0,0,0,0.03)",
+              }
+            }
           >
             <div style={{ height: 48 }} />
-            <div className={styles.row__text}>
+            <div className={styles.sscard}>
+              <h4
+                style={{
+                  width: "auto",
+                  color: "#b744fe",
+                }}
+                className={styles.screenshot_headertext}
+              >
+                Vibe-powered Creation
+              </h4>
+              <p>
+                Vibe-based Computing enables a creative model for apps that
+                mirrors the experience of working with a human professional.
+                When you hire a designer or artist to make something for you,
+                you don't have to manually specify every detail of what you
+                want. Instead, you give them different references that gesture
+                at the “vibe” of what it should look like, and then they use
+                their own creativity to map that to a completed work.
+              </p>
+              <p>
+                By composing different generative models together under the Vibe
+                interface, developers can enable that same kind of experience
+                but at software scale.
+              </p>
+            </div>
+            <div className={styles.sscard} id={MOBILE_SECTION2_ID}>
               <h4
                 style={{
                   width: "auto",
@@ -118,24 +176,6 @@ const MobileScreenshotSection = () => {
                 Generating a Music Vibe
               </h4>
               <p>
-                Vibe-based Computing enables a creative model for apps that
-                mirrors the experience of working with a human professional.
-                When you hire a designer or artist to make something for you,
-                you don't have to manually specify every detail of what you
-                want. Instead, you give them different references that gesture
-                at the “vibe” of what it should look like, and then they use
-                their own creativity to map that to a completed work. By
-                composing different generative models together under the Vibe
-                interface, developers can enable that same kind of experience
-                but at software scale.
-              </p>
-              {/* <p>
-              While the different people Vibes start out being defined by the
-              user, as the AI infers different meta-properties on each
-              relationship it can begin to automatically categorize new contacts
-              into the appropriate Vibe.
-            </p> */}
-              <p>
                 Consider, for example, the concept of an app that creates a
                 personalized playlist for a user based off a social media
                 account that they connect. This functionality could be
@@ -144,22 +184,17 @@ const MobileScreenshotSection = () => {
                 understanding of their content, and then mapping that
                 understanding to a music model that produces a list of related
                 song Media Objects. From there, the generated list can be pulled
-                into a new Vibe and presented to the user. This app would let
-                anyone see what kinds of songs matched their Instagram, a task
-                that would require a human curator today.
-                {/* But while new newly generated playlist is just the starting point
-              the Music Vibe. */}
-                {/* And while generating a custom playlist from your social media is
-              already a pretty magical experience, it is just the starting point
-              for the Music Vibe. */}
+                into a new Vibe and presented to the user.
+              </p>
+              <p>
+                This app would let anyone see what kinds of songs matched their
+                Instagram, a task that would require a human curator today.
               </p>
             </div>
-            <div style={{ height: 80 }} />
-            <div className={styles.row__text} id={MOBILE_SECTION2_ID}>
+            <div className={styles.sscard} id={MOBILE_SECTION3_ID}>
               <h4
                 style={{
                   width: "auto",
-                  // visibility: isMusicScreenShotsSticky ? "visible" : "hidden",
                   color: "#b744fe",
                 }}
                 className={styles.screenshot_headertext}
@@ -175,15 +210,28 @@ const MobileScreenshotSection = () => {
                 station the Vibe is a living object that can change form in
                 response to its owner.
               </p>
+            </div>
+            <div className={styles.sscard} id={MOBILE_SECTION4_ID}>
+              <h4
+                style={{
+                  width: "auto",
+                  color: "#b744fe",
+                }}
+                className={styles.screenshot_headertext}
+              >
+                A Music Tamogotchi
+              </h4>
               <p>
                 The Music Vibe evolves its song queue continuously with user
                 interaction. If the user skips through tracks from a certain
                 artist, the Vibe will exclude that artist from future
                 recommendations. If they are playing the same couple of tracks
                 on repeat, the Vibe may stop pulling new song objects altogether
-                and just loop those songs on repeat. The UI surfaces different
-                recommended artists, albums, and songs in a widget to the right
-                of the queue, which operates like a{" "}
+                and just loop those songs on repeat.
+              </p>
+              <p>
+                The UI surfaces different recommended artists, albums, and songs
+                in a widget to the right of the queue, which operates like a{" "}
                 <Link
                   href="https://en.wikipedia.org/wiki/Conveyor_belt_sushi"
                   target="_blank"
@@ -195,8 +243,8 @@ const MobileScreenshotSection = () => {
                 selects in turn inform the new song Media Objects that get
                 pulled into the end of the queue.
               </p>
-              <div style={{ height: 36 }} />
             </div>
+            <div style={{ height: 100 }} />
           </div>
         </div>
       </div>

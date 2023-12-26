@@ -75,12 +75,10 @@ body {
 }
 
 .mobile_screenshots {
-  z-index: 1000000000;
   position: sticky;
   position: -webkit-sticky;
   display: block;
   top: 0px;
-  background: white;
   padding-top: 16px;
   /* margin-bottom: 48px; */
   /* border-bottom: 1px solid rgba(0,0,0,0.1); */
