@@ -31,22 +31,21 @@ const ParadigmShiftMobile = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const switchText = scrollY > sectionTop - 100;
-
-  console.log({ scrollY, sectionTop });
+  const textOpacity = Math.min(scrollY - sectionTop + 400, 300) / 300;
 
   return (
     <div
       className={styles.mobileonly}
       style={{
         position: "relative",
-        height: 912,
+        height: 868,
         width: "100%",
-        paddingBottom: 0,
+        paddingBottom: 60,
       }}
       id={SECTION_ID}
     >
       <Image
+        priority
         alt="From walled gardens to vibes"
         src={MobileParadigmShift}
         className={cs(styles.mobileonly)}
@@ -60,10 +59,10 @@ const ParadigmShiftMobile = () => {
       />
       <div
         style={{
-          width: 144,
+          width: 128,
           position: "sticky",
           top: "80vh",
-          marginLeft: 8,
+          marginLeft: 36,
         }}
       >
         <text
@@ -71,11 +70,10 @@ const ParadigmShiftMobile = () => {
             textAlign: "center",
             // paddingTop: 24,
             fontFamily: "Times",
-            fontSize: 18,
-            width: 144,
+            fontSize: 20,
+            width: 128,
             display: "block",
-            opacity: switchText ? 0 : 1,
-            transition: "opacity 0.5s",
+            opacity: 1 - textOpacity,
             position: "absolute",
           }}
           // className={playfairMed.className}
@@ -87,18 +85,19 @@ const ParadigmShiftMobile = () => {
             textAlign: "center",
             marginLeft: 8,
             // paddingTop: 24,
-            fontFamily: "HelveticaNeue",
+            fontFamily: "HelveticaNeue-MediumItalic",
             // fontFamily: "Times",
             fontSize: 20,
             marginTop: -2,
-            width: 144,
+            marginLeft: -2,
+            width: 128,
             display: "block",
-            opacity: switchText ? 1 : 0,
+            opacity: textOpacity,
             transition: "opacity 0.5 ease-out",
             position: "absolute",
             color: "#b744fe",
             // letterSpacing: 0.5,
-            fontStyle: "italic",
+            // fontStyle: "italic",
           }}
           // className={playfairMed.className}
         >
