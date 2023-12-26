@@ -125,8 +125,8 @@ const VibeBasedComputing = ({
           style={{
             marginTop: -1.5,
             background: "white",
-            height: 2,
-            zIndex: 1000000,
+            height: 3,
+            zIndex: 10000000000,
           }}
         />
         <div style={{ height: 240 }} />
