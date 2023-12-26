@@ -463,23 +463,22 @@
 
 .mobilescreenshot {
   transition: opacity .4s ease-in-out;
+  -webkit-transition: opacity .4s ease-in-out;
   z-index: 10000;
-  width: 280px;
-  height: auto;
   position: absolute;
   bottom: 16px;
-  left: calc(50vw - 140px);
+  left: calc(50vw - 122px);
 }
 
 .mobilescreenshotbg {
-  width: 280px;
-  height: 571px;
+  width: 244px;
+  height: 500px;
   background: #1a1a1a;
   z-index: 1;
   border-radius: 48px;
   position: absolute;
   bottom: 12px;
-  left: calc(50vw - 140px);
+  left: calc(50vw - 122px);
 }
 
 .screenshotwrapper {

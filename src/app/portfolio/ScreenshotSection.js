@@ -53,12 +53,12 @@ const MobileScreenshotSection = () => {
           }}
         >
           <div className={cs("mobile_screenshots", styles.overextendpadding)}>
-            <div style={{ height: 590, background: "white" }} />
+            <div style={{ height: 500, background: "white" }} />
             <Image
               src={PeopleSS1}
               alt="Screenshot of a people vibe in a mobile app"
-              width={342}
-              height={700}
+              width={244}
+              height={500}
               style={{
                 opacity: isGenScreenshotOneVisible ? 1 : 0,
                 // transition: "opacity .5s ease-in",
@@ -68,8 +68,8 @@ const MobileScreenshotSection = () => {
             <Image
               src={PeopleSS2}
               alt="Screenshot of a people vibe in a mobile app"
-              width={342}
-              height={700}
+              width={244}
+              height={500}
               style={{
                 opacity: isGenScreenshotTwoVisible ? 1 : 0,
                 // transition: "opacity .5s ease-in",
@@ -79,8 +79,8 @@ const MobileScreenshotSection = () => {
             <Image
               src={MusicSS2}
               alt="Screenshot of a music vibe in a mobile app"
-              width={342}
-              height={700}
+              width={244}
+              height={500}
               style={{
                 opacity: isMusicScreenshotTwoVisible ? 1 : 0,
               }}
