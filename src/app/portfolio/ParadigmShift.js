@@ -31,16 +31,16 @@ const ParadigmShiftMobile = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const textOpacity = Math.min(scrollY - sectionTop, 300) / 300;
+  const textOpacity = Math.min(scrollY - sectionTop, 400) / 400;
 
   return (
     <div
       className={styles.mobileonly}
       style={{
         position: "relative",
-        height: 868,
+        height: 1068,
         width: "100%",
-        paddingBottom: 60,
+        paddingBottom: 20,
       }}
       id={SECTION_ID}
     >
@@ -50,11 +50,11 @@ const ParadigmShiftMobile = () => {
         src={MobileParadigmShift}
         className={cs(styles.mobileonly)}
         style={{
-          height: 1000,
-          width: 144,
+          height: 1200,
+          width: 173,
           position: "absolute",
           // margin: "-120px auto -80px",
-          left: 200,
+          left: 180,
         }}
       />
       <div
@@ -62,7 +62,7 @@ const ParadigmShiftMobile = () => {
           width: 128,
           position: "sticky",
           top: "50vh",
-          marginLeft: 36,
+          marginLeft: 16,
         }}
       >
         <text
