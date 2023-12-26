@@ -228,3 +228,11 @@
     transform: rotate(0deg);
   }
 }
+
+
+@media screen and (max-width: 800px) {
+  .main {
+    height: calc(100vh - 120px) !important;
+  }
+  
+}

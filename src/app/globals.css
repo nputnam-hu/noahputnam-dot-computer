@@ -99,6 +99,9 @@ body {
 @media screen and (max-width: 800px) {
   .mobile_screenshots {
     padding-top: 20px;
+    /* position: absolute !important; */
+    /* bottom: 20px; */
+    /* top: 50vh; */
   }
   .indexquote {
     width: 320px;
