@@ -232,7 +232,8 @@
 
 @media screen and (max-width: 800px) {
   .main {
-    height: calc(100vh - 120px) !important;
+    /* height: calc(100vh - 140px) !important; */
+    max-height: -webkit-fill-available;
   }
   
 }
