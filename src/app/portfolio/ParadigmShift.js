@@ -31,7 +31,7 @@ const ParadigmShiftMobile = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const textOpacity = Math.min(scrollY - sectionTop, 400) / 400;
+  const textOpacity = Math.min(scrollY - sectionTop, 300) / 300;
 
   return (
     <div
