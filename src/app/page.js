@@ -188,8 +188,8 @@ export default function Home() {
         </div>
       </div>
       <p
+        className="indexquote"
         style={{
-          width: 550,
           fontFamily: "Times New Roman",
           fontStyle: "italic",
           fontSize: 18,
