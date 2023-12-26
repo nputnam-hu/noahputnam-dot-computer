@@ -38,7 +38,7 @@ const ParadigmShiftMobile = () => {
       className={styles.mobileonly}
       style={{
         position: "relative",
-        height: 1068,
+        height: 968,
         width: "100%",
         paddingBottom: 20,
       }}
@@ -50,11 +50,11 @@ const ParadigmShiftMobile = () => {
         src={MobileParadigmShift}
         className={cs(styles.mobileonly)}
         style={{
-          height: 1200,
-          width: 173,
+          height: 1100,
+          width: 158,
           position: "absolute",
           // margin: "-120px auto -80px",
-          left: 180,
+          left: 188,
         }}
       />
       <div
@@ -62,7 +62,7 @@ const ParadigmShiftMobile = () => {
           width: 128,
           position: "sticky",
           top: "50vh",
-          marginLeft: 16,
+          marginLeft: 28,
         }}
       >
         <text
