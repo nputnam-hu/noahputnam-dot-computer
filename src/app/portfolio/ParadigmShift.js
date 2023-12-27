@@ -35,75 +35,63 @@ const ParadigmShiftMobile = () => {
 
   return (
     <div
-      className={styles.mobileonly}
+      className={cs(styles.mobileonly, styles.col)}
       style={{
-        position: "relative",
-        height: 968,
         width: "100%",
         paddingBottom: 20,
+        alignItems: "center",
+        display: "flex",
+        width: "100%",
+        marginBottom: -100,
       }}
       id={SECTION_ID}
     >
+      <text
+        style={{
+          textAlign: "center",
+          // paddingTop: 24,
+          fontFamily: "Times",
+          fontSize: 28,
+          marginBottom: 48,
+          marginLeft: -12,
+        }}
+        // className={playfairMed.className}
+      >
+        Walled Gardens
+      </text>
       <Image
         priority
         alt="From walled gardens to vibes"
         src={MobileParadigmShift}
         className={cs(styles.mobileonly)}
         style={{
-          height: 1100,
-          width: 175,
-          position: "absolute",
+          height: "auto",
+          width: 187,
           // margin: "-120px auto -80px",
-          left: 192,
         }}
       />
-      <div
+      <text
         style={{
+          textAlign: "center",
+          marginLeft: 8,
+          paddingTop: 48,
+          fontFamily: "HelveticaNeue-MediumItalic",
+          // fontFamily: "Times",
+          fontSize: 28,
+          marginTop: -2,
+          marginLeft: -2,
           width: 128,
-          position: "sticky",
-          top: "50vh",
-          marginLeft: 32,
+          display: "block",
+          opacity: textOpacity,
+          transition: "opacity 0.5 ease-out",
+          color: "#b744fe",
+          // letterSpacing: 0.5,
+          // fontStyle: "italic",
         }}
+        // className={playfairMed.className}
       >
-        <text
-          style={{
-            textAlign: "center",
-            // paddingTop: 24,
-            fontFamily: "Times",
-            fontSize: 20,
-            width: 128,
-            display: "block",
-            opacity: 1 - textOpacity,
-            position: "absolute",
-          }}
-          // className={playfairMed.className}
-        >
-          Walled Gardens
-        </text>
-        <text
-          style={{
-            textAlign: "center",
-            marginLeft: 8,
-            // paddingTop: 24,
-            fontFamily: "HelveticaNeue-MediumItalic",
-            // fontFamily: "Times",
-            fontSize: 20,
-            marginTop: -2,
-            marginLeft: -2,
-            width: 128,
-            display: "block",
-            opacity: textOpacity,
-            transition: "opacity 0.5 ease-out",
-            position: "absolute",
-            color: "#b744fe",
-            // letterSpacing: 0.5,
-            // fontStyle: "italic",
-          }}
-          // className={playfairMed.className}
-        >
-          Vibes
-        </text>
-      </div>
+        Vibes
+      </text>
     </div>
   );
 };

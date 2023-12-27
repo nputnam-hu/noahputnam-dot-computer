@@ -26,16 +26,16 @@ const MobileScreenshotSection = () => {
   useEffect(() => {
     const _setOffsets = () => {
       const _section2Top =
-        document.getElementById(MOBILE_SECTION2_ID).offsetTop +
-        document.getElementById(MOBILE_SECTION2_ID).offsetParent.offsetTop -
+        document.getElementById(MOBILE_SECTION2_ID)?.offsetTop +
+        document.getElementById(MOBILE_SECTION2_ID)?.offsetParent?.offsetTop -
         0.95 * window.innerHeight;
       const _section3Top =
-        document.getElementById(MOBILE_SECTION3_ID).offsetTop +
-        document.getElementById(MOBILE_SECTION3_ID).offsetParent.offsetTop -
+        document.getElementById(MOBILE_SECTION3_ID)?.offsetTop +
+        document.getElementById(MOBILE_SECTION3_ID)?.offsetParent?.offsetTop -
         0.95 * window.innerHeight;
       const _section4Top =
-        document.getElementById(MOBILE_SECTION4_ID).offsetTop +
-        document.getElementById(MOBILE_SECTION4_ID).offsetParent.offsetTop -
+        document.getElementById(MOBILE_SECTION4_ID)?.offsetTop +
+        document.getElementById(MOBILE_SECTION4_ID)?.offsetParent?.offsetTop -
         0.95 * window.innerHeight;
       setSection2Top(_section2Top);
       setSection3Top(_section3Top);
