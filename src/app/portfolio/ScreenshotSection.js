@@ -217,7 +217,7 @@ const MobileScreenshotSection = () => {
                 will exclude that artist from future recommendations. If they
                 are playing the same couple of tracks on repeat, the Vibe may
                 stop pulling new song objects altogether and just loop those
-                songs on repeat. Each new Vibe is brought to life in this
+                songs on repeat. Every new Vibe is brought to life in this
                 co-creative process between user and AI.
               </p>
             </div>

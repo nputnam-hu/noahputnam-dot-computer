@@ -986,6 +986,7 @@
 
   .groupvibes_img { 
     width: 90%;
+    max-width: 400px;
   }
   .paradigmshift_img {
     width: 85%;
@@ -1005,9 +1006,9 @@
 
   .diagram__butttons {
     width: 400px;
-    height: 120px;
+    height: 126px;
     justify-content: center;
-    margin-top: 48px;
+    margin-top: 32px;
     padding-left: 0;
   }
   .hoverbutton {
@@ -1067,12 +1068,21 @@
   }
 
   .tangiblealgos_img_mobile {
-    margin-bottom: 44px;
+    margin-bottom: 32px;
     /* margin-left: 0 */
   }
 
   .computer_img_mobile {
     margin: 12px auto;
+  }
+
+  .diagram_img {
+    width: 90vw;
+    height: calc(1080/1366 * 90vw);
+  }
+
+  .diagramspacer {
+    height: calc(1080/1366 * 90vw);
   }
 }
 

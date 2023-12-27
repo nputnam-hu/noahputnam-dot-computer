@@ -12,6 +12,12 @@ import MusicVibeDiagram from "/public/vibe-based-computing/vibediagram-music.png
 import NewsVibeDiagram from "/public/vibe-based-computing/vibediagram-news.png";
 import PhotosVibeDiagram from "/public/vibe-based-computing/vibediagram-photos.png";
 import MoneyVibeDiagram from "/public/vibe-based-computing/vibediagram-money.png";
+import VibeDiagramMobile from "/public/vibe-based-computing/vibediagram_mobile.png";
+import PeopleVibeDiagramMobile from "/public/vibe-based-computing/vibediagram_mobile-people.png";
+import MusicVibeDiagramMobile from "/public/vibe-based-computing/vibediagram_mobile-music.png";
+import NewsVibeDiagramMobile from "/public/vibe-based-computing/vibediagram_mobile-news.png";
+import PhotosVibeDiagramMobile from "/public/vibe-based-computing/vibediagram_mobile-photos.png";
+import MoneyVibeDiagramMobile from "/public/vibe-based-computing/vibediagram_mobile-money.png";
 
 const DIAGRAM_ID = "diagram";
 
@@ -43,8 +49,10 @@ const DiagramSection = () => {
   useEffect(() => {
     const _setOffsets = () => {
       const _diagramTop =
-        document.getElementById(DIAGRAM_ID).offsetParent.offsetTop +
-        document.getElementById(DIAGRAM_ID).offsetHeight;
+        document.getElementById(DIAGRAM_ID)?.offsetTop +
+        document.getElementById(DIAGRAM_ID)?.offsetHeight;
+
+      console.log(_diagramTop);
       setDiagramTop(_diagramTop);
     };
     _setOffsets();
@@ -52,7 +60,7 @@ const DiagramSection = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const triggerPoint = diagramTop - windowHeight + 72 + 20;
+  const triggerPoint = diagramTop - windowHeight - 72;
   useEffect(() => {
     if (scrollY > triggerPoint) {
       if (selectedDiagram === "none") {
@@ -64,14 +72,16 @@ const DiagramSection = () => {
   }, [scrollY, triggerPoint, selectedDiagram]);
 
   useEffect(() => {
-    if (scrollY > diagramTop - windowHeight - 20) {
+    if (scrollY > diagramTop - windowHeight - 140) {
       const _scrollAnimation =
-        Math.min(scrollY - diagramTop + windowHeight + 20, 130) / 130;
+        Math.min(scrollY - diagramTop + windowHeight + 140, 130) / 130;
       setAnimation(_scrollAnimation);
     } else {
       setAnimation(0);
     }
   }, [scrollY, diagramTop, windowHeight]);
+
+  console.log({ diagramTop, scrollY });
 
   const dimScale = windowWidth < 600 ? 1 : (1 / 5) * scrollAnimation + 4 / 5;
   const translateScale = windowWidth < 600 ? 0.5 : scrollAnimation - 0.5;
@@ -87,18 +97,24 @@ const DiagramSection = () => {
           domains.
         </p>
       </div>
+      <div className={styles.mobileonly} style={{ height: 80 }} />
       <div
         style={{
           position: "absolute",
           zIndex: 10,
         }}
+        id={DIAGRAM_ID}
         className={styles.diagramcol}
       >
         <Image
           src={VibeDiagram}
           placeholder="blur"
           alt="Vibe Diagram"
-          className={cs(styles.diagram_img, styles.webkitfix)}
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.desktoponly
+          )}
           style={{
             opacity: selectedDiagram === "none" ? 1 : 0,
             transition: "opacity .3s ease-in-out",
@@ -108,13 +124,16 @@ const DiagramSection = () => {
               10 * translateScale
             }%)`,
           }}
-          id={DIAGRAM_ID}
         />
         <Image
           src={MusicVibeDiagram}
           placeholder="blur"
           alt="An example of a music vibe"
-          className={cs(styles.diagram_img, styles.webkitfix)}
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.desktoponly
+          )}
           // width={DIAGRAM_FINAL_WIDTH * dimScale}
           // height={DIAGRAM_FINAL_HEIGHT * dimScale}
           style={{
@@ -131,7 +150,11 @@ const DiagramSection = () => {
           src={PeopleVibeDiagram}
           placeholder="blur"
           alt="An example of a people vibe"
-          className={cs(styles.diagram_img, styles.webkitfix)}
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.desktoponly
+          )}
           style={{
             transform: `scale(${dimScale}) translateY(${10 * translateScale}%)`,
             opacity: selectedDiagram === "people" ? 1 : 0,
@@ -146,7 +169,11 @@ const DiagramSection = () => {
           src={NewsVibeDiagram}
           placeholder="blur"
           alt="An example of a news vibe"
-          className={cs(styles.diagram_img, styles.webkitfix)}
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.desktoponly
+          )}
           style={{
             zIndex: 15,
             transform: `scale(${dimScale}) translateY(${10 * translateScale}%)`,
@@ -161,7 +188,11 @@ const DiagramSection = () => {
           src={PhotosVibeDiagram}
           placeholder="blur"
           alt="An example of a photos vibe"
-          className={cs(styles.diagram_img, styles.webkitfix)}
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.desktoponly
+          )}
           style={{
             zIndex: 15,
             transform: `scale(${dimScale}) translateY(${10 * translateScale}%)`,
@@ -176,7 +207,11 @@ const DiagramSection = () => {
           src={MoneyVibeDiagram}
           placeholder="blur"
           alt="An example of a money vibe"
-          className={cs(styles.diagram_img, styles.webkitfix)}
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.desktoponly
+          )}
           style={{
             transform: `scale(${dimScale}) translateY(${10 * translateScale}%)`,
             zIndex: 15,
@@ -187,7 +222,115 @@ const DiagramSection = () => {
             position: "absolute",
           }}
         />
+        <Image
+          src={VibeDiagramMobile}
+          placeholder="blur"
+          alt="Vibe Diagram"
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.mobileonly
+          )}
+          style={{
+            opacity: selectedDiagram === "none" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            zIndex: 16,
+            position: "absolute",
+          }}
+        />
+        <Image
+          src={MusicVibeDiagramMobile}
+          placeholder="blur"
+          alt="An example of a music vibe"
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.mobileonly
+          )}
+          // width={DIAGRAM_FINAL_WIDTH * dimScale}
+          // height={DIAGRAM_FINAL_HEIGHT * dimScale}
+          style={{
+            zIndex: 15,
+            opacity: selectedDiagram === "music" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            position: "absolute",
+          }}
+        />
+        <Image
+          src={PeopleVibeDiagramMobile}
+          placeholder="blur"
+          alt="An example of a people vibe"
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.mobileonly
+          )}
+          style={{
+            opacity: selectedDiagram === "people" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            zIndex: 15,
+            // position: "absolute",
+            position: "absolute",
+            // marginTop: -5,
+          }}
+        />
+        <Image
+          src={NewsVibeDiagramMobile}
+          placeholder="blur"
+          alt="An example of a news vibe"
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.mobileonly
+          )}
+          style={{
+            zIndex: 15,
+            // position: "absolute",
+            opacity: selectedDiagram === "news" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            // top: 0,
+            position: "absolute",
+          }}
+        />
+        <Image
+          src={PhotosVibeDiagramMobile}
+          placeholder="blur"
+          alt="An example of a photos vibe"
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.mobileonly
+          )}
+          style={{
+            zIndex: 15,
+            // position: "absolute",
+            opacity: selectedDiagram === "photos" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            // top: 0,
+            position: "absolute",
+          }}
+        />
+        <Image
+          src={MoneyVibeDiagramMobile}
+          placeholder="blur"
+          alt="An example of a money vibe"
+          className={cs(
+            styles.diagram_img,
+            styles.webkitfix,
+            styles.mobileonly
+          )}
+          style={{
+            zIndex: 15,
+            // position: "absolute",
+            opacity: selectedDiagram === "money" ? 1 : 0,
+            transition: "opacity .3s ease-in-out",
+            // top: 0,
+            position: "absolute",
+          }}
+        />
+
         <div className={styles.diagramspacer} />
+        <div className={styles.mobileonly} style={{ height: 12 }} />
         <div className={styles.diagram__butttons}>
           <button
             onClick={() => setSelectedDiagram("music")}
