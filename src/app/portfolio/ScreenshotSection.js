@@ -221,7 +221,7 @@ const MobileScreenshotSection = () => {
                 co-creative process between user and AI.
               </p>
             </div>
-            <div style={{ height: 100 }} />
+            <div style={{ height: 100 }} className={styles.desktoponly} />
           </div>
         </div>
       </div>
@@ -254,8 +254,6 @@ const ScreenshotSection = () => {
   }, []);
 
   const SECTION_HEIGHT = 1700;
-
-  console.log({ sectionTop, scrollY });
 
   const isMusicVisible =
     scrollY > sectionTop + 450 + (screenWidth > 1300 ? 0 : 250);

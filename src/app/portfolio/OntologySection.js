@@ -59,7 +59,7 @@ const OntologySection = () => {
             distinct Media Objects, we can begin to destructure the walled
             gardens behind every platform into their constituent parts.
           </p>
-          <div style={{ height: 24 }} />
+          <div style={{ height: 24 }} className={styles.desktoponly} />
           <Image
             src="/vibe-based-computing/destructure.png"
             alt="Destructuring platforms into different media objects"
