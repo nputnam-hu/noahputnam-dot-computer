@@ -228,8 +228,8 @@ const Sidebar = ({ dark = false }) => {
       >
         <div className={styles.row} style={{ alignItems: "center" }}>
           <Link
+            className={styles.orbIcon}
             href="/"
-            className={styles.row}
             style={{
               alignItems: "center",
               zIndex: 10,
@@ -237,7 +237,6 @@ const Sidebar = ({ dark = false }) => {
               textDecoration: "none",
               fontWeight: "300",
               // background: "red",
-              marginRight: "auto",
               marginTop: 4,
             }}
           >
@@ -269,7 +268,10 @@ const Sidebar = ({ dark = false }) => {
               PORTFOLIO
             </h4>
             <div style={{ height: 12 }} />
-            <div className={styles.row} style={{ alignItems: "center" }}>
+            <div
+              className={cs(styles.row, styles.sidebar__links)}
+              style={{ alignItems: "center" }}
+            >
               <Link
                 className={cs(
                   styles.sidebar__link,

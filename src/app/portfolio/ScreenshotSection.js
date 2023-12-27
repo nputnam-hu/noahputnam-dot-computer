@@ -28,15 +28,15 @@ const MobileScreenshotSection = () => {
       const _section2Top =
         document.getElementById(MOBILE_SECTION2_ID).offsetTop +
         document.getElementById(MOBILE_SECTION2_ID).offsetParent.offsetTop -
-        window.innerHeight;
+        0.95 * window.innerHeight;
       const _section3Top =
         document.getElementById(MOBILE_SECTION3_ID).offsetTop +
         document.getElementById(MOBILE_SECTION3_ID).offsetParent.offsetTop -
-        window.innerHeight;
+        0.95 * window.innerHeight;
       const _section4Top =
         document.getElementById(MOBILE_SECTION4_ID).offsetTop +
         document.getElementById(MOBILE_SECTION4_ID).offsetParent.offsetTop -
-        window.innerHeight;
+        0.95 * window.innerHeight;
       setSection2Top(_section2Top);
       setSection3Top(_section3Top);
       setSection4Top(_section4Top);
@@ -151,16 +151,12 @@ const MobileScreenshotSection = () => {
                 Vibe-powered Creation
               </h4>
               <p>
-                Vibe-based Computing enables a creative model for apps that
-                mirrors the experience of working with a human professional.
                 When you hire a designer or artist to make something for you,
                 you don't have to manually specify every detail of what you
                 want. Instead, you give them different references that gesture
                 at the “vibe” of what it should look like, and then they use
-                their own creativity to map that to a completed work.
-              </p>
-              <p>
-                By composing different generative models together under the Vibe
+                their own creativity to map that to a completed work. By
+                composing different generative models together under the Vibe
                 interface, developers can enable that same kind of experience
                 but at software scale.
               </p>
@@ -176,19 +172,13 @@ const MobileScreenshotSection = () => {
                 Generating a Music Vibe
               </h4>
               <p>
-                Consider, for example, the concept of an app that creates a
-                personalized playlist for a user based off a social media
-                account that they connect. This functionality could be
-                implemented by first taking the Media Objects from the connected
-                account and pushing them to an AI model that learns an
-                understanding of their content, and then mapping that
-                understanding to a music model that produces a list of related
-                song Media Objects. From there, the generated list can be pulled
-                into a new Vibe and presented to the user.
-              </p>
-              <p>
-                This app would let anyone see what kinds of songs matched their
-                Instagram, a task that would require a human curator today.
+                For example, image an app that creates a personalized playlist
+                for a user based off a social media account that they connect.
+                This could be implemented by first taking the Media Objects from
+                the connected account and pushing them to an AI model that
+                learns an understanding of their content, and then mapping to a
+                music model that produces a list of related song Media Objects,
+                which then get pulled into a new Vibe and presented to the user.
               </p>
             </div>
             <div className={styles.sscard} id={MOBILE_SECTION3_ID}>
@@ -219,29 +209,16 @@ const MobileScreenshotSection = () => {
                 }}
                 className={styles.screenshot_headertext}
               >
-                A Music Tamogotchi
+                A Tamagotchi for Music
               </h4>
               <p>
-                The Music Vibe evolves its song queue continuously with user
-                interaction. If the user skips through tracks from a certain
-                artist, the Vibe will exclude that artist from future
-                recommendations. If they are playing the same couple of tracks
-                on repeat, the Vibe may stop pulling new song objects altogether
-                and just loop those songs on repeat.
-              </p>
-              <p>
-                The UI surfaces different recommended artists, albums, and songs
-                in a widget to the right of the queue, which operates like a{" "}
-                <Link
-                  href="https://en.wikipedia.org/wiki/Conveyor_belt_sushi"
-                  target="_blank"
-                >
-                  sushi converyor belt
-                </Link>
-                , letting the user pick objects off it and drag them into the
-                Vibe to shape its direction. The recommendations the user
-                selects in turn inform the new song Media Objects that get
-                pulled into the end of the queue.
+                The Music Vibe evolves continuously with user interaction. If
+                the user skips through tracks from a certain artist, the Vibe
+                will exclude that artist from future recommendations. If they
+                are playing the same couple of tracks on repeat, the Vibe may
+                stop pulling new song objects altogether and just loop those
+                songs on repeat. Each new Vibe is brought to life in this
+                co-creative process between user and AI.
               </p>
             </div>
             <div style={{ height: 100 }} />
