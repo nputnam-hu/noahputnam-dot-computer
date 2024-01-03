@@ -23,7 +23,7 @@ export const DemoVideo = () => {
             autoPlay
             playsInline
             muted
-            loop
+            // loop
             ref={videoRef}
             controls={false}
             poster="/vibe-based-computing/demoplaceholder.png"

@@ -184,12 +184,6 @@ const OntologySection = () => {
             into it.
           </p>
           {/* <p>
-            This
-            co-creative process between user and AI in constructing a Vibe is
-            key to the object feeling at once intimately personal and vibrantly
-            alive.
-          </p> */}
-          {/* <p>
             You can think of a Vibe as almost like a{" "}
             <Link
               href="https://en.wikipedia.org/wiki/Tamagotchi"

@@ -172,7 +172,7 @@ const MobileScreenshotSection = () => {
                 Generating a Music Vibe
               </h4>
               <p>
-                For example, image an app that creates a personalized playlist
+                For example, imagine an app that creates a personalized playlist
                 for a user based off a social media account that they connect.
                 This could be implemented by first taking the Media Objects from
                 the connected account and pushing them to an AI model that
@@ -216,9 +216,9 @@ const MobileScreenshotSection = () => {
                 the user skips through tracks from a certain artist, the Vibe
                 will exclude that artist from future recommendations. If they
                 are playing the same couple of tracks on repeat, the Vibe may
-                stop pulling new song objects altogether and just loop those
-                songs on repeat. Every new Vibe is brought to life in this
-                co-creative process between user and AI.
+                stop pulling new objects altogether and just loop those songs on
+                repeat. Every new Vibe is brought to life in this co-creative
+                process between user and AI.
               </p>
             </div>
             <div style={{ height: 100 }} className={styles.desktoponly} />

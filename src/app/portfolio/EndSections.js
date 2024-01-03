@@ -35,7 +35,8 @@ const EndSection = () => {
             working to predict and influence our behavior, nudging us towards
             addiction, emotional activation, and passive consumption. And at the
             same time, platforms hide the workings of these algorithms away from
-            us to more easily divert our will towards profit-maximizing ends.
+            us in order to more easily divert our will towards profit-maximizing
+            ends.
           </p>
           <p>
             Vibe-based Computing seeks to put the user back in the driver's
@@ -66,7 +67,7 @@ const EndSection = () => {
             If a Vibe’s recommendations become stale the user can reset its
             parameters or discard the Vibe altogether to start fresh. And like
             all Vibes owned by the user, the created Music Vibes are natively
-            shareable with other people, letting users borrow and swap
+            shareable with other people, letting people borrow and swap
             algorithms with each other.
           </p>
         </div>
