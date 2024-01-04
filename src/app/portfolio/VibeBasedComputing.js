@@ -165,8 +165,54 @@ const VibeBasedComputing = ({
           <p>
             To this end, there are 2 major research areas I have been pursuing:
           </p>
-          <p>1. Multi-modal generative models</p>
-          <p>2. Privacy and data model</p>
+          <p>
+            <b>1) Multi-modal generative models</b> To fully implement the Vibe
+            as described in the above write-up, we will need a general media AI
+            architecture than can create a mathematical semantic understanding
+            of any piece of media, and be able to map that understanding to
+            other models.
+          </p>
+          <p>
+            The rise of multimodal LLMs, as well as the innovation made with the
+            RAG (Retrieval Augmented Generation) design, enable such an
+            architecture to exist in theory. However, how to implement this
+            architecture is still very much an open question, as well how
+            effective the current state of the art AI models will be at creating
+            a deep semantic understanding of any arbitrary piece of media fed
+            into it.
+          </p>
+          <p>
+            Given the rapid acceleration of the field I expect many of these
+            problems to have clear solutions developed over the next year or
+            two. But devising a system that can piece them together in the right
+            way will be a technical challenge that needs to be engaged with.
+          </p>
+          <p>
+            <b>2) Privacy and data model</b> Another key part of Vibe-based
+            Computing is creating a new data framework for online media that
+            gives users complete control over their data. Cryptographic identity
+            is the obvious starting point for building this system, with a
+            Public/Prviate key generated for each user. However, this still
+            leaves the questions of:
+          </p>
+          <p>
+            a) Where will a user's data and media be stored (Local to the user's
+            device? In a cloud service operated by a coroporation?)
+          </p>
+          <p>
+            b) How will communication between users work in a privacy-perserving
+            way?
+          </p>
+          <p>
+            c) How can the data framework be designed to have minimal, if not 0,
+            impact on the user-facing experience?
+          </p>
+          <p>
+            All of these problems have been well-researched in fields like
+            cryptography, networking, and cryptocurrency design, but Vibe-based
+            Computing introduces new challenges that will require a novel system
+            design.
+          </p>
           <div style={{ height: 12 }} />
           {/* <h4
           style={{
@@ -200,7 +246,7 @@ const VibeBasedComputing = ({
             fontSize: 30,
           }}
         >
-          Attribution & Prior Works
+          Attribution
         </h4>
         <div className={styles.fulltext}>
           <p>
