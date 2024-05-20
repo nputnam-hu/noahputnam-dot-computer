@@ -255,7 +255,7 @@ export default function Home() {
             style={{
               fontFamily: "Times New Roman",
               fontSize: 17,
-              marginTop: 22,
+              marginTop: 24,
               marginBottom: 0,
               fontWeight: "700",
               fontStyle: "italic",
