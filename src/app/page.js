@@ -267,7 +267,7 @@ export default function Home() {
           <div style={{ marginTop: 6 }}>
             <Link
               href={{
-                pathname: "/recs/1000Plateaus00Rhizome.pdf",
+                pathname: "/1000Plateaus00Rhizome.pdf",
                 params: { from: "home" },
               }}
               target="_blank"
@@ -287,7 +287,7 @@ export default function Home() {
           <div style={{ marginTop: 6 }}>
             <Link
               href={{
-                pathname: "/recs/Federalist-Papers-No-70.pdf",
+                pathname: "/Federalist-Papers-No-70.pdf",
                 params: { from: "home" },
               }}
               target="_blank"
@@ -308,7 +308,7 @@ export default function Home() {
           <div style={{ marginTop: 6 }}>
             <Link
               href={{
-                pathname: "/recs/The_Question_Concerning_Technology.pdf",
+                pathname: "/The_Question_Concerning_Technology.pdf",
                 params: { from: "home" },
               }}
               target="_blank"
@@ -328,8 +328,7 @@ export default function Home() {
           <div style={{ marginTop: 6 }}>
             <Link
               href={{
-                pathname:
-                  "/recs/Le_Corbusier_Three_Reminders_To_Architects.pdf",
+                pathname: "/Le_Corbusier_Three_Reminders_To_Architects.pdf",
                 params: { from: "home" },
               }}
               target="_blank"
@@ -349,7 +348,7 @@ export default function Home() {
           <div style={{ marginTop: 6 }}>
             <Link
               href={{
-                pathname: "/recs/manifesto_futurista.pdf",
+                pathname: "/manifesto_futurista.pdf",
                 params: { from: "home" },
               }}
               target="_blank"
@@ -369,7 +368,7 @@ export default function Home() {
           <div style={{ marginTop: 6 }}>
             <Link
               href={{
-                pathname: "/recs/deleuze_socities_of_control.pdf",
+                pathname: "/deleuze_socities_of_control.pdf",
                 params: { from: "home" },
               }}
               target="_blank"
@@ -389,7 +388,7 @@ export default function Home() {
           {/* <div style={{ marginTop: 6 }}>
             <Link
               href={{
-                pathname: "/recs/medium-of-contingency/ch1.html",
+                pathname: "/medium-of-contingency/ch1.html",
                 params: { from: "home" },
               }}
               target="_blank"
