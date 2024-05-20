@@ -131,7 +131,7 @@ const FixedBar = ({ dark }) => {
             >
               Cambridge Technologists
             </Link> */}
-            <Link
+            {/* <Link
               className={cs(
                 styles.fixedsidebar__link,
                 pathname === "/portfolio/e-conomy" && styles.active,
@@ -144,7 +144,7 @@ const FixedBar = ({ dark }) => {
               target="_blank"
             >
               E-conomy
-            </Link>
+            </Link> */}
             <Link
               className={cs(
                 styles.fixedsidebar__link,
@@ -212,7 +212,7 @@ const Sidebar = ({ dark = false }) => {
           // paddingBottom: 20,
           // paddingLeft: 14,
           // paddingLeft: 14,
-          padding: "11px 14px 15px",
+          padding: "13px 14px 15px",
           top: 0,
           display: "block",
           // height: 230,
@@ -310,7 +310,7 @@ const Sidebar = ({ dark = false }) => {
               >
                 Cambridge Technologists
               </Link> */}
-              <Link
+              {/* <Link
                 className={cs(
                   styles.sidebar__link,
                   pathname === "/portfolio/e-conomy" && styles.active,
@@ -323,7 +323,7 @@ const Sidebar = ({ dark = false }) => {
                 target="_blank"
               >
                 E-conomy
-              </Link>
+              </Link> */}
               <Link
                 className={cs(
                   styles.sidebar__link,

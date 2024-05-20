@@ -81,8 +81,6 @@ const DiagramSection = () => {
     }
   }, [scrollY, diagramTop, windowHeight]);
 
-  console.log({ diagramTop, scrollY });
-
   const dimScale = windowWidth < 600 ? 1 : (1 / 5) * scrollAnimation + 4 / 5;
   const translateScale = windowWidth < 600 ? 0.5 : scrollAnimation - 0.5;
 

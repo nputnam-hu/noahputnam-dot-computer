@@ -142,22 +142,8 @@ export default function Home() {
           </h4>
           <Link
             href={{
-              pathname: "https://e-conomy.la/the-creator-middle-class/",
-              params: { from: "home" },
-            }}
-            target="_blank"
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            The Creator Middle Class
-          </Link>
-          <Link
-            href={{
-              pathname: "https://e-conomy.la/marc-andreessens-original-sin/",
+              pathname:
+                "https://economyofbits.substack.com/p/marc-andreessens-original-sin",
               params: { from: "home" },
             }}
             target="_blank"
@@ -172,7 +158,23 @@ export default function Home() {
           </Link>
           <Link
             href={{
-              pathname: "https://e-conomy.la/the-economy-of-bits/",
+              pathname:
+                "https://economyofbits.substack.com/p/paradoxes-in-productivity-and-inquiries",
+              params: { from: "home" },
+            }}
+            target="_blank"
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            Paradoxes in Productivity
+          </Link>
+          <Link
+            href={{
+              pathname: "https://economyofbits.substack.com/p/coming-soon",
               params: { from: "home" },
             }}
             target="_blank"
@@ -185,6 +187,70 @@ export default function Home() {
           >
             The Economy of Bits
           </Link>
+          <Link
+            href={{
+              pathname:
+                "https://economyofbits.substack.com/p/the-creator-middle-class",
+              params: { from: "home" },
+            }}
+            target="_blank"
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            The Creator Middle Class
+          </Link>
+          <h4
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 20,
+              marginBottom: 0,
+              fontWeight: "700",
+              fontStyle: "italic",
+              // textDecoration: "underline",
+            }}
+          >
+            Decks
+          </h4>
+          <div style={{ marginTop: 6 }}>
+            •{" "}
+            <Link
+              href={{
+                pathname: "/decks/The_Geo_of_Geopolitics.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                marginTop: 6,
+                color: "blue",
+              }}
+            >
+              [Oct 2023] The Geo of Geopolitics
+            </Link>
+          </div>
+          <div style={{ marginTop: 6 }}>
+            •{" "}
+            <Link
+              href={{
+                pathname: "/decks/Ownership_Culture.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                color: "blue",
+              }}
+            >
+              [Sep 2022] Ownership Culture
+            </Link>
+          </div>
         </div>
       </div>
       <p

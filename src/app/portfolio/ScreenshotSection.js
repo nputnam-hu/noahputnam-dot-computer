@@ -356,7 +356,7 @@ const ScreenshotSection = () => {
               href="https://en.wikipedia.org/wiki/Conveyor_belt_sushi"
               target="_blank"
             >
-              sushi converyor belt
+              sushi conveyor belt
             </Link>
             , letting the user pick objects off it and drag them into the Vibe
             to shape its direction. The recommendations the user selects in turn
