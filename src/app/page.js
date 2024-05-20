@@ -156,7 +156,7 @@ export default function Home() {
           >
             Marc Andreessen’s Original Sin
           </Link>
-          <Link
+          {/* <Link
             href={{
               pathname:
                 "https://economyofbits.substack.com/p/paradoxes-in-productivity-and-inquiries",
@@ -171,7 +171,7 @@ export default function Home() {
             }}
           >
             Paradoxes in Productivity
-          </Link>
+          </Link> */}
           <Link
             href={{
               pathname: "https://economyofbits.substack.com/p/coming-soon",
@@ -216,7 +216,7 @@ export default function Home() {
           >
             Decks
           </h4>
-          <div style={{ marginTop: 6 }}>
+          {/* <div style={{ marginTop: 6 }}>
             •{" "}
             <Link
               href={{
@@ -233,7 +233,7 @@ export default function Home() {
             >
               [Oct 2023] The Geo of Geopolitics
             </Link>
-          </div>
+          </div> */}
           <div style={{ marginTop: 6 }}>
             •{" "}
             <Link
@@ -251,6 +251,161 @@ export default function Home() {
               [Sep 2022] Ownership Culture
             </Link>
           </div>
+          <h4
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 22,
+              marginBottom: 0,
+              fontWeight: "700",
+              fontStyle: "italic",
+              // textDecoration: "underline",
+            }}
+          >
+            Recommended PDFs
+          </h4>
+          <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname: "/recs/1000Plateaus00Rhizome.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                color: "blue",
+              }}
+            >
+              Introduction: Rhizome
+            </Link>
+            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+              {" "}
+              - <em>Gilles Deleuze & Felix Gautarri</em>
+            </span>
+          </div>
+          <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname: "/recs/Federalist-Papers-No-70.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                marginTop: 6,
+                color: "blue",
+              }}
+            >
+              Federalist 70
+            </Link>
+            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+              {" "}
+              - <em>Alexander Hamilton</em>
+            </span>
+          </div>
+          <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname: "/recs/The_Question_Concerning_Technology.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                color: "blue",
+              }}
+            >
+              The Question Concerning Technology
+            </Link>
+            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+              {" "}
+              - <em>Martin Heidegger</em>
+            </span>
+          </div>
+          <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname:
+                  "/recs/Le_Corbusier_Three_Reminders_To_Architects.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                color: "blue",
+              }}
+            >
+              Three Reminders to Architects
+            </Link>
+            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+              {" "}
+              - <em>Le Corbusier</em>
+            </span>
+          </div>
+          <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname: "/recs/manifesto_futurista.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                color: "blue",
+              }}
+            >
+              The Futurist Manifesto
+            </Link>
+            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+              {" "}
+              - <em>Filippo Marinetti</em>
+            </span>
+          </div>
+          <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname: "/recs/deleuze_socities_of_control.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                color: "blue",
+              }}
+            >
+              Postscript on Socities of Control
+            </Link>
+            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+              {" "}
+              - <em>Gilles Deleuze</em>
+            </span>
+          </div>
+          {/* <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname: "/recs/medium-of-contingency/ch1.html",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                color: "blue",
+              }}
+            >
+              Medium of Contingency Ch.01
+            </Link>
+            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+              {" "}
+              - Elie Ayache
+            </span>
+          </div> */}
         </div>
       </div>
       <p
