@@ -112,8 +112,8 @@ body {
     margin-bottom: 12px !important;
   }
   .businesscard{
-    width:90vw;
-    height:calc(90vw*550/850);
+    width:80vw;
+    height:calc(80vw*550/850);
   }
   .about{
     font-size: 32px !important;
