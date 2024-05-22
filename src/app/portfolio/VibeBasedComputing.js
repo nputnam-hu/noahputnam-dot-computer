@@ -48,7 +48,7 @@ const VibeBasedComputing = ({
     <>
       <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
         <div className={styles.desktoponly} style={{ height: 108 }} />
-        <div className={styles.mobileonly} style={{ height: 92 }} />
+        <div className={styles.mobileonly} style={{ height: 100 }} />
         <div className={styles.intropadding}>
           <h5>CASE 1</h5>
           <h1>Vibe-based Computing</h1>

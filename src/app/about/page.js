@@ -64,6 +64,18 @@ const About = () => {
           className="businesscard"
           priority
         />
+        <p
+          className={styles.desktoponly}
+          style={{ fontFamily: "HelveticaNeue", fontSize: 17 }}
+        >
+          Resume available upon request.
+        </p>
+        <p
+          className={styles.mobileonly}
+          style={{ fontFamily: "HelveticaNeue", fontSize: 14 }}
+        >
+          Resume available upon request.
+        </p>
       </div>
     </main>
   );
