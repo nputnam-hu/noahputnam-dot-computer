@@ -279,7 +279,10 @@ export default function Home() {
             >
               Introduction: Rhizome
             </Link>
-            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+            <span
+              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+              className="pdfauthor"
+            >
               {" "}
               - <em>Gilles Deleuze & Felix Gautarri</em>
             </span>
@@ -300,7 +303,10 @@ export default function Home() {
             >
               Federalist 70
             </Link>
-            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+            <span
+              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+              className="pdfauthor"
+            >
               {" "}
               - <em>Alexander Hamilton</em>
             </span>
@@ -320,7 +326,10 @@ export default function Home() {
             >
               The Question Concerning Technology
             </Link>
-            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+            <span
+              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+              className="pdfauthor"
+            >
               {" "}
               - <em>Martin Heidegger</em>
             </span>
@@ -340,7 +349,10 @@ export default function Home() {
             >
               Three Reminders to Architects
             </Link>
-            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+            <span
+              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+              className="pdfauthor"
+            >
               {" "}
               - <em>Le Corbusier</em>
             </span>
@@ -360,7 +372,10 @@ export default function Home() {
             >
               The Futurist Manifesto
             </Link>
-            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+            <span
+              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+              className="pdfauthor"
+            >
               {" "}
               - <em>Filippo Marinetti</em>
             </span>
@@ -380,7 +395,10 @@ export default function Home() {
             >
               Postscript on Socities of Control
             </Link>
-            <span style={{ fontFamily: "Times New Roman", fontSize: 17 }}>
+            <span
+              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+              className="pdfauthor"
+            >
               {" "}
               - <em>Gilles Deleuze</em>
             </span>

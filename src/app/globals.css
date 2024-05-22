@@ -101,6 +101,9 @@ body {
     /* bottom: 20px; */
     /* top: 50vh; */
   }
+  .pdfauthor{
+    display: none;
+  }
   .indexquote {
     width: 320px;
     margin-right: 8px !important;

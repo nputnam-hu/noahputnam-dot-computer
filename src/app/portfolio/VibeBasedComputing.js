@@ -192,7 +192,7 @@ const VibeBasedComputing = ({
             Computing is creating a new data framework for online media that
             gives users complete control over their data. Cryptographic identity
             is the obvious starting point for building this system, with a
-            Public/Prviate key generated for each user. However, this still
+            Public/Private key generated for each user. However, this still
             leaves the questions of:
           </p>
           <p>
