@@ -45,6 +45,7 @@ const About = () => {
             // margin: "16px 0 12px",
             margin: 0,
           }}
+          className="about"
         >
           About
         </h2>
@@ -60,6 +61,7 @@ const About = () => {
             border: "1px solid rgba(0,0,0,0.2)",
             margin: "auto",
           }}
+          className="businesscard"
           priority
         />
       </div>
