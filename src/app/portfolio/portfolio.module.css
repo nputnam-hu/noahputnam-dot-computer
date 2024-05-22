@@ -965,9 +965,9 @@
   .mobilevibeheader_img {
     display: block;
     max-width: 500px;
-    width: 92%;
+    width: 84%;
     height: auto;
-    margin: 56px auto 64px;
+    margin: 48px auto 56px;
   }
 
   .row__text, .row__smalltext, .fulltext, .intro__description {
