@@ -13,8 +13,8 @@ export const DemoVideo = () => {
   }, [isVisible]);
 
   return (
-    <VisibilitySensor onChange={(isVisible) => setIsVisible(isVisible)}>
-      <div>
+    <>
+      <VisibilitySensor onChange={(isVisible) => setIsVisible(isVisible)}>
         <div className={styles.videowrapper}>
           <video
             id="video"
@@ -30,6 +30,8 @@ export const DemoVideo = () => {
             src="/vibe-based-computing/vibevideo.mp4"
           />
         </div>
+      </VisibilitySensor>
+      <VisibilitySensor onChange={(isVisible) => setIsVisible(isVisible)}>
         <div className={styles.videowrapper_mobile}>
           <video
             id="video2"
@@ -45,8 +47,8 @@ export const DemoVideo = () => {
             src="/vibe-based-computing/demomobile.mp4"
           ></video>
         </div>
-      </div>
-    </VisibilitySensor>
+      </VisibilitySensor>
+    </>
   );
 };
 

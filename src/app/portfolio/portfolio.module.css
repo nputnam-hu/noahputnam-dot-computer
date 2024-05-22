@@ -967,7 +967,7 @@
     max-width: 500px;
     width: 92%;
     height: auto;
-    margin: 64px auto;
+    margin: 56px auto 64px;
   }
 
   .row__text, .row__smalltext, .fulltext, .intro__description {
@@ -1108,7 +1108,7 @@
   }
 
   .intro__description {
-    font-size: 27px;
+    font-size: 24px;
   }
 
   .media_img, .inlinemedia_img {
