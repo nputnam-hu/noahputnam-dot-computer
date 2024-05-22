@@ -114,9 +114,9 @@ const EndSection = () => {
           All revolutions in computing rely on new organizing metaphors to make
           their capabilities accessible to a nontechnical audience: x86 had the
           desktop, the internet had the browser, smartphones had the app. Vibes
-          represent the next stage in that evolution. In a world of monopoly
-          platforms and surveillance capitalism, Vibes promise to return the web
-          to an era of truly personal computing.
+          represent the next stage in that evolution for the AI-computing era.
+          In a world of monopoly platforms and surveillance capitalism, Vibes
+          promise to return the web to an era of truly personal computing.
         </p>
       </div>
       <div className={styles.row_mobilecol}>

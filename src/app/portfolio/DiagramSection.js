@@ -30,9 +30,9 @@ const DiagramSection = () => {
   const [scrollAnimation, setAnimation] = useState(0);
   const [diagramTop, setDiagramTop] = useState();
   // none | people | music
-  const [selectedDiagram, setSelectedDiagram] = useState("none");
   const [windowHeight, setWindowHeight] = useState();
   const [windowWidth, setWindowWidth] = useState();
+  const [selectedDiagram, setSelectedDiagram] = useState("none");
 
   useEffect(() => {
     const _getAndSetWindowHeight = () => {
@@ -40,6 +40,10 @@ const DiagramSection = () => {
       const _windowWidth = window.innerWidth;
       setWindowHeight(_windowHeight);
       setWindowWidth(_windowWidth);
+
+      if (_windowWidth < 600) {
+        setSelectedDiagram("music");
+      }
     };
     _getAndSetWindowHeight();
     window.addEventListener("reisze", _getAndSetWindowHeight);
@@ -51,8 +55,6 @@ const DiagramSection = () => {
       const _diagramTop =
         document.getElementById(DIAGRAM_ID)?.offsetTop +
         document.getElementById(DIAGRAM_ID)?.offsetHeight;
-
-      console.log(_diagramTop);
       setDiagramTop(_diagramTop);
     };
     _setOffsets();
@@ -66,10 +68,10 @@ const DiagramSection = () => {
       if (selectedDiagram === "none") {
         setSelectedDiagram("music");
       }
-    } else {
+    } else if (windowWidth > 600) {
       setSelectedDiagram("none");
     }
-  }, [scrollY, triggerPoint, selectedDiagram]);
+  }, [scrollY, triggerPoint, selectedDiagram, windowWidth]);
 
   useEffect(() => {
     if (scrollY > diagramTop - windowHeight - 140) {
@@ -95,7 +97,7 @@ const DiagramSection = () => {
           domains.
         </p>
       </div>
-      <div className={styles.mobileonly} style={{ height: 80 }} />
+      <div className={styles.mobileonly} style={{ height: 40 }} />
       <div
         style={{
           position: "absolute",
@@ -401,7 +403,14 @@ const DiagramSection = () => {
               </button> */}
         </div>
       </div>
-      <div style={{ height: DIAGRAM_FINAL_HEIGHT + 100 }} />
+      <div
+        className={styles.desktoponly}
+        style={{ height: DIAGRAM_FINAL_HEIGHT + 100 }}
+      />
+      <div
+        className={styles.mobileonly}
+        style={{ height: DIAGRAM_FINAL_HEIGHT + 40 }}
+      />
     </div>
   );
 };

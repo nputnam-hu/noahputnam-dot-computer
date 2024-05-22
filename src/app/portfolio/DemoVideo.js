@@ -14,7 +14,7 @@ export const DemoVideo = () => {
 
   return (
     <VisibilitySensor onChange={(isVisible) => setIsVisible(isVisible)}>
-      <>
+      <div>
         <div className={styles.videowrapper}>
           <video
             id="video"
@@ -45,7 +45,7 @@ export const DemoVideo = () => {
             src="/vibe-based-computing/demomobile.mp4"
           ></video>
         </div>
-      </>
+      </div>
     </VisibilitySensor>
   );
 };

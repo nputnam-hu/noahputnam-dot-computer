@@ -15,7 +15,7 @@ const IntroSection = () => {
             <p className={styles.largefont} style={{ marginBottom: 8 }}>
               Vibes are everywhere online. Their form uniquely matches the pace
               and tenor of the web: continuous, social, ever-evolving. But with
-              the advent of Generative AI, vibes can take on new meaning in
+              the advent of Generative AI, a “vibe” can take on new meaning in
               cyberspace.
             </p>
             <p className={styles.largefont}>

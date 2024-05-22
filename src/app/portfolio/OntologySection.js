@@ -147,7 +147,7 @@ const OntologySection = () => {
           <p>
             As we apply Vibes to more complex arrangements of models, use cases
             emerge beyond simple content creation. For example, imagine a series
-            of generative models each fed the same Vibe as an input where the
+            of generative models, each fed the same Vibe as an input, where the
             first model produces a color scheme, the next a typography pairing,
             and so on for all of the components of a design system. This
             constitutes an AI-powered theming engine that a user composes a Vibe

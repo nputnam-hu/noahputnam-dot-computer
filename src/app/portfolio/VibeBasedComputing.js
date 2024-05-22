@@ -47,7 +47,8 @@ const VibeBasedComputing = ({
   return (
     <>
       <div className={cs(styles.content, wasDarkmode && "animatedWhiteBg")}>
-        <div style={{ height: 108 }} />
+        <div className={styles.desktoponly} style={{ height: 108 }} />
+        <div className={styles.mobileonly} style={{ height: 92 }} />
         <div className={styles.intropadding}>
           <h5>CASE 1</h5>
           <h1>Vibe-based Computing</h1>
@@ -100,20 +101,20 @@ const VibeBasedComputing = ({
             .
           </span>
           <div style={{ height: 120 }} />
-          <div className={styles.mobileonly} style={{ height: 40 }} />
+          {/* <div className={styles.mobileonly} style={{ height: 40 }} /> */}
           {introSection}
         </div>
         <div className={styles.desktoponly} style={{ height: 180 }} />
-        <div className={styles.mobileonly} style={{ height: 80 }} />
+        <div className={styles.mobileonly} style={{ height: 200 }} />
         <div>
           <Image
             alt="From walled gardens to vibes"
             src={ParadigmShift}
             className={cs(styles.desktoponly, styles.paradigmshift_img)}
           />
-          <ParadigmShiftMobile />
+          {/* <ParadigmShiftMobile /> */}
         </div>
-        <div className={styles.desktoponly3} style={{ height: 280 }} />
+        <div className={styles.desktoponly} style={{ height: 280 }} />
         {ontologySection}
         <div style={{ height: 60 }} />
         <h3>Generative UI</h3>
