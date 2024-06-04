@@ -94,16 +94,15 @@ body {
   width: 550px;
 }
 
-.pdfauthor {
-  display: none;
-}
-
 @media screen and (max-width: 800px) {
   .mobile_screenshots {
     padding-top: 20px;
     /* position: absolute !important; */
     /* bottom: 20px; */
     /* top: 50vh; */
+  }
+  .pdfauthor{
+    display: none;
   }
   .indexquote {
     width: 320px;
