@@ -131,7 +131,7 @@ const FixedBar = ({ dark }) => {
             >
               Cambridge Technologists
             </Link> */}
-            {/* <Link
+            <Link
               className={cs(
                 styles.fixedsidebar__link,
                 pathname === "/portfolio/e-conomy" && styles.active,
@@ -140,11 +140,11 @@ const FixedBar = ({ dark }) => {
               // href={{
               //   pathname: "/portfolio/e-conomy",
               // }}
-              href="https://e-conomy.la"
+              href="https://economyofbits.substack.com"
               target="_blank"
             >
               E-conomy
-            </Link> */}
+            </Link>
             <Link
               className={cs(
                 styles.fixedsidebar__link,
@@ -310,7 +310,7 @@ const Sidebar = ({ dark = false }) => {
               >
                 Cambridge Technologists
               </Link> */}
-              {/* <Link
+              <Link
                 className={cs(
                   styles.sidebar__link,
                   pathname === "/portfolio/e-conomy" && styles.active,
@@ -319,11 +319,11 @@ const Sidebar = ({ dark = false }) => {
                 // href={{
                 //   pathname: "/portfolio/e-conomy",
                 // }}
-                href="https://e-conomy.la"
+                href="https://economyofbits.substack.com"
                 target="_blank"
               >
                 E-conomy
-              </Link> */}
+              </Link>
               <Link
                 className={cs(
                   styles.sidebar__link,
