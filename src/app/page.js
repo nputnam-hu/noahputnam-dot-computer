@@ -248,7 +248,7 @@ export default function Home() {
                 color: "blue",
               }}
             >
-              [Sep 2022] Ownership Culture
+              [Oct 2023] Ownership Culture
             </Link>
           </div>
           <h4

@@ -241,7 +241,6 @@ const ScreenshotSection = () => {
   useEffect(() => {
     const _setOffsets = () => {
       const _sectionTop = document.getElementById(SECTION_ID).offsetTop;
-      console.log({ _sectionTop });
       setSectionTop(_sectionTop);
       const _screenWidth = window.innerWidth;
       setScreenWidth(_screenWidth);
@@ -253,7 +252,7 @@ const ScreenshotSection = () => {
     return () => window.removeEventListener("resize", _setOffsets);
   }, []);
 
-  const SECTION_HEIGHT = 1700;
+  const SECTION_HEIGHT = 2000;
 
   const isMusicVisible =
     scrollY > sectionTop + 450 + (screenWidth > 1300 ? 0 : 250);
@@ -359,7 +358,7 @@ const ScreenshotSection = () => {
               sushi conveyor belt
             </Link>
             , letting the user pick objects off it and drag them into the Vibe
-            to shape its direction. The recommendations the user selects in turn
+            to shape its content. The recommendations the user selects in turn
             inform the new song Media Objects that get pulled into the end of
             the queue.
           </p>
