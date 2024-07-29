@@ -209,7 +209,7 @@ const VibeBasedComputing = ({
             impact on the user-facing experience?
           </p>
           <p>
-            All of these problems have been well-researched in fields like
+            All of these problems have been well researched in fields like
             cryptography, networking, and cryptocurrency design, but Vibe-based
             Computing introduces new challenges that will require a novel system
             design.
