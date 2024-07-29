@@ -141,8 +141,8 @@ const OntologySection = () => {
               multimodal models
             </Link>
             , over time AI will be able to infer implicit properties like style
-            and mood from not just images but all forms of media, unlocking the
-            ability to use any of your Vibes for this kind of function.
+            and mood in a universal interface over all forms of media, unlocking
+            the ability to apply any of your Vibes to this kind of function.
           </p>
           <p>
             As we apply Vibes to more complex arrangements of models, use cases
