@@ -50,7 +50,7 @@ export default function Portfolio() {
           >
             Stealth
           </h2>
-          <p style={{ fontSize: 21, maxWidth: 700 }}>
+          <p style={{ fontSize: 22, maxWidth: 740 }}>
             This case is currently in stealth due to its relevancy to an ongoing
             corporate project. If you are interested in seeing it, please{" "}
             <Link href="/about">contact</Link> me to get access to the full
