@@ -142,6 +142,21 @@ export default function Home() {
           </h4>
           <Link
             href={{
+              pathname: "https://joinreboot.org/p/the-concrete-oasis",
+              params: { from: "home" },
+            }}
+            target="_blank"
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            The Concrete Oasis
+          </Link>
+          <Link
+            href={{
               pathname:
                 "https://economyofbits.substack.com/p/marc-andreessens-original-sin",
               params: { from: "home" },
