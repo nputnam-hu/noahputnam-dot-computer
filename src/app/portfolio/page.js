@@ -34,7 +34,7 @@ export default function Portfolio() {
             // position: "absolute",
             // top: "50%",
             // left: "50%",
-            marginTop: 128,
+            marginTop: 124,
             paddingLeft: 20,
           }}
         >
