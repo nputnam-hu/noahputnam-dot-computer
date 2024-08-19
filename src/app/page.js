@@ -189,21 +189,6 @@ export default function Home() {
           </Link> */}
           <Link
             href={{
-              pathname: "https://economyofbits.substack.com/p/coming-soon",
-              params: { from: "home" },
-            }}
-            target="_blank"
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            The Economy of Bits
-          </Link>
-          <Link
-            href={{
               pathname:
                 "https://economyofbits.substack.com/p/the-creator-middle-class",
               params: { from: "home" },
