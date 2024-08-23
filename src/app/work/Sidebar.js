@@ -272,7 +272,16 @@ const Sidebar = ({ dark = false }) => {
               className={cs(styles.row, styles.sidebar__links)}
               style={{ alignItems: "center" }}
             >
-              <Link
+              <div
+                style={{
+                  background: "red",
+                  width: 132,
+                  height: 18,
+                  marginRight: 20,
+                  // marginBottom: 12,
+                }}
+              />
+              {/* <Link
                 className={cs(
                   styles.sidebar__link,
                   pathname === "/portfolio" && styles.active,
@@ -283,7 +292,7 @@ const Sidebar = ({ dark = false }) => {
                 }}
               >
                 Vibe-based Computing
-              </Link>
+              </Link> */}
               <Link
                 className={cs(
                   styles.sidebar__link,

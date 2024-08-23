@@ -6,7 +6,6 @@ import IntroSection from "./IntroSection";
 import VibeBasedComputing from "./VibeBasedComputing";
 import Head from "next/head";
 import TopBarContent from "./TopBarContent";
-import Link from "next/link";
 
 export const metadata = {
   title: "Portfolio | noahputnam.computer",
@@ -18,45 +17,15 @@ export default function Portfolio() {
     <main className={styles.main}>
       <div
         className={styles.row}
-        style={{
-          position: "absolute",
-          display: "relative",
-          width: "100vw",
-          height: "100vh",
-        }}
+        style={{ position: "absolute", display: "relative" }}
       >
         <Sidebar />
-        <div
-          className="row"
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            // position: "absolute",
-            // top: "50%",
-            // left: "50%",
-            marginTop: 124,
-            paddingLeft: 20,
+        <VibeBasedComputing
+          serverComponents={{
+            ontologySection: <OntologySection />,
+            introSection: <IntroSection />,
           }}
-        >
-          <h2
-            style={{
-              color: "white",
-              background: "red",
-              padding: "4px 8px",
-              fontSize: 36,
-              width: 119,
-              fontWeight: "500",
-            }}
-          >
-            Stealth
-          </h2>
-          <p style={{ fontSize: 22, maxWidth: 740 }}>
-            This case is currently in stealth due to its relevancy to an ongoing
-            corporate project. If you are interested in seeing it, please{" "}
-            <Link href="/about">contact</Link> me to get access to the full
-            portfolio.
-          </p>
-        </div>
+        />
       </div>
     </main>
   );
