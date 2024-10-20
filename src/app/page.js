@@ -90,7 +90,7 @@ export default function Home() {
               color: "blue",
             }}
           >
-            Aesthetic
+            Aesthetics
           </Link>
           {/* <Link
           href={{ pathname: "https://e-conomy.la", params: { from: "home" } }}
