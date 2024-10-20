@@ -71,17 +71,6 @@ export default function Home() {
             About
           </Link>
           <Link
-            href={{ pathname: "https://www.are.na/noah-putnam/reclout", params: { from: "home" } }}
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            Fashion
-          </Link>
-          <Link
             href={{ pathname: "/work", params: { from: "home" } }}
             style={{
               fontFamily: "Times New Roman",
@@ -130,7 +119,17 @@ export default function Home() {
           >
             Twitter
           </Link>
-
+          <Link
+            href={{ pathname: "https://www.are.na/noah-putnam/reclout", params: { from: "home" } }}
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            Aesthetics
+          </Link>
           {/* <Link
           href="https://based.fashion"
           target="_blank"
