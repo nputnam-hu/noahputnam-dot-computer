@@ -81,6 +81,17 @@ export default function Home() {
           >
             Portfolio
           </Link>
+          <Link
+            href={{ pathname: "https://www.are.na/noah-putnam/reclout", params: { from: "home" } }}
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            Aesthetics
+          </Link>
           {/* <Link
           href={{ pathname: "https://e-conomy.la", params: { from: "home" } }}
           target="_blank"
@@ -118,17 +129,6 @@ export default function Home() {
             }}
           >
             Twitter
-          </Link>
-          <Link
-            href={{ pathname: "https://www.are.na/noah-putnam/reclout", params: { from: "home" } }}
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            Aesthetics
           </Link>
           {/* <Link
           href="https://based.fashion"
