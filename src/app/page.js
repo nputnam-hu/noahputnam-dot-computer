@@ -82,40 +82,6 @@ export default function Home() {
             Portfolio
           </Link>
           <Link
-            href={{ pathname: "https://www.are.na/noah-putnam/reclout", params: { from: "home" } }}
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            Aesthetics
-          </Link>
-          {/* <Link
-          href={{ pathname: "https://e-conomy.la", params: { from: "home" } }}
-          target="_blank"
-          style={{
-            fontFamily: "Times New Roman",
-            fontSize: 17,
-            marginTop: 6,
-            color: "blue",
-          }}
-        >
-          Essays
-        </Link> */}
-          {/* <Link
-            href={{ pathname: "/portfolio", params: { from: "home" } }}
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            Cambridge Technologists
-          </Link> */}
-          <Link
             href={{
               pathname: "https://twitter.com/noah_putnam",
               params: { from: "home" },
