@@ -94,6 +94,10 @@ body {
   width: 550px;
 }
 
+.about-content p {
+  font-size: 18px !important;
+}
+
 @media screen and (max-width: 800px) {
   .mobile_screenshots {
     padding-top: 20px;
@@ -114,6 +118,7 @@ body {
   .businesscard{
     width:80vw;
     height:calc(80vw*550/850);
+    Margin-left: -14px;
   }
   .about{
     font-size: 32px !important;
