@@ -68,7 +68,7 @@ As computers become increasingly dominant in our society, critical engagement wi
           style={{ fontFamily: "HelveticaNeue", fontSize: 17, lineHeight: '130%', marginRight: '14px' }}
         >
 Feel free to reach out to me with any questions or criticisms of
-            my ideas and writing, or writing/ideas of your own. I
+            my ideas or writings, or writing/ideas of your own. I
             always enjoy getting messages, and almost always reply.
 	</p>
         <div style={{ height: 12 }} />
