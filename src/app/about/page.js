@@ -52,7 +52,7 @@ const About = () => {
         <p
           style={{ fontFamily: "HelveticaNeue", fontSize: 17, lineHeight: '130%', marginRight: '14px' }}
         >
-        Hi, my name is Noah. I work as lead of the Deployment Engineering team at <Link href="https://norm.ai" target="_blank">Norm Ai</Link>. Before that I did independent research on Human-Computer Interaction between internet users and AI, and before that I worked at <Link href="https://palantir.com" target="_blank">Palantir</Link>. I don't keep public social media accounts due to <Link href="https://arxiv.org/abs/2208.04040" target="_blank">general</Link> <Link href="https://arxiv.org/abs/2106.06415" target="_blank">privacy</Link> <Link href="https://www.wired.com/story/ai-tools-are-secretly-training-on-real-childrens-faces/?utm_source=chatgpt.com" target="_blank">concerns</Link>, but I promise I'm a real person.
+        Hi, my name is Noah. I work as lead of the deployment engineering team at <Link href="https://norm.ai" target="_blank">Norm Ai</Link>. Before that I did independent research on Human-Computer Interaction between internet users and AI, and before that I worked at <Link href="https://palantir.com" target="_blank">Palantir</Link>. I don't keep public social media accounts due to <Link href="https://arxiv.org/abs/2208.04040" target="_blank">general</Link> <Link href="https://arxiv.org/abs/2106.06415" target="_blank">privacy</Link> <Link href="https://www.wired.com/story/ai-tools-are-secretly-training-on-real-childrens-faces/?utm_source=chatgpt.com" target="_blank">concerns</Link>, but I promise I'm a real person.
         </p>
         <p
           style={{ fontFamily: "HelveticaNeue", fontSize: 17, lineHeight: '130%', marginRight: '14px' }}
