@@ -19,7 +19,6 @@ const About = () => {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          // marginBottom: 12,
           zIndex: 10,
         }}
       >
