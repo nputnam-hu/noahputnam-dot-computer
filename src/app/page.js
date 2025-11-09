@@ -81,6 +81,16 @@ export default function Home() {
           >
             Portfolio
           </Link>
+          <Link
+            href={{ pathname: "https://www.are.na/noah-putnam", params: { from: "home" } }}
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              color: "blue",
+            }}
+          >
+            Are.na
+          </Link>
           {/* <Link
           href="https://based.fashion"
           target="_blank"
