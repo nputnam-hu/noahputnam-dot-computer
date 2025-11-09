@@ -87,6 +87,7 @@ export default function Home() {
               fontFamily: "Times New Roman",
               fontSize: 17,
               color: "blue",
+              marginTop: 6,
             }}
           >
             Are.na
