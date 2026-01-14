@@ -71,7 +71,7 @@ export default function Home() {
             About
           </Link>
           <Link
-            href={{ pathname: "/work", params: { from: "home" } }}
+            href={{ pathname: "/portfolio", params: { from: "home" } }}
             style={{
               fontFamily: "Times New Roman",
               fontSize: 17,
