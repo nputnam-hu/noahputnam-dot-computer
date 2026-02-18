@@ -71,17 +71,6 @@ export default function Home() {
             About
           </Link>
           <Link
-            href={{ pathname: "/work", params: { from: "home" } }}
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            Portfolio
-          </Link>
-          <Link
             href={{ pathname: "https://twitter.com/noah_putnam", params: { from: "home" } }}
             style={{
               fontFamily: "Times New Roman",
@@ -93,23 +82,78 @@ export default function Home() {
             Twitter
           </Link>
           <Link
-            href={{ pathname: "https://www.are.na/noah-putnam", params: { from: "home" } }}
+            href={{ pathname: "/work", params: { from: "home" } }}
             style={{
               fontFamily: "Times New Roman",
               fontSize: 17,
-              color: "blue",
               marginTop: 6,
+              color: "blue",
             }}
           >
-            Are.na
+            Portfolio
           </Link>
-          {/* <Link
-          href="https://based.fashion"
-          target="_blank"
-          style={{ fontFamily: "Times New Roman", fontSize: 17, marginTop: 6 }}
-        >
-          American Dialectic
-        </Link> */}
+          <div
+            style={{
+              marginTop: 16,
+              paddingLeft: 8,
+              paddingTop: 4,
+              paddingBottom: 4,
+              borderLeft: "4px solid red",
+            }}
+          >
+            <h4
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                marginTop: 0,
+                marginBottom: 6,
+                fontWeight: 700,
+                fontStyle: "normal",
+                textDecoration: "underline",
+              }}
+            >
+              Applied AI Consulting
+            </h4>
+            <p
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                margin: 0,
+                marginBottom: 6,
+                fontStyle: "italic",
+              }}
+            >
+              AI Agent design • LLM Context Engineering • Forward Deployed
+              Engineering
+            </p>
+            <p
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                margin: 0,
+                marginTop: 2,
+              }}
+            >
+              <Link
+                href="https://2dm-tech.github.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "blue" }}
+              >
+                Learn more
+              </Link>{" "}
+              or book an introduction call{" "}
+              <Link
+                href="https://calendly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "blue" }}
+              >
+                here
+              </Link>
+              .
+            </p>
+          </div>
           <h4
             style={{
               fontFamily: "Times New Roman",
@@ -118,7 +162,6 @@ export default function Home() {
               marginBottom: 0,
               fontWeight: "700",
               fontStyle: "italic",
-              // textDecoration: "underline",
             }}
           >
             Essays
