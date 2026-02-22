@@ -61,7 +61,7 @@ const About = () => {
         <p
           style={{ fontFamily: "HelveticaNeue", fontSize: 17, lineHeight: '130%', marginRight: '14px' }}
         >
-As computers become increasingly dominant in our society, critical engagement with computing must not be limited to a purely technical lens. The technology of modern computing both shapes and is shaped by the <Link href="https://en.wikipedia.org/wiki/Political_economy" target="_blank">political economy</Link> and <Link href="https://en.wikipedia.org/wiki/Legal_realism" target="_blank">legal realism</Link> of our times. That is why I am enthusiastic about my current work advising startups on how to navigate our current moment to achieve not just the best business outcome, but also the best social outcome for the technology they are deploying.
+As computers become increasingly dominant in our society, critical engagement with computing must not be limited to a purely technical lens. The technology of modern computing both shapes and is shaped by the <Link href="https://en.wikipedia.org/wiki/Political_economy" target="_blank">political economy</Link> and <Link href="https://en.wikipedia.org/wiki/Legal_realism" target="_blank">legal realism</Link> of our times. That is why I am enthusiastic about my current work advising startups on how to navigate our current moment to achieve not just the best business outcomes, but also the best social outcomes for the technology they are deploying.
 	</p>
         <p
           style={{ fontFamily: "HelveticaNeue", fontSize: 17, lineHeight: '130%', marginRight: '14px' }}
