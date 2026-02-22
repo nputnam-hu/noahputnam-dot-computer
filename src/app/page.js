@@ -144,7 +144,7 @@ export default function Home() {
               </Link>{" "}
               or book an introduction call{" "}
               <Link
-                href="https://calendly.com/comingsoon"
+                href="https://calendar.app.google/1mBGZZuhFNe243uV9"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "blue" }}
