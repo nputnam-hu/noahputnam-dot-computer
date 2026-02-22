@@ -51,7 +51,7 @@ const About = () => {
         <p
           style={{ fontFamily: "HelveticaNeue", fontSize: 17, lineHeight: '130%', marginRight: '14px' }}
         >
-        Hi, my name is Noah. I work as technical director of the deployment engineering team at <Link href="https://norm.ai" target="_blank">Norm Ai</Link>. Before that I did independent research on Human-Computer Interaction between internet users and AI, and before that I worked at <Link href="https://palantir.com" target="_blank">Palantir</Link>. I don't keep public social media accounts due to <Link href="https://arxiv.org/abs/2208.04040" target="_blank">general</Link> <Link href="https://arxiv.org/abs/2106.06415" target="_blank">privacy</Link> <Link href="https://www.wired.com/story/ai-tools-are-secretly-training-on-real-childrens-faces/?utm_source=chatgpt.com" target="_blank">concerns</Link>, but I promise I'm a real person.
+        Hi, my name is Noah. I do Applied AI Consulting for high-ambition, high-stakes startups. Before that I was Technical Director of the Deployment Engineering team at <Link href="https://norm.ai" target="_blank">Norm Ai</Link>. Before that I did independent research on Human-Computer Interaction between internet users and AI, and before that I worked at <Link href="https://palantir.com" target="_blank">Palantir</Link>. I don't keep public social media accounts due to <Link href="https://arxiv.org/abs/2208.04040" target="_blank">general</Link> <Link href="https://arxiv.org/abs/2106.06415" target="_blank">privacy</Link> <Link href="https://www.wired.com/story/ai-tools-are-secretly-training-on-real-childrens-faces/?utm_source=chatgpt.com" target="_blank">concerns</Link>, but I promise I'm a real person.
         </p>
         <p
           style={{ fontFamily: "HelveticaNeue", fontSize: 17, lineHeight: '130%', marginRight: '14px' }}
@@ -61,7 +61,7 @@ const About = () => {
         <p
           style={{ fontFamily: "HelveticaNeue", fontSize: 17, lineHeight: '130%', marginRight: '14px' }}
         >
-As computers become increasingly dominant in our society, critical engagement with computing must not be limited to a purely technical lens. The technology of modern computing both shapes and is shaped by the <Link href="https://en.wikipedia.org/wiki/Political_economy" target="_blank">political economy</Link> and <Link href="https://en.wikipedia.org/wiki/Legal_realism" target="_blank">legal realism</Link> of our times. That is why I am enthusiastic about my current work at Norm, which I believe has—in addition to an impressive technological and business vision—an importantly differentiated philosophical vision for how AI should be implemented in civil society (see: <Link href="https://arxiv.org/abs/2209.13020" target="_blank">Law Informs Code [arXiv:2209.13020]</Link>)
+As computers become increasingly dominant in our society, critical engagement with computing must not be limited to a purely technical lens. The technology of modern computing both shapes and is shaped by the <Link href="https://en.wikipedia.org/wiki/Political_economy" target="_blank">political economy</Link> and <Link href="https://en.wikipedia.org/wiki/Legal_realism" target="_blank">legal realism</Link> of our times. That is why I am enthusiastic about my current work advising startups on how to navigate our current moment to achieve the best business outcome and the best social outcome for the technology they are deploying.
 	</p>
         <p
           style={{ fontFamily: "HelveticaNeue", fontSize: 17, lineHeight: '130%', marginRight: '14px' }}
