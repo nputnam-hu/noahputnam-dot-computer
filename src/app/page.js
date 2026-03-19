@@ -70,19 +70,19 @@ export default function Home() {
           >
             About
           </Link>
+          // <Link
+          //   href={{ pathname: "https://twitter.com/noah_putnam", params: { from: "home" } }}
+          //   style={{
+          //     fontFamily: "Times New Roman",
+          //     fontSize: 17,
+          //     color: "blue",
+          //     marginTop: 6,
+          //   }}
+          // >
+          //   Twitter
+          // </Link>
           <Link
-            href={{ pathname: "https://twitter.com/noah_putnam", params: { from: "home" } }}
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              color: "blue",
-              marginTop: 6,
-            }}
-          >
-            Twitter
-          </Link>
-          <Link
-            href={{ pathname: "/work", params: { from: "home" } }}
+            href={{ pathname: "/portfolio", params: { from: "home" } }}
             style={{
               fontFamily: "Times New Roman",
               fontSize: 17,
