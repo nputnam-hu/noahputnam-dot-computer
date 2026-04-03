@@ -305,30 +305,6 @@ export default function Home() {
           <div style={{ marginTop: 6 }}>
             <Link
               href={{
-                pathname: "/Federalist-Papers-No-70.pdf",
-                params: { from: "home" },
-              }}
-              target="_blank"
-              style={{
-                fontFamily: "Times New Roman",
-                fontSize: 17,
-                marginTop: 6,
-                color: "blue",
-              }}
-            >
-              Federalist 70
-            </Link>
-            <span
-              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
-              className="pdfauthor"
-            >
-              {" "}
-              - <em>Alexander Hamilton</em>
-            </span>
-          </div>
-          <div style={{ marginTop: 6 }}>
-            <Link
-              href={{
                 pathname: "/The_Question_Concerning_Technology.pdf",
                 params: { from: "home" },
               }}
@@ -416,6 +392,30 @@ export default function Home() {
             >
               {" "}
               - <em>Gilles Deleuze</em>
+            </span>
+          </div>
+          <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname: "/Federalist-Papers-No-70.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                marginTop: 6,
+                color: "blue",
+              }}
+            >
+              Federalist 70
+            </Link>
+            <span
+              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+              className="pdfauthor"
+            >
+              {" "}
+              - <em>Alexander Hamilton</em>
             </span>
           </div>
           <div style={{ marginTop: 6 }}>
