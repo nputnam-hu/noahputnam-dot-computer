@@ -418,6 +418,29 @@ export default function Home() {
               - <em>Gilles Deleuze</em>
             </span>
           </div>
+          <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname: "/The_Coming_Nomos_of_the_Earth.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                color: "blue",
+              }}
+            >
+              The Coming Nomos of the Earth
+            </Link>
+            <span
+              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+              className="pdfauthor"
+            >
+              {" "}
+              - <em>Carl Schmitt</em>
+            </span>
+          </div>
           {/* <div style={{ marginTop: 6 }}>
             <Link
               href={{
