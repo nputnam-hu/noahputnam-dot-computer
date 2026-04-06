@@ -81,6 +81,18 @@ export default function Home() {
           >
             Portfolio
           </Link>
+          <Link
+            href="http://are.na/noah-putnam"
+            target="_blank"
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            are.na
+          </Link>
           <div
             style={{
               marginTop: 16,
@@ -374,29 +386,6 @@ export default function Home() {
           <div style={{ marginTop: 6 }}>
             <Link
               href={{
-                pathname: "/deleuze_socities_of_control.pdf",
-                params: { from: "home" },
-              }}
-              target="_blank"
-              style={{
-                fontFamily: "Times New Roman",
-                fontSize: 17,
-                color: "blue",
-              }}
-            >
-              Postscript on Socities of Control
-            </Link>
-            <span
-              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
-              className="pdfauthor"
-            >
-              {" "}
-              - <em>Gilles Deleuze</em>
-            </span>
-          </div>
-          <div style={{ marginTop: 6 }}>
-            <Link
-              href={{
                 pathname: "/Federalist-Papers-No-70.pdf",
                 params: { from: "home" },
               }}
@@ -416,6 +405,29 @@ export default function Home() {
             >
               {" "}
               - <em>Alexander Hamilton</em>
+            </span>
+          </div>
+          <div style={{ marginTop: 6 }}>
+            <Link
+              href={{
+                pathname: "/deleuze_socities_of_control.pdf",
+                params: { from: "home" },
+              }}
+              target="_blank"
+              style={{
+                fontFamily: "Times New Roman",
+                fontSize: 17,
+                color: "blue",
+              }}
+            >
+              Postscript on Socities of Control
+            </Link>
+            <span
+              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
+              className="pdfauthor"
+            >
+              {" "}
+              - <em>Gilles Deleuze</em>
             </span>
           </div>
           <div style={{ marginTop: 6 }}>
