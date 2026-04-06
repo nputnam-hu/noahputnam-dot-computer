@@ -91,7 +91,7 @@ export default function Home() {
               color: "blue",
             }}
           >
-            are.na
+            Are.na
           </Link>
           <div
             style={{
