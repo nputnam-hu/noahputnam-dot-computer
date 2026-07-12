@@ -71,7 +71,7 @@ export default function Home() {
             About
           </Link>
           <Link
-            href={{ pathname: "/portfolio", params: { from: "home" } }}
+            href={{ pathname: "/work", params: { from: "home" } }}
             style={{
               fontFamily: "Times New Roman",
               fontSize: 17,
@@ -80,6 +80,18 @@ export default function Home() {
             }}
           >
             Portfolio
+          </Link>
+          <Link
+            href={{ pathname: "https://twitter.com/noah_putnam", params: { from: "home" } }}
+            target="_blank"
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            Twitter
           </Link>
           <Link
             href="http://are.na/noah-putnam"
@@ -93,68 +105,68 @@ export default function Home() {
           >
             Are.na
           </Link>
-          <div
-            style={{
-              marginTop: 16,
-              paddingLeft: 8,
-              paddingTop: 4,
-              paddingBottom: 4,
-              borderLeft: "4px solid red",
-            }}
-          >
-            <h4
-              style={{
-                fontFamily: "Times New Roman",
-                fontSize: 17,
-                marginTop: 0,
-                marginBottom: 6,
-                fontWeight: 700,
-                fontStyle: "normal",
-                textDecoration: "underline",
-              }}
-            >
-              Applied AI Consulting
-            </h4>
-            <p
-              style={{
-                fontFamily: "Times New Roman",
-                fontSize: 17,
-                margin: 0,
-                marginBottom: 6,
-                fontStyle: "italic",
-              }}
-            >
-              AI Agent design • LLM Context Engineering • Forward Deployed
-              Engineering
-            </p>
-            <p
-              style={{
-                fontFamily: "Times New Roman",
-                fontSize: 17,
-                margin: 0,
-                marginTop: 2,
-              }}
-            >
-              <Link
-                href="https://2dm-tech.github.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "blue" }}
-              >
-                Learn more
-              </Link>{" "}
-              or book an introduction call{" "}
-              <Link
-                href="https://calendar.app.google/1mBGZZuhFNe243uV9"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "blue" }}
-              >
-                here
-              </Link>
-              .
-            </p>
-          </div>
+          // <div
+          //   style={{
+          //     marginTop: 16,
+          //     paddingLeft: 8,
+          //     paddingTop: 4,
+          //     paddingBottom: 4,
+          //     borderLeft: "4px solid red",
+          //   }}
+          // >
+          //   <h4
+          //     style={{
+          //       fontFamily: "Times New Roman",
+          //       fontSize: 17,
+          //       marginTop: 0,
+          //       marginBottom: 6,
+          //       fontWeight: 700,
+          //       fontStyle: "normal",
+          //       textDecoration: "underline",
+          //     }}
+          //   >
+          //     Applied AI Consulting
+          //   </h4>
+          //   <p
+          //     style={{
+          //       fontFamily: "Times New Roman",
+          //       fontSize: 17,
+          //       margin: 0,
+          //       marginBottom: 6,
+          //       fontStyle: "italic",
+          //     }}
+          //   >
+          //     AI Agent design • LLM Context Engineering • Forward Deployed
+          //     Engineering
+          //   </p>
+          //   <p
+          //     style={{
+          //       fontFamily: "Times New Roman",
+          //       fontSize: 17,
+          //       margin: 0,
+          //       marginTop: 2,
+          //     }}
+          //   >
+          //     <Link
+          //       href="https://2dm-tech.github.io"
+          //       target="_blank"
+          //       rel="noopener noreferrer"
+          //       style={{ color: "blue" }}
+          //     >
+          //       Learn more
+          //     </Link>{" "}
+          //     or book an introduction call{" "}
+          //     <Link
+          //       href="https://calendar.app.google/1mBGZZuhFNe243uV9"
+          //       target="_blank"
+          //       rel="noopener noreferrer"
+          //       style={{ color: "blue" }}
+          //     >
+          //       here
+          //     </Link>
+          //     .
+          //   </p>
+          // </div>
           <h4
             style={{
               fontFamily: "Times New Roman",
