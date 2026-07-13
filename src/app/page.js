@@ -105,7 +105,7 @@ export default function Home() {
           >
             Are.na
           </Link>
-          /* <div
+          {/* <div
             style={{
               marginTop: 16,
               paddingLeft: 8,
@@ -166,7 +166,7 @@ export default function Home() {
               </Link>
               .
             </p>
-          </div> */
+          </div> */}
           <h4
             style={{
               fontFamily: "Times New Roman",
