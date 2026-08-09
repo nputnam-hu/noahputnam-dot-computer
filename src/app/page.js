@@ -83,17 +83,6 @@ export default function Home() {
             Twitter
           </Link>
           <Link
-            href={{ pathname: "/work", params: { from: "home" } }}
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            Portfolio
-          </Link>
-          <Link
             href="http://are.na/noah-putnam"
             target="_blank"
             style={{
@@ -104,6 +93,17 @@ export default function Home() {
             }}
           >
             Are.na
+          </Link>
+          <Link
+            href={{ pathname: "/work", params: { from: "home" } }}
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            Portfolio
           </Link>
           {/* <div
             style={{
