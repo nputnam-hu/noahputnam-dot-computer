@@ -181,21 +181,6 @@ export default function Home() {
           </h4>
           <Link
             href={{
-              pathname: "https://publiusfool.substack.com/p/thymos",
-              params: { from: "home" },
-            }}
-            target="_blank"
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            On Thymos
-          </Link>
-          <Link
-            href={{
               pathname: "https://joinreboot.org/p/the-concrete-oasis",
               params: { from: "home" },
             }}
@@ -208,6 +193,21 @@ export default function Home() {
             }}
           >
             The Concrete Oasis
+          </Link>
+          <Link
+            href={{
+              pathname: "https://publiusfool.substack.com/p/thymos",
+              params: { from: "home" },
+            }}
+            target="_blank"
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            On Thymos
           </Link>
           <Link
             href={{
