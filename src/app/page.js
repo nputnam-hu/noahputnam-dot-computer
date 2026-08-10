@@ -94,7 +94,7 @@ export default function Home() {
             Portfolio
           </Link>
           <Link
-            href="http://are.na/noah-putnam"
+            href="https://www.are.na/noah-putnam/love-always-wins"
             target="_blank"
             style={{
               fontFamily: "Times New Roman",
