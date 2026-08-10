@@ -71,18 +71,6 @@ export default function Home() {
             About
           </Link>
           <Link
-            href="https://www.are.na/noah-putnam/love-always-wins"
-            target="_blank"
-            style={{
-              fontFamily: "Times New Roman",
-              fontSize: 17,
-              marginTop: 6,
-              color: "blue",
-            }}
-          >
-            Are.na
-          </Link>
-          <Link
             href={{ pathname: "https://twitter.com/noah_putnam", params: { from: "home" } }}
             target="_blank"
             style={{
@@ -104,6 +92,18 @@ export default function Home() {
             }}
           >
             Portfolio
+          </Link>
+          <Link
+            href="https://www.are.na/noah-putnam/love-always-wins"
+            target="_blank"
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            Are.na
           </Link>
           {/* <div
             style={{
@@ -179,6 +179,21 @@ export default function Home() {
           >
             Essays
           </h4>
+          <Link
+            href={{
+              pathname: "https://publiusfool.substack.com/p/thymos",
+              params: { from: "home" },
+            }}
+            target="_blank"
+            style={{
+              fontFamily: "Times New Roman",
+              fontSize: 17,
+              marginTop: 6,
+              color: "blue",
+            }}
+          >
+            On Thymos
+          </Link>
           <Link
             href={{
               pathname: "https://joinreboot.org/p/the-concrete-oasis",
@@ -440,29 +455,6 @@ export default function Home() {
             >
               {" "}
               - <em>Gilles Deleuze</em>
-            </span>
-          </div>
-          <div style={{ marginTop: 6 }}>
-            <Link
-              href={{
-                pathname: "/The_Coming_Nomos_of_the_Earth.pdf",
-                params: { from: "home" },
-              }}
-              target="_blank"
-              style={{
-                fontFamily: "Times New Roman",
-                fontSize: 17,
-                color: "blue",
-              }}
-            >
-              The Coming Nomos of the Earth
-            </Link>
-            <span
-              style={{ fontFamily: "Times New Roman", fontSize: 17 }}
-              className="pdfauthor"
-            >
-              {" "}
-              - <em>Carl Schmitt</em>
             </span>
           </div>
           {/* <div style={{ marginTop: 6 }}>
