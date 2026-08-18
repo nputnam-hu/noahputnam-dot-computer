@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APD — rNet × Rhizome</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --bg:#0d0e12; --bg2:#13141a; --panel:#171821; --line:#262838;
+  --ink:#e9eaef; --dim:#9a9db0; --faint:#6a6d80;
+  --violet:#8b7bff; --violet-dim:#6a5ce0;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --disp:'Space Grotesk',sans-serif; --body:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+.orb{width:14px;height:14px;border-radius:50%;display:inline-block;vertical-align:-2px;
+  background:conic-gradient(from 200deg,#ff5c5c,#ffb347,#f5e663,#7ee787,#58c4dd,#8b7bff,#e06ac0,#ff5c5c);
+  filter:saturate(.9)}
+.orb.lg{width:44px;height:44px;box-shadow:0 0 60px 8px rgba(139,123,255,.25)}
+
+.wrap{display:grid;grid-template-columns:230px minmax(0,1fr);max-width:1200px;margin:0 auto}
+nav{position:sticky;top:0;height:100vh;padding:36px 20px;border-right:1px solid var(--line);overflow-y:auto}
+nav .brand{display:flex;align-items:center;gap:10px;margin-bottom:6px;font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:.01em}
+nav .sub{font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-bottom:28px;letter-spacing:.05em}
+nav a{display:block;color:var(--dim);text-decoration:none;font-size:13px;padding:5px 8px;border-radius:6px;border-left:2px solid transparent}
+nav a:hover{color:var(--ink);background:var(--bg2)}
+nav a .n{font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-right:8px}
+main{padding:0 48px 120px}
+
+header.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:18px}
+h1{font-family:var(--disp);font-size:clamp(30px,4.5vw,46px);font-weight:700;line-height:1.08;letter-spacing:-.02em}
+h1 .x{color:var(--faint);font-weight:400}
+.hero p.tag{color:var(--dim);font-size:16px;margin-top:16px;max-width:640px}
+.pill{display:inline-block;font-family:var(--mono);font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:4px 12px;margin:22px 8px 0 0}
+.pill b{color:var(--violet);font-weight:600}
+
+section{padding-top:56px}
+h2{font-family:var(--disp);font-size:24px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px;display:flex;align-items:center;gap:12px}
+h2 .n{font-family:var(--mono);font-size:12px;color:var(--violet);font-weight:500;letter-spacing:.08em}
+h3{font-family:var(--disp);font-size:16.5px;font-weight:600;margin:30px 0 10px;color:var(--ink)}
+.lede{color:var(--dim);margin-bottom:22px;max-width:680px}
+p{margin-bottom:14px;max-width:720px}
+p.note{color:var(--dim);font-size:14px}
+strong{color:var(--ink);font-weight:600}
+em{color:var(--dim)}
+b.hl{color:var(--violet);font-weight:600}
+
+.quote{border-left:2px solid var(--violet);background:var(--bg2);padding:16px 20px;border-radius:0 10px 10px 0;color:var(--dim);font-size:14px;margin:18px 0;max-width:720px}
+
+ol.criteria{counter-reset:c;list-style:none;margin:22px 0;max-width:720px}
+ol.criteria li{counter-increment:c;position:relative;padding:16px 18px 16px 58px;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--bg2)}
+ol.criteria li::before{content:counter(c);position:absolute;left:18px;top:16px;width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;font-weight:600;
+  color:var(--bg);background:conic-gradient(from 200deg,#ff5c5c,#ffb347,#f5e663,#7ee787,#58c4dd,#8b7bff,#e06ac0,#ff5c5c)}
+ol.criteria li.big{border-color:var(--violet-dim);box-shadow:0 0 30px rgba(139,123,255,.08)}
+ol.criteria .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--violet)}
+
+pre{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;overflow-x:auto;
+  font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--dim);margin:16px 0}
+pre .c{color:var(--faint)}
+pre .k{color:var(--violet)}
+pre .g{color:#7ee787}
+code{font-family:var(--mono);font-size:.88em;background:var(--panel);border:1px solid var(--line);padding:1.5px 6px;border-radius:6px;color:var(--ink)}
+
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);
+  text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--dim)}
+td:first-child{color:var(--ink);font-weight:500;white-space:nowrap}
+td code{white-space:nowrap}
+tr:hover td{background:var(--bg2)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+.card{border:1px solid var(--line);border-radius:14px;padding:20px 22px;background:var(--bg2)}
+.card h4{font-family:var(--disp);font-size:15px;font-weight:600;margin-bottom:8px;display:flex;gap:9px;align-items:center}
+.card .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2.5px 8px;border-radius:99px;border:1px solid var(--line);color:var(--faint)}
+.card .tag.open{color:#7ee787;border-color:#2c4a35}
+.card .tag.prod{color:var(--violet);border-color:#3b3566}
+.card p{font-size:13.5px;color:var(--dim);margin-bottom:0}
+.arrow-note{text-align:center;font-family:var(--mono);font-size:11.5px;color:var(--faint);margin:6px 0 18px}
+.arrow-note b{color:var(--violet)}
+
+ol.decisions{counter-reset:d;list-style:none;margin:18px 0;max-width:760px}
+ol.decisions li{counter-increment:d;padding:13px 0 13px 44px;position:relative;border-bottom:1px solid var(--line);color:var(--dim);font-size:14px}
+ol.decisions li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:14px;font-family:var(--mono);font-size:11px;color:var(--violet)}
+ol.decisions strong{display:block}
+
+footer{margin-top:90px;padding-top:28px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--faint);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+
+@media(max-width:880px){
+  .wrap{grid-template-columns:1fr}
+  nav{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:24px 20px}
+  nav .links{display:flex;flex-wrap:wrap;gap:2px}
+  main{padding:0 20px 90px}
+  .split{grid-template-columns:1fr}
+}
+:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div class="brand"><span class="orb"></span>rNet <span style="color:var(--faint)">×</span> Rhizome</div>
+  <div class="sub">APD · v2 · SPEC v0.4</div>
+  <div class="links">
+    <a href="#s0"><span class="n">00</span>Objective</a>
+    <a href="#s1"><span class="n">01</span>Repo topology</a>
+    <a href="#s2"><span class="n">02</span>System architecture</a>
+    <a href="#s3"><span class="n">03</span>Skill corpus</a>
+    <a href="#s4"><span class="n">04</span>End-to-end flow</a>
+    <a href="#s5"><span class="n">05</span>Milestones</a>
+    <a href="#s6"><span class="n">06</span>Decisions</a>
+    <a href="#s7"><span class="n">07</span>Deferrals</a>
+  </div>
+</nav>
+<main>
+
+<header class="hero">
+  <div class="eyebrow">Technical Architecture Proposal</div>
+  <h1><span class="orb lg" style="margin-right:14px"></span>rNet <span class="x">×</span> Rhizome</h1>
+  <p class="tag">Budget dMachine + Maker MVP — the smallest system that runs the full loop: <em>QFX upload → living budget app → "describe an app, get it."</em></p>
+  <div>
+    <span class="pill">status <b>proposal-draft v2</b></span>
+    <span class="pill">aligned to <b>spec v0.4</b></span>
+    <span class="pill">stack <b>Bun · Hono · Zod · Pi · R2</b></span>
+  </div>
+</header>
+
+<section id="s0">
+  <h2><span class="n">00</span>Objective &amp; success criteria</h2>
+  <div class="quote">Raw bank export → origin artifact → ingestion (skill-guided, verified, dry-run gated) → transaction Vibe → push categorization → budget dMachine renders → user edits persist → monthly pull keeps the Vibe alive.</div>
+  <ol class="criteria">
+    <li>A stranger with a Chase QFX file gets a working, personalized budget app in <strong>under three minutes</strong>, every object carrying conformant provenance.</li>
+    <li>A stranger with a <em>weird credit-union CSV</em> gets the same result via the <strong>generated-parser path</strong>.</li>
+    <li class="big"><span class="k">the unlock</span><br>A stranger <strong>describes an app</strong> — "budget app, but for my freelance invoices" — and the Maker generates a working dMachine against their Vibe, sandboxed and scope-limited.</li>
+  </ol>
+  <p>The Maker is the same agent harness pointed the other direction: <b class="hl">Pi generates parsers on the write edge, dMachines on the read edge. One runtime, two factories.</b></p>
+</section>
+
+<section id="s1">
+  <h2><span class="n">01</span>Repo topology</h2>
+  <p class="lede">Two repositories with a hard ownership boundary that mirrors the protocol/product split.</p>
+  <div class="split">
+    <div class="card">
+      <h4><span class="orb"></span>rnet/ <span class="tag open">open · the protocol</span></h4>
+      <p>Apache-2.0 or MIT. The rNet Foundation's eventual home. Contains <strong>nothing Rhizome needs to keep</strong>: the spec, JSON Schemas (source of truth), generated <code>@rnet/types</code>, and the conformance suite.</p>
+    </div>
+    <div class="card">
+      <h4>rhizome/ <span class="tag prod">product</span></h4>
+      <p>License TBD (BUSL or closed). Server, ingestion runtime, skill corpus, dMachine SDK, budget app, the Maker. Depends on <code>rnet</code> packages; never vice versa.</p>
+    </div>
+  </div>
+  <div class="arrow-note">rhizome ─────▶ rnet &nbsp;·&nbsp; <b>the dependency arrow points one way.</b> If rnet ever needs something from rhizome, it's either (a) actually protocol — move it — or (b) a design error.</div>
+
+  <h3>rnet/ layout</h3>
+<pre>rnet/
+├── spec/rnet-spec.md          <span class="c"># the spec (v0.4+), canonical prose</span>
+├── schemas/0.4/               <span class="c"># THE PROTOCOL — JSON Schema, source of truth</span>
+│   ├── media-element.json · media-object.json · origin-artifact.json
+│   ├── vibe.json · ingest-record.json · <span class="k">grant.json</span>  <span class="c"># subjects + scopes (spec §3)</span>
+│   └── types/  transaction.json · track.json · document.json
+├── packages/
+│   ├── types/                 <span class="c"># @rnet/types — TS + Zod, GENERATED from schemas/</span>
+│   └── conformance/           <span class="c"># @rnet/conformance — runnable vs ANY store</span>
+└── README.md                  <span class="c"># second-implementer framing</span></pre>
+  <p class="note"><strong>Schemas are the source of truth; Zod is derived.</strong> A Python implementer ignores <code>packages/</code> and consumes <code>schemas/</code> with Pydantic — that's the point. The conformance suite tests <strong>both edges</strong>: write-edge (source immutability, origins fetchable, export round-trip lossless) and read-edge (spec §3: <code>write:user</code> can't corrupt <code>source</code>; <code>read</code> can't see origins; revoked grants fail closed; <code>share</code> can't self-escalate).</p>
+
+  <h3>rhizome/ layout</h3>
+<pre>rhizome/
+├── apps/
+│   ├── server/     <span class="c"># the rNet store — Bun + Hono · SQLite (Drizzle) · BlobStore→R2</span>
+│   │               <span class="c">#   routes / db / blobs / push / pull / auth / metering</span>
+│   ├── ingest/     <span class="c"># harness (Pi RPC, subprocess-per-job) · skills/ · verify/ · cache/</span>
+│   ├── budget/     <span class="c"># the budget dMachine — React + Vite, @rhizome/client ONLY</span>
+│   └── <span class="k">maker/</span>      <span class="c"># the dMachine that makes dMachines · templates/ (budget = #1)</span>
+├── packages/
+│   ├── client/       <span class="c"># @rhizome/client — typed SDK over the rNet API</span>
+│   └── <span class="k">dmachine-sdk/</span> <span class="c"># manifests, client: registration, metering, sandbox contract</span>
+│                     <span class="c"># everything spec v0.4 punt #5 excludes lives here</span>
+└── infra/            <span class="c"># railway/fly + R2 buckets + Litestream→R2</span></pre>
+</section>
+
+<section id="s2">
+  <h2><span class="n">02</span>System architecture</h2>
+<pre>
+  ┌──────────────────────────┐   ┌─────────────────────────────┐
+  │  budget dMachine (React) │   │  <span class="k">Maker dMachine</span>             │
+  │  upload · review · 📊    │   │  intent → generate → preview│
+  └──────┬───────────────────┘   └──────┬──────────────────────┘
+         │ @rhizome/client              ▼ <span class="c">generated apps run in</span>
+         │                  ┌───────────────────────────┐
+         │                  │ generated dMachine        │
+         │                  │ <span class="g">locked iframe · CSP</span>       │
+         │                  │ postMessage → client only │
+         │                  │ scoped grants, no egress  │
+         │                  └──────┬────────────────────┘
+         ▼                         ▼
+  ┌─────────────────────────────────────────────────────────────┐
+  │              rNet Server  (Bun + Hono)                      │
+  │  routes → zod validation (@rnet/types) → handlers           │
+  │  ┌────────┐ ┌─────────┐ ┌──────────┐ ┌───────────────────┐  │
+  │  │ SQLite │ │ blobs→<span class="k">R2</span> │ │ push/    │ │ pull/             │  │
+  │  │ vibes  │ │ elements│ │ Anthropic│ │ job → ingest      │  │
+  │  │ objects│ │ origins │ │ API →    │ │ runtime, dry-run  │  │
+  │  │ grants │ │ (2 bkts)│ │ inferred │ │ gate, commit      │  │
+  │  └────────┘ └─────────┘ └──────────┘ └────────┬──────────┘  │
+  └────────────────────────────────────────────────┼────────────┘
+                                                   │ <span class="c">RPC, subprocess per job</span>
+                                                   ▼
+                              ┌─────────────────────────────────┐
+                              │   Ingestion Runtime (<span class="k">Pi</span>)        │
+                              │ load skill → parse → <span class="g">VERIFY</span> →   │
+                              │ emit conformant MediaObjects    │
+                              │ novel format? generate parser → │
+                              │ hash → verify → cache → dry-run │
+                              └─────────────────────────────────┘</pre>
+
+  <h3>Component decisions</h3>
+  <table>
+    <tr><th>Component</th><th>Choice</th><th>Why</th></tr>
+    <tr><td>Runtime</td><td>Bun</td><td>Fast hashing (content-addressing is the hot path), zero-config TS, one binary. Standards-only code in packages keeps Node portability.</td></tr>
+    <tr><td>HTTP</td><td>Hono + zod-validator</td><td>FastAPI-style schema-first: one Zod definition → validation + types + OpenAPI. Web-standard, runs anywhere.</td></tr>
+    <tr><td>DB</td><td>SQLite via Drizzle</td><td>v0 is single-node; SQLite is honest about that. Litestream → R2 continuously. Postgres is a migration, not a rewrite.</td></tr>
+    <tr><td>Blobs</td><td>Cloudflare R2, two buckets, from M1</td><td>Durable by construction — bank data deserves it; no blob-sync cron ever exists. Zero egress; same API from laptop and prod. Spec §2.2 namespace separation as literal buckets. Filesystem impl for offline dev only. Immutable content-addressed blobs keep provider exit trivial.</td></tr>
+    <tr><td>Agent harness</td><td>Pi · RPC mode · subprocess-per-job</td><td>Embeddable (no TUI to amputate), TS extensions, skills-native, minimal prompt = lower COGS per metered run. Wrapped behind a <code>Harness</code> interface — stays swappable.</td></tr>
+    <tr><td>Inference</td><td>Anthropic API</td><td>Categorization + essence. Batch where possible; costs land in metering.</td></tr>
+    <tr><td>dMachine UI</td><td>React + Vite, <code>@rhizome/client</code> only</td><td>Must be buildable by an outsider using only the public API — so ours uses nothing else. Dogfood is the architecture review.</td></tr>
+    <tr><td>Maker</td><td>Same Pi harness + templates + sandbox</td><td><strong>The spec is the prompt</strong>: generation sees <code>@rnet/types</code> + SDK, never Vibe data — closing the injection channel architecturally. Generated apps meet data only at runtime, inside the sandbox.</td></tr>
+    <tr><td>Sandbox</td><td>Locked iframe · CSP no-egress · postMessage bridge</td><td>Server-enforced grants (spec §3) are the real boundary: a fully compromised app reads exactly what was granted. <code>source</code> is protected by protocol, not by prompt.</td></tr>
+    <tr><td>Auth</td><td>Phone OTP (Better Auth + Twilio Verify) → passkey</td><td>Phone = credential, never identity: <code>rnet://id</code> is a ULID. Fraud Guard + rate limits + US/CA geo-fence. Passkey enrolled on first session becomes the login factor.</td></tr>
+  </table>
+</section>
+
+<section id="s3">
+  <h2><span class="n">03</span>The skill corpus <span style="font-family:var(--mono);font-size:12px;color:var(--faint);font-weight:400">— the accumulating asset</span></h2>
+  <p class="lede">Skills live in <code>apps/ingest/skills/</code>, one directory each. Three required files; the format is ours, not Pi's — the corpus must survive harness mortality.</p>
+  <table>
+    <tr><th>File</th><th>Role</th></tr>
+    <tr><td><code>SKILL.md</code></td><td>Format knowledge: field mapping to the type vocabulary, edge cases (Chase QFX quirks, date formats, sign conventions).</td></tr>
+    <tr><td><code>VERIFY.md</code></td><td><strong>Required.</strong> Invariants the runtime executes post-parse: object count = record count, Σ amounts = statement total, required fields present, fitid unique.</td></tr>
+    <tr><td><code>BOUNDARIES.md</code></td><td><strong>Required.</strong> Permitted paths only — user-initiated exports, sanctioned APIs, no credentialed scraping. The compliance posture, versioned.</td></tr>
+    <tr><td><code>scripts/</code></td><td>Optional deterministic parsers → <code>method: "compiled"</code>, the top rung.</td></tr>
+  </table>
+  <p><strong>The determinism ladder:</strong> compiled script → <code>reproducible: true</code>. Agent on a known format → <code>method: "skill"</code>. Novel format → generated parser → <code>parser_hash</code> recorded, VERIFY gauntlet, forced dry-run review → approval seeds <code>parser_cache</code> keyed by format signature.</p>
+  <p class="note">The cache converts the long tail into compiled capability over time — every weird format any user brings becomes permanent, zero-marginal-cost coverage. The corpus and cache are the <em>defensible asset</em>, not the product: the product is the §00 loop. The asset accretes as exhaust from users running it.</p>
+</section>
+
+<section id="s4">
+  <h2><span class="n">04</span>End-to-end flow</h2>
+<pre> 1. UI: drag in chase_export.qfx
+ 2. POST /origins                    → rnet://origin/sha256:3c4f…
+ 3. POST /vibes                      → "My Spending"
+ 4. POST /vibes/{id}/pull <span class="k">{dry_run}</span>  → Pi job: ofx skill, compiled path
+ 5. runtime runs <span class="g">VERIFY.md</span>          → 214 candidates · zero elements
+                                       <span class="c">(fields are facts; elements are content)</span>
+ 6. review: "totals reconcile ✓"     → user confirms → commit
+ 7. POST /vibes/{id}/push            → categorize · essence · metering rows
+ 8. budget-app granted               → [read, write:user, push]
+ 9. user recategorizes               → PATCH /objects/{id}/user (If-Match)
+                                       <span class="c">sticky across re-pushes forever</span>
+10. monthly: new export → 2,4,6,7    → <span class="k">the Vibe stays alive</span></pre>
+  <p class="note">Novel-format variant of step 4: no matching skill or cache → agent generates parser → hash + full gauntlet → dry-run review is <strong>required</strong>, not optional → approval seeds the cache.</p>
+</section>
+
+<section id="s5">
+  <h2><span class="n">05</span>Build order</h2>
+  <p class="lede">Each milestone independently demoable.</p>
+  <table>
+    <tr><th>#</th><th>Milestone</th><th>Contents</th><th>Exit test</th></tr>
+    <tr><td>M0</td><td>Schemas compile</td><td>v0.4 schemas + codegen → <code>@rnet/types</code>; both-edge conformance fixtures</td><td><code>bun test</code> green on type round-trips</td></tr>
+    <tr><td>M1</td><td>Store stands</td><td>CRUD; SQLite; R2 wired via BlobStore; grants</td><td>conformance passes on fs AND R2 configs</td></tr>
+    <tr><td>M2</td><td>Compiled ingestion</td><td>hardcoded OFX path; verify runner; dry-run flow</td><td>QFX → 214 conformant objects, invariants green</td></tr>
+    <tr><td>M3</td><td>Push pipeline</td><td>categorize + essence; write-back; metering</td><td>inferred blocks present; costs queryable</td></tr>
+    <tr><td>M4</td><td>Budget dMachine</td><td>React on public client only; upload → review → dashboard</td><td>the three-minute stranger test</td></tr>
+    <tr><td>M5</td><td>Agentic tail</td><td>Pi harness live; skill path; generated parsers; cache</td><td>cursed credit-union CSV survives the gauntlet</td></tr>
+    <tr><td>M6</td><td><b class="hl">The Maker</b></td><td>intent → generation from budget template → sandbox preview → grant flow → registered app</td><td>criterion 3: stranger describes an app, gets it</td></tr>
+    <tr><td>M7</td><td>Polish for strangers</td><td>deploy; docs site (the landing mock, made real); fork graph over generated apps</td><td>someone you've never met completes 1 and 3</td></tr>
+  </table>
+  <p><strong>Deliberate ordering:</strong> the agent enters at M5, not M2 — and the Maker at M6, not M5. Deterministic before generative; generative write edge (parsers) before generative read edge (apps). Nothing is thrown away: M2's parser becomes M5's compiled script; M4's app becomes M6's template #1. <b class="hl">Variation before invention.</b></p>
+</section>
+
+<section id="s6">
+  <h2><span class="n">06</span>Decisions this proposal makes <span style="font-family:var(--mono);font-size:12px;color:var(--faint);font-weight:400">— veto points</span></h2>
+  <ol class="decisions">
+    <li><strong>SQLite over Postgres for v0</strong> Single-node honesty; Drizzle keeps the exit. Litestream → R2 continuously: DB and blobs share one durability story.</li>
+    <li><strong>R2 for blobs from M1, filesystem for dev only</strong> Durability by construction over DIY sync jobs; velocity means never building the backup path.</li>
+    <li><strong>Conformance suite lives in rnet, runs in rhizome CI</strong> The open repo holds the certification asset; the product is its first subject.</li>
+    <li><strong>Transactions ship with zero elements</strong> Fields are facts; elements are content. First element-exercising demo (receipt PDFs + decomposition) is post-M7.</li>
+    <li><strong>Skill files are Rhizome-private at launch</strong> Conformance rules are public in the spec; the corpus is the moat. Revisit if ecosystem pressure warrants promotion (spec punt #6).</li>
+    <li><strong>Phone-first auth, passkey upgrade</strong> OTP for signup/recovery; passkey becomes the login factor. Identity stays a spec punt — server implementation, invisible to protocol.</li>
+    <li><strong>Metering from M3, enforcement later</strong> Record every token from the first push; budgets and developer-pays billing are post-MVP. Metering lives in the dMachine SDK, not the protocol.</li>
+    <li><strong>Maker generates against schemas, never data</strong> The injection channel closes architecturally; sandbox + server-enforced grants contain whatever generation gets wrong anyway. Every generated app is code-hashed — the fork graph starts at M6 metadata.</li>
+  </ol>
+</section>
+
+<section id="s7">
+  <h2><span class="n">07</span>Deferred, deliberately</h2>
+  <p>Federation, E2EE, DIDs, inter-store sharing (spec punts 1–3). Music/track ingestion and capability negotiation (MusicKit auth — post-M7). The dMachine <em>store as a surface</em> — though its substrate ships early: M6 registers every generated app code-hashed with fork provenance, so the store is a UI over data that already exists, <strong>populated autogenously by Maker usage</strong>. Payments settlement. The rNet Foundation — it needs a second implementer to govern; the conformance suite is its dowry, waiting.</p>
+</section>
+
+<footer>
+  <span class="orb"></span>
+  <span>two repos · one dependency arrow · one runtime, two factories · seven milestones · one sentence:</span>
+  <span style="color:var(--ink)">describe an app, get it — running on your own data.</span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>
